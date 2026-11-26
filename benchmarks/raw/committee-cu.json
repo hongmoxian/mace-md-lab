@@ -1,0 +1,226 @@
+{
+  "schema_version": 1,
+  "benchmark": "same_frame_committee",
+  "models": [
+    "member-17.model",
+    "member-29.model",
+    "member-43.model"
+  ],
+  "model_state_sha256": [
+    "b15055f9ad73b8a9d32930964d1ab60bbc023f046672326b3440f0a2f51e3d07",
+    "f1a20ca19e596d622671de45832eb03d05a754e85849875c0bbd02ef533428d8",
+    "6f3f4af7f05cae387babc2d82ad81ca1c9a28cb9c07eb0a7675287c8e9dd596e"
+  ],
+  "trajectory": "cu.extxyz",
+  "frames": 8,
+  "atoms": 32,
+  "input_stride": 1,
+  "head": "Default",
+  "skin_A": 0.5,
+  "cutoff_A": 5.0,
+  "dtype": "float64",
+  "device": "cuda:0",
+  "gpu": "Tesla V100-SXM2-16GB",
+  "torch": "2.13.0+cu126",
+  "mace": "0.3.16",
+  "ase": "3.29.0",
+  "platform": "Linux-6.12.0-211.74.1.el10_2.x86_64-x86_64-with-glibc2.39",
+  "torch_num_threads": 1,
+  "energy_atol_eV_per_atom": 1e-08,
+  "force_atol_eV_A": 1e-08,
+  "checks": {
+    "cached_topology_ef": {
+      "max_energy_error_eV_per_atom_by_member": [
+        1.3877787807814457e-17,
+        3.469446951953614e-18,
+        4.336808689942018e-18
+      ],
+      "max_force_component_error_eV_A_by_member": [
+        1.3183898417423734e-16,
+        5.2258544713801314e-17,
+        2.6020852139652106e-17
+      ],
+      "max_atom_disagreement_error_eV_A": 5.4643789493269423e-17,
+      "passed": true
+    },
+    "shared_geometry_ef": {
+      "max_energy_error_eV_per_atom_by_member": [
+        1.3877787807814457e-17,
+        3.469446951953614e-18,
+        3.469446951953614e-18
+      ],
+      "max_force_component_error_eV_A_by_member": [
+        1.5612511283791264e-16,
+        5.377642775528102e-17,
+        3.0357660829594124e-17
+      ],
+      "max_atom_disagreement_error_eV_A": 5.551115123125783e-17,
+      "passed": true
+    }
+  },
+  "passed": true,
+  "observations": [
+    {
+      "source_frame": 0,
+      "native_energies_eV": [
+        2.030034584563891,
+        0.25811256302202906,
+        -0.14859593673534038
+      ],
+      "native_max_force_disagreement_eV_A": 0.025994071143524596,
+      "native_max_atom_index": 27,
+      "cached_topology_ef_max_force_disagreement_eV_A": 0.025994071143524616,
+      "shared_geometry_ef_max_force_disagreement_eV_A": 0.025994071143524606
+    },
+    {
+      "source_frame": 1,
+      "native_energies_eV": [
+        2.0294329643934486,
+        0.25821362071610554,
+        -0.14875566109741978
+      ],
+      "native_max_force_disagreement_eV_A": 0.026645558303834593,
+      "native_max_atom_index": 27,
+      "cached_topology_ef_max_force_disagreement_eV_A": 0.026645558303834558,
+      "shared_geometry_ef_max_force_disagreement_eV_A": 0.026645558303834537
+    },
+    {
+      "source_frame": 2,
+      "native_energies_eV": [
+        2.02872140100831,
+        0.25833364472274517,
+        -0.14894790364534077
+      ],
+      "native_max_force_disagreement_eV_A": 0.027263388600953217,
+      "native_max_atom_index": 27,
+      "cached_topology_ef_max_force_disagreement_eV_A": 0.02726338860095323,
+      "shared_geometry_ef_max_force_disagreement_eV_A": 0.027263388600953245
+    },
+    {
+      "source_frame": 3,
+      "native_energies_eV": [
+        2.02790371675005,
+        0.25847187544096994,
+        -0.1491715715881593
+      ],
+      "native_max_force_disagreement_eV_A": 0.027845408569761306,
+      "native_max_atom_index": 27,
+      "cached_topology_ef_max_force_disagreement_eV_A": 0.027845408569761303,
+      "shared_geometry_ef_max_force_disagreement_eV_A": 0.02784540856976129
+    },
+    {
+      "source_frame": 4,
+      "native_energies_eV": [
+        2.026984388893777,
+        0.2586274026029746,
+        -0.14942532498590963
+      ],
+      "native_max_force_disagreement_eV_A": 0.028389730727187385,
+      "native_max_atom_index": 27,
+      "cached_topology_ef_max_force_disagreement_eV_A": 0.028389730727187375,
+      "shared_geometry_ef_max_force_disagreement_eV_A": 0.02838973072718739
+    },
+    {
+      "source_frame": 5,
+      "native_energies_eV": [
+        2.0259685131722565,
+        0.2587991748455431,
+        -0.14970758894628602
+      ],
+      "native_max_force_disagreement_eV_A": 0.028894708593531316,
+      "native_max_atom_index": 27,
+      "cached_topology_ef_max_force_disagreement_eV_A": 0.028894708593531306,
+      "shared_geometry_ef_max_force_disagreement_eV_A": 0.028894708593531295
+    },
+    {
+      "source_frame": 6,
+      "native_energies_eV": [
+        2.0248617831386504,
+        0.2589860055595439,
+        -0.150016563587759
+      ],
+      "native_max_force_disagreement_eV_A": 0.029358896366403542,
+      "native_max_atom_index": 27,
+      "cached_topology_ef_max_force_disagreement_eV_A": 0.029358896366403556,
+      "shared_geometry_ef_max_force_disagreement_eV_A": 0.029358896366403552
+    },
+    {
+      "source_frame": 7,
+      "native_energies_eV": [
+        2.0236704508729,
+        0.25918658453578786,
+        -0.1503502405931686
+      ],
+      "native_max_force_disagreement_eV_A": 0.029781029680431115,
+      "native_max_atom_index": 27,
+      "cached_topology_ef_max_force_disagreement_eV_A": 0.029781029680431087,
+      "shared_geometry_ef_max_force_disagreement_eV_A": 0.029781029680431094
+    }
+  ],
+  "shared_geometry_inactive_reason": null,
+  "driver_check": {
+    "steps": 4,
+    "observation_steps": [
+      2,
+      4
+    ],
+    "dt_fs": 0.5,
+    "max_position_error_A": 2.220446049250313e-16,
+    "max_velocity_error_A_per_ASE_time_unit": 2.0816681711721685e-17,
+    "max_driver_energy_error_eV_atom": 2.7755575615628914e-17,
+    "max_driver_force_error_eV_A": 2.185751579730777e-16,
+    "max_member_energy_error_eV_atom": 1.3877787807814457e-17,
+    "max_member_force_error_eV_A": 1.1102230246251565e-16,
+    "max_atom_disagreement_error_eV_A": 6.071532165918825e-17,
+    "position_and_velocity_atol_in_reported_units": 1e-09,
+    "passed": true
+  },
+  "certify_edges": true,
+  "timings": {
+    "official_committee": {
+      "raw_ms_per_frame": [
+        59.91428637935314,
+        59.8868886299897,
+        60.43755500286352
+      ],
+      "rebuilds_per_pass": [
+        8,
+        8,
+        8
+      ],
+      "median_ms_per_frame": 59.91428637935314
+    },
+    "cached_topology_ef": {
+      "raw_ms_per_frame": [
+        51.53362624696456,
+        51.3253779936349,
+        51.423819502815604
+      ],
+      "rebuilds_per_pass": [
+        0,
+        0,
+        0
+      ],
+      "median_ms_per_frame": 51.423819502815604,
+      "speedup_vs_official": 1.1651076671983236
+    },
+    "shared_geometry_ef": {
+      "raw_ms_per_frame": [
+        49.71780774940271,
+        49.7189858724596,
+        49.68317125167232
+      ],
+      "rebuilds_per_pass": [
+        0,
+        0,
+        0
+      ],
+      "median_ms_per_frame": 49.71780774940271,
+      "speedup_vs_official": 1.2050870521352166,
+      "speedup_vs_cached_ef": 1.034313897386865
+    }
+  },
+  "warmup_first_frame": 1,
+  "repeats": 3,
+  "timing_scope": "Host positions to member E/F host arrays plus the same NumPy vector-force disagreement. Native MACECalculator also computes stress; the two EF-only methods isolate intra-committee geometry sharing. Checkpoint loading, template creation, trajectory I/O and warmup are excluded."
+}

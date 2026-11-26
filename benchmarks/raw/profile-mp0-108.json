@@ -1,0 +1,139 @@
+{
+  "checkpoint": "mace-mp-0-small.model",
+  "checkpoint_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736",
+  "structure": "cu.extxyz",
+  "structure_sha256": "caf53b8fdc45601d1d781b1f91467a58bae78db87be195d4de6bae55124cd7f9",
+  "torch": "2.13.0+cu126",
+  "mace_torch": "0.3.16",
+  "device": "cuda",
+  "dtype": "float64",
+  "enable_oeq": false,
+  "enable_cueq": false,
+  "scope": "Prepared real-geometry graphs only. CUDA events measure time between markers on the current stream, including launch gaps. CPU uses wall time. Forward parts are disjoint and sum to energy_forward_ms. Position backward is measured once as a whole. Excludes neighbor construction, data transfers, integration and stress. Hookless totals quantify instrumentation effects. Repeated indices are repeated evaluations of the same geometry.",
+  "model": {
+    "class": "ScaleShiftMACE",
+    "head": "Default",
+    "cutoff_A": 6.0
+  },
+  "gpu": "Tesla V100-SXM2-16GB",
+  "source_frame_indices": [
+    0,
+    1,
+    2
+  ],
+  "validation": {
+    "passed": true,
+    "reference": "unmodified MACECalculator",
+    "energy_tolerance_eV_atom": 1e-08,
+    "force_tolerance_eV_A": 1e-06,
+    "frames": [
+      {
+        "energy_eV_atom": 0.0,
+        "force_eV_A": 5.551115123125783e-16,
+        "atoms": 108,
+        "directed_edges": 8424
+      },
+      {
+        "energy_eV_atom": 0.0,
+        "force_eV_A": 4.718447854656915e-16,
+        "atoms": 108,
+        "directed_edges": 8424
+      },
+      {
+        "energy_eV_atom": 0.0,
+        "force_eV_A": 5.551115123125783e-16,
+        "atoms": 108,
+        "directed_edges": 8424
+      }
+    ]
+  },
+  "samples": [
+    {
+      "source_index": 0,
+      "with_hooks": {
+        "energy_forward_ms": 6.810624122619629,
+        "position_backward_ms": 8.988672256469727,
+        "forward_and_backward_ms": 15.799296379089355,
+        "forward_parts_ms": {
+          "spherical_harmonics": 0.4925439953804016,
+          "radial_embedding": 0.34406399726867676,
+          "interactions[0]": 1.745919942855835,
+          "interactions[1]": 1.6414719820022583,
+          "products[0]": 1.0209280252456665,
+          "products[1]": 1.005568027496338,
+          "other_forward_ms": 0.5601281523704529
+        }
+      },
+      "without_hooks": {
+        "energy_forward_ms": 6.673408031463623,
+        "position_backward_ms": 8.827903747558594,
+        "forward_and_backward_ms": 15.501312255859375
+      }
+    },
+    {
+      "source_index": 1,
+      "with_hooks": {
+        "energy_forward_ms": 6.814720153808594,
+        "position_backward_ms": 8.995840072631836,
+        "forward_and_backward_ms": 15.81056022644043,
+        "forward_parts_ms": {
+          "spherical_harmonics": 0.4935680031776428,
+          "radial_embedding": 0.3399679958820343,
+          "interactions[0]": 1.7448960542678833,
+          "interactions[1]": 1.6424959897994995,
+          "products[0]": 1.018880009651184,
+          "products[1]": 1.0106879472732544,
+          "other_forward_ms": 0.5642241537570953
+        }
+      },
+      "without_hooks": {
+        "energy_forward_ms": 6.67033576965332,
+        "position_backward_ms": 8.845312118530273,
+        "forward_and_backward_ms": 15.515647888183594
+      }
+    },
+    {
+      "source_index": 2,
+      "with_hooks": {
+        "energy_forward_ms": 6.83519983291626,
+        "position_backward_ms": 8.987648010253906,
+        "forward_and_backward_ms": 15.822848320007324,
+        "forward_parts_ms": {
+          "spherical_harmonics": 0.49459201097488403,
+          "radial_embedding": 0.3481599986553192,
+          "interactions[0]": 1.7479679584503174,
+          "interactions[1]": 1.6373759508132935,
+          "products[0]": 1.0199040174484253,
+          "products[1]": 1.0106879472732544,
+          "other_forward_ms": 0.576511949300766
+        }
+      },
+      "without_hooks": {
+        "energy_forward_ms": 6.677504062652588,
+        "position_backward_ms": 8.840191841125488,
+        "forward_and_backward_ms": 15.517696380615234
+      }
+    }
+  ],
+  "mean_ms": {
+    "forward_parts": {
+      "spherical_harmonics": 0.4935680031776428,
+      "radial_embedding": 0.34406399726867676,
+      "interactions[0]": 1.7462613185246785,
+      "interactions[1]": 1.640447974205017,
+      "products[0]": 1.0199040174484253,
+      "products[1]": 1.0089813073476155,
+      "other_forward_ms": 0.5669547518094381
+    },
+    "with_hooks": {
+      "energy_forward_ms": 6.820181369781494,
+      "position_backward_ms": 8.99072011311849,
+      "forward_and_backward_ms": 15.810901641845703
+    },
+    "without_hooks": {
+      "energy_forward_ms": 6.673749287923177,
+      "position_backward_ms": 8.837802569071451,
+      "forward_and_backward_ms": 15.511552174886068
+    }
+  }
+}

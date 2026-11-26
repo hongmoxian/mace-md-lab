@@ -1,0 +1,531 @@
+{
+  "schema_version": 1,
+  "inputs": {
+    "checkpoint": "mace-mp-0-small.model",
+    "checkpoint_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736",
+    "structure": "cu.extxyz",
+    "structure_sha256": "caf53b8fdc45601d1d781b1f91467a58bae78db87be195d4de6bae55124cd7f9",
+    "frame": 0,
+    "atoms": 108,
+    "formula": "Cu108",
+    "initial_velocities": "input momenta",
+    "initial_temperature_K": 292.43945192908876
+  },
+  "settings": {
+    "device": "cuda",
+    "dtype": "float64",
+    "steps": 20,
+    "dt_fs": 0.5,
+    "warmup_steps": 3,
+    "repeats": 3,
+    "skin_A": 0.12,
+    "seed": 17,
+    "temperature_if_generated_K": 300.0,
+    "head": null,
+    "enable_oeq": false,
+    "enable_cueq": false,
+    "capture_forces": true,
+    "pad_capture": true,
+    "certify_edges": true,
+    "paths": [
+      "ase_native",
+      "ase_ef",
+      "resident_cached",
+      "resident_certified",
+      "resident_capture",
+      "resident_padded"
+    ]
+  },
+  "environment": {
+    "machine": "x86_64",
+    "platform": "Linux-6.12.0-211.74.1.el10_2.x86_64-x86_64-with-glibc2.39",
+    "python": "3.12.14",
+    "torch": "2.13.0+cu126",
+    "ase": "3.29.0",
+    "mace_torch": "0.3.16",
+    "matscipy": "1.2.0",
+    "openequivariance": null,
+    "cuequivariance_torch": "0.11.1",
+    "e3nn": "0.4.4",
+    "cuda_runtime": "12.6",
+    "gpu": "Tesla V100-SXM2-16GB",
+    "torch_threads": 1,
+    "omp_threads": "1"
+  },
+  "scope": "Single-rank fixed-cell NVE. Validation and host diagnostics excluded from warm timings. Includes all list rebuilds and endpoint device synchronization. Native ASE copies its outputs each step; the resident paths leave observations on device until read. ase_ef uses native MACECalculator with a scoped model hook that disables stress; weights and backend are shared.",
+  "model": {
+    "class": "ScaleShiftMACE",
+    "selected_head": "Default",
+    "cutoff_A": 6.0,
+    "parameter_count": 3847696
+  },
+  "validation": {
+    "passed": true,
+    "controls_passed": true,
+    "reasons": [],
+    "absolute_tolerances": {
+      "energy_eV_atom": 1e-08,
+      "force_eV_A": 1e-06,
+      "position_A": 1e-06,
+      "velocity_A_fs": 1e-07,
+      "nve_difference_eV_atom": 1e-08
+    },
+    "sampled_trajectory_steps": [
+      0,
+      1,
+      10,
+      20
+    ],
+    "paths": {
+      "ase_native": {
+        "stress_returned": true,
+        "max_nve_excursion_meV_atom": 0.00016925820300883743,
+        "end_nve_change_meV_atom": 0.00016925820300883743,
+        "maximum_initial_to_final_displacement_component_A": 0.05997852100253631
+      },
+      "ase_ef": {
+        "max_error": {
+          "energy_eV_atom": 5.26327952414889e-16,
+          "force_eV_A": 5.551115123125783e-16,
+          "position_A": 7.806255641895632e-18,
+          "velocity_A_fs": 1.734723475976807e-18,
+          "nve_difference_eV_atom": 8.881784197001252e-16
+        },
+        "stress_returned": false,
+        "topology_counts_in_validation_including_initial": {},
+        "max_nve_excursion_meV_atom": 0.00016925820300883743,
+        "end_nve_change_meV_atom": 0.00016925820300883743,
+        "passed": true
+      },
+      "resident_cached": {
+        "max_error": {
+          "energy_eV_atom": 0.0,
+          "force_eV_A": 6.661338147750939e-16,
+          "position_A": 8.881784197001252e-16,
+          "velocity_A_fs": 6.938893903907228e-18,
+          "nve_difference_eV_atom": 8.881784197001252e-16
+        },
+        "stress_returned": false,
+        "topology_counts_in_validation_including_initial": {
+          "neighbor_rebuilds": 2,
+          "certificate_hits": 0,
+          "edge_refreshes": 21,
+          "captures": 0,
+          "replays": 0,
+          "fallback_evaluations": 0
+        },
+        "max_nve_excursion_meV_atom": 0.00016925820300883743,
+        "end_nve_change_meV_atom": 0.00016925820300883743,
+        "passed": true
+      },
+      "resident_certified": {
+        "max_error": {
+          "energy_eV_atom": 5.26327952414889e-16,
+          "force_eV_A": 5.551115123125783e-16,
+          "position_A": 8.881784197001252e-16,
+          "velocity_A_fs": 6.938893903907228e-18,
+          "nve_difference_eV_atom": 0.0
+        },
+        "stress_returned": false,
+        "topology_counts_in_validation_including_initial": {
+          "neighbor_rebuilds": 2,
+          "certificate_hits": 18,
+          "edge_refreshes": 3,
+          "captures": 0,
+          "replays": 0,
+          "fallback_evaluations": 0
+        },
+        "max_nve_excursion_meV_atom": 0.00016925820300883743,
+        "end_nve_change_meV_atom": 0.00016925820300883743,
+        "passed": true
+      },
+      "resident_capture": {
+        "max_error": {
+          "energy_eV_atom": 0.0,
+          "force_eV_A": 5.551115123125783e-16,
+          "position_A": 8.881784197001252e-16,
+          "velocity_A_fs": 6.938893903907228e-18,
+          "nve_difference_eV_atom": 8.881784197001252e-16
+        },
+        "stress_returned": false,
+        "topology_counts_in_validation_including_initial": {
+          "neighbor_rebuilds": 2,
+          "certificate_hits": 18,
+          "edge_refreshes": 3,
+          "captures": 1,
+          "replays": 21,
+          "fallback_evaluations": 0
+        },
+        "max_nve_excursion_meV_atom": 0.00016925820300883743,
+        "end_nve_change_meV_atom": 0.00016925820300883743,
+        "passed": true
+      },
+      "resident_padded": {
+        "max_error": {
+          "energy_eV_atom": 5.26327952414889e-16,
+          "force_eV_A": 6.661338147750939e-16,
+          "position_A": 8.881784197001252e-16,
+          "velocity_A_fs": 6.938893903907228e-18,
+          "nve_difference_eV_atom": 8.881784197001252e-16
+        },
+        "stress_returned": false,
+        "topology_counts_in_validation_including_initial": {
+          "neighbor_rebuilds": 2,
+          "certificate_hits": 18,
+          "edge_refreshes": 3,
+          "captures": 1,
+          "replays": 21,
+          "fallback_evaluations": 0
+        },
+        "max_nve_excursion_meV_atom": 0.00016925820300883743,
+        "end_nve_change_meV_atom": 0.00016925820300883743,
+        "passed": true
+      }
+    }
+  },
+  "timing": {
+    "ase_native": {
+      "trials": [
+        {
+          "repeat": 1,
+          "seconds": 0.5599960759282112,
+          "setup_and_first_force_ms": 30.43494396843016,
+          "counts_before_timed_steps": {},
+          "ms_step": 27.99980379641056
+        },
+        {
+          "repeat": 2,
+          "seconds": 0.5658604199998081,
+          "setup_and_first_force_ms": 31.062974012456834,
+          "counts_before_timed_steps": {},
+          "ms_step": 28.293020999990404
+        },
+        {
+          "repeat": 3,
+          "seconds": 0.5632051440188661,
+          "setup_and_first_force_ms": 30.174604966305196,
+          "counts_before_timed_steps": {},
+          "ms_step": 28.160257200943306
+        }
+      ],
+      "median_ms_step": 28.160257200943306
+    },
+    "ase_ef": {
+      "trials": [
+        {
+          "repeat": 1,
+          "seconds": 0.5188944230321795,
+          "setup_and_first_force_ms": 25.61632404103875,
+          "counts_before_timed_steps": {},
+          "ms_step": 25.944721151608974
+        },
+        {
+          "repeat": 2,
+          "seconds": 0.5196702500106767,
+          "setup_and_first_force_ms": 27.998280012980103,
+          "counts_before_timed_steps": {},
+          "ms_step": 25.983512500533834
+        },
+        {
+          "repeat": 3,
+          "seconds": 0.5200592600740492,
+          "setup_and_first_force_ms": 25.565353105776012,
+          "counts_before_timed_steps": {},
+          "ms_step": 26.00296300370246
+        }
+      ],
+      "median_ms_step": 25.983512500533834
+    },
+    "resident_cached": {
+      "trials": [
+        {
+          "repeat": 1,
+          "seconds": 0.31850432395003736,
+          "setup_and_first_force_ms": 32.46070409659296,
+          "counts_before_timed_steps": {
+            "neighbor_rebuilds": 1,
+            "certificate_hits": 0,
+            "edge_refreshes": 4,
+            "captures": 0,
+            "replays": 0,
+            "fallback_evaluations": 0
+          },
+          "ms_step": 15.925216197501868,
+          "neighbor_rebuilds": 1,
+          "certificate_hits": 0,
+          "edge_refreshes": 20,
+          "captures": 0,
+          "replays": 0,
+          "fallback_evaluations": 0
+        },
+        {
+          "repeat": 2,
+          "seconds": 0.31550793908536434,
+          "setup_and_first_force_ms": 32.1736749028787,
+          "counts_before_timed_steps": {
+            "neighbor_rebuilds": 1,
+            "certificate_hits": 0,
+            "edge_refreshes": 4,
+            "captures": 0,
+            "replays": 0,
+            "fallback_evaluations": 0
+          },
+          "ms_step": 15.775396954268217,
+          "neighbor_rebuilds": 1,
+          "certificate_hits": 0,
+          "edge_refreshes": 20,
+          "captures": 0,
+          "replays": 0,
+          "fallback_evaluations": 0
+        },
+        {
+          "repeat": 3,
+          "seconds": 0.31504645000677556,
+          "setup_and_first_force_ms": 32.29507489595562,
+          "counts_before_timed_steps": {
+            "neighbor_rebuilds": 1,
+            "certificate_hits": 0,
+            "edge_refreshes": 4,
+            "captures": 0,
+            "replays": 0,
+            "fallback_evaluations": 0
+          },
+          "ms_step": 15.752322500338778,
+          "neighbor_rebuilds": 1,
+          "certificate_hits": 0,
+          "edge_refreshes": 20,
+          "captures": 0,
+          "replays": 0,
+          "fallback_evaluations": 0
+        }
+      ],
+      "median_ms_step": 15.775396954268217
+    },
+    "resident_certified": {
+      "trials": [
+        {
+          "repeat": 1,
+          "seconds": 0.3123190669575706,
+          "setup_and_first_force_ms": 33.08570198714733,
+          "counts_before_timed_steps": {
+            "neighbor_rebuilds": 1,
+            "certificate_hits": 3,
+            "edge_refreshes": 1,
+            "captures": 0,
+            "replays": 0,
+            "fallback_evaluations": 0
+          },
+          "ms_step": 15.61595334787853,
+          "neighbor_rebuilds": 1,
+          "certificate_hits": 18,
+          "edge_refreshes": 2,
+          "captures": 0,
+          "replays": 0,
+          "fallback_evaluations": 0
+        },
+        {
+          "repeat": 2,
+          "seconds": 0.3124574349494651,
+          "setup_and_first_force_ms": 32.6387140667066,
+          "counts_before_timed_steps": {
+            "neighbor_rebuilds": 1,
+            "certificate_hits": 3,
+            "edge_refreshes": 1,
+            "captures": 0,
+            "replays": 0,
+            "fallback_evaluations": 0
+          },
+          "ms_step": 15.622871747473255,
+          "neighbor_rebuilds": 1,
+          "certificate_hits": 18,
+          "edge_refreshes": 2,
+          "captures": 0,
+          "replays": 0,
+          "fallback_evaluations": 0
+        },
+        {
+          "repeat": 3,
+          "seconds": 0.31240235501900315,
+          "setup_and_first_force_ms": 32.542808912694454,
+          "counts_before_timed_steps": {
+            "neighbor_rebuilds": 1,
+            "certificate_hits": 3,
+            "edge_refreshes": 1,
+            "captures": 0,
+            "replays": 0,
+            "fallback_evaluations": 0
+          },
+          "ms_step": 15.620117750950158,
+          "neighbor_rebuilds": 1,
+          "certificate_hits": 18,
+          "edge_refreshes": 2,
+          "captures": 0,
+          "replays": 0,
+          "fallback_evaluations": 0
+        }
+      ],
+      "median_ms_step": 15.620117750950158
+    },
+    "resident_capture": {
+      "trials": [
+        {
+          "repeat": 1,
+          "seconds": 0.2854513939237222,
+          "setup_and_first_force_ms": 103.61944406758994,
+          "counts_before_timed_steps": {
+            "neighbor_rebuilds": 1,
+            "certificate_hits": 3,
+            "edge_refreshes": 1,
+            "captures": 1,
+            "replays": 4,
+            "fallback_evaluations": 0
+          },
+          "ms_step": 14.27256969618611,
+          "neighbor_rebuilds": 1,
+          "certificate_hits": 18,
+          "edge_refreshes": 2,
+          "captures": 0,
+          "replays": 20,
+          "fallback_evaluations": 0,
+          "final_capacity_edges": 8424
+        },
+        {
+          "repeat": 2,
+          "seconds": 0.28550614800769836,
+          "setup_and_first_force_ms": 103.29769703093916,
+          "counts_before_timed_steps": {
+            "neighbor_rebuilds": 1,
+            "certificate_hits": 3,
+            "edge_refreshes": 1,
+            "captures": 1,
+            "replays": 4,
+            "fallback_evaluations": 0
+          },
+          "ms_step": 14.275307400384918,
+          "neighbor_rebuilds": 1,
+          "certificate_hits": 18,
+          "edge_refreshes": 2,
+          "captures": 0,
+          "replays": 20,
+          "fallback_evaluations": 0,
+          "final_capacity_edges": 8424
+        },
+        {
+          "repeat": 3,
+          "seconds": 0.28513408300932497,
+          "setup_and_first_force_ms": 100.99456098396331,
+          "counts_before_timed_steps": {
+            "neighbor_rebuilds": 1,
+            "certificate_hits": 3,
+            "edge_refreshes": 1,
+            "captures": 1,
+            "replays": 4,
+            "fallback_evaluations": 0
+          },
+          "ms_step": 14.256704150466248,
+          "neighbor_rebuilds": 1,
+          "certificate_hits": 18,
+          "edge_refreshes": 2,
+          "captures": 0,
+          "replays": 20,
+          "fallback_evaluations": 0,
+          "final_capacity_edges": 8424
+        }
+      ],
+      "median_ms_step": 14.27256969618611
+    },
+    "resident_padded": {
+      "trials": [
+        {
+          "repeat": 1,
+          "seconds": 0.30742079101037234,
+          "setup_and_first_force_ms": 105.17883999273181,
+          "counts_before_timed_steps": {
+            "neighbor_rebuilds": 1,
+            "certificate_hits": 3,
+            "edge_refreshes": 1,
+            "captures": 1,
+            "replays": 4,
+            "fallback_evaluations": 0
+          },
+          "ms_step": 15.371039550518617,
+          "neighbor_rebuilds": 1,
+          "certificate_hits": 18,
+          "edge_refreshes": 2,
+          "captures": 0,
+          "replays": 20,
+          "fallback_evaluations": 0,
+          "final_capacity_edges": 8952
+        },
+        {
+          "repeat": 2,
+          "seconds": 0.3074016399914399,
+          "setup_and_first_force_ms": 108.80005301441997,
+          "counts_before_timed_steps": {
+            "neighbor_rebuilds": 1,
+            "certificate_hits": 3,
+            "edge_refreshes": 1,
+            "captures": 1,
+            "replays": 4,
+            "fallback_evaluations": 0
+          },
+          "ms_step": 15.370081999571994,
+          "neighbor_rebuilds": 1,
+          "certificate_hits": 18,
+          "edge_refreshes": 2,
+          "captures": 0,
+          "replays": 20,
+          "fallback_evaluations": 0,
+          "final_capacity_edges": 8952
+        },
+        {
+          "repeat": 3,
+          "seconds": 0.30727420398034155,
+          "setup_and_first_force_ms": 103.88352104928344,
+          "counts_before_timed_steps": {
+            "neighbor_rebuilds": 1,
+            "certificate_hits": 3,
+            "edge_refreshes": 1,
+            "captures": 1,
+            "replays": 4,
+            "fallback_evaluations": 0
+          },
+          "ms_step": 15.363710199017078,
+          "neighbor_rebuilds": 1,
+          "certificate_hits": 18,
+          "edge_refreshes": 2,
+          "captures": 0,
+          "replays": 20,
+          "fallback_evaluations": 0,
+          "final_capacity_edges": 8952
+        }
+      ],
+      "median_ms_step": 15.370081999571994
+    }
+  },
+  "timing_notes": [
+    "resident_capture, resident_padded use the edge policy of resident_certified. Setup includes the first force; timed steps include any recapture. Counter deltas cover only timed steps."
+  ],
+  "speedup_resident_cached_vs": {
+    "ase_native": 1.7850743967063358,
+    "ase_ef": 1.6470908830920856
+  },
+  "speedup_resident_certified_vs": {
+    "ase_native": 1.8028197770295518,
+    "ase_ef": 1.6634645727272626,
+    "resident_cached": 1.0099409752086288
+  },
+  "speedup_resident_capture_vs": {
+    "ase_native": 1.9730334340891842,
+    "ase_ef": 1.8205209751035303,
+    "resident_cached": 1.105294792043208,
+    "resident_certified": 1.0944152373012503
+  },
+  "speedup_resident_padded_vs": {
+    "ase_native": 1.832147492884389,
+    "ase_ef": 1.6905253011179373,
+    "resident_cached": 1.0263703833660425,
+    "resident_certified": 1.0162676914401059,
+    "resident_capture": 0.9285942454037366
+  }
+}

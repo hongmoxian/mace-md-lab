@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mace-md-lab"
+version = "0.1.0"
+description = "Accuracy-gated MD and independent-checkpoint committee benchmarks for MACE."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["mace-torch==0.3.16", "ase>=3.23", "numpy>=1.24", "torch>=2.2"]
+
+[project.scripts]
+mace-md-bench = "mace_md_lab.bench:main"
+mace-md-committee = "mace_md_lab.committee:main"
+mace-md-profile = "mace_md_lab.profile:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
