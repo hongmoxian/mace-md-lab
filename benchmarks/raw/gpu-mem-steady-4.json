@@ -1,0 +1,74 @@
+{
+  "tiles": [
+    4,
+    4,
+    1
+  ],
+  "steps": 2,
+  "warmup": 2,
+  "repeats": 3,
+  "sample_sleep_ms": 10,
+  "dtype": "float64",
+  "routes": {
+    "prepared": {
+      "process_peak_MiB": 2864.0,
+      "board_peak_MiB": 3235.5,
+      "board_total_MiB": 16384.0,
+      "samples": 2636,
+      "foreign_compute_pid_seen": false,
+      "atoms": 3072,
+      "gpu": "Tesla V100-SXM2-16GB",
+      "times": [
+        30.24791751522571,
+        29.910218552686274,
+        29.728127527050674
+      ],
+      "ms_step": 29.910218552686274,
+      "post_warmup_process_MiB": 2864.0,
+      "post_md_process_MiB": 2864.0,
+      "torch_reserved_peak_MiB": 0.0,
+      "torch_allocated_peak_MiB": 0.0,
+      "model_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736",
+      "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+      "fixture_sha256": "f87aa8aeffcef2c334d0b94ea4d7eb9109f01f1c7a746345fc4ded509c93ac2c",
+      "torch": "2.13.0+cu126",
+      "status": "ok",
+      "initial_efs_reference": "prepared",
+      "max_error_eV_atom_eV_A_eV_A3": {
+        "e": 0.0,
+        "f": 0.0,
+        "s": 0.0
+      }
+    },
+    "locked": {
+      "process_peak_MiB": 2864.0,
+      "board_peak_MiB": 3235.5,
+      "board_total_MiB": 16384.0,
+      "samples": 2558,
+      "foreign_compute_pid_seen": false,
+      "atoms": 3072,
+      "gpu": "Tesla V100-SXM2-16GB",
+      "times": [
+        25.97699296893552,
+        25.953210017178208,
+        25.903195957653224
+      ],
+      "ms_step": 25.953210017178208,
+      "post_warmup_process_MiB": 2864.0,
+      "post_md_process_MiB": 2864.0,
+      "torch_reserved_peak_MiB": 0.0,
+      "torch_allocated_peak_MiB": 0.0,
+      "model_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736",
+      "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+      "fixture_sha256": "f87aa8aeffcef2c334d0b94ea4d7eb9109f01f1c7a746345fc4ded509c93ac2c",
+      "torch": "2.13.0+cu126",
+      "status": "ok",
+      "initial_efs_reference": "prepared",
+      "max_error_eV_atom_eV_A_eV_A3": {
+        "e": 0.0,
+        "f": 2.220446049250313e-15,
+        "s": 1.734723475976807e-18
+      }
+    }
+  }
+}

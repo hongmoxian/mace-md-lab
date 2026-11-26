@@ -1,5 +1,7 @@
 # V100 benchmarks
 
+[Periodic DPA4 and SevenNet transfer plus GPU memory scaling](periodic-transfer-memory.md) compares each checkpoint with its own reference and measures fresh-process peak memory across lateral Au/water replications.
+
 [Direct comparisons with original MACE and CHGNet](direct-comparison.md) report wall time per full MD step and per evaluation on identical moving frames for Au/water and Cu108.
 
 [Native force algorithm comparisons](native-algorithms.md) hold the prepared driver, integration, observables and graph maintenance fixed.

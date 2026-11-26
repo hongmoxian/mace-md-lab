@@ -1,0 +1,53 @@
+{
+  "framework": "sevennet",
+  "routes": {
+    "official": {
+      "process_peak_MiB": 1472.0,
+      "board_peak_MiB": 1715.5,
+      "board_total_MiB": 16384.0,
+      "samples": 403,
+      "foreign_compute_pid_seen": false,
+      "atoms": 192,
+      "gpu": "Tesla V100-SXM2-16GB",
+      "steps": 4,
+      "warmup": 2,
+      "ms_step": 178.67153100087307,
+      "model_sha256": "7052cb42b7b3be42b40b97fa0d21077a48c54b5548948fc4dcf346629f813c36",
+      "torch_allocated_peak_MiB": 912.27490234375,
+      "torch_reserved_peak_MiB": 1088.0,
+      "status": "ok"
+    },
+    "driver": {
+      "process_peak_MiB": 1472.0,
+      "board_peak_MiB": 1715.5,
+      "board_total_MiB": 16384.0,
+      "samples": 392,
+      "foreign_compute_pid_seen": false,
+      "atoms": 192,
+      "gpu": "Tesla V100-SXM2-16GB",
+      "steps": 4,
+      "warmup": 2,
+      "ms_step": 175.61967475921847,
+      "model_sha256": "7052cb42b7b3be42b40b97fa0d21077a48c54b5548948fc4dcf346629f813c36",
+      "torch_allocated_peak_MiB": 912.27490234375,
+      "torch_reserved_peak_MiB": 1088.0,
+      "status": "ok"
+    },
+    "driver_kernel": {
+      "process_peak_MiB": 1472.0,
+      "board_peak_MiB": 1715.5,
+      "board_total_MiB": 16384.0,
+      "samples": 444,
+      "foreign_compute_pid_seen": false,
+      "atoms": 192,
+      "gpu": "Tesla V100-SXM2-16GB",
+      "steps": 4,
+      "warmup": 2,
+      "ms_step": 240.95901974942535,
+      "model_sha256": "7052cb42b7b3be42b40b97fa0d21077a48c54b5548948fc4dcf346629f813c36",
+      "torch_allocated_peak_MiB": 911.39794921875,
+      "torch_reserved_peak_MiB": 1088.0,
+      "status": "ok"
+    }
+  }
+}

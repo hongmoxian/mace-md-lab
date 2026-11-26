@@ -1,0 +1,125 @@
+{
+  "model": "dpa4-mini.pt",
+  "sha256": "13edeea63448c0f8a0b38e08fd8ba196fb1e2fad5f12486b1cd23320829da268",
+  "fixture": "cu.extxyz",
+  "fixture_sha256": "caf53b8fdc45601d1d781b1f91467a58bae78db87be195d4de6bae55124cd7f9",
+  "framework": "dpa4",
+  "version": "3.2.0",
+  "torch": "2.12.0",
+  "gpu": "Tesla V100-SXM2-16GB",
+  "dtype": "torch.float32",
+  "atoms": 108,
+  "dt_fs": 0.5,
+  "steps": 8,
+  "warmup": 3,
+  "orders": [
+    [
+      "official",
+      "driver",
+      "driver_kernel"
+    ],
+    [
+      "driver",
+      "driver_kernel",
+      "official"
+    ],
+    [
+      "driver_kernel",
+      "official",
+      "driver"
+    ],
+    [
+      "driver_kernel",
+      "driver",
+      "official"
+    ],
+    [
+      "official",
+      "driver_kernel",
+      "driver"
+    ],
+    [
+      "driver",
+      "official",
+      "driver_kernel"
+    ]
+  ],
+  "ms_per_step": {
+    "official": [
+      36.5662543772487,
+      37.05231737694703,
+      35.47756037733052,
+      36.35372374264989,
+      36.220333247911185,
+      36.2394808762474
+    ],
+    "driver": [
+      35.530747001757845,
+      35.69557250011712,
+      35.836487368214875,
+      35.06204274890479,
+      35.355402884306386,
+      36.147275124676526
+    ],
+    "driver_kernel": [
+      35.11282200634014,
+      36.01700076251291,
+      35.24204675341025,
+      35.529816246707924,
+      35.845445381710306,
+      35.63803175347857
+    ]
+  },
+  "medians": {
+    "official": 36.296602309448645,
+    "driver": 35.613159750937484,
+    "driver_kernel": 35.58392400009325
+  },
+  "max_abs_E_per_atom_F_stress": {
+    "driver": [
+      2.869853266963252e-08,
+      6.504749308078317e-07,
+      3.790311110980771e-09
+    ],
+    "driver_kernel": [
+      2.8146637810601128e-08,
+      2.7140538634284894e-06,
+      2.931926822418579e-08
+    ]
+  },
+  "thresholds": [
+    2e-05,
+    0.0002,
+    2e-05
+  ],
+  "geometry_checks": 5,
+  "replacement_calls": {
+    "driver_kernel": {
+      "0": {
+        "radial": 12,
+        "envelope": 12
+      },
+      "1": {
+        "radial": 12,
+        "envelope": 12
+      },
+      "2": {
+        "radial": 12,
+        "envelope": 12
+      },
+      "3": {
+        "radial": 12,
+        "envelope": 12
+      },
+      "4": {
+        "radial": 12,
+        "envelope": 12
+      },
+      "5": {
+        "radial": 12,
+        "envelope": 12
+      }
+    }
+  },
+  "passed": true
+}

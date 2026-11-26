@@ -1,0 +1,126 @@
+{
+  "tiles": [
+    4,
+    4,
+    1
+  ],
+  "steps": 4,
+  "warmup": 2,
+  "repeats": 3,
+  "sample_sleep_ms": 10,
+  "dtype": "float64",
+  "routes": {
+    "mace": {
+      "process_peak_MiB": 15332.0,
+      "board_peak_MiB": 15575.5,
+      "board_total_MiB": 16384.0,
+      "samples": 1076,
+      "foreign_compute_pid_seen": false,
+      "atoms": 3072,
+      "gpu": "Tesla V100-SXM2-16GB",
+      "times": [
+        569.8792314797174,
+        588.4913619956933,
+        411.7040215060115
+      ],
+      "ms_step": 569.8792314797174,
+      "torch_reserved_peak_MiB": 14910.0,
+      "torch_allocated_peak_MiB": 11338.54541015625,
+      "model_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736",
+      "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+      "fixture_sha256": "f87aa8aeffcef2c334d0b94ea4d7eb9109f01f1c7a746345fc4ded509c93ac2c",
+      "torch": "2.13.0+cu126",
+      "status": "ok",
+      "initial_efs_reference": "mace",
+      "max_error_eV_atom_eV_A_eV_A3": {
+        "e": 0.0,
+        "f": 0.0,
+        "s": 0.0
+      }
+    },
+    "xl_ase": {
+      "process_peak_MiB": 2864.0,
+      "board_peak_MiB": 3235.5,
+      "board_total_MiB": 16384.0,
+      "samples": 2630,
+      "foreign_compute_pid_seen": false,
+      "atoms": 3072,
+      "gpu": "Tesla V100-SXM2-16GB",
+      "times": [
+        31.989594746846706,
+        31.814007757930085,
+        31.889914738712832
+      ],
+      "ms_step": 31.889914738712832,
+      "torch_reserved_peak_MiB": 0.0,
+      "torch_allocated_peak_MiB": 0.0,
+      "model_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736",
+      "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+      "fixture_sha256": "f87aa8aeffcef2c334d0b94ea4d7eb9109f01f1c7a746345fc4ded509c93ac2c",
+      "torch": "2.13.0+cu126",
+      "status": "ok",
+      "initial_efs_reference": "mace",
+      "max_error_eV_atom_eV_A_eV_A3": {
+        "e": 5.701460636942102e-09,
+        "f": 7.472916752071512e-08,
+        "s": 5.562754076815501e-10
+      }
+    },
+    "prepared": {
+      "process_peak_MiB": 2864.0,
+      "board_peak_MiB": 3235.5,
+      "board_total_MiB": 16384.0,
+      "samples": 2532,
+      "foreign_compute_pid_seen": false,
+      "atoms": 3072,
+      "gpu": "Tesla V100-SXM2-16GB",
+      "times": [
+        30.165047995978966,
+        29.69931424013339,
+        29.72633350873366
+      ],
+      "ms_step": 29.72633350873366,
+      "torch_reserved_peak_MiB": 0.0,
+      "torch_allocated_peak_MiB": 0.0,
+      "model_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736",
+      "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+      "fixture_sha256": "f87aa8aeffcef2c334d0b94ea4d7eb9109f01f1c7a746345fc4ded509c93ac2c",
+      "torch": "2.13.0+cu126",
+      "status": "ok",
+      "initial_efs_reference": "mace",
+      "max_error_eV_atom_eV_A_eV_A3": {
+        "e": 5.701460636942102e-09,
+        "f": 7.472916763173743e-08,
+        "s": 5.562754076815501e-10
+      }
+    },
+    "locked": {
+      "process_peak_MiB": 2864.0,
+      "board_peak_MiB": 3235.5,
+      "board_total_MiB": 16384.0,
+      "samples": 2516,
+      "foreign_compute_pid_seen": false,
+      "atoms": 3072,
+      "gpu": "Tesla V100-SXM2-16GB",
+      "times": [
+        25.884151516947895,
+        25.9434824984055,
+        25.904383015586063
+      ],
+      "ms_step": 25.904383015586063,
+      "torch_reserved_peak_MiB": 0.0,
+      "torch_allocated_peak_MiB": 0.0,
+      "model_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736",
+      "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+      "fixture_sha256": "f87aa8aeffcef2c334d0b94ea4d7eb9109f01f1c7a746345fc4ded509c93ac2c",
+      "torch": "2.13.0+cu126",
+      "status": "ok",
+      "initial_efs_reference": "mace",
+      "max_error_eV_atom_eV_A_eV_A3": {
+        "e": 5.701460636942102e-09,
+        "f": 7.472916718764822e-08,
+        "s": 5.562754076815501e-10
+      }
+    }
+  }
+}

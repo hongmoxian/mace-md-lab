@@ -6,6 +6,10 @@ Run a fixed-cell molecular dynamics benchmark with an existing MACE checkpoint, 
 
 **Inputs** are trusted local MACE or ScaleShiftMACE checkpoints and ASE-readable periodic structures. **Outputs** include wall time per MD step, milliseconds per committee observation, per-member force errors, and the maximum atomic force disagreement on each sampled frame. The initial release targets scalar-energy MACE 0.3.16 on CPU or one GPU, with optional CUDA Graph replay.
 
+## Measure periodic transfer and GPU capacity
+
+Run comparable short trajectories with the published SevenNet-0 or DPA4-Mini weights. Inspect per-trial speed and same-frame errors, or measure complete-process GPU peaks while increasing the periodic Au/water cell. [Results and benchmark commands](benchmarks/periodic-transfer-memory.md)
+
 ## Benchmark a native force algorithm
 
 Compare two conservative-force implementations inside the same prepared Symmetrix-XL evaluator and fixed-cell integrator. The runner reports per-trial full-step timings, numerical checks against XL and MACE, and finite differences of the candidate energy. [Algorithm-only results and reproduction](benchmarks/native-algorithms.md)

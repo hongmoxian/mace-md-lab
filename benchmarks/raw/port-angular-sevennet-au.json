@@ -1,0 +1,207 @@
+{
+  "model": "checkpoint_sevennet_0.pth",
+  "sha256": "7052cb42b7b3be42b40b97fa0d21077a48c54b5548948fc4dcf346629f813c36",
+  "fixture": "au-water-seed109.extxyz",
+  "fixture_sha256": "f87aa8aeffcef2c334d0b94ea4d7eb9109f01f1c7a746345fc4ded509c93ac2c",
+  "framework": "sevennet",
+  "version": "0.13.0",
+  "torch": "2.13.0+cu126",
+  "gpu": "Tesla V100-SXM2-16GB",
+  "dtype": "torch.float32",
+  "atoms": 192,
+  "dt_fs": 0.5,
+  "steps": 8,
+  "warmup": 3,
+  "orders": [
+    [
+      "official",
+      "driver",
+      "driver_kernel",
+      "driver_radial_angular"
+    ],
+    [
+      "driver",
+      "driver_kernel",
+      "driver_radial_angular",
+      "official"
+    ],
+    [
+      "driver_kernel",
+      "driver_radial_angular",
+      "official",
+      "driver"
+    ],
+    [
+      "driver_radial_angular",
+      "official",
+      "driver",
+      "driver_kernel"
+    ],
+    [
+      "driver_radial_angular",
+      "driver_kernel",
+      "driver",
+      "official"
+    ],
+    [
+      "official",
+      "driver_radial_angular",
+      "driver_kernel",
+      "driver"
+    ],
+    [
+      "driver",
+      "official",
+      "driver_radial_angular",
+      "driver_kernel"
+    ],
+    [
+      "driver_kernel",
+      "driver",
+      "official",
+      "driver_radial_angular"
+    ]
+  ],
+  "ms_per_step": {
+    "official": [
+      43.007584870792925,
+      43.50248600530904,
+      43.01380300603341,
+      42.73643437772989,
+      42.56486875237897,
+      42.748531384859234,
+      42.249621998053044,
+      43.03401200741064
+    ],
+    "driver": [
+      42.22465663042385,
+      41.680915383039974,
+      41.70707063167356,
+      41.85252374736592,
+      41.84829599398654,
+      41.98140975495335,
+      41.89164649869781,
+      41.97855900565628
+    ],
+    "driver_kernel": [
+      41.49538738420233,
+      41.46121675148606,
+      41.48870549397543,
+      41.66227887617424,
+      41.685278876684606,
+      41.720848632394336,
+      42.05330036347732,
+      41.78289987612516
+    ],
+    "driver_radial_angular": [
+      41.14787399885245,
+      41.295219998573884,
+      41.191087002516724,
+      41.647185003967024,
+      41.328297011204995,
+      41.40774311963469,
+      41.42276238417253,
+      41.43333699903451
+    ]
+  },
+  "medians": {
+    "official": 42.87805812782608,
+    "driver": 41.872085123031866,
+    "driver_kernel": 41.673778876429424,
+    "driver_radial_angular": 41.36802006541984
+  },
+  "max_abs_E_per_atom_F_stress": {
+    "driver": [
+      0.0,
+      9.5367431640625e-07,
+      3.725290298461914e-09
+    ],
+    "driver_kernel": [
+      0.0,
+      1.1920928955078125e-06,
+      5.587935447692871e-09
+    ],
+    "driver_radial_angular": [
+      0.0,
+      1.6689300537109375e-06,
+      7.450580596923828e-09
+    ]
+  },
+  "thresholds": [
+    2e-05,
+    0.0002,
+    2e-05
+  ],
+  "geometry_checks": 5,
+  "replacement_calls": {
+    "driver_kernel": {
+      "0": {
+        "radial": 12,
+        "envelope": 0
+      },
+      "1": {
+        "radial": 12,
+        "envelope": 0
+      },
+      "2": {
+        "radial": 12,
+        "envelope": 0
+      },
+      "3": {
+        "radial": 12,
+        "envelope": 0
+      },
+      "4": {
+        "radial": 12,
+        "envelope": 0
+      },
+      "5": {
+        "radial": 12,
+        "envelope": 0
+      },
+      "6": {
+        "radial": 12,
+        "envelope": 0
+      },
+      "7": {
+        "radial": 12,
+        "envelope": 0
+      }
+    },
+    "driver_radial_angular": {
+      "0": {
+        "radial": 12,
+        "envelope": 0
+      },
+      "1": {
+        "radial": 12,
+        "envelope": 0
+      },
+      "2": {
+        "radial": 12,
+        "envelope": 0
+      },
+      "3": {
+        "radial": 12,
+        "envelope": 0
+      },
+      "4": {
+        "radial": 12,
+        "envelope": 0
+      },
+      "5": {
+        "radial": 12,
+        "envelope": 0
+      },
+      "6": {
+        "radial": 12,
+        "envelope": 0
+      },
+      "7": {
+        "radial": 12,
+        "envelope": 0
+      }
+    }
+  },
+  "passed": true
+}
