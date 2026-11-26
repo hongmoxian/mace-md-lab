@@ -1,0 +1,137 @@
+{
+  "atoms": 192,
+  "fixture": "au-water-seed109.extxyz",
+  "model_sha256": "13edeea63448c0f8a0b38e08fd8ba196fb1e2fad5f12486b1cd23320829da268",
+  "fixture_sha256": "f87aa8aeffcef2c334d0b94ea4d7eb9109f01f1c7a746345fc4ded509c93ac2c",
+  "deepmd": "3.2.0",
+  "torch": "2.12.0",
+  "gpu": "Tesla V100-SXM2-16GB",
+  "dt_fs": 0.5,
+  "warmup": 3,
+  "steps": 8,
+  "trials": [
+    {
+      "local": 31.59235375642311,
+      "stock": 35.39784700842574
+    },
+    {
+      "stock": 35.291587249957956,
+      "local": 31.260720745194703
+    },
+    {
+      "local": 31.56027925433591,
+      "stock": 35.63276150089223
+    },
+    {
+      "stock": 35.67812338587828,
+      "local": 31.551152002066374
+    },
+    {
+      "local": 30.733708379557356,
+      "stock": 35.077177875791676
+    },
+    {
+      "stock": 35.00170850020368,
+      "local": 31.03367351286579
+    },
+    {
+      "local": 31.90359313157387,
+      "stock": 35.31709201342892
+    },
+    {
+      "stock": 35.99942001164891,
+      "local": 31.68355012894608
+    }
+  ],
+  "orders": [
+    [
+      "local",
+      "stock"
+    ],
+    [
+      "stock",
+      "local"
+    ],
+    [
+      "local",
+      "stock"
+    ],
+    [
+      "stock",
+      "local"
+    ],
+    [
+      "local",
+      "stock"
+    ],
+    [
+      "stock",
+      "local"
+    ],
+    [
+      "local",
+      "stock"
+    ],
+    [
+      "stock",
+      "local"
+    ]
+  ],
+  "medians": {
+    "local": 31.555715628201142,
+    "stock": 35.35746951092733
+  },
+  "saved": {
+    "local": 0.10752335886342901,
+    "stock": 0.0
+  },
+  "faster_pairs": {
+    "local": 8
+  },
+  "efs_limits": [
+    2e-05,
+    0.0002,
+    2e-05
+  ],
+  "efs_max_abs": {
+    "local": [
+      3.026798367500305e-08,
+      7.140441473652004e-06,
+      1.0731018428022931e-08
+    ],
+    "stock": [
+      3.019037346045176e-08,
+      6.642438137305362e-06,
+      1.0069938135952305e-08
+    ]
+  },
+  "passed": true,
+  "dispatch": {
+    "local": {
+      "edge": 0,
+      "mixer": 0,
+      "linear": 72,
+      "gate": 48,
+      "transport": 24,
+      "local": 24
+    }
+  },
+  "block_vjp": {
+    "model.Default.atomic_model.descriptor.blocks.0.so2_conv": {
+      "output": 8.940696716308594e-08,
+      "node": 7.152557373046875e-07,
+      "radial": 1.6391277313232422e-07,
+      "envelope": 8.344650268554688e-07,
+      "rotation": 1.430511474609375e-06,
+      "inverse_rotation": 1.7881393432617188e-07
+    },
+    "model.Default.atomic_model.descriptor.blocks.1.so2_conv": {
+      "output": 1.7881393432617188e-07,
+      "node": 8.940696716308594e-07,
+      "radial": 5.960464477539062e-07,
+      "envelope": 1.6689300537109375e-06,
+      "rotation": 2.86102294921875e-06,
+      "inverse_rotation": 7.748603820800781e-07
+    }
+  }
+}

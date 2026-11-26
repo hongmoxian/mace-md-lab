@@ -1,5 +1,7 @@
 # V100 benchmarks
 
+[DPA4-Mini message reverse](dpa4-message-reverse.md) profiles both SO(2) convolutions and tests the receiver and sender adjoints against the same-driver eager baseline.
+
 [SevenNet message-passing reverse](sevennet-message-reverse.md) reports convolution reverse shares and paired full-step savings with a fixed driver.
 
 [Periodic DPA4 and SevenNet transfer plus GPU memory scaling](periodic-transfer-memory.md) compares each checkpoint with its own reference and measures fresh-process peak memory across lateral Au/water replications.

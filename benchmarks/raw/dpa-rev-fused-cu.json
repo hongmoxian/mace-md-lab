@@ -1,0 +1,198 @@
+{
+  "atoms": 108,
+  "fixture": "cu.extxyz",
+  "model_sha256": "13edeea63448c0f8a0b38e08fd8ba196fb1e2fad5f12486b1cd23320829da268",
+  "fixture_sha256": "caf53b8fdc45601d1d781b1f91467a58bae78db87be195d4de6bae55124cd7f9",
+  "deepmd": "3.2.0",
+  "torch": "2.12.0",
+  "gpu": "Tesla V100-SXM2-16GB",
+  "dt_fs": 0.5,
+  "warmup": 3,
+  "steps": 6,
+  "trials": [
+    {
+      "stock": 36.325150344055146,
+      "packed": 35.049810501125954,
+      "full": 33.04799684944252,
+      "transport": 32.4335116505002
+    },
+    {
+      "packed": 35.880943158796676,
+      "full": 37.88572382957985,
+      "transport": 31.346935332597543,
+      "stock": 35.47655515527973
+    },
+    {
+      "full": 32.63116750167683,
+      "transport": 31.685971014667302,
+      "stock": 35.498552004961915,
+      "packed": 35.06280615692958
+    },
+    {
+      "transport": 31.75510165359204,
+      "stock": 34.96847833351543,
+      "packed": 35.88634050295999,
+      "full": 32.16367381780098
+    },
+    {
+      "transport": 31.30891715409234,
+      "full": 31.500293504601967,
+      "packed": 35.436295166922115,
+      "stock": 35.41966116366287
+    },
+    {
+      "stock": 35.84937349660322,
+      "transport": 31.64735116297379,
+      "full": 38.526051658360906,
+      "packed": 35.495929672227554
+    },
+    {
+      "packed": 34.74768282224735,
+      "stock": 35.025180666707456,
+      "transport": 31.318771672279883,
+      "full": 32.16074300386632
+    },
+    {
+      "full": 32.151012817242496,
+      "packed": 35.85566483282795,
+      "stock": 35.0098418421112,
+      "transport": 31.69462598937874
+    }
+  ],
+  "orders": [
+    [
+      "stock",
+      "packed",
+      "full",
+      "transport"
+    ],
+    [
+      "packed",
+      "full",
+      "transport",
+      "stock"
+    ],
+    [
+      "full",
+      "transport",
+      "stock",
+      "packed"
+    ],
+    [
+      "transport",
+      "stock",
+      "packed",
+      "full"
+    ],
+    [
+      "transport",
+      "full",
+      "packed",
+      "stock"
+    ],
+    [
+      "stock",
+      "transport",
+      "full",
+      "packed"
+    ],
+    [
+      "packed",
+      "stock",
+      "transport",
+      "full"
+    ],
+    [
+      "full",
+      "packed",
+      "stock",
+      "transport"
+    ]
+  ],
+  "medians": {
+    "stock": 35.4481081594713,
+    "packed": 35.466112419574834,
+    "full": 32.3974206597389,
+    "transport": 31.666661088820547
+  },
+  "saved": {
+    "stock": 0.0,
+    "packed": -0.0005079046820364308,
+    "full": 0.0860606576240458,
+    "transport": 0.10667556794960864
+  },
+  "faster_pairs": {
+    "packed": 4,
+    "full": 6,
+    "transport": 8
+  },
+  "efs_limits": [
+    2e-05,
+    0.0002,
+    2e-05
+  ],
+  "efs_max_abs": {
+    "stock": [
+      3.476937611897787e-08,
+      6.977701101362754e-07,
+      6.277661083672892e-09
+    ],
+    "packed": [
+      3.2561796682852285e-08,
+      6.64856770526967e-07,
+      5.766238999737466e-09
+    ],
+    "full": [
+      4.5807273299605756e-08,
+      6.988538530094957e-07,
+      1.0811170835737377e-08
+    ],
+    "transport": [
+      2.4283373797381364e-08,
+      7.691924963637575e-07,
+      8.255596099532997e-09
+    ]
+  },
+  "passed": true,
+  "dispatch": {
+    "packed": {
+      "edge": 0,
+      "mixer": 0,
+      "linear": 0,
+      "gate": 0,
+      "transport": 0
+    },
+    "full": {
+      "edge": 24,
+      "mixer": 24,
+      "linear": 72,
+      "gate": 48,
+      "transport": 0
+    },
+    "transport": {
+      "edge": 0,
+      "mixer": 24,
+      "linear": 72,
+      "gate": 48,
+      "transport": 24
+    }
+  },
+  "block_vjp": {
+    "model.Default.atomic_model.descriptor.blocks.0.so2_conv": {
+      "output": 5.960464477539063e-08,
+      "node": 5.364418029785156e-07,
+      "radial": 2.086162567138672e-07,
+      "envelope": 5.960464477539062e-07,
+      "rotation": 6.258487701416016e-07,
+      "inverse_rotation": 1.341104507446289e-07
+    },
+    "model.Default.atomic_model.descriptor.blocks.1.so2_conv": {
+      "output": 1.6391277313232422e-07,
+      "node": 5.364418029785156e-07,
+      "radial": 3.5762786865234375e-07,
+      "envelope": 9.5367431640625e-07,
+      "rotation": 1.9073486328125e-06,
+      "inverse_rotation": 4.76837158203125e-07
+    }
+  }
+}

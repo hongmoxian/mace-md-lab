@@ -1,0 +1,119 @@
+{
+  "route": "stock",
+  "atoms": 108,
+  "model_sha256": "13edeea63448c0f8a0b38e08fd8ba196fb1e2fad5f12486b1cd23320829da268",
+  "fixture_sha256": "caf53b8fdc45601d1d781b1f91467a58bae78db87be195d4de6bae55124cd7f9",
+  "fixture": "cu.extxyz",
+  "torch": "2.12.0",
+  "deepmd": "3.2.0",
+  "dtype": "torch.float32",
+  "gpu": "Tesla V100-SXM2-16GB",
+  "blocks": {
+    "model.Default.atomic_model.descriptor.blocks.0.so2_conv": {
+      "channels": 32,
+      "lmax": 2,
+      "mmax": 1,
+      "n_focus": 1,
+      "focus_dim": 0,
+      "head_dim": 32,
+      "n_atten_head": 1,
+      "needs_local_frame": true,
+      "use_flash_atten": false,
+      "edge_cartesian": false,
+      "so2_mixing_layers": null,
+      "so2_attn_res_mode": "none",
+      "use_projected_rotation": null,
+      "radial_mode": null,
+      "hidden_channels": 32,
+      "children": [
+        "so2_linears",
+        "so2_inter_norms",
+        "non_linearities",
+        "attn_qk_norm",
+        "attn_q_proj",
+        "attn_k_proj",
+        "attn_output_gate_norm",
+        "radial_degree_mixer",
+        "message_node_grid_product",
+        "pre_focus_mix",
+        "post_focus_mix"
+      ]
+    },
+    "model.Default.atomic_model.descriptor.blocks.1.so2_conv": {
+      "channels": 32,
+      "lmax": 2,
+      "mmax": 1,
+      "n_focus": 1,
+      "focus_dim": 0,
+      "head_dim": 32,
+      "n_atten_head": 1,
+      "needs_local_frame": true,
+      "use_flash_atten": false,
+      "edge_cartesian": false,
+      "so2_mixing_layers": null,
+      "so2_attn_res_mode": "none",
+      "use_projected_rotation": null,
+      "radial_mode": null,
+      "hidden_channels": 32,
+      "children": [
+        "so2_linears",
+        "so2_inter_norms",
+        "non_linearities",
+        "attn_qk_norm",
+        "attn_q_proj",
+        "attn_k_proj",
+        "attn_output_gate_norm",
+        "radial_degree_mixer",
+        "message_node_grid_product",
+        "pre_focus_mix",
+        "post_focus_mix"
+      ]
+    }
+  },
+  "steps": 4,
+  "warmup": 3,
+  "dt_fs": 0.5,
+  "trials": [
+    {
+      "bare_ms": 36.7557572608348,
+      "traced_ms": 35.51197226624936,
+      "backward_ms": 7.827715635299683,
+      "block_ms": {
+        "model.Default.atomic_model.descriptor.blocks.0.so2_conv": 3.9237119555473328,
+        "model.Default.atomic_model.descriptor.blocks.1.so2_conv": 3.903999984264374
+      },
+      "forward_ms": 6.879487991333008
+    },
+    {
+      "traced_ms": 36.81858125491999,
+      "backward_ms": 7.785983085632324,
+      "block_ms": {
+        "model.Default.atomic_model.descriptor.blocks.0.so2_conv": 3.900160014629364,
+        "model.Default.atomic_model.descriptor.blocks.1.so2_conv": 3.885823965072632
+      },
+      "forward_ms": 7.408639967441559,
+      "bare_ms": 35.16584972385317
+    },
+    {
+      "bare_ms": 36.435658228583634,
+      "traced_ms": 36.66780551429838,
+      "backward_ms": 7.749637126922607,
+      "block_ms": {
+        "model.Default.atomic_model.descriptor.blocks.0.so2_conv": 3.881215989589691,
+        "model.Default.atomic_model.descriptor.blocks.1.so2_conv": 3.8684160113334656
+      },
+      "forward_ms": 7.3653759360313416
+    },
+    {
+      "traced_ms": 36.64880123687908,
+      "backward_ms": 7.752960920333862,
+      "block_ms": {
+        "model.Default.atomic_model.descriptor.blocks.0.so2_conv": 3.879423975944519,
+        "model.Default.atomic_model.descriptor.blocks.1.so2_conv": 3.873535990715027
+      },
+      "forward_ms": 7.348223984241486,
+      "bare_ms": 36.41955251805484
+    }
+  ],
+  "share": 0.21150815712045154
+}

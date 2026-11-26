@@ -20,6 +20,8 @@ SevenNet on Cu108 used 36.342 ms/step for radial plus angular, 36.810 for radial
 
 For a separate transfer at the message-passing level, see [SevenNet convolution reverse](sevennet-message-reverse.md).
 
+The follow-up [DPA4 SO(2) reverse measurements](dpa4-message-reverse.md) test optimizations inside both message-passing convolutions.
+
 ## GPU memory
 
 Each route uses a fresh subprocess. An independent parent queries NVIDIA NVML for the worker PID, including CUDA contexts and native allocations that the PyTorch allocator does not own. It samples throughout initialization, the first force call, warmup and MD, sleeping 10 ms between polls. This is a sampled high-water mark; short allocations between samples can be missed. Raw reports also give the whole-device sampled peak, capacity and other visible compute PIDs. PyTorch allocated and reserved allocator maxima are reported separately. A failed allocation has no successful peak or step time. A wall-time limit is a distinct outcome. MACE wall times collected with monitoring are ancillary to the dedicated paired timing runs.
