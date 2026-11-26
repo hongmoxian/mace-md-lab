@@ -31,6 +31,8 @@ Each row is a separate invocation with **all six implementations**, the same Sma
 
 At the interface the active edge count changed often enough that the exact-size modes recaptured on all 12 timed steps of each trial. Their padded counterparts reused their captures throughout. Symmetrix-XL 0.2.0 used its CUDA 12 SM70 wheel, the native `mh0-direct-speed` plan and a four-element export with 8,192 radial spline samples. All six implementations passed the original FP64 thresholds. The external timing is for this converted representation and hardware. [Cu32](raw/strong-cu32.json) · [Cu108](raw/strong-cu108.json) · [Interface](raw/strong-interface.json)
 
+The follow-up benchmarks tune the native neighbor builder and skin, then compare the same native engine with and without a fixed-cell reuse check. They also test two changes to the standalone MACE interaction. [Tuned Au/water experiments](xl-parity.md)
+
 ## Does the computed force follow the energy?
 
 The 192-atom fixture contains 48 gold atoms and 48 waters in a periodic, unequilibrated slab geometry. With Small and both transforms, force components at its initial geometry matched the official calculator within 2.45 × 10⁻¹⁵ eV/Å. At a centered step of 0.0001 Å, the absolute discrepancies between the force projection and the energy finite difference were 3.52 × 10⁻⁹ eV/Å along a random normalized direction and 1.70 × 10⁻⁶ eV/Å along an O–H stretch. The raw report gives four displacements per direction. [Force checks](raw/fd-interface.json)

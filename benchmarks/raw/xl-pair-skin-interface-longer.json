@@ -1,0 +1,279 @@
+{
+  "passed": true,
+  "gates": {
+    "energy_eV_atom": 1e-08,
+    "force_eV_A": 1e-06,
+    "stress_eV_A3": 1e-07,
+    "position_A": 1e-06,
+    "velocity_A_fs": 1e-07,
+    "nve_eV_atom": 1e-08
+  },
+  "results": {
+    "kokkos_skin0.3_stock": {
+      "errors": {
+        "energy_eV_atom": 0.0,
+        "force_eV_A": 2.886579864025407e-15,
+        "stress_eV_A3": 0.0,
+        "position_A": 1.7763568394002505e-14,
+        "velocity_A_fs": 9.631184738623233e-15,
+        "nve_eV_atom": 1.1842378929335002e-15
+      },
+      "passed": true,
+      "actual_neighbor_builder": "kokkos",
+      "trials_ms_step": [
+        6.240356269699987,
+        6.225764331854104,
+        6.236180105285409,
+        6.233577061114677,
+        6.241451623888376,
+        6.238464479489873
+      ],
+      "timed_rebuild_counts": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "median_ms_step": 6.237322292387641
+    },
+    "kokkos_skin0.3_two_largest": {
+      "errors": {
+        "energy_eV_atom": 1.1842378929335002e-15,
+        "force_eV_A": 3.0059288391726113e-13,
+        "stress_eV_A3": 1.5265566588595902e-16,
+        "position_A": 1.4210854715202004e-14,
+        "velocity_A_fs": 1.3145517660517747e-14,
+        "nve_eV_atom": 1.7763568394002505e-15
+      },
+      "passed": true,
+      "actual_neighbor_builder": "kokkos",
+      "trials_ms_step": [
+        6.087769167303729,
+        6.078928311277802,
+        6.080022583773825,
+        6.079986373758099,
+        6.085749249905348,
+        6.088163543608971
+      ],
+      "timed_rebuild_counts": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "median_ms_step": 6.082885916839587
+    },
+    "kokkos_skin0.6_stock": {
+      "errors": {
+        "energy_eV_atom": 1.1842378929335002e-15,
+        "force_eV_A": 2.686739719592879e-13,
+        "stress_eV_A3": 1.5265566588595902e-16,
+        "position_A": 1.7763568394002505e-14,
+        "velocity_A_fs": 1.1775302954930567e-14,
+        "nve_eV_atom": 1.7763568394002505e-15
+      },
+      "passed": true,
+      "actual_neighbor_builder": "kokkos",
+      "trials_ms_step": [
+        5.848177250300068,
+        5.847376812501655,
+        5.8472759774303995,
+        5.86360187541383,
+        5.846874000174769,
+        5.849626936348311
+      ],
+      "timed_rebuild_counts": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "median_ms_step": 5.847777031400861
+    },
+    "kokkos_skin0.6_two_largest": {
+      "errors": {
+        "energy_eV_atom": 1.1842378929335002e-15,
+        "force_eV_A": 3.00676150644108e-13,
+        "stress_eV_A3": 1.1275702593849246e-16,
+        "position_A": 2.1316282072803006e-14,
+        "velocity_A_fs": 1.303384483675174e-14,
+        "nve_eV_atom": 1.7763568394002505e-15
+      },
+      "passed": true,
+      "actual_neighbor_builder": "kokkos",
+      "trials_ms_step": [
+        5.712862313278795,
+        5.7005562509099645,
+        5.693154290687137,
+        5.6976985215442255,
+        5.6865623337216675,
+        5.6979948543206165
+      ],
+      "timed_rebuild_counts": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "median_ms_step": 5.6978466879324206
+    },
+    "kokkos_skin1.0_stock": {
+      "errors": {
+        "energy_eV_atom": 1.1842378929335002e-15,
+        "force_eV_A": 2.3842039453825237e-13,
+        "stress_eV_A3": 1.5439038936193583e-16,
+        "position_A": 2.1316282072803006e-14,
+        "velocity_A_fs": 1.251776460264864e-14,
+        "nve_eV_atom": 1.7763568394002505e-15
+      },
+      "passed": true,
+      "actual_neighbor_builder": "kokkos",
+      "trials_ms_step": [
+        5.835180146580872,
+        5.82721758352515,
+        5.84185072996964,
+        5.987212061882019,
+        5.930297564191278,
+        5.838483062689193
+      ],
+      "timed_rebuild_counts": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "median_ms_step": 5.840166896329416
+    },
+    "kokkos_skin1.0_two_largest": {
+      "errors": {
+        "energy_eV_atom": 1.1842378929335002e-15,
+        "force_eV_A": 3.05089287166993e-13,
+        "stress_eV_A3": 9.71445146547012e-17,
+        "position_A": 2.1316282072803006e-14,
+        "velocity_A_fs": 1.2732870313669764e-14,
+        "nve_eV_atom": 1.7763568394002505e-15
+      },
+      "passed": true,
+      "actual_neighbor_builder": "kokkos",
+      "trials_ms_step": [
+        5.683490875526331,
+        5.67918706171137,
+        5.699918207634862,
+        5.679925207611329,
+        5.681467000007008,
+        5.6981278127447395
+      ],
+      "timed_rebuild_counts": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "median_ms_step": 5.682478937766669
+    }
+  },
+  "trial_orders": [
+    [
+      "kokkos_skin0.3_stock",
+      "kokkos_skin0.3_two_largest",
+      "kokkos_skin0.6_stock",
+      "kokkos_skin0.6_two_largest",
+      "kokkos_skin1.0_stock",
+      "kokkos_skin1.0_two_largest"
+    ],
+    [
+      "kokkos_skin0.6_two_largest",
+      "kokkos_skin0.6_stock",
+      "kokkos_skin1.0_two_largest",
+      "kokkos_skin1.0_stock",
+      "kokkos_skin0.3_two_largest",
+      "kokkos_skin0.3_stock"
+    ],
+    [
+      "kokkos_skin1.0_stock",
+      "kokkos_skin1.0_two_largest",
+      "kokkos_skin0.3_stock",
+      "kokkos_skin0.3_two_largest",
+      "kokkos_skin0.6_stock",
+      "kokkos_skin0.6_two_largest"
+    ],
+    [
+      "kokkos_skin0.3_two_largest",
+      "kokkos_skin0.3_stock",
+      "kokkos_skin0.6_two_largest",
+      "kokkos_skin0.6_stock",
+      "kokkos_skin1.0_two_largest",
+      "kokkos_skin1.0_stock"
+    ],
+    [
+      "kokkos_skin0.6_stock",
+      "kokkos_skin0.6_two_largest",
+      "kokkos_skin1.0_stock",
+      "kokkos_skin1.0_two_largest",
+      "kokkos_skin0.3_stock",
+      "kokkos_skin0.3_two_largest"
+    ],
+    [
+      "kokkos_skin1.0_two_largest",
+      "kokkos_skin1.0_stock",
+      "kokkos_skin0.3_two_largest",
+      "kokkos_skin0.3_stock",
+      "kokkos_skin0.6_two_largest",
+      "kokkos_skin0.6_stock"
+    ]
+  ],
+  "boundary_cases": {
+    "small_uniform_translation": {
+      "stock_reuse": true,
+      "two_largest_reuse": true
+    },
+    "one_fast_atom": {
+      "stock_reuse": false,
+      "two_largest_reuse": true
+    },
+    "two_fast_atoms_rebuild": {
+      "stock_reuse": false,
+      "two_largest_reuse": false
+    },
+    "equality_rebuild": {
+      "stock_reuse": true,
+      "two_largest_reuse": false
+    },
+    "full_periodic_image_jump_rebuild": {
+      "stock_reuse": true,
+      "two_largest_reuse": false
+    }
+  },
+  "symmetrix_version": "0.2.0",
+  "selector": "cuda12-sm70",
+  "gpu": "Tesla V100-SXM2-16GB",
+  "dtype": "float64",
+  "streamed_edges": "direct",
+  "execution_profile": "speed",
+  "observables": [
+    "energy",
+    "forces",
+    "stress"
+  ],
+  "structure_sha256": "674186cd63ac40385917aa952cf204c88d263fac13d2af3f5257c01e1d3a24a5",
+  "converted_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+  "atoms": 192,
+  "dt_fs": 0.5,
+  "warmup": 5,
+  "steps": 48,
+  "repeats": 6,
+  "velocity_source": "input momenta",
+  "timing": "Warm full ASE velocity Verlet with synchronized endpoints; setup and validation excluded."
+}

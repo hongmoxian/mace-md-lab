@@ -1,0 +1,154 @@
+{
+  "scope": "Energy and conservative forces on a prepared graph; excludes pair construction; optional moving_md is separate",
+  "moving_md": {
+    "scope": "moving NVE including topology refresh and pair-map refresh",
+    "dt_fs": 0.5,
+    "skin_A": 0.12,
+    "warmup_steps": 6,
+    "preflight_trajectory_each_route": true,
+    "preflight_max_deviation": {
+      "position_A": 3.858025010572419e-15,
+      "velocity_A_per_ASE_time": 1.176836406102666e-14,
+      "energy_eV": 1.1368683772161603e-13,
+      "force_eV_A": 9.9253938401489e-14
+    },
+    "timed_steps": 12,
+    "raw_ms_step": {
+      "directed": [
+        19.81462474213913,
+        19.67364433221519,
+        19.643349670028936,
+        19.423317833570763,
+        19.39633858273737,
+        19.73348091511677
+      ],
+      "paired": [
+        23.19900117193659,
+        23.129652671438333,
+        22.87099783037168,
+        22.827712498838082,
+        23.047389249162126,
+        22.806170580831047
+      ]
+    },
+    "median_ms_step": {
+      "directed": 19.658497001122065,
+      "paired": 22.959193539766904
+    },
+    "directed_over_paired": 0.8562363903188583,
+    "graph_refreshes_timed": {
+      "directed": 12,
+      "paired": 12
+    },
+    "final_max_deviation": {
+      "position_A": 1.7763568394002505e-15,
+      "velocity_A_per_ASE_time": 1.1518563880485999e-14,
+      "energy_eV": 0.0,
+      "force_eV_A": 7.260858581048524e-14
+    }
+  },
+  "interaction_specs": [
+    {
+      "type": "RealAgnosticResidualInteractionBlock",
+      "node_feats": "128x0e",
+      "edge_feats": "10x0e",
+      "output": "128x0e+128x1o+128x2e+128x3o",
+      "radial_mlp": [
+        [
+          10,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          512
+        ]
+      ]
+    },
+    {
+      "type": "RealAgnosticResidualInteractionBlock",
+      "node_feats": "128x0e",
+      "edge_feats": "10x0e",
+      "output": "128x0e+128x1o+128x2e+128x3o",
+      "radial_mlp": [
+        [
+          10,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          64,
+          512
+        ]
+      ]
+    }
+  ],
+  "checkpoint_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736",
+  "structure_sha256": "674186cd63ac40385917aa952cf204c88d263fac13d2af3f5257c01e1d3a24a5",
+  "checkpoint": "mace-mp-0-small.model",
+  "structure": "au-water.extxyz",
+  "frame": 0,
+  "atoms": 192,
+  "directed_edges": 13306,
+  "pairs": 6653,
+  "periodic_directed_edges": 5224,
+  "torch": "2.13.0+cu126",
+  "mace": "0.3.16",
+  "device": "cuda",
+  "cpu_threads": 1,
+  "gpu": "Tesla V100-SXM2-16GB",
+  "adjoint": "both",
+  "dtype": "float64",
+  "pair_setup_ms": 2.9763939091935754,
+  "errors": {
+    "directed": {
+      "energy_eV_atom": 0.0,
+      "max_force_eV_A": 2.4424906541753444e-15
+    },
+    "paired": {
+      "energy_eV_atom": 0.0,
+      "max_force_eV_A": 2.9976021664879227e-15
+    }
+  },
+  "raw_ms": {
+    "directed": [
+      16.954654012806714,
+      16.27330796327442,
+      16.248284955509007,
+      16.219604993239045,
+      16.286766971461475,
+      16.230377950705588,
+      16.290895058773458,
+      15.877899015322328
+    ],
+    "paired": [
+      16.350419027730823,
+      16.370111028663814,
+      16.42761507537216,
+      16.390111995860934,
+      16.3067210232839,
+      16.296747024171054,
+      16.16178103722632,
+      16.131825977936387
+    ]
+  },
+  "median_ms": {
+    "directed": 16.260796459391713,
+    "paired": 16.32857002550736
+  },
+  "directed_over_paired": 0.9958493875452794
+}
