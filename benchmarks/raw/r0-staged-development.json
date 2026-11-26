@@ -1,0 +1,338 @@
+{
+  "passed": true,
+  "gates": {
+    "energy_eV_atom": 1e-08,
+    "force_eV_A": 1e-06,
+    "position_A": 1e-06,
+    "velocity_A_fs": 1e-07,
+    "nve_difference_eV_atom": 1e-08,
+    "stress_eV_A3": 1e-07
+  },
+  "results": {
+    "arrays_upstream_r0": {
+      "errors": {
+        "energy_eV_atom": 5.655457139634261e-09,
+        "force_eV_A": 1.4544381121694983e-07,
+        "stress_eV_A3": 7.656854317250605e-10,
+        "position_A": 1.0658141036401503e-14,
+        "velocity_A_fs": 3.467441177934516e-15,
+        "nve_difference_eV_atom": 5.921189464667501e-16
+      },
+      "common_frames_vs_xl": {
+        "force_eV_A": 2.1990048670872397e-13,
+        "energy_eV_atom": 0.0,
+        "stress_eV_A3": 6.472686969738461e-17
+      },
+      "passed": true,
+      "trials_ms": [
+        3.2192911651994414,
+        3.2524861259541162,
+        3.2205340830842033,
+        3.217966834199615
+      ],
+      "timed_rebuilds": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "trace": {
+        "calls_in_two_steps": {
+          "symmetrix_r0_forward": 2,
+          "symmetrix_m1_forward": 2,
+          "symmetrix_m1_reverse": 2,
+          "symmetrix_r0_coordinate_reverse": 2
+        },
+        "ms_per_step": {
+          "symmetrix_r0_forward": 0.42964600000000003,
+          "symmetrix_m1_forward": 0.012848,
+          "symmetrix_m1_reverse": 0.020928000000000002,
+          "symmetrix_r0_coordinate_reverse": 0.463326
+        }
+      },
+      "modules_executed": true,
+      "median_ms_step": 3.2199126241418226
+    },
+    "arrays_factored_r0": {
+      "errors": {
+        "energy_eV_atom": 5.655457139634261e-09,
+        "force_eV_A": 1.4544381210512825e-07,
+        "stress_eV_A3": 7.656854317250605e-10,
+        "position_A": 1.0658141036401503e-14,
+        "velocity_A_fs": 3.610826915245724e-15,
+        "nve_difference_eV_atom": 5.921189464667501e-16
+      },
+      "common_frames_vs_xl": {
+        "force_eV_A": 2.1988660892091616e-13,
+        "energy_eV_atom": 0.0,
+        "stress_eV_A3": 6.472686969738461e-17
+      },
+      "passed": true,
+      "trials_ms": [
+        3.092968293155233,
+        3.1282755420155204,
+        3.093619418602126,
+        3.093683291808702
+      ],
+      "timed_rebuilds": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "trace": {
+        "calls_in_two_steps": {
+          "symmetrix_r0_forward": 2,
+          "symmetrix_m1_forward": 2,
+          "symmetrix_m1_reverse": 2,
+          "symmetrix_r0_coordinate_reverse": 2
+        },
+        "ms_per_step": {
+          "symmetrix_r0_forward": 0.414208,
+          "symmetrix_m1_forward": 0.011824,
+          "symmetrix_m1_reverse": 0.0194565,
+          "symmetrix_r0_coordinate_reverse": 0.3082555
+        }
+      },
+      "modules_executed": true,
+      "median_ms_step": 3.093651355205414
+    },
+    "arrays_staged": {
+      "errors": {
+        "energy_eV_atom": 5.655457139634261e-09,
+        "force_eV_A": 1.4544381299330666e-07,
+        "stress_eV_A3": 7.656854317250605e-10,
+        "position_A": 1.0658141036401503e-14,
+        "velocity_A_fs": 3.5926123187479675e-15,
+        "nve_difference_eV_atom": 1.1842378929335002e-15
+      },
+      "common_frames_vs_xl": {
+        "force_eV_A": 2.1965068652818331e-13,
+        "energy_eV_atom": 0.0,
+        "stress_eV_A3": 6.472686969738461e-17
+      },
+      "passed": true,
+      "trials_ms": [
+        3.2913987088249996,
+        3.2921447079085433,
+        3.3652358300363026,
+        3.2904111673512184
+      ],
+      "timed_rebuilds": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "trace": {
+        "calls_in_two_steps": {
+          "symmetrix_r0_forward": 2,
+          "symmetrix_m1_forward": 2,
+          "symmetrix_m1_reverse": 2,
+          "symmetrix_r0_coordinate_reverse": 2
+        },
+        "ms_per_step": {
+          "symmetrix_r0_forward": 0.5324875,
+          "symmetrix_m1_forward": 0.011392,
+          "symmetrix_m1_reverse": 0.0186235,
+          "symmetrix_r0_coordinate_reverse": 0.37256999999999996
+        }
+      },
+      "modules_executed": true,
+      "median_ms_step": 3.2917717083667712
+    },
+    "arrays_stagedgrad": {
+      "errors": {
+        "energy_eV_atom": 5.655457139634261e-09,
+        "force_eV_A": 1.4544381210512825e-07,
+        "stress_eV_A3": 7.656854317250605e-10,
+        "position_A": 1.0658141036401503e-14,
+        "velocity_A_fs": 3.4694740570079263e-15,
+        "nve_difference_eV_atom": 5.921189464667501e-16
+      },
+      "common_frames_vs_xl": {
+        "force_eV_A": 2.1977558661845364e-13,
+        "energy_eV_atom": 0.0,
+        "stress_eV_A3": 6.472686969738461e-17
+      },
+      "passed": true,
+      "trials_ms": [
+        3.1660336680943146,
+        3.167085873428732,
+        3.165562084177509,
+        3.1640059993757554
+      ],
+      "timed_rebuilds": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "trace": {
+        "calls_in_two_steps": {
+          "symmetrix_r0_forward": 2,
+          "symmetrix_m1_forward": 2,
+          "symmetrix_m1_reverse": 2,
+          "symmetrix_r0_coordinate_reverse": 2
+        },
+        "ms_per_step": {
+          "symmetrix_r0_forward": 0.5366234999999999,
+          "symmetrix_m1_forward": 0.011279999999999998,
+          "symmetrix_m1_reverse": 0.018672,
+          "symmetrix_r0_coordinate_reverse": 0.2471515
+        }
+      },
+      "modules_executed": true,
+      "median_ms_step": 3.165797876135912
+    },
+    "arrays_endpoints": {
+      "errors": {
+        "energy_eV_atom": 5.655457139634261e-09,
+        "force_eV_A": 1.4544354698386996e-07,
+        "stress_eV_A3": 7.656846823245189e-10,
+        "position_A": 2.1316282072803006e-14,
+        "velocity_A_fs": 1.17952522749043e-14,
+        "nve_difference_eV_atom": 1.1842378929335002e-15
+      },
+      "common_frames_vs_xl": {
+        "force_eV_A": 5.950795411990839e-13,
+        "energy_eV_atom": 0.0,
+        "stress_eV_A3": 2.39044894989604e-15
+      },
+      "passed": true,
+      "trials_ms": [
+        3.463693540349292,
+        3.464189542379851,
+        3.4648515817631655,
+        3.4653543358823904
+      ],
+      "timed_rebuilds": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "trace": {
+        "calls_in_two_steps": {
+          "symmetrix_r0_forward": 2,
+          "symmetrix_m1_forward": 2,
+          "symmetrix_m1_reverse": 2,
+          "symmetrix_r0_coordinate_reverse": 2
+        },
+        "ms_per_step": {
+          "symmetrix_r0_forward": 0.49028700000000003,
+          "symmetrix_m1_forward": 0.01112,
+          "symmetrix_m1_reverse": 0.018335499999999998,
+          "symmetrix_r0_coordinate_reverse": 0.591647
+        }
+      },
+      "modules_executed": true,
+      "median_ms_step": 3.4645205620715083
+    }
+  },
+  "trial_orders": [
+    [
+      "arrays_upstream_r0",
+      "arrays_factored_r0",
+      "arrays_staged",
+      "arrays_stagedgrad",
+      "arrays_endpoints"
+    ],
+    [
+      "arrays_endpoints",
+      "arrays_stagedgrad",
+      "arrays_staged",
+      "arrays_factored_r0",
+      "arrays_upstream_r0"
+    ],
+    [
+      "arrays_factored_r0",
+      "arrays_staged",
+      "arrays_stagedgrad",
+      "arrays_endpoints",
+      "arrays_upstream_r0"
+    ],
+    [
+      "arrays_upstream_r0",
+      "arrays_endpoints",
+      "arrays_stagedgrad",
+      "arrays_staged",
+      "arrays_factored_r0"
+    ]
+  ],
+  "model_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736",
+  "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+  "structure_sha256": "674186cd63ac40385917aa952cf204c88d263fac13d2af3f5257c01e1d3a24a5",
+  "fixture": "au-water.extxyz",
+  "atoms": 192,
+  "velocities": "input momenta",
+  "period": "fixed-cell fully periodic",
+  "dt_fs": 0.5,
+  "warmup": 5,
+  "steps": 24,
+  "repeats": 4,
+  "skin_A": 1.0,
+  "selected_plan": "mh0-direct-speed",
+  "gpu": "Tesla V100-SXM2-16GB",
+  "symmetrix": "0.2.0",
+  "selector": "cuda12-sm70",
+  "native_neighbor_builder": "kokkos",
+  "dtype": "float64",
+  "observables": "E/F/stress on host every step",
+  "kernel_launch_policy": "static",
+  "launch_tuning_status": "static",
+  "numerical_scope": "Common frames against original MACE and XL; all moving frames against stock XL",
+  "product_info": {
+    "upstream": {
+      "source_sha256": "8aa139b19fe1981c9d8e30679bf02d5de0ca18dc7b44ec300651f5096d628ffd",
+      "cubin_sha256": "de8257c5ac17e1ead737225643620c2ec9d8c07986487080ab2a3c0174ec8f80",
+      "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+      "artifact_id": "jit-m1-gen19-f64-198de909c403f357-c128-chunk32-r3-sm_70",
+      "variant": "upstream",
+      "structure": "sha256:198de909c403f357759b9f9cbf0a60330815da0853d2101a2a9f02efc1f2053f"
+    },
+    "r0_upstream": {
+      "source_sha256": "7051c1df15ef19c6d4f0c309b04e2cf11a6901161dce52b18d7ea7f6839b19c2",
+      "cubin_sha256": "ade00d2fcb0639a5f8db41e7f24743abec13d3355942b1f7fa01a0ed8e63cd08",
+      "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+      "artifact_id": "generated-r0-gen19-cuda-f64-1adb0508937bf91e836ab42d98c17f2035f23607a7962549d30c64c3e7076b06",
+      "variant": "upstream",
+      "structure": "sha256:87d40a97a59259e75e7d3f51451a9b4b635349e610415f0aadd7199db238364d"
+    },
+    "r0_factored": {
+      "source_sha256": "df20ad0be36c47d72106af5c4f2357796a5cd95e91dda35e08166ac61e9ad884",
+      "cubin_sha256": "a73a3fce2f34886fe6486c7784c7a382e0bc28f6d13dc6da1a2c00136d71ca3d",
+      "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+      "artifact_id": "generated-r0-gen19-cuda-f64-1adb0508937bf91e836ab42d98c17f2035f23607a7962549d30c64c3e7076b06",
+      "variant": "factored",
+      "structure": "sha256:87d40a97a59259e75e7d3f51451a9b4b635349e610415f0aadd7199db238364d"
+    },
+    "r0_staged": {
+      "source_sha256": "41786b79b1cb37a796583aa9dc38d5b8d09bc6acdb0332dc6a556a827edb15f9",
+      "cubin_sha256": "2e9750af9916ceda604b848b560f1f43cd8f59df0a4cdd1dc028c7c17b07a1a8",
+      "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+      "artifact_id": "generated-r0-gen19-cuda-f64-1adb0508937bf91e836ab42d98c17f2035f23607a7962549d30c64c3e7076b06",
+      "structure": "sha256:87d40a97a59259e75e7d3f51451a9b4b635349e610415f0aadd7199db238364d",
+      "variant": "staged",
+      "forward_shards": 1
+    },
+    "r0_stagedgrad": {
+      "source_sha256": "40ca6eca4077d68335fe22471c59d717ba2a3ef7313f3f9ce4235f9d49f7f96c",
+      "cubin_sha256": "9f59268095a83155a8ac909ffbc135056e356764c932eca180387ed2aa24f16e",
+      "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+      "artifact_id": "generated-r0-gen19-cuda-f64-1adb0508937bf91e836ab42d98c17f2035f23607a7962549d30c64c3e7076b06",
+      "structure": "sha256:87d40a97a59259e75e7d3f51451a9b4b635349e610415f0aadd7199db238364d",
+      "variant": "stagedgrad",
+      "forward_shards": 1
+    },
+    "r0_endpoints": {
+      "source_sha256": "84bc5398d37b35408fa2801154518d933418d085562ecd0c9030644026f84fa0",
+      "cubin_sha256": "e3ab7a72f08f2832e50b30c81d9b896b756b5c235b8983faa3f55afa53f7d534",
+      "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+      "artifact_id": "generated-r0-gen19-cuda-f64-1adb0508937bf91e836ab42d98c17f2035f23607a7962549d30c64c3e7076b06",
+      "structure": "sha256:87d40a97a59259e75e7d3f51451a9b4b635349e610415f0aadd7199db238364d",
+      "variant": "endpoints",
+      "forward_shards": 1
+    }
+  }
+}

@@ -1,5 +1,7 @@
 # Full-step conservative MD acceptance
 
+A subsequent same-driver study isolates the speed contributed by the native R0 and R1 force algorithms, with the official on-demand angular derivative enabled on both sides. [Native algorithm comparison](native-algorithms.md)
+
 The independent MACE path evaluates the frozen MACE-MP-0 Small checkpoint directly. Its primary timing criterion is at most 1.10 times the median step time of the stock Symmetrix-XL Python/ASE driver on the same GPU and trajectory. The native combination uses the same XL export, our prepared fixed-cell driver and our factored first-layer coordinate reverse. Its criterion is at most 0.90 times stock. Both conditions apply to synchronized full velocity-Verlet steps, including integration, periodic neighbor maintenance and host-visible energy, forces and global stress at every step. Setup, model export, offline compilation and graph capture at initialization are excluded. A separate cubic-interpolation route is reported against its own energy derivative and the source model.
 
 ## Locked periodic results

@@ -1,0 +1,237 @@
+{
+  "passed": true,
+  "steps": 48,
+  "repeats": 6,
+  "warmup": 5,
+  "dt_fs": 0.5,
+  "rows": {
+    "control": {
+      "mace_errors": {
+        "force_eV_A": 8.485269786806526e-08,
+        "energy_eV_atom": 5.655457139634261e-09,
+        "stress_eV_A3": 8.888907596094064e-10
+      },
+      "xl_trajectory_errors": {
+        "positions_A": 7.105427357601002e-15,
+        "velocities_A_fs": 5.578870698741412e-15,
+        "energy_eV": 1.1368683772161603e-13,
+        "forces_eV_A": 3.093081346605686e-13,
+        "kinetic_eV": 3.730349362740526e-14,
+        "stress_eV_A3": 1.1622647289044608e-16
+      },
+      "passed": true,
+      "raw_ms_step": [
+        3.324560061931455,
+        3.2562312505130344,
+        3.320633334321125,
+        3.2440096668627425,
+        3.213013769709505,
+        3.2119593961397186
+      ],
+      "timed_neighbor_rebuilds": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    "r0": {
+      "mace_errors": {
+        "force_eV_A": 8.485269786806526e-08,
+        "energy_eV_atom": 5.655457139634261e-09,
+        "stress_eV_A3": 8.888907596094064e-10
+      },
+      "xl_trajectory_errors": {
+        "positions_A": 7.105427357601002e-15,
+        "velocities_A_fs": 4.6802839381854255e-15,
+        "energy_eV": 1.1368683772161603e-13,
+        "forces_eV_A": 3.965786032900098e-13,
+        "kinetic_eV": 1.7763568394002505e-14,
+        "stress_eV_A3": 2.1337098754514727e-16
+      },
+      "passed": true,
+      "raw_ms_step": [
+        3.2541071462522573,
+        3.2759050227468833,
+        3.363221769783801,
+        3.231865853498069,
+        3.2001786263814815,
+        3.2009161271465323
+      ],
+      "timed_neighbor_rebuilds": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    "r1": {
+      "mace_errors": {
+        "force_eV_A": 8.485269775704296e-08,
+        "energy_eV_atom": 5.655457139634261e-09,
+        "stress_eV_A3": 8.888907596094064e-10
+      },
+      "xl_trajectory_errors": {
+        "positions_A": 1.0658141036401503e-14,
+        "velocities_A_fs": 5.655198531684391e-15,
+        "energy_eV": 2.2737367544323206e-13,
+        "forces_eV_A": 3.270717030545711e-13,
+        "kinetic_eV": 4.973799150320701e-14,
+        "stress_eV_A3": 2.0383000842727483e-16
+      },
+      "passed": true,
+      "raw_ms_step": [
+        3.1996402297712243,
+        3.295770979699834,
+        3.2726387289585546,
+        3.1703398538714587,
+        3.181818268785719,
+        3.169013376464136
+      ],
+      "timed_neighbor_rebuilds": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    "both": {
+      "mace_errors": {
+        "force_eV_A": 8.485269786806526e-08,
+        "energy_eV_atom": 5.655457139634261e-09,
+        "stress_eV_A3": 8.888907596094064e-10
+      },
+      "xl_trajectory_errors": {
+        "positions_A": 7.105427357601002e-15,
+        "velocities_A_fs": 4.7167131311809385e-15,
+        "energy_eV": 1.1368683772161603e-13,
+        "forces_eV_A": 3.9715106203708217e-13,
+        "kinetic_eV": 2.4868995751603507e-14,
+        "stress_eV_A3": 2.0643209364124004e-16
+      },
+      "passed": true,
+      "raw_ms_step": [
+        3.4214907500427216,
+        3.2512156661444656,
+        3.381221518793609,
+        3.187828146716735,
+        3.1540977312639975,
+        3.3258498321326138
+      ],
+      "timed_neighbor_rebuilds": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  "orders": [
+    [
+      "control",
+      "r0",
+      "r1",
+      "both"
+    ],
+    [
+      "both",
+      "r1",
+      "r0",
+      "control"
+    ],
+    [
+      "r0",
+      "r1",
+      "both",
+      "control"
+    ],
+    [
+      "control",
+      "both",
+      "r1",
+      "r0"
+    ],
+    [
+      "r1",
+      "both",
+      "control",
+      "r0"
+    ],
+    [
+      "r0",
+      "control",
+      "both",
+      "r1"
+    ]
+  ],
+  "medians_ms_step": {
+    "control": 3.2501204586878885,
+    "r0": 3.242986499875163,
+    "r1": 3.190729249278472,
+    "both": 3.2885327491385397
+  },
+  "audit": {
+    "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+    "atomic_numbers": [
+      1,
+      8,
+      79
+    ],
+    "stages": {
+      "r0": {
+        "rows": 9,
+        "intervals": 8191,
+        "functions": 512,
+        "row_bytes": 134201344,
+        "representative_rows": 3,
+        "nonidentical_coefficients_per_row": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "passed": true
+      },
+      "r1": {
+        "rows": 6,
+        "intervals": 8191,
+        "functions": 512,
+        "row_bytes": 134201344,
+        "representative_rows": 1,
+        "nonidentical_coefficients_per_row": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "passed": true
+      }
+    },
+    "passed": true
+  },
+  "gpu": "Tesla V100-SXM2-16GB",
+  "structure_sha256": "674186cd63ac40385917aa952cf204c88d263fac13d2af3f5257c01e1d3a24a5",
+  "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+  "model_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736",
+  "native_m1": "de8257c5ac17e1ead737225643620c2ec9d8c07986487080ab2a3c0174ec8f80",
+  "generated_m0": false,
+  "native_precision": "FP64",
+  "driver": "PreparedXL and ArrayVerlet; E/F/stress returned on each step",
+  "skin_A": 1.0,
+  "compiler": "R0 and R1 use nvcc for all four routes; original factored R0 and stock generated R1 are controls"
+}

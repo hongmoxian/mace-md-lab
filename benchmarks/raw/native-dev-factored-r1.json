@@ -1,0 +1,462 @@
+{
+  "passed": true,
+  "performance_rule": {
+    "reference": "upstream",
+    "max_ratio": 0.9,
+    "paired_win_fraction": 0.875,
+    "estimator": "ratio of trial medians"
+  },
+  "results": {
+    "upstream": {
+      "trajectory_vs_XL": {
+        "position_A": 7.105427357601002e-15,
+        "velocity_A_fs": 3.4273799076611766e-15,
+        "nve_difference_eV_atom": 5.921189464667501e-16
+      },
+      "EFS_vs_XL_all_frames": {
+        "energy_eV_atom": 0.0,
+        "force_eV_A": 3.1086244689504383e-15,
+        "stress_eV_A3": 0.0
+      },
+      "EFS_vs_original_MACE_three_frames": {
+        "energy_eV_atom": 5.6569125680046755e-09,
+        "force_eV_A": 8.821685049120731e-08,
+        "stress_eV_A3": 8.588728409031354e-10
+      },
+      "finite_differences": {
+        "displacement_A": 0.0001,
+        "strain": 1e-05,
+        "force_error_eV_A": {
+          "random_normalized": 3.069197840321891e-09,
+          "OH_stretch_48_49": 1.6961376361201985e-06
+        },
+        "stress_error_eV_A3": {
+          "xx": 1.0271752545754076e-10,
+          "xy": 5.793993756997295e-13
+        },
+        "passed": true
+      },
+      "trials_ms": [
+        3.4717368143901695,
+        3.3106655318988487,
+        3.31681284296792,
+        3.3110083459177986,
+        3.346022218465805,
+        3.3144002518383786
+      ],
+      "timed_rebuilds": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "trace": {
+        "steps": 2,
+        "counts": {
+          "symmetrix_r0_forward": 2,
+          "symmetrix_m1_forward": 2,
+          "symmetrix_m1_reverse": 2,
+          "symmetrix_r0_coordinate_reverse": 2
+        },
+        "ms_per_step": {
+          "symmetrix_r0_forward": 0.40505599999999997,
+          "symmetrix_m1_forward": 0.011296,
+          "symmetrix_m1_reverse": 0.018496,
+          "symmetrix_r0_coordinate_reverse": 0.44256
+        },
+        "passed": true
+      },
+      "passed": true,
+      "same_timed_rebuilds": true,
+      "median_ms_step": 3.3156065474031493,
+      "vs_upstream": {
+        "ratio_of_medians": 1.0,
+        "time_reduction_pct": 0.0,
+        "paired_ratios": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "wins": 0,
+        "wins_required": 6,
+        "trials": 6,
+        "meets_10pct_and_win_rule": false
+      },
+      "vs_factored": {
+        "ratio_of_medians": 1.02880139759055,
+        "time_reduction_pct": -2.8801397590549893,
+        "paired_ratios": [
+          1.0555827892436385,
+          1.0158361781027132,
+          1.0411261256767066,
+          1.039614285793674,
+          1.019998688564917,
+          1.0401325927430742
+        ],
+        "wins": 0,
+        "wins_required": 6,
+        "trials": 6,
+        "meets_10pct_and_win_rule": false
+      }
+    },
+    "factored": {
+      "trajectory_vs_XL": {
+        "position_A": 3.552713678800501e-15,
+        "velocity_A_fs": 3.1068897454744615e-15,
+        "nve_difference_eV_atom": 1.1842378929335002e-15
+      },
+      "EFS_vs_XL_all_frames": {
+        "energy_eV_atom": 0.0,
+        "force_eV_A": 2.6645352591003757e-15,
+        "stress_eV_A3": 5.204170427930421e-18
+      },
+      "EFS_vs_original_MACE_three_frames": {
+        "energy_eV_atom": 5.6569125680046755e-09,
+        "force_eV_A": 8.821685093529652e-08,
+        "stress_eV_A3": 8.588728443725824e-10
+      },
+      "finite_differences": {
+        "displacement_A": 0.0001,
+        "strain": 1e-05,
+        "force_error_eV_A": {
+          "random_normalized": 3.069198284411101e-09,
+          "OH_stretch_48_49": 1.6961376367863323e-06
+        },
+        "stress_error_eV_A3": {
+          "xx": 1.0271752545754076e-10,
+          "xy": 5.793989420188606e-13
+        },
+        "passed": true
+      },
+      "trials_ms": [
+        3.2889289686863776,
+        3.2590545633865986,
+        3.1857934991421644,
+        3.1848430626268964,
+        3.280418157373788,
+        3.1865170603850856
+      ],
+      "timed_rebuilds": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "trace": {
+        "steps": 2,
+        "counts": {
+          "symmetrix_r0_forward": 2,
+          "symmetrix_m1_forward": 2,
+          "symmetrix_m1_reverse": 2,
+          "symmetrix_r0_coordinate_reverse": 2
+        },
+        "ms_per_step": {
+          "symmetrix_r0_forward": 0.4053595,
+          "symmetrix_m1_forward": 0.011216,
+          "symmetrix_m1_reverse": 0.019055999999999997,
+          "symmetrix_r0_coordinate_reverse": 0.30443149999999997
+        },
+        "passed": true
+      },
+      "passed": true,
+      "same_timed_rebuilds": true,
+      "median_ms_step": 3.222785811885842,
+      "vs_upstream": {
+        "ratio_of_medians": 0.9720049004035155,
+        "time_reduction_pct": 2.7995099596484496,
+        "paired_ratios": [
+          0.9473439792595848,
+          0.9844106968780236,
+          0.9604984212167612,
+          0.9618952083142728,
+          0.9803934173748262,
+          0.9614158877213576
+        ],
+        "wins": 6,
+        "wins_required": 6,
+        "trials": 6,
+        "meets_10pct_and_win_rule": false
+      },
+      "vs_factored": {
+        "ratio_of_medians": 1.0,
+        "time_reduction_pct": 0.0,
+        "paired_ratios": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "wins": 0,
+        "wins_required": 6,
+        "trials": 6,
+        "meets_10pct_and_win_rule": false
+      }
+    },
+    "candidate": {
+      "trajectory_vs_XL": {
+        "position_A": 3.552713678800501e-15,
+        "velocity_A_fs": 3.3280669886615044e-15,
+        "nve_difference_eV_atom": 1.1842378929335002e-15
+      },
+      "EFS_vs_XL_all_frames": {
+        "energy_eV_atom": 0.0,
+        "force_eV_A": 3.1086244689504383e-15,
+        "stress_eV_A3": 6.938893903907228e-18
+      },
+      "EFS_vs_original_MACE_three_frames": {
+        "energy_eV_atom": 5.6569125680046755e-09,
+        "force_eV_A": 8.821685038018501e-08,
+        "stress_eV_A3": 8.588728409031354e-10
+      },
+      "finite_differences": {
+        "displacement_A": 0.0001,
+        "strain": 1e-05,
+        "force_error_eV_A": {
+          "random_normalized": 3.0691983954334034e-09,
+          "OH_stretch_48_49": 1.696137637008377e-06
+        },
+        "stress_error_eV_A3": {
+          "xx": 1.0271752545754076e-10,
+          "xy": 5.79399592540164e-13
+        },
+        "passed": true
+      },
+      "trials_ms": [
+        3.0602159968111664,
+        2.922643529018387,
+        2.827124251780333,
+        2.8268947498872876,
+        2.8265906585147604,
+        2.8254703101993073
+      ],
+      "timed_rebuilds": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "trace": {
+        "steps": 2,
+        "counts": {
+          "symmetrix_r0_forward": 2,
+          "symmetrix_m1_forward": 2,
+          "symmetrix_m1_reverse": 2,
+          "symmetrix_factorized_reverse_fused_v2": 2,
+          "symmetrix_r0_coordinate_reverse": 2
+        },
+        "ms_per_step": {
+          "symmetrix_r0_forward": 0.413136,
+          "symmetrix_m1_forward": 0.013776,
+          "symmetrix_m1_reverse": 0.019456,
+          "symmetrix_factorized_reverse_fused_v2": 0.32086400000000004,
+          "symmetrix_r0_coordinate_reverse": 0.306784
+        },
+        "passed": true
+      },
+      "passed": true,
+      "same_timed_rebuilds": true,
+      "median_ms_step": 2.8270095008338103,
+      "vs_upstream": {
+        "ratio_of_medians": 0.8526372054150942,
+        "time_reduction_pct": 14.736279458490575,
+        "paired_ratios": [
+          0.8814654337064749,
+          0.8827963745833577,
+          0.852361705537353,
+          0.85378665788403,
+          0.8447614731652288,
+          0.8524831328479777
+        ],
+        "wins": 6,
+        "wins_required": 6,
+        "trials": 6,
+        "meets_10pct_and_win_rule": true
+      },
+      "vs_factored": {
+        "ratio_of_medians": 0.8771943485687497,
+        "time_reduction_pct": 12.280565143125033,
+        "paired_ratios": [
+          0.9304597411337342,
+          0.8967764951996892,
+          0.8874160401612943,
+          0.8876088065562738,
+          0.8616555947787007,
+          0.8866954912389057
+        ],
+        "wins": 6,
+        "wins_required": 6,
+        "trials": 6,
+        "meets_10pct_and_win_rule": true
+      }
+    }
+  },
+  "orders": [
+    [
+      "upstream",
+      "factored",
+      "candidate"
+    ],
+    [
+      "candidate",
+      "factored",
+      "upstream"
+    ],
+    [
+      "factored",
+      "candidate",
+      "upstream"
+    ],
+    [
+      "upstream",
+      "candidate",
+      "factored"
+    ],
+    [
+      "candidate",
+      "upstream",
+      "factored"
+    ],
+    [
+      "factored",
+      "upstream",
+      "candidate"
+    ]
+  ],
+  "routes": {
+    "upstream": {
+      "r0": "upstream"
+    },
+    "factored": {
+      "r0": "factored"
+    },
+    "candidate": {
+      "r0": "factored",
+      "install": [
+        {
+          "module": "mace_md_lab.xl_r1_algorithm",
+          "config": {
+            "directory": "runs/r1-dev/artifacts",
+            "variant": "edgewarp8"
+          }
+        }
+      ],
+      "kernels": [
+        "symmetrix_factorized_reverse_fused_v2"
+      ]
+    }
+  },
+  "modules": {
+    "upstream": {
+      "m1": {
+        "source_sha256": "8aa139b19fe1981c9d8e30679bf02d5de0ca18dc7b44ec300651f5096d628ffd",
+        "cubin_sha256": "de8257c5ac17e1ead737225643620c2ec9d8c07986487080ab2a3c0174ec8f80",
+        "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+        "artifact_id": "jit-m1-gen19-f64-198de909c403f357-c128-chunk32-r3-sm_70",
+        "variant": "upstream",
+        "structure": "sha256:198de909c403f357759b9f9cbf0a60330815da0853d2101a2a9f02efc1f2053f"
+      },
+      "r0": {
+        "source_sha256": "7051c1df15ef19c6d4f0c309b04e2cf11a6901161dce52b18d7ea7f6839b19c2",
+        "cubin_sha256": "ade00d2fcb0639a5f8db41e7f24743abec13d3355942b1f7fa01a0ed8e63cd08",
+        "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+        "artifact_id": "generated-r0-gen19-cuda-f64-1adb0508937bf91e836ab42d98c17f2035f23607a7962549d30c64c3e7076b06",
+        "variant": "upstream",
+        "structure": "sha256:87d40a97a59259e75e7d3f51451a9b4b635349e610415f0aadd7199db238364d"
+      }
+    },
+    "factored": {
+      "m1": {
+        "source_sha256": "8aa139b19fe1981c9d8e30679bf02d5de0ca18dc7b44ec300651f5096d628ffd",
+        "cubin_sha256": "de8257c5ac17e1ead737225643620c2ec9d8c07986487080ab2a3c0174ec8f80",
+        "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+        "artifact_id": "jit-m1-gen19-f64-198de909c403f357-c128-chunk32-r3-sm_70",
+        "variant": "upstream",
+        "structure": "sha256:198de909c403f357759b9f9cbf0a60330815da0853d2101a2a9f02efc1f2053f"
+      },
+      "r0": {
+        "source_sha256": "df20ad0be36c47d72106af5c4f2357796a5cd95e91dda35e08166ac61e9ad884",
+        "cubin_sha256": "a73a3fce2f34886fe6486c7784c7a382e0bc28f6d13dc6da1a2c00136d71ca3d",
+        "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+        "artifact_id": "generated-r0-gen19-cuda-f64-1adb0508937bf91e836ab42d98c17f2035f23607a7962549d30c64c3e7076b06",
+        "variant": "factored",
+        "structure": "sha256:87d40a97a59259e75e7d3f51451a9b4b635349e610415f0aadd7199db238364d"
+      }
+    },
+    "candidate": {
+      "m1": {
+        "source_sha256": "8aa139b19fe1981c9d8e30679bf02d5de0ca18dc7b44ec300651f5096d628ffd",
+        "cubin_sha256": "de8257c5ac17e1ead737225643620c2ec9d8c07986487080ab2a3c0174ec8f80",
+        "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+        "artifact_id": "jit-m1-gen19-f64-198de909c403f357-c128-chunk32-r3-sm_70",
+        "variant": "upstream",
+        "structure": "sha256:198de909c403f357759b9f9cbf0a60330815da0853d2101a2a9f02efc1f2053f"
+      },
+      "r0": {
+        "source_sha256": "df20ad0be36c47d72106af5c4f2357796a5cd95e91dda35e08166ac61e9ad884",
+        "cubin_sha256": "a73a3fce2f34886fe6486c7784c7a382e0bc28f6d13dc6da1a2c00136d71ca3d",
+        "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+        "artifact_id": "generated-r0-gen19-cuda-f64-1adb0508937bf91e836ab42d98c17f2035f23607a7962549d30c64c3e7076b06",
+        "variant": "factored",
+        "structure": "sha256:87d40a97a59259e75e7d3f51451a9b4b635349e610415f0aadd7199db238364d"
+      },
+      "mace_md_lab.xl_r1_algorithm": {
+        "variant": "edgewarp8",
+        "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+        "structure": "sha256:963963a85b9316a79f901a9b9e63eb953bcd4abccfe80e74687305e58a492c0f",
+        "source_sha256": "76a9f7c25994400209faf4eaf7cf0b281d03cd7feaa947ac88ff4dad63fea08d",
+        "cubin_sha256": "f40bc13e910c713c5e11daa8db11433671cffca5f9027e62520655473cbfd2a0",
+        "native_artifact": "jit-r1-gen19-f64-44c7e72f932e893e"
+      }
+    }
+  },
+  "route_manifest_sha256": "2a295c093104d9eb20f6eef9d0aa82cbdaf692926e657d58f7c6e1756a8fae06",
+  "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+  "model_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736",
+  "structure_sha256": "674186cd63ac40385917aa952cf204c88d263fac13d2af3f5257c01e1d3a24a5",
+  "driver": "PreparedXL + ArrayVerlet",
+  "dtype": "float64",
+  "dt_fs": 0.5,
+  "skin_A": 1.0,
+  "symmetrix": "0.2.0",
+  "mace": "0.3.16",
+  "gpu": "Tesla V100-SXM2-16GB",
+  "launch": "static",
+  "plans": {
+    "upstream": "mh0-direct-speed",
+    "factored": "mh0-direct-speed",
+    "candidate": "mh0-direct-speed"
+  },
+  "neighbor_backend": "kokkos",
+  "observables": "E/F/stress returned to host every step",
+  "atoms": 192,
+  "steps": 32,
+  "warmup": 5,
+  "repeats": 6,
+  "velocities": "input momenta",
+  "gates_vs_MACE": {
+    "energy_eV_atom": 1e-08,
+    "force_eV_A": 1e-06,
+    "position_A": 1e-06,
+    "velocity_A_fs": 1e-07,
+    "nve_difference_eV_atom": 1e-08,
+    "stress_eV_A3": 1e-07
+  },
+  "gates_vs_XL": {
+    "energy_eV_atom": 1e-10,
+    "force_eV_A": 1e-09,
+    "stress_eV_A3": 1e-10
+  },
+  "generated_m0": false,
+  "trace_outside_timing": true
+}

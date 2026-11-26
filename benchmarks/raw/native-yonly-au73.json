@@ -1,0 +1,524 @@
+{
+  "passed": true,
+  "harmonic_storage_requested": "y-only-direct-v1",
+  "native_harmonic_storage_by_route": {
+    "upstream": "y-only-direct-v1",
+    "factored": "y-only-direct-v1",
+    "locked": "y-only-direct-v1"
+  },
+  "same_harmonic_storage_policy": true,
+  "performance_rule": {
+    "reference": "upstream",
+    "max_ratio": 0.9,
+    "paired_win_fraction": 0.875,
+    "estimator": "ratio of trial medians"
+  },
+  "results": {
+    "upstream": {
+      "trajectory_vs_XL": {
+        "position_A": 1.0658141036401503e-14,
+        "velocity_A_fs": 5.2284565565940966e-15,
+        "nve_difference_eV_atom": 1.1842378929335002e-15
+      },
+      "EFS_vs_XL_all_frames": {
+        "energy_eV_atom": 0.0,
+        "force_eV_A": 3.552713678800501e-15,
+        "stress_eV_A3": 0.0
+      },
+      "EFS_vs_original_MACE_three_frames": {
+        "energy_eV_atom": 5.5852951893105756e-09,
+        "force_eV_A": 7.312034444595383e-08,
+        "stress_eV_A3": 8.389011846299255e-10
+      },
+      "finite_differences": {
+        "displacement_A": 0.0001,
+        "strain": 1e-05,
+        "force_error_eV_A": {
+          "random_normalized": 1.6888940801429442e-09,
+          "OH_stretch_48_49": 1.5829877957340699e-06
+        },
+        "stress_error_eV_A3": {
+          "xx": 1.0231465674692686e-10,
+          "xy": 7.657266747757019e-13
+        },
+        "passed": true
+      },
+      "trials_ms": [
+        3.150115146127064,
+        3.1493399170964644,
+        3.1499915009286874,
+        3.1494831249195463,
+        3.14953535416862,
+        3.2720222928522467,
+        3.187320937286131,
+        3.3647578117476464
+      ],
+      "timed_rebuilds": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "trace": {
+        "steps": 2,
+        "counts": {
+          "symmetrix_r0_forward": 2,
+          "symmetrix_m1_forward": 2,
+          "symmetrix_m1_reverse": 2,
+          "symmetrix_r0_coordinate_reverse": 2
+        },
+        "ms_per_step": {
+          "symmetrix_r0_forward": 0.400095,
+          "symmetrix_m1_forward": 0.011328,
+          "symmetrix_m1_reverse": 0.0186245,
+          "symmetrix_r0_coordinate_reverse": 0.43260699999999996
+        },
+        "passed": true
+      },
+      "passed": true,
+      "same_timed_rebuilds": true,
+      "median_ms_step": 3.1500533235278754,
+      "vs_upstream": {
+        "ratio_of_medians": 1.0,
+        "time_reduction_pct": 0.0,
+        "paired_ratios": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "wins": 0,
+        "wins_required": 7,
+        "trials": 8,
+        "meets_10pct_and_win_rule": false
+      },
+      "vs_factored": {
+        "ratio_of_medians": 1.0301739662988518,
+        "time_reduction_pct": -3.017396629885183,
+        "paired_ratios": [
+          1.04308506888483,
+          1.0426584630979838,
+          1.0431245117436385,
+          1.0434422909392649,
+          0.9963624375959518,
+          1.0497965582278221,
+          1.0298007630255182,
+          1.0031182253868414
+        ],
+        "wins": 1,
+        "wins_required": 7,
+        "trials": 8,
+        "meets_10pct_and_win_rule": false
+      }
+    },
+    "factored": {
+      "trajectory_vs_XL": {
+        "position_A": 7.105427357601002e-15,
+        "velocity_A_fs": 5.155598170603071e-15,
+        "nve_difference_eV_atom": 5.921189464667501e-16
+      },
+      "EFS_vs_XL_all_frames": {
+        "energy_eV_atom": 0.0,
+        "force_eV_A": 3.1086244689504383e-15,
+        "stress_eV_A3": 6.938893903907228e-18
+      },
+      "EFS_vs_original_MACE_three_frames": {
+        "energy_eV_atom": 5.5852951893105756e-09,
+        "force_eV_A": 7.312034422390923e-08,
+        "stress_eV_A3": 8.389011846299255e-10
+      },
+      "finite_differences": {
+        "displacement_A": 0.0001,
+        "strain": 1e-05,
+        "force_error_eV_A": {
+          "random_normalized": 1.6888943576987003e-09,
+          "OH_stretch_48_49": 1.5829877957340699e-06
+        },
+        "stress_error_eV_A3": {
+          "xx": 1.0231465674692686e-10,
+          "xy": 7.657268916161364e-13
+        },
+        "passed": true
+      },
+      "trials_ms": [
+        3.0199983108711117,
+        3.0204904372415817,
+        3.019765584516184,
+        3.0183587077772245,
+        3.161033811920788,
+        3.1168156031829617,
+        3.0950850414228626,
+        3.354298353466826
+      ],
+      "timed_rebuilds": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "trace": {
+        "steps": 2,
+        "counts": {
+          "symmetrix_r0_forward": 2,
+          "symmetrix_m1_forward": 2,
+          "symmetrix_m1_reverse": 2,
+          "symmetrix_r0_coordinate_reverse": 2
+        },
+        "ms_per_step": {
+          "symmetrix_r0_forward": 0.3987195,
+          "symmetrix_m1_forward": 0.011344,
+          "symmetrix_m1_reverse": 0.018704,
+          "symmetrix_r0_coordinate_reverse": 0.30487949999999997
+        },
+        "passed": true
+      },
+      "passed": true,
+      "same_timed_rebuilds": true,
+      "median_ms_step": 3.0577877393322224,
+      "vs_upstream": {
+        "ratio_of_medians": 0.9707098341775622,
+        "time_reduction_pct": 2.929016582243782,
+        "paired_ratios": [
+          0.9586945780645748,
+          0.9590868298606282,
+          0.9586583276894207,
+          0.9583663693560284,
+          1.0036508425717303,
+          0.9525655158253857,
+          0.9710616226987786,
+          0.996891467717438
+        ],
+        "wins": 7,
+        "wins_required": 7,
+        "trials": 8,
+        "meets_10pct_and_win_rule": false
+      },
+      "vs_factored": {
+        "ratio_of_medians": 1.0,
+        "time_reduction_pct": 0.0,
+        "paired_ratios": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "wins": 0,
+        "wins_required": 7,
+        "trials": 8,
+        "meets_10pct_and_win_rule": false
+      }
+    },
+    "locked": {
+      "trajectory_vs_XL": {
+        "position_A": 1.0658141036401503e-14,
+        "velocity_A_fs": 4.6629367034256575e-15,
+        "nve_difference_eV_atom": 1.1842378929335002e-15
+      },
+      "EFS_vs_XL_all_frames": {
+        "energy_eV_atom": 0.0,
+        "force_eV_A": 3.1086244689504383e-15,
+        "stress_eV_A3": 6.938893903907228e-18
+      },
+      "EFS_vs_original_MACE_three_frames": {
+        "energy_eV_atom": 5.5852951893105756e-09,
+        "force_eV_A": 7.312034355777541e-08,
+        "stress_eV_A3": 8.389011846299255e-10
+      },
+      "finite_differences": {
+        "displacement_A": 0.0001,
+        "strain": 1e-05,
+        "force_error_eV_A": {
+          "random_normalized": 1.688894302187549e-09,
+          "OH_stretch_48_49": 1.5829877946238469e-06
+        },
+        "stress_error_eV_A3": {
+          "xx": 1.0231465674692686e-10,
+          "xy": 7.657266747757019e-13
+        },
+        "passed": true
+      },
+      "trials_ms": [
+        2.602310875469508,
+        2.576459000313965,
+        2.5747801264515147,
+        2.5725162292170958,
+        2.5731070830564327,
+        2.6134907093364745,
+        2.5975557073252276,
+        2.8976428123617857
+      ],
+      "timed_rebuilds": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "trace": {
+        "steps": 2,
+        "counts": {
+          "symmetrix_r0_forward": 2,
+          "symmetrix_factorized_forward_v2": 2,
+          "symmetrix_m1_forward": 2,
+          "symmetrix_m1_reverse": 2,
+          "symmetrix_factorized_reverse_fused_v2": 2,
+          "symmetrix_r0_coordinate_reverse": 2
+        },
+        "ms_per_step": {
+          "symmetrix_r0_forward": 0.3775665,
+          "symmetrix_factorized_forward_v2": 0.27007899999999996,
+          "symmetrix_m1_forward": 0.011375999999999999,
+          "symmetrix_m1_reverse": 0.018479999999999996,
+          "symmetrix_factorized_reverse_fused_v2": 0.33025499999999997,
+          "symmetrix_r0_coordinate_reverse": 0.26588749999999994
+        },
+        "passed": true
+      },
+      "passed": true,
+      "same_timed_rebuilds": true,
+      "median_ms_step": 2.5870073538195966,
+      "vs_upstream": {
+        "ratio_of_medians": 0.821258273470209,
+        "time_reduction_pct": 17.874172652979105,
+        "paired_ratios": [
+          0.8261002391194943,
+          0.8180949240593035,
+          0.8173927217557293,
+          0.8168058462871779,
+          0.8169799013847404,
+          0.7987386623390866,
+          0.8149652195165938,
+          0.8611742581427451
+        ],
+        "wins": 8,
+        "wins_required": 7,
+        "trials": 8,
+        "meets_10pct_and_win_rule": true
+      },
+      "vs_factored": {
+        "ratio_of_medians": 0.8460388929365523,
+        "time_reduction_pct": 15.396110706344768,
+        "paired_ratios": [
+          0.8616928248277322,
+          0.852993596187935,
+          0.8526423837842488,
+          0.852289763502478,
+          0.8140080860106003,
+          0.8385130986470677,
+          0.8392518048974472,
+          0.8638595935769801
+        ],
+        "wins": 8,
+        "wins_required": 7,
+        "trials": 8,
+        "meets_10pct_and_win_rule": true
+      }
+    }
+  },
+  "orders": [
+    [
+      "upstream",
+      "factored",
+      "locked"
+    ],
+    [
+      "locked",
+      "factored",
+      "upstream"
+    ],
+    [
+      "factored",
+      "locked",
+      "upstream"
+    ],
+    [
+      "upstream",
+      "locked",
+      "factored"
+    ],
+    [
+      "locked",
+      "upstream",
+      "factored"
+    ],
+    [
+      "factored",
+      "upstream",
+      "locked"
+    ],
+    [
+      "upstream",
+      "factored",
+      "locked"
+    ],
+    [
+      "locked",
+      "factored",
+      "upstream"
+    ]
+  ],
+  "routes": {
+    "upstream": {
+      "r0": "upstream"
+    },
+    "factored": {
+      "r0": "factored"
+    },
+    "locked": {
+      "r0": "upstream",
+      "install": [
+        {
+          "module": "mace_md_lab.xl_r0_algorithm",
+          "config": {
+            "directory": "runs/r0-algorithm",
+            "variant": "tilegrad"
+          }
+        },
+        {
+          "module": "mace_md_lab.xl_r1_algorithm",
+          "config": {
+            "directory": "runs/r1-qualified/artifacts",
+            "variant": "edgewarp8"
+          }
+        }
+      ],
+      "kernels": [
+        "symmetrix_factorized_forward_v2",
+        "symmetrix_factorized_reverse_fused_v2"
+      ]
+    }
+  },
+  "modules": {
+    "upstream": {
+      "m1": {
+        "source_sha256": "8aa139b19fe1981c9d8e30679bf02d5de0ca18dc7b44ec300651f5096d628ffd",
+        "cubin_sha256": "de8257c5ac17e1ead737225643620c2ec9d8c07986487080ab2a3c0174ec8f80",
+        "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+        "artifact_id": "jit-m1-gen19-f64-198de909c403f357-c128-chunk32-r3-sm_70",
+        "variant": "upstream",
+        "structure": "sha256:198de909c403f357759b9f9cbf0a60330815da0853d2101a2a9f02efc1f2053f"
+      },
+      "r0": {
+        "source_sha256": "7051c1df15ef19c6d4f0c309b04e2cf11a6901161dce52b18d7ea7f6839b19c2",
+        "cubin_sha256": "ade00d2fcb0639a5f8db41e7f24743abec13d3355942b1f7fa01a0ed8e63cd08",
+        "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+        "artifact_id": "generated-r0-gen19-cuda-f64-1adb0508937bf91e836ab42d98c17f2035f23607a7962549d30c64c3e7076b06",
+        "variant": "upstream",
+        "structure": "sha256:87d40a97a59259e75e7d3f51451a9b4b635349e610415f0aadd7199db238364d"
+      }
+    },
+    "factored": {
+      "m1": {
+        "source_sha256": "8aa139b19fe1981c9d8e30679bf02d5de0ca18dc7b44ec300651f5096d628ffd",
+        "cubin_sha256": "de8257c5ac17e1ead737225643620c2ec9d8c07986487080ab2a3c0174ec8f80",
+        "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+        "artifact_id": "jit-m1-gen19-f64-198de909c403f357-c128-chunk32-r3-sm_70",
+        "variant": "upstream",
+        "structure": "sha256:198de909c403f357759b9f9cbf0a60330815da0853d2101a2a9f02efc1f2053f"
+      },
+      "r0": {
+        "source_sha256": "df20ad0be36c47d72106af5c4f2357796a5cd95e91dda35e08166ac61e9ad884",
+        "cubin_sha256": "a73a3fce2f34886fe6486c7784c7a382e0bc28f6d13dc6da1a2c00136d71ca3d",
+        "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+        "artifact_id": "generated-r0-gen19-cuda-f64-1adb0508937bf91e836ab42d98c17f2035f23607a7962549d30c64c3e7076b06",
+        "variant": "factored",
+        "structure": "sha256:87d40a97a59259e75e7d3f51451a9b4b635349e610415f0aadd7199db238364d"
+      }
+    },
+    "locked": {
+      "m1": {
+        "source_sha256": "8aa139b19fe1981c9d8e30679bf02d5de0ca18dc7b44ec300651f5096d628ffd",
+        "cubin_sha256": "de8257c5ac17e1ead737225643620c2ec9d8c07986487080ab2a3c0174ec8f80",
+        "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+        "artifact_id": "jit-m1-gen19-f64-198de909c403f357-c128-chunk32-r3-sm_70",
+        "variant": "upstream",
+        "structure": "sha256:198de909c403f357759b9f9cbf0a60330815da0853d2101a2a9f02efc1f2053f"
+      },
+      "r0": {
+        "source_sha256": "7051c1df15ef19c6d4f0c309b04e2cf11a6901161dce52b18d7ea7f6839b19c2",
+        "cubin_sha256": "ade00d2fcb0639a5f8db41e7f24743abec13d3355942b1f7fa01a0ed8e63cd08",
+        "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+        "artifact_id": "generated-r0-gen19-cuda-f64-1adb0508937bf91e836ab42d98c17f2035f23607a7962549d30c64c3e7076b06",
+        "variant": "upstream",
+        "structure": "sha256:87d40a97a59259e75e7d3f51451a9b4b635349e610415f0aadd7199db238364d"
+      },
+      "mace_md_lab.xl_r0_algorithm": {
+        "source_sha256": "8c51b6c7f07d1f3a89e9dfdbeaccf937bcee4f56789f7d22025abdfef410d98d",
+        "cubin_sha256": "e48a82506f462a485c2edf57540d83125fc5d3f386e7e62fbf12a3236d6bd779",
+        "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+        "artifact_id": "generated-r0-gen19-cuda-f64-1adb0508937bf91e836ab42d98c17f2035f23607a7962549d30c64c3e7076b06",
+        "structure": "sha256:87d40a97a59259e75e7d3f51451a9b4b635349e610415f0aadd7199db238364d",
+        "variant": "tilegrad",
+        "forward_shards": 1
+      },
+      "mace_md_lab.xl_r1_algorithm": {
+        "variant": "edgewarp8",
+        "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+        "structure": "sha256:963963a85b9316a79f901a9b9e63eb953bcd4abccfe80e74687305e58a492c0f",
+        "source_sha256": "8c3e6f312354aa59b88c6f0c0766a7bb8ae21b8b16c4d9f76eae6d4c845f49ad",
+        "cubin_sha256": "fd90423bffb2d02540c4bfa22304d7df81837d40e49aff803145828e860057cc",
+        "native_artifact": "jit-r1-gen19-f64-44c7e72f932e893e"
+      }
+    }
+  },
+  "route_manifest_sha256": "6e5fe5cb38eca5a8c36b40dceaf2968b89f89dc2e0c92d1eda6174d62c9d1901",
+  "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+  "model_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736",
+  "structure_sha256": "ff5507e3036fe096dfa99e0ebdefaafd2289e88bc36fc02dcbda57caf7e277b8",
+  "driver": "PreparedXL + ArrayVerlet",
+  "dtype": "float64",
+  "dt_fs": 0.5,
+  "skin_A": 1.0,
+  "symmetrix": "0.2.0",
+  "mace": "0.3.16",
+  "gpu": "Tesla V100-SXM2-16GB",
+  "launch": "static",
+  "plans": {
+    "upstream": "mh0-direct-speed",
+    "factored": "mh0-direct-speed",
+    "locked": "mh0-direct-speed"
+  },
+  "neighbor_backend": "kokkos",
+  "observables": "E/F/stress returned to host every step",
+  "atoms": 192,
+  "steps": 48,
+  "warmup": 5,
+  "repeats": 8,
+  "velocities": "input momenta",
+  "gates_vs_MACE": {
+    "energy_eV_atom": 1e-08,
+    "force_eV_A": 1e-06,
+    "position_A": 1e-06,
+    "velocity_A_fs": 1e-07,
+    "nve_difference_eV_atom": 1e-08,
+    "stress_eV_A3": 1e-07
+  },
+  "gates_vs_XL": {
+    "energy_eV_atom": 1e-10,
+    "force_eV_A": 1e-09,
+    "stress_eV_A3": 1e-10
+  },
+  "generated_m0": false,
+  "trace_outside_timing": true,
+  "required_route": "locked",
+  "accepted": true
+}

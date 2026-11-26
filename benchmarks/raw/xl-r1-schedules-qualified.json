@@ -1,0 +1,342 @@
+{
+  "results": {
+    "stock": {
+      "artifact": {},
+      "trial_ms": [
+        3.3334604086121544,
+        3.312946533696959,
+        3.307355407741852,
+        3.311960375867784,
+        3.338018654176267,
+        3.310765063361032
+      ],
+      "rebuilds": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "moving_maxima": {
+        "position_A": 7.105427357601002e-15,
+        "velocity_A_fs": 3.3588583303600927e-15,
+        "energy_eV": 2.2737367544323206e-13,
+        "force_eV_A": 1.9939605522267811e-13,
+        "kinetic_eV": 1.7763568394002505e-14,
+        "stress_eV_A3": 9.367506770274758e-17
+      },
+      "passed": true,
+      "forward_v2_ms": 0.27334325000000004,
+      "forward_v2_calls": 4,
+      "reverse_fused_v2_ms": 0.6655185,
+      "reverse_fused_v2_calls": 4,
+      "median_ms": 3.3124534547823714
+    },
+    "upstream": {
+      "artifact": {
+        "variant": "upstream",
+        "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+        "structure": "sha256:963963a85b9316a79f901a9b9e63eb953bcd4abccfe80e74687305e58a492c0f",
+        "source_sha256": "47ada8c459450e9b9f2e5f5775277b12baa4d19f1fb216ab6939e807b564acac",
+        "cubin_sha256": "f56c7ee9d4f66332bc9dc750d7590d9f43574c1480b605e4a6fa7cb07d368904",
+        "native_artifact": "jit-r1-gen19-f64-44c7e72f932e893e"
+      },
+      "trial_ms": [
+        3.3647537493379787,
+        3.368447967659449,
+        3.361035152920522,
+        3.3616080618230626,
+        3.3959345309995115,
+        3.365285250765737
+      ],
+      "rebuilds": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "moving_maxima": {
+        "position_A": 7.105427357601002e-15,
+        "velocity_A_fs": 3.503274059735162e-15,
+        "energy_eV": 2.2737367544323206e-13,
+        "force_eV_A": 2.002564780667626e-13,
+        "kinetic_eV": 2.3092638912203256e-14,
+        "stress_eV_A3": 7.979727989493313e-17
+      },
+      "passed": true,
+      "forward_v2_ms": 0.27520775000000003,
+      "forward_v2_calls": 4,
+      "reverse_fused_v2_ms": 0.7174467500000001,
+      "reverse_fused_v2_calls": 4,
+      "median_ms": 3.365019500051858
+    },
+    "edgewarp2": {
+      "artifact": {
+        "variant": "edgewarp2",
+        "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+        "structure": "sha256:963963a85b9316a79f901a9b9e63eb953bcd4abccfe80e74687305e58a492c0f",
+        "source_sha256": "316564a397ff842e1a61760a6d64301f0895b262b1f3061f72539169850401df",
+        "cubin_sha256": "69793b4971a74467cc1dee7358192c2ad70673ca5ac1ec1a885eaab0f360ee6f",
+        "native_artifact": "jit-r1-gen19-f64-44c7e72f932e893e"
+      },
+      "trial_ms": [
+        3.0835571233183146,
+        3.0988633770903107,
+        3.0579046251659747,
+        3.0629104367108084,
+        3.059782313357573,
+        3.0658784999104682
+      ],
+      "rebuilds": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "moving_maxima": {
+        "position_A": 7.105427357601002e-15,
+        "velocity_A_fs": 3.387047586844716e-15,
+        "energy_eV": 1.1368683772161603e-13,
+        "force_eV_A": 1.992017661933687e-13,
+        "kinetic_eV": 1.9539925233402755e-14,
+        "stress_eV_A3": 1.249000902703301e-16
+      },
+      "passed": true,
+      "forward_v2_ms": 0.27324775,
+      "forward_v2_calls": 4,
+      "reverse_fused_v2_ms": 0.42220775000000005,
+      "reverse_fused_v2_calls": 4,
+      "median_ms": 3.0643944683106383
+    },
+    "edgewarp4": {
+      "artifact": {
+        "variant": "edgewarp4",
+        "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+        "structure": "sha256:963963a85b9316a79f901a9b9e63eb953bcd4abccfe80e74687305e58a492c0f",
+        "source_sha256": "c47394fc5e068c2bfc3e51570fb664738958546e6fd9c5dda39b6a67b8bd3d4e",
+        "cubin_sha256": "a40a44fee43fb1a44e20a4198210b8164c122707ce61c9d8fb56eb76f46c81a6",
+        "native_artifact": "jit-r1-gen19-f64-44c7e72f932e893e"
+      },
+      "trial_ms": [
+        3.005881248100195,
+        3.0208490607037675,
+        2.999738404469099,
+        3.002508561621653,
+        3.0035594681976363,
+        3.007756437000353
+      ],
+      "rebuilds": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "moving_maxima": {
+        "position_A": 7.105427357601002e-15,
+        "velocity_A_fs": 3.3497510321112145e-15,
+        "energy_eV": 1.1368683772161603e-13,
+        "force_eV_A": 1.9970136655445003e-13,
+        "kinetic_eV": 1.0658141036401503e-14,
+        "stress_eV_A3": 9.71445146547012e-17
+      },
+      "passed": true,
+      "forward_v2_ms": 0.27328775,
+      "forward_v2_calls": 4,
+      "reverse_fused_v2_ms": 0.3674635,
+      "reverse_fused_v2_calls": 4,
+      "median_ms": 3.0047203581489157
+    },
+    "edgewarp8": {
+      "artifact": {
+        "variant": "edgewarp8",
+        "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+        "structure": "sha256:963963a85b9316a79f901a9b9e63eb953bcd4abccfe80e74687305e58a492c0f",
+        "source_sha256": "8c3e6f312354aa59b88c6f0c0766a7bb8ae21b8b16c4d9f76eae6d4c845f49ad",
+        "cubin_sha256": "fd90423bffb2d02540c4bfa22304d7df81837d40e49aff803145828e860057cc",
+        "native_artifact": "jit-r1-gen19-f64-44c7e72f932e893e"
+      },
+      "trial_ms": [
+        2.960155030450551,
+        2.963322407595115,
+        2.992900033859769,
+        2.9607440301333554,
+        2.963926690426888,
+        2.969536439195508
+      ],
+      "rebuilds": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "moving_maxima": {
+        "position_A": 8.881784197001252e-15,
+        "velocity_A_fs": 4.624772786954168e-15,
+        "energy_eV": 1.1368683772161603e-13,
+        "force_eV_A": 2.824407374646398e-13,
+        "kinetic_eV": 6.217248937900877e-15,
+        "stress_eV_A3": 1.0581813203458523e-16
+      },
+      "passed": true,
+      "forward_v2_ms": 0.27440800000000004,
+      "forward_v2_calls": 4,
+      "reverse_fused_v2_ms": 0.32308775000000006,
+      "reverse_fused_v2_calls": 4,
+      "median_ms": 2.9636245490110014
+    },
+    "edgewarp8forward": {
+      "artifact": {
+        "variant": "edgewarp8forward",
+        "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+        "structure": "sha256:963963a85b9316a79f901a9b9e63eb953bcd4abccfe80e74687305e58a492c0f",
+        "source_sha256": "bdd976f4a365f66c5cf94fc9257b9e2a15dbcde82a327dec74747fc806006f5f",
+        "cubin_sha256": "2c8d37eb008b2f07d21f4cff558b231c46c774e6060614c14f3bc2eae64432ea",
+        "native_artifact": "jit-r1-gen19-f64-44c7e72f932e893e"
+      },
+      "trial_ms": [
+        3.034050125279464,
+        3.0427933743339963,
+        3.0354569062183145,
+        3.05426406339393,
+        3.037095593754202,
+        3.037534093891736
+      ],
+      "rebuilds": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "moving_maxima": {
+        "position_A": 7.105427357601002e-15,
+        "velocity_A_fs": 3.1862533445004004e-15,
+        "energy_eV": 1.1368683772161603e-13,
+        "force_eV_A": 1.9953483310075626e-13,
+        "kinetic_eV": 2.3092638912203256e-14,
+        "stress_eV_A3": 9.71445146547012e-17
+      },
+      "passed": true,
+      "forward_v2_ms": 0.35001575,
+      "forward_v2_calls": 4,
+      "reverse_fused_v2_ms": 0.32096,
+      "reverse_fused_v2_calls": 4,
+      "median_ms": 3.037314843822969
+    },
+    "edgewarp8pairs": {
+      "artifact": {
+        "variant": "edgewarp8pairs",
+        "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+        "structure": "sha256:963963a85b9316a79f901a9b9e63eb953bcd4abccfe80e74687305e58a492c0f",
+        "source_sha256": "934d86c0f80bb294982e6c7f7ca10927078186ad6dadf879070d37c02f5eba7d",
+        "cubin_sha256": "95e2e7e66bece3e0c441c840ec3aaf7e122211c8253fb514048d2dd84970cd97",
+        "native_artifact": "jit-r1-gen19-f64-44c7e72f932e893e"
+      },
+      "trial_ms": [
+        3.0171848120517097,
+        3.524197654769523,
+        3.015209687873721,
+        3.0480571585940197,
+        3.0426527191593777,
+        3.0402589072764385
+      ],
+      "rebuilds": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "moving_maxima": {
+        "position_A": 8.881784197001252e-15,
+        "velocity_A_fs": 4.6074255521944e-15,
+        "energy_eV": 1.1368683772161603e-13,
+        "force_eV_A": 2.8177460364986473e-13,
+        "kinetic_eV": 1.2434497875801753e-14,
+        "stress_eV_A3": 1.4224732503009818e-16
+      },
+      "passed": true,
+      "forward_v2_ms": 0.32754300000000003,
+      "forward_v2_calls": 4,
+      "reverse_fused_v2_ms": 0.324127,
+      "reverse_fused_v2_calls": 4,
+      "median_ms": 3.041455813217908
+    }
+  },
+  "orders": [
+    [
+      "stock",
+      "upstream",
+      "edgewarp2",
+      "edgewarp4",
+      "edgewarp8",
+      "edgewarp8forward",
+      "edgewarp8pairs"
+    ],
+    [
+      "edgewarp8pairs",
+      "edgewarp8forward",
+      "edgewarp8",
+      "edgewarp4",
+      "edgewarp2",
+      "upstream",
+      "stock"
+    ],
+    [
+      "upstream",
+      "edgewarp2",
+      "edgewarp4",
+      "edgewarp8",
+      "edgewarp8forward",
+      "edgewarp8pairs",
+      "stock"
+    ],
+    [
+      "stock",
+      "edgewarp8pairs",
+      "edgewarp8forward",
+      "edgewarp8",
+      "edgewarp4",
+      "edgewarp2",
+      "upstream"
+    ],
+    [
+      "edgewarp2",
+      "edgewarp4",
+      "edgewarp8",
+      "edgewarp8forward",
+      "edgewarp8pairs",
+      "stock",
+      "upstream"
+    ],
+    [
+      "upstream",
+      "stock",
+      "edgewarp8pairs",
+      "edgewarp8forward",
+      "edgewarp8",
+      "edgewarp4",
+      "edgewarp2"
+    ]
+  ],
+  "structure_sha256": "674186cd63ac40385917aa952cf204c88d263fac13d2af3f5257c01e1d3a24a5",
+  "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+  "steps": 32,
+  "warmup": 5,
+  "repeats": 6,
+  "gpu": "Tesla V100-SXM2-16GB",
+  "dtype": "float64",
+  "prepared_driver": true,
+  "upstream_generated_r0_m1": true
+}

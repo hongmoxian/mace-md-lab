@@ -1,0 +1,338 @@
+{
+  "passed": true,
+  "gates": {
+    "energy_eV_atom": 1e-08,
+    "force_eV_A": 1e-06,
+    "position_A": 1e-06,
+    "velocity_A_fs": 1e-07,
+    "nve_difference_eV_atom": 1e-08,
+    "stress_eV_A3": 1e-07
+  },
+  "results": {
+    "arrays_upstream_r0": {
+      "errors": {
+        "energy_eV_atom": 5.655457139634261e-09,
+        "force_eV_A": 1.4544380722014694e-07,
+        "stress_eV_A3": 7.656854317250605e-10,
+        "position_A": 1.0658141036401503e-14,
+        "velocity_A_fs": 3.711549297069627e-15,
+        "nve_difference_eV_atom": 5.921189464667501e-16
+      },
+      "common_frames_vs_xl": {
+        "force_eV_A": 2.2042784264542092e-13,
+        "energy_eV_atom": 0.0,
+        "stress_eV_A3": 6.526897078362737e-17
+      },
+      "passed": true,
+      "trials_ms": [
+        3.2262582923673713,
+        3.205992456059903,
+        3.284009959315881,
+        3.223096835426986
+      ],
+      "timed_rebuilds": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "trace": {
+        "calls_in_two_steps": {
+          "symmetrix_r0_forward": 2,
+          "symmetrix_m1_forward": 2,
+          "symmetrix_m1_reverse": 2,
+          "symmetrix_r0_coordinate_reverse": 2
+        },
+        "ms_per_step": {
+          "symmetrix_r0_forward": 0.4137195,
+          "symmetrix_m1_forward": 0.011775500000000001,
+          "symmetrix_m1_reverse": 0.019375499999999997,
+          "symmetrix_r0_coordinate_reverse": 0.443719
+        }
+      },
+      "modules_executed": true,
+      "median_ms_step": 3.2246775638971785
+    },
+    "arrays_factored_r0": {
+      "errors": {
+        "energy_eV_atom": 5.655457139634261e-09,
+        "force_eV_A": 1.454438049997009e-07,
+        "stress_eV_A3": 7.656854317250605e-10,
+        "position_A": 1.0658141036401503e-14,
+        "velocity_A_fs": 3.562254657918373e-15,
+        "nve_difference_eV_atom": 5.921189464667501e-16
+      },
+      "common_frames_vs_xl": {
+        "force_eV_A": 2.2053886494788344e-13,
+        "energy_eV_atom": 0.0,
+        "stress_eV_A3": 6.526897078362737e-17
+      },
+      "passed": true,
+      "trials_ms": [
+        3.092895543280368,
+        3.082424125750549,
+        3.0809931243614606,
+        3.0961642041802406
+      ],
+      "timed_rebuilds": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "trace": {
+        "calls_in_two_steps": {
+          "symmetrix_r0_forward": 2,
+          "symmetrix_m1_forward": 2,
+          "symmetrix_m1_reverse": 2,
+          "symmetrix_r0_coordinate_reverse": 2
+        },
+        "ms_per_step": {
+          "symmetrix_r0_forward": 0.40476749999999995,
+          "symmetrix_m1_forward": 0.011359999999999999,
+          "symmetrix_m1_reverse": 0.018847999999999997,
+          "symmetrix_r0_coordinate_reverse": 0.30563149999999994
+        }
+      },
+      "modules_executed": true,
+      "median_ms_step": 3.087659834515459
+    },
+    "arrays_channelgrad": {
+      "errors": {
+        "energy_eV_atom": 5.655457139634261e-09,
+        "force_eV_A": 1.454438049997009e-07,
+        "stress_eV_A3": 7.656854317250605e-10,
+        "position_A": 1.0658141036401503e-14,
+        "velocity_A_fs": 3.622969979577562e-15,
+        "nve_difference_eV_atom": 1.1842378929335002e-15
+      },
+      "common_frames_vs_xl": {
+        "force_eV_A": 2.2014334799536073e-13,
+        "energy_eV_atom": 0.0,
+        "stress_eV_A3": 6.516055056637882e-17
+      },
+      "passed": true,
+      "trials_ms": [
+        3.046941705785381,
+        3.051547125020685,
+        3.0639674563038475,
+        3.0608882516389713
+      ],
+      "timed_rebuilds": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "trace": {
+        "calls_in_two_steps": {
+          "symmetrix_r0_forward": 2,
+          "symmetrix_m1_forward": 2,
+          "symmetrix_m1_reverse": 2,
+          "symmetrix_r0_coordinate_reverse": 2
+        },
+        "ms_per_step": {
+          "symmetrix_r0_forward": 0.40312000000000003,
+          "symmetrix_m1_forward": 0.0112645,
+          "symmetrix_m1_reverse": 0.018672,
+          "symmetrix_r0_coordinate_reverse": 0.27083199999999996
+        }
+      },
+      "modules_executed": true,
+      "median_ms_step": 3.056217688329828
+    },
+    "arrays_tilegrad": {
+      "errors": {
+        "energy_eV_atom": 5.655457139634261e-09,
+        "force_eV_A": 1.454438049997009e-07,
+        "stress_eV_A3": 7.656854317250605e-10,
+        "position_A": 1.0658141036401503e-14,
+        "velocity_A_fs": 3.634245682171411e-15,
+        "nve_difference_eV_atom": 5.921189464667501e-16
+      },
+      "common_frames_vs_xl": {
+        "force_eV_A": 2.1999763122337868e-13,
+        "energy_eV_atom": 0.0,
+        "stress_eV_A3": 6.516055056637882e-17
+      },
+      "passed": true,
+      "trials_ms": [
+        3.026553376306159,
+        3.0233953778709597,
+        3.0732500405671694,
+        3.0359707889147103
+      ],
+      "timed_rebuilds": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "trace": {
+        "calls_in_two_steps": {
+          "symmetrix_r0_forward": 2,
+          "symmetrix_m1_forward": 2,
+          "symmetrix_m1_reverse": 2,
+          "symmetrix_r0_coordinate_reverse": 2
+        },
+        "ms_per_step": {
+          "symmetrix_r0_forward": 0.38017599999999996,
+          "symmetrix_m1_forward": 0.011344,
+          "symmetrix_m1_reverse": 0.018543999999999998,
+          "symmetrix_r0_coordinate_reverse": 0.271024
+        }
+      },
+      "modules_executed": true,
+      "median_ms_step": 3.031262082610435
+    },
+    "arrays_childgrad": {
+      "errors": {
+        "energy_eV_atom": 5.655457139634261e-09,
+        "force_eV_A": 1.4544380322334405e-07,
+        "stress_eV_A3": 7.656854282556136e-10,
+        "position_A": 1.0658141036401503e-14,
+        "velocity_A_fs": 3.606490106555782e-15,
+        "nve_difference_eV_atom": 1.1842378929335002e-15
+      },
+      "common_frames_vs_xl": {
+        "force_eV_A": 2.1998375343557086e-13,
+        "energy_eV_atom": 0.0,
+        "stress_eV_A3": 6.483528991463317e-17
+      },
+      "passed": true,
+      "trials_ms": [
+        3.2851882909502215,
+        3.2854210439836606,
+        3.3166757105694464,
+        3.330318878094355
+      ],
+      "timed_rebuilds": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "trace": {
+        "calls_in_two_steps": {
+          "symmetrix_r0_forward": 2,
+          "symmetrix_m1_forward": 2,
+          "symmetrix_m1_reverse": 2,
+          "symmetrix_r0_coordinate_reverse": 2
+        },
+        "ms_per_step": {
+          "symmetrix_r0_forward": 0.020816,
+          "symmetrix_m1_forward": 0.0116,
+          "symmetrix_m1_reverse": 0.0182715,
+          "symmetrix_r0_coordinate_reverse": 0.275599
+        }
+      },
+      "modules_executed": true,
+      "median_ms_step": 3.3010483772765538
+    }
+  },
+  "trial_orders": [
+    [
+      "arrays_upstream_r0",
+      "arrays_factored_r0",
+      "arrays_channelgrad",
+      "arrays_tilegrad",
+      "arrays_childgrad"
+    ],
+    [
+      "arrays_childgrad",
+      "arrays_tilegrad",
+      "arrays_channelgrad",
+      "arrays_factored_r0",
+      "arrays_upstream_r0"
+    ],
+    [
+      "arrays_factored_r0",
+      "arrays_channelgrad",
+      "arrays_tilegrad",
+      "arrays_childgrad",
+      "arrays_upstream_r0"
+    ],
+    [
+      "arrays_upstream_r0",
+      "arrays_childgrad",
+      "arrays_tilegrad",
+      "arrays_channelgrad",
+      "arrays_factored_r0"
+    ]
+  ],
+  "model_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736",
+  "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+  "structure_sha256": "674186cd63ac40385917aa952cf204c88d263fac13d2af3f5257c01e1d3a24a5",
+  "fixture": "au-water.extxyz",
+  "atoms": 192,
+  "velocities": "input momenta",
+  "period": "fixed-cell fully periodic",
+  "dt_fs": 0.5,
+  "warmup": 5,
+  "steps": 24,
+  "repeats": 4,
+  "skin_A": 1.0,
+  "selected_plan": "mh0-direct-speed",
+  "gpu": "Tesla V100-SXM2-16GB",
+  "symmetrix": "0.2.0",
+  "selector": "cuda12-sm70",
+  "native_neighbor_builder": "kokkos",
+  "dtype": "float64",
+  "observables": "E/F/stress on host every step",
+  "kernel_launch_policy": "static",
+  "launch_tuning_status": "static",
+  "numerical_scope": "Common frames against original MACE and XL; all moving frames against stock XL",
+  "product_info": {
+    "upstream": {
+      "source_sha256": "8aa139b19fe1981c9d8e30679bf02d5de0ca18dc7b44ec300651f5096d628ffd",
+      "cubin_sha256": "de8257c5ac17e1ead737225643620c2ec9d8c07986487080ab2a3c0174ec8f80",
+      "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+      "artifact_id": "jit-m1-gen19-f64-198de909c403f357-c128-chunk32-r3-sm_70",
+      "variant": "upstream",
+      "structure": "sha256:198de909c403f357759b9f9cbf0a60330815da0853d2101a2a9f02efc1f2053f"
+    },
+    "r0_upstream": {
+      "source_sha256": "7051c1df15ef19c6d4f0c309b04e2cf11a6901161dce52b18d7ea7f6839b19c2",
+      "cubin_sha256": "ade00d2fcb0639a5f8db41e7f24743abec13d3355942b1f7fa01a0ed8e63cd08",
+      "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+      "artifact_id": "generated-r0-gen19-cuda-f64-1adb0508937bf91e836ab42d98c17f2035f23607a7962549d30c64c3e7076b06",
+      "variant": "upstream",
+      "structure": "sha256:87d40a97a59259e75e7d3f51451a9b4b635349e610415f0aadd7199db238364d"
+    },
+    "r0_factored": {
+      "source_sha256": "df20ad0be36c47d72106af5c4f2357796a5cd95e91dda35e08166ac61e9ad884",
+      "cubin_sha256": "a73a3fce2f34886fe6486c7784c7a382e0bc28f6d13dc6da1a2c00136d71ca3d",
+      "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+      "artifact_id": "generated-r0-gen19-cuda-f64-1adb0508937bf91e836ab42d98c17f2035f23607a7962549d30c64c3e7076b06",
+      "variant": "factored",
+      "structure": "sha256:87d40a97a59259e75e7d3f51451a9b4b635349e610415f0aadd7199db238364d"
+    },
+    "r0_channelgrad": {
+      "source_sha256": "b161c4085e19c35fe196c83564812cba300ae901aa0fe5c74f9cc6d5f2953a23",
+      "cubin_sha256": "cd9d5fdd9c9947f5ef212430cfae8c30099818607d9147d91776b71a4a9936fc",
+      "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+      "artifact_id": "generated-r0-gen19-cuda-f64-1adb0508937bf91e836ab42d98c17f2035f23607a7962549d30c64c3e7076b06",
+      "structure": "sha256:87d40a97a59259e75e7d3f51451a9b4b635349e610415f0aadd7199db238364d",
+      "variant": "channelgrad",
+      "forward_shards": 1
+    },
+    "r0_tilegrad": {
+      "source_sha256": "8c51b6c7f07d1f3a89e9dfdbeaccf937bcee4f56789f7d22025abdfef410d98d",
+      "cubin_sha256": "e48a82506f462a485c2edf57540d83125fc5d3f386e7e62fbf12a3236d6bd779",
+      "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+      "artifact_id": "generated-r0-gen19-cuda-f64-1adb0508937bf91e836ab42d98c17f2035f23607a7962549d30c64c3e7076b06",
+      "structure": "sha256:87d40a97a59259e75e7d3f51451a9b4b635349e610415f0aadd7199db238364d",
+      "variant": "tilegrad",
+      "forward_shards": 1
+    },
+    "r0_childgrad": {
+      "source_sha256": "bd7fdb205f9a2c0da323a5efab778e0f0c8ef7b1c02d518359024e07af733be2",
+      "cubin_sha256": "d17f248367ecaacb54149bf8a957ed507b65b26e4158b014bbb6fe8c84dd5548",
+      "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+      "artifact_id": "generated-r0-gen19-cuda-f64-1adb0508937bf91e836ab42d98c17f2035f23607a7962549d30c64c3e7076b06",
+      "structure": "sha256:87d40a97a59259e75e7d3f51451a9b4b635349e610415f0aadd7199db238364d",
+      "variant": "childgrad",
+      "forward_shards": 4
+    }
+  }
+}

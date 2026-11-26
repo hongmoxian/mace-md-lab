@@ -1,0 +1,25 @@
+{
+  "locked": {
+    "r0": "upstream",
+    "install": [
+      {
+        "module": "mace_md_lab.xl_r0_algorithm",
+        "config": {
+          "directory": "runs/r0-algorithm",
+          "variant": "tilegrad"
+        }
+      },
+      {
+        "module": "mace_md_lab.xl_r1_algorithm",
+        "config": {
+          "directory": "runs/r1-qualified/artifacts",
+          "variant": "edgewarp8"
+        }
+      }
+    ],
+    "kernels": [
+      "symmetrix_factorized_forward_v2",
+      "symmetrix_factorized_reverse_fused_v2"
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+  "atomic_numbers": [
+    1,
+    8,
+    79
+  ],
+  "stages": {
+    "r0": {
+      "rows": 9,
+      "intervals": 8191,
+      "functions": 512,
+      "row_bytes": 134201344,
+      "representative_rows": 3,
+      "nonidentical_coefficients_per_row": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "passed": true
+    },
+    "r1": {
+      "rows": 6,
+      "intervals": 8191,
+      "functions": 512,
+      "row_bytes": 134201344,
+      "representative_rows": 1,
+      "nonidentical_coefficients_per_row": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "passed": true
+    }
+  },
+  "passed": true
+}

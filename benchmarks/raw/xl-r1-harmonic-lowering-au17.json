@@ -1,0 +1,212 @@
+{
+  "results": {
+    "stock": {
+      "artifact": {},
+      "trial_ms": [
+        3.2305279576879307,
+        3.286149292155945,
+        3.2943241458269767,
+        3.578203458649417,
+        3.2294134362018667,
+        3.2800650005810894
+      ],
+      "rebuilds": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "moving_maxima": {
+        "position_A": 1.0658141036401503e-14,
+        "velocity_A_fs": 5.870304242705515e-15,
+        "energy_eV": 1.1368683772161603e-13,
+        "force_eV_A": 4.557049182452033e-13,
+        "kinetic_eV": 2.3092638912203256e-14,
+        "stress_eV_A3": 2.636779683484747e-16
+      },
+      "passed": true,
+      "forward_v2_ms": 0.27481475,
+      "forward_v2_calls": 4,
+      "reverse_fused_v2_ms": 0.7050605000000001,
+      "reverse_fused_v2_calls": 4,
+      "direct_harmonic_launches": 112,
+      "median_ms": 3.2831071463685175
+    },
+    "upstream": {
+      "artifact": {
+        "variant": "upstream",
+        "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+        "structure": "sha256:963963a85b9316a79f901a9b9e63eb953bcd4abccfe80e74687305e58a492c0f",
+        "source_sha256": "47ada8c459450e9b9f2e5f5775277b12baa4d19f1fb216ab6939e807b564acac",
+        "cubin_sha256": "f56c7ee9d4f66332bc9dc750d7590d9f43574c1480b605e4a6fa7cb07d368904",
+        "native_artifact": "jit-r1-gen19-f64-44c7e72f932e893e",
+        "native_module_basename": "r1-upstream.cubin"
+      },
+      "trial_ms": [
+        3.6307290429249406,
+        3.2631329789486094,
+        3.274943209059226,
+        3.3584703948387564,
+        3.302108624969454,
+        3.2902296055302336
+      ],
+      "rebuilds": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "moving_maxima": {
+        "position_A": 7.993605777301127e-15,
+        "velocity_A_fs": 3.8311367966947785e-15,
+        "energy_eV": 1.1368683772161603e-13,
+        "force_eV_A": 2.3803181647963356e-13,
+        "kinetic_eV": 1.4210854715202004e-14,
+        "stress_eV_A3": 1.7694179454963432e-16
+      },
+      "passed": true,
+      "forward_v2_ms": 0.2743505,
+      "forward_v2_calls": 4,
+      "reverse_fused_v2_ms": 0.763108,
+      "reverse_fused_v2_calls": 4,
+      "direct_harmonic_launches": 58,
+      "median_ms": 3.296169115249844
+    },
+    "edgewarp8": {
+      "artifact": {
+        "variant": "edgewarp8",
+        "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+        "structure": "sha256:963963a85b9316a79f901a9b9e63eb953bcd4abccfe80e74687305e58a492c0f",
+        "source_sha256": "8c3e6f312354aa59b88c6f0c0766a7bb8ae21b8b16c4d9f76eae6d4c845f49ad",
+        "cubin_sha256": "fd90423bffb2d02540c4bfa22304d7df81837d40e49aff803145828e860057cc",
+        "native_artifact": "jit-r1-gen19-f64-44c7e72f932e893e",
+        "native_module_basename": "r1-edgewarp8.cubin"
+      },
+      "trial_ms": [
+        3.0780168550942713,
+        2.9582083734567277,
+        3.036868106088756,
+        2.9003097297390923,
+        2.7664504159474745,
+        2.8169898941996507
+      ],
+      "rebuilds": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "moving_maxima": {
+        "position_A": 1.0658141036401503e-14,
+        "velocity_A_fs": 5.8945903713691905e-15,
+        "energy_eV": 1.1368683772161603e-13,
+        "force_eV_A": 4.581612866871865e-13,
+        "kinetic_eV": 1.7763568394002505e-14,
+        "stress_eV_A3": 2.3678975447083417e-16
+      },
+      "passed": true,
+      "forward_v2_ms": 0.27593475,
+      "forward_v2_calls": 4,
+      "reverse_fused_v2_ms": 0.3346465,
+      "reverse_fused_v2_calls": 4,
+      "direct_harmonic_launches": 116,
+      "median_ms": 2.92925905159791
+    },
+    "edgewarp8lower": {
+      "artifact": {
+        "variant": "edgewarp8lower",
+        "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+        "structure": "sha256:963963a85b9316a79f901a9b9e63eb953bcd4abccfe80e74687305e58a492c0f",
+        "source_sha256": "b7cf93e548ab93201f9bd1cc55ad8ab81f60e8b9c4907c6606c2817912498bcf",
+        "cubin_sha256": "2e570f763ed65873988d941475cc66bd188be223bd9a98cf676bf7f2b3a011ab",
+        "native_artifact": "jit-r1-gen19-f64-44c7e72f932e893e",
+        "native_module_basename": "r1-edgewarp8lower.cubin"
+      },
+      "trial_ms": [
+        2.8783883123348155,
+        3.015119958339104,
+        2.819308397495964,
+        3.004543083079625,
+        2.807255123722522,
+        3.1010865423013456
+      ],
+      "rebuilds": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "moving_maxima": {
+        "position_A": 1.0658141036401503e-14,
+        "velocity_A_fs": 5.863365348801608e-15,
+        "energy_eV": 1.1368683772161603e-13,
+        "force_eV_A": 4.579392420822614e-13,
+        "kinetic_eV": 3.907985046680551e-14,
+        "stress_eV_A3": 2.0816681711721685e-16
+      },
+      "passed": true,
+      "forward_v2_ms": 0.276495,
+      "forward_v2_calls": 4,
+      "reverse_fused_v2_ms": 0.37271,
+      "reverse_fused_v2_calls": 4,
+      "direct_harmonic_launches": 174,
+      "median_ms": 2.94146569770722
+    }
+  },
+  "orders": [
+    [
+      "stock",
+      "upstream",
+      "edgewarp8",
+      "edgewarp8lower"
+    ],
+    [
+      "edgewarp8lower",
+      "edgewarp8",
+      "upstream",
+      "stock"
+    ],
+    [
+      "upstream",
+      "edgewarp8",
+      "edgewarp8lower",
+      "stock"
+    ],
+    [
+      "stock",
+      "edgewarp8lower",
+      "edgewarp8",
+      "upstream"
+    ],
+    [
+      "edgewarp8",
+      "edgewarp8lower",
+      "stock",
+      "upstream"
+    ],
+    [
+      "upstream",
+      "stock",
+      "edgewarp8lower",
+      "edgewarp8"
+    ]
+  ],
+  "structure_sha256": "674186cd63ac40385917aa952cf204c88d263fac13d2af3f5257c01e1d3a24a5",
+  "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+  "steps": 48,
+  "warmup": 5,
+  "repeats": 6,
+  "gpu": "Tesla V100-SXM2-16GB",
+  "dtype": "float64",
+  "prepared_driver": true,
+  "upstream_generated_r0_m1": true,
+  "y_only": true
+}

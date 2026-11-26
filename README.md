@@ -6,6 +6,10 @@ Run a fixed-cell molecular dynamics benchmark with an existing MACE checkpoint, 
 
 **Inputs** are trusted local MACE or ScaleShiftMACE checkpoints and ASE-readable periodic structures. **Outputs** include wall time per MD step, milliseconds per committee observation, per-member force errors, and the maximum atomic force disagreement on each sampled frame. The initial release targets scalar-energy MACE 0.3.16 on CPU or one GPU, with optional CUDA Graph replay.
 
+## Benchmark a native force algorithm
+
+Compare two conservative-force implementations inside the same prepared Symmetrix-XL evaluator and fixed-cell integrator. The runner reports per-trial full-step timings, numerical checks against XL and MACE, and finite differences of the candidate energy. [Algorithm-only results and reproduction](benchmarks/native-algorithms.md)
+
 ## Reproduce the full-step acceptance tests
 
 Run the frozen-checkpoint MACE implementation and the prepared Symmetrix-XL driver on the same moving structures. Both return the energy, conservative forces and stress to the host at every step. The report compares against XL with its upstream generated kernels enabled and includes separate tests of real SchNet and PaiNN models. [Protocol, results and commands](benchmarks/acceptance.md)

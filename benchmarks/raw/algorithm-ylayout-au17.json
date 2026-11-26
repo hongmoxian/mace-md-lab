@@ -1,0 +1,107 @@
+{
+  "passed": true,
+  "errors_vs_prepared_xl": {
+    "energy_eV_atom": 5.921189464667501e-16,
+    "force_eV_A": 2.7844393457598926e-13,
+    "stress_eV_A3": 7.632783294297951e-17,
+    "pos_A": 1.0658141036401503e-14,
+    "velocity_A_fs": 4.690692279041286e-15,
+    "nve_eV_atom": 5.921234639758022e-16
+  },
+  "gates": {
+    "energy_eV_atom": 1e-09,
+    "force_eV_A": 1e-08,
+    "stress_eV_A3": 1e-09,
+    "pos_A": 1e-08,
+    "velocity_A_fs": 1e-09,
+    "nve_eV_atom": 1e-09
+  },
+  "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+  "fixture_sha256": "674186cd63ac40385917aa952cf204c88d263fac13d2af3f5257c01e1d3a24a5",
+  "study": "harmonics",
+  "manifest": {
+    "harmonic_storage_policy": "y-only-direct-v1"
+  },
+  "steps": 32,
+  "repeats": 6,
+  "warmup": 5,
+  "dt_fs": 0.5,
+  "neighbor_skin": 1.0,
+  "velocities": "input momenta",
+  "device": "Tesla V100-SXM2-16GB",
+  "dtype": "float64",
+  "kernel_launch_policy": "static",
+  "driver": "PreparedXL/ArrayVerlet with host E/F/stress",
+  "both_generated_r0_m1": true,
+  "stock_generated_m0": false,
+  "traces": {
+    "upstream": {
+      "calls_in_two_steps": {
+        "symmetrix_r0_forward": 2,
+        "symmetrix_m1_forward": 2,
+        "symmetrix_m1_reverse": 2,
+        "symmetrix_r0_coordinate_reverse": 2
+      },
+      "ms_per_step": {
+        "symmetrix_r0_forward": 0.41139100000000006,
+        "symmetrix_m1_forward": 0.01176,
+        "symmetrix_m1_reverse": 0.018959999999999998,
+        "symmetrix_r0_coordinate_reverse": 0.4438075
+      }
+    },
+    "y_only": {
+      "calls_in_two_steps": {
+        "symmetrix_r0_forward": 2,
+        "symmetrix_m1_forward": 2,
+        "symmetrix_m1_reverse": 2,
+        "symmetrix_r0_coordinate_reverse": 2
+      },
+      "ms_per_step": {
+        "symmetrix_r0_forward": 0.41025500000000004,
+        "symmetrix_m1_forward": 0.011567999999999998,
+        "symmetrix_m1_reverse": 0.019424,
+        "symmetrix_r0_coordinate_reverse": 0.450287
+      }
+    }
+  },
+  "ms_step": {
+    "upstream": [
+      3.3591254068596754,
+      3.3990376578003634,
+      3.364545376825845,
+      3.3426220288674813,
+      3.317357721243752,
+      3.321563093777513
+    ],
+    "y_only": [
+      3.122356749372557,
+      3.1650284690840635,
+      3.129480843199417,
+      3.1255930953193456,
+      3.1348124066425953,
+      3.115825187705923
+    ]
+  },
+  "median_ms_step": {
+    "upstream": 3.3508737178635783,
+    "y_only": 3.1275369692593813
+  },
+  "timed_rebuilds": {
+    "upstream": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "y_only": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ]
+  }
+}

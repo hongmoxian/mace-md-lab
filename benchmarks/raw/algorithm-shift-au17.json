@@ -1,0 +1,117 @@
+{
+  "passed": true,
+  "errors_vs_prepared_xl": {
+    "energy_eV_atom": 7.697546304067751e-15,
+    "force_eV_A": 2.864375403532904e-13,
+    "stress_eV_A3": 6.227657278756737e-16,
+    "pos_A": 9.769962616701378e-15,
+    "velocity_A_fs": 7.008282842946301e-15,
+    "nve_eV_atom": 1.1842469279516044e-15
+  },
+  "gates": {
+    "energy_eV_atom": 1e-09,
+    "force_eV_A": 1e-08,
+    "stress_eV_A3": 1e-09,
+    "pos_A": 1e-08,
+    "velocity_A_fs": 1e-09,
+    "nve_eV_atom": 1e-09
+  },
+  "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+  "fixture_sha256": "674186cd63ac40385917aa952cf204c88d263fac13d2af3f5257c01e1d3a24a5",
+  "study": "species",
+  "manifest": {
+    "source_compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+    "cubin_sha256": "ce60a99248b8daa24c67c8268ae03772a3f60b7538d379b3ccef02a335563df7",
+    "input_compact_sha256": "f16f4a8a4f35a38b96f89adda60f5965df627a4a15a75aa40f9a2c9c7e1e2bd4",
+    "cuda_source_sha256": "f0a595a856043f13cacf9066d4f589c948f6cbfc6f18100eccf2a1a0502cb582",
+    "artifact_id": "jit-m0-gen19-f64-3b4ab2d979488798-c128-chunk32-r2-sm_70",
+    "condition": 400.7639715209477,
+    "max_species_residual": 1.7555401576885288e-14
+  },
+  "steps": 32,
+  "repeats": 6,
+  "warmup": 5,
+  "dt_fs": 0.5,
+  "neighbor_skin": 1.0,
+  "velocities": "input momenta",
+  "device": "Tesla V100-SXM2-16GB",
+  "dtype": "float64",
+  "kernel_launch_policy": "static",
+  "driver": "PreparedXL/ArrayVerlet with host E/F/stress",
+  "both_generated_r0_m1": true,
+  "stock_generated_m0": false,
+  "traces": {
+    "upstream": {
+      "calls_in_two_steps": {
+        "symmetrix_r0_forward": 2,
+        "symmetrix_m1_forward": 2,
+        "symmetrix_m1_reverse": 2,
+        "symmetrix_r0_coordinate_reverse": 2
+      },
+      "ms_per_step": {
+        "symmetrix_r0_forward": 0.4029755,
+        "symmetrix_m1_forward": 0.0113595,
+        "symmetrix_m1_reverse": 0.0187515,
+        "symmetrix_r0_coordinate_reverse": 0.43403100000000006
+      }
+    },
+    "shifted": {
+      "calls_in_two_steps": {
+        "symmetrix_r0_forward": 2,
+        "symmetrix_m0_forward": 2,
+        "symmetrix_m1_forward": 2,
+        "symmetrix_m1_reverse": 2,
+        "symmetrix_m0_reverse": 2,
+        "symmetrix_r0_coordinate_reverse": 2
+      },
+      "ms_per_step": {
+        "symmetrix_r0_forward": 0.408862,
+        "symmetrix_m0_forward": 0.01432,
+        "symmetrix_m1_forward": 0.011264,
+        "symmetrix_m1_reverse": 0.019039999999999998,
+        "symmetrix_m0_reverse": 0.0212645,
+        "symmetrix_r0_coordinate_reverse": 0.4414055
+      }
+    }
+  },
+  "ms_step": {
+    "upstream": [
+      3.358661095262505,
+      3.3610438731557224,
+      3.3606489705562126,
+      3.3324093783448916,
+      3.332842530653579,
+      3.3307810335827526
+    ],
+    "shifted": [
+      3.3087903138948604,
+      3.28499909301172,
+      3.279805718193529,
+      3.2693984067009296,
+      3.2668249077687506,
+      3.26869112541317
+    ]
+  },
+  "median_ms_step": {
+    "upstream": 3.345751812958042,
+    "shifted": 3.2746020624472294
+  },
+  "timed_rebuilds": {
+    "upstream": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "shifted": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ]
+  }
+}
