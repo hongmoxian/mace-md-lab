@@ -1,5 +1,7 @@
 # V100 benchmarks
 
+[Direct comparisons with original MACE and CHGNet](direct-comparison.md) report wall time per full MD step and per evaluation on identical moving frames for Au/water and Cu108.
+
 [Native force algorithm comparisons](native-algorithms.md) hold the prepared driver, integration, observables and graph maintenance fixed.
 
 [Current acceptance results and reproduction](acceptance.md) cover the independent analytic tangent and its comparison with the combined native XL route.
