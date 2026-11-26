@@ -1,0 +1,150 @@
+{
+  "model": {
+    "framework": "torch_geometric",
+    "version": "2.6.1",
+    "model": "SchNet",
+    "target": "QM9 U0",
+    "pretrained": true,
+    "source": "https://www.quantum-machine.org/datasets/trained_schnet_models.zip",
+    "source_sha256": "ca567abbd43b5d0740a558d708761e232cf6d5e732f3ec498bc608e67105c62d",
+    "weights_sha256": "85f92d2b93f04f2329a276b1567fb19072abb4b72f6f3900dbd36ae5e94d2e65",
+    "hidden_channels": 128,
+    "interactions": 6,
+    "energy_unit": "eV",
+    "length_unit": "angstrom",
+    "native_edges": "all-pairs exact cutoff supplied to PyG SchNet.forward"
+  },
+  "framework": "schnet",
+  "device": "cuda",
+  "dtype": "float64",
+  "torch": "2.13.0+cu126",
+  "gpu": "Tesla V100-SXM2-16GB",
+  "cpu_threads": 1,
+  "structure": "ethanol.xyz",
+  "structure_sha256": "edbce53d31f89531c17d36fac0f4e7f467f95b62c213776d70b0fab116821613",
+  "atoms": 9,
+  "directed_edges": 72,
+  "occupied_groups": 26,
+  "allocated_groups": 27,
+  "input_source_types": 3,
+  "steps": 16,
+  "warmup": 5,
+  "dt_fs": 0.25,
+  "repeats": 6,
+  "velocity_seed": 17,
+  "cuda_graph": true,
+  "geometry": "analytic",
+  "passed": true,
+  "scope": "Full FP64 molecular velocity-Verlet using identical graph policy. Only first interaction differs.",
+  "checks": {
+    "stock": {
+      "passed": true,
+      "max_energy_error_eV_atom": 0.0,
+      "max_force_component_error_eV_A": 4.440892098500626e-15,
+      "same_initial_force_error_eV_A": 1.1102230246251565e-15,
+      "max_position_error_A": 4.440892098500626e-16,
+      "max_velocity_error_A_fs": 4.9074218631082503e-17,
+      "max_NVE_change_difference_eV_atom": 0.0,
+      "fd_displacements_A": [
+        0.001,
+        0.0003
+      ],
+      "fd_errors_eV_A": [
+        6.009851583055337e-06,
+        5.415146886456057e-07
+      ],
+      "fd_tolerance_eV_A": 0.0005,
+      "force_projection_eV_A": 0.7682669142029197
+    },
+    "grouped": {
+      "passed": true,
+      "max_energy_error_eV_atom": 0.0,
+      "max_force_component_error_eV_A": 5.10702591327572e-15,
+      "same_initial_force_error_eV_A": 1.3322676295501878e-15,
+      "max_position_error_A": 4.440892098500626e-16,
+      "max_velocity_error_A_fs": 5.725325506959625e-17,
+      "max_NVE_change_difference_eV_atom": 0.0,
+      "fd_displacements_A": [
+        0.001,
+        0.0003
+      ],
+      "fd_errors_eV_A": [
+        6.0098515826112475e-06,
+        5.415146882015165e-07
+      ],
+      "fd_tolerance_eV_A": 0.0005,
+      "force_projection_eV_A": 0.7682669142029193
+    }
+  },
+  "trials": {
+    "stock": [
+      {
+        "ms_step": 1.1092860659118742,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.103472626709845,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.1046190556953661,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.1018890581908636,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.1055837458116002,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.1096916859969497,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      }
+    ],
+    "grouped": [
+      {
+        "ms_step": 1.1320259363856167,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.133630437834654,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.138494691986125,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.1378093113307841,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.13384731230326,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.1376990005373955,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      }
+    ]
+  },
+  "median_ms_step": {
+    "stock": 1.1051014007534832,
+    "grouped": 1.1357731564203277
+  },
+  "relative_step_time_reduction": -0.027754698026743796
+}

@@ -20,6 +20,8 @@ At skin 1.00 Å the new check reduced median time by 2.70%. Both paths rebuilt t
 
 ## Changes to the standalone force calculation
 
+The grouped first interaction and its coordinate derivative are now implemented on GPU, alongside a fused second interaction. The follow-up reports end-to-end timings, matched stress outputs and results for two additional model families. [Moving MD with grouped interactions](grouped-interactions.md)
+
 **Shared radial weights on reciprocal edges.** The two directed edges between the same atoms and opposite periodic images have equal lengths. The probe computes the distance-only radial MLP once per pair, retains the two directed messages and differentiates the resulting energy. The strict active graph has 13,306 directed edges and 6,653 reciprocal pairs at the starting frame.
 
 The prepared-graph energy and force call took 16.26 ms using directed edges and 16.33 ms with sharing. In moving MD, the full step time rose from 19.66 to 22.96 ms when sharing was enabled. Both routes refreshed the active graph on all 12 timed steps. Initial pair-map construction took 2.98 ms. These medians come from a second run that primed both complete trajectories and used six alternating trials. The two routes agreed within 9.93 × 10⁻¹⁴ eV/Å in force over 18 moving frames. [Repeat measurements](raw/paired-radial-interface.json) · [Pilot measurements](raw/paired-radial-interface-pilot.json)

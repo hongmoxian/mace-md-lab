@@ -1,0 +1,30 @@
+{
+  "scope": "Native CPU R0 radial values and slopes at every spline node",
+  "version": "0.2.0",
+  "export_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+  "receiver_sender_Z": [
+    79,
+    8
+  ],
+  "radial_shape": [
+    10,
+    64,
+    64,
+    64,
+    512
+  ],
+  "spline_nodes": 8192,
+  "distance_transform": {
+    "type": "none"
+  },
+  "native_report": {
+    "network": "R0",
+    "embedding_width": 64,
+    "output_width": 512,
+    "projection_layout": "row-major-output-by-embedding",
+    "max_value_error": 0,
+    "max_derivative_error": 1.823913338168963e-9
+  },
+  "tolerance": 1e-8,
+  "passed": true
+}

@@ -1,0 +1,131 @@
+{
+  "passed": true,
+  "model_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736",
+  "structure_sha256": "674186cd63ac40385917aa952cf204c88d263fac13d2af3f5257c01e1d3a24a5",
+  "atoms": 192,
+  "gpu": "Tesla V100-SXM2-16GB",
+  "torch": "2.13.0+cu126",
+  "dtype": "float64",
+  "rows": {
+    "first": {
+      "errors_vs_original": {
+        "energy_eV_atom": 0.0,
+        "force_eV_A": 2.831068712794149e-15,
+        "stress_eV_A3": 4.163336342344337e-17
+      },
+      "force_differences": [
+        {
+          "direction": "random_normalized",
+          "projection_eV_A": -0.2811702490805581,
+          "absolute_error_eV_A": {
+            "0.0002": 1.4607619780449e-08,
+            "0.0001": 3.5231531025914364e-09
+          }
+        },
+        {
+          "direction": "OH_stretch_48_49",
+          "projection_eV_A": 0.801290929239485,
+          "absolute_error_eV_A": {
+            "0.0002": 6.80825655785533e-06,
+            "0.0001": 1.70229645868325e-06
+          }
+        }
+      ],
+      "strain_difference_errors_eV_A3": {
+        "xx": {
+          "2e-05": 4.0832028036508206e-10,
+          "1e-05": 1.0159374036478042e-10
+        },
+        "zz": {
+          "2e-05": 2.469724980080912e-10,
+          "1e-05": 6.211863662342054e-11
+        },
+        "xy": {
+          "2e-05": 9.21701950873377e-13,
+          "1e-05": 1.0376443627946319e-13
+        }
+      },
+      "passed": true
+    },
+    "second": {
+      "errors_vs_original": {
+        "energy_eV_atom": 0.0,
+        "force_eV_A": 2.4424906541753444e-15,
+        "stress_eV_A3": 1.0408340855860843e-17
+      },
+      "force_differences": [
+        {
+          "direction": "random_normalized",
+          "projection_eV_A": -0.2811702490805581,
+          "absolute_error_eV_A": {
+            "0.0002": 1.4607619780449e-08,
+            "0.0001": 3.5231531025914364e-09
+          }
+        },
+        {
+          "direction": "OH_stretch_48_49",
+          "projection_eV_A": 0.8012909292394863,
+          "absolute_error_eV_A": {
+            "0.0002": 6.808256556523062e-06,
+            "0.0001": 1.7022964573509825e-06
+          }
+        }
+      ],
+      "strain_difference_errors_eV_A3": {
+        "xx": {
+          "2e-05": 4.083202699567412e-10,
+          "1e-05": 1.0159372995643956e-10
+        },
+        "zz": {
+          "2e-05": 2.4697252923311375e-10,
+          "1e-05": 6.211866784844311e-11
+        },
+        "xy": {
+          "2e-05": 9.21702384554246e-13,
+          "1e-05": 1.0376486996033218e-13
+        }
+      },
+      "passed": true
+    },
+    "bothfolded": {
+      "errors_vs_original": {
+        "energy_eV_atom": 0.0,
+        "force_eV_A": 3.7192471324942744e-15,
+        "stress_eV_A3": 2.42861286636753e-17
+      },
+      "force_differences": [
+        {
+          "direction": "random_normalized",
+          "projection_eV_A": -0.2811702490805583,
+          "absolute_error_eV_A": {
+            "0.0002": 1.4607620002493604e-08,
+            "0.0001": 3.5231533246360414e-09
+          }
+        },
+        {
+          "direction": "OH_stretch_48_49",
+          "projection_eV_A": 0.8012909292394859,
+          "absolute_error_eV_A": {
+            "0.0002": 6.808256556967152e-06,
+            "0.0001": 1.7022964577950717e-06
+          }
+        }
+      ],
+      "strain_difference_errors_eV_A3": {
+        "xx": {
+          "2e-05": 4.0913820595345207e-10,
+          "1e-05": 1.0159372995643956e-10
+        },
+        "zz": {
+          "2e-05": 2.4697251535532594e-10,
+          "1e-05": 6.21186539706553e-11
+        },
+        "xy": {
+          "2e-05": 9.217021677138115e-13,
+          "1e-05": 1.0376465311989769e-13
+        }
+      },
+      "passed": true
+    }
+  }
+}

@@ -1,0 +1,750 @@
+{
+  "passed": true,
+  "gates": {
+    "energy_eV_atom": 1e-08,
+    "force_eV_A": 1e-06,
+    "position_A": 1e-06,
+    "velocity_A_fs": 1e-07,
+    "nve_difference_eV_atom": 1e-08,
+    "stress_eV_A3": 1e-07
+  },
+  "checks": {
+    "base_efs": {
+      "errors": {
+        "energy_eV_atom": 5.26327952414889e-16,
+        "force_eV_A": 7.771561172376096e-16,
+        "position_A": 8.881784197001252e-16,
+        "velocity_A_fs": 7.37257477290143e-18,
+        "nve_difference_eV_atom": 1.5789838557741238e-15,
+        "stress_eV_A3": 1.474514954580286e-17
+      },
+      "passed": true,
+      "nve_excursion_meV_atom": 0.00033161445171740696
+    },
+    "base_edgeefs": {
+      "errors": {
+        "energy_eV_atom": 0.0,
+        "force_eV_A": 7.216449660063518e-16,
+        "position_A": 8.881784197001252e-16,
+        "velocity_A_fs": 7.37257477290143e-18,
+        "nve_difference_eV_atom": 1.0526559126726757e-15,
+        "stress_eV_A3": 1.3010426069826053e-17
+      },
+      "passed": true,
+      "nve_excursion_meV_atom": 0.0003316144522437349
+    },
+    "bothfolded_efs": {
+      "errors": {
+        "energy_eV_atom": 5.26327952414889e-16,
+        "force_eV_A": 6.661338147750939e-16,
+        "position_A": 8.881784197001252e-16,
+        "velocity_A_fs": 7.37257477290143e-18,
+        "nve_difference_eV_atom": 5.263279563363379e-16,
+        "stress_eV_A3": 1.3877787807814457e-17
+      },
+      "passed": true,
+      "nve_excursion_meV_atom": 0.00033161445277006286
+    },
+    "bothfolded_edgeefs": {
+      "errors": {
+        "energy_eV_atom": 5.26327952414889e-16,
+        "force_eV_A": 8.881784197001252e-16,
+        "position_A": 8.881784197001252e-16,
+        "velocity_A_fs": 7.37257477290143e-18,
+        "nve_difference_eV_atom": 5.263279563363379e-16,
+        "stress_eV_A3": 1.3444106938820255e-17
+      },
+      "passed": true,
+      "nve_excursion_meV_atom": 0.00033161445277006286
+    },
+    "xl_efs": {
+      "errors": {
+        "energy_eV_atom": 5.613445510890516e-11,
+        "force_eV_A": 4.7356527588249264e-09,
+        "position_A": 4.8254733542307804e-11,
+        "velocity_A_fs": 6.880462670964815e-12,
+        "nve_difference_eV_atom": 9.737067118106867e-14,
+        "stress_eV_A3": 6.467758620343211e-11
+      },
+      "passed": true,
+      "nve_excursion_meV_atom": 0.0003316143548730637
+    }
+  },
+  "median_ms_step": {
+    "base_efs": 14.483944039966445,
+    "base_edgeefs": 12.424987602571491,
+    "bothfolded_efs": 9.510715812211856,
+    "bothfolded_edgeefs": 7.63027854069757,
+    "xl_efs": 4.446591522234182
+  },
+  "raw_ms_step": {
+    "base_efs": [
+      14.487212873063982,
+      14.48067520686891,
+      14.476919794105925,
+      14.491826708156927
+    ],
+    "base_edgeefs": [
+      12.42515899745437,
+      12.406367124640383,
+      12.441541291385269,
+      12.424816207688613
+    ],
+    "bothfolded_efs": [
+      9.519303207828974,
+      9.496737543183068,
+      9.502128416594738,
+      9.583270502237914
+    ],
+    "bothfolded_edgeefs": [
+      7.641701750496092,
+      7.618855330899048,
+      7.664383413308921,
+      7.610338584830363
+    ],
+    "xl_efs": [
+      4.41040195679913,
+      4.4424938775288565,
+      4.450689166939507,
+      4.629264289784866
+    ]
+  },
+  "timed_graph_updates": {
+    "base_efs": [
+      {
+        "neighbor_rebuilds": 0,
+        "certificate_hits": 22,
+        "edge_refreshes": 2,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 0,
+        "certificate_hits": 22,
+        "edge_refreshes": 2,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 0,
+        "certificate_hits": 22,
+        "edge_refreshes": 2,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 0,
+        "certificate_hits": 22,
+        "edge_refreshes": 2,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      }
+    ],
+    "base_edgeefs": [
+      {
+        "neighbor_rebuilds": 0,
+        "certificate_hits": 22,
+        "edge_refreshes": 2,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 0,
+        "certificate_hits": 22,
+        "edge_refreshes": 2,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 0,
+        "certificate_hits": 22,
+        "edge_refreshes": 2,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 0,
+        "certificate_hits": 22,
+        "edge_refreshes": 2,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      }
+    ],
+    "bothfolded_efs": [
+      {
+        "neighbor_rebuilds": 0,
+        "certificate_hits": 22,
+        "edge_refreshes": 2,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 0,
+        "certificate_hits": 22,
+        "edge_refreshes": 2,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 0,
+        "certificate_hits": 22,
+        "edge_refreshes": 2,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 0,
+        "certificate_hits": 22,
+        "edge_refreshes": 2,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      }
+    ],
+    "bothfolded_edgeefs": [
+      {
+        "neighbor_rebuilds": 0,
+        "certificate_hits": 22,
+        "edge_refreshes": 2,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 0,
+        "certificate_hits": 22,
+        "edge_refreshes": 2,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 0,
+        "certificate_hits": 22,
+        "edge_refreshes": 2,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 0,
+        "certificate_hits": 22,
+        "edge_refreshes": 2,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      }
+    ],
+    "xl_efs": [
+      {
+        "neighbor_rebuilds": 0
+      },
+      {
+        "neighbor_rebuilds": 0
+      },
+      {
+        "neighbor_rebuilds": 0
+      },
+      {
+        "neighbor_rebuilds": 0
+      }
+    ]
+  },
+  "orders": [
+    [
+      "base_efs",
+      "base_edgeefs",
+      "bothfolded_efs",
+      "bothfolded_edgeefs",
+      "xl_efs"
+    ],
+    [
+      "xl_efs",
+      "bothfolded_edgeefs",
+      "bothfolded_efs",
+      "base_edgeefs",
+      "base_efs"
+    ],
+    [
+      "base_edgeefs",
+      "bothfolded_efs",
+      "bothfolded_edgeefs",
+      "xl_efs",
+      "base_efs"
+    ],
+    [
+      "base_efs",
+      "xl_efs",
+      "bothfolded_edgeefs",
+      "bothfolded_efs",
+      "base_edgeefs"
+    ]
+  ],
+  "source_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736",
+  "structure_sha256": "caf53b8fdc45601d1d781b1f91467a58bae78db87be195d4de6bae55124cd7f9",
+  "xl_json_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+  "model": "mace-mp-0-small.model",
+  "formula": "Cu108",
+  "atoms": 108,
+  "device": "Tesla V100-SXM2-16GB",
+  "torch": "2.13.0+cu126",
+  "mace": "0.3.16",
+  "symmetrix": "0.2.0",
+  "xl_plan": {
+    "requested_algorithm": "direct",
+    "requested_profile": "speed",
+    "selection_source": "native_request",
+    "state": "active",
+    "selected_id": "mh0-direct-speed",
+    "selection_reason": "low_memory=False: exact speed graph fits advisory device-memory budget",
+    "available_bytes": 14432313272,
+    "reserve_bytes": 846417100,
+    "boundary_attempt": false,
+    "candidates": [
+      {
+        "id": "mh0-direct-speed",
+        "qualified": true,
+        "estimated_bytes": 15133828,
+        "reason": "estimated fit"
+      },
+      {
+        "id": "mh0-direct-capacity-y-only",
+        "qualified": true,
+        "estimated_bytes": 9229252,
+        "reason": "qualified"
+      },
+      {
+        "id": "mh0-direct-capacity-retained",
+        "qualified": true,
+        "estimated_bytes": 15133828,
+        "reason": "qualified"
+      },
+      {
+        "id": "mh0-single-layer-tiled-v1",
+        "qualified": false,
+        "estimated_bytes": 0,
+        "reason": "fixed-workspace execution requires explicit opt-in via allow_fixed_workspace"
+      },
+      {
+        "id": "mh0-dual-layer-tiled-v1",
+        "qualified": false,
+        "estimated_bytes": 11822628,
+        "reason": "fixed-workspace execution requires explicit opt-in via allow_fixed_workspace"
+      }
+    ],
+    "binding_report_version": 1,
+    "bindings": [
+      {
+        "operator_id": "mh0.geometry",
+        "kind": "geometry",
+        "capability_key": "geometry",
+        "implementation_id": "generic_geometry",
+        "selected_implementation_id": "generic_geometry",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'generic_geometry'"
+      },
+      {
+        "operator_id": "mh0.interaction0.r0",
+        "kind": "radial",
+        "capability_key": "r0",
+        "implementation_id": "builtin_r0",
+        "selected_implementation_id": "builtin_r0",
+        "tier": "frozen",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified frozen implementation 'builtin_r0'"
+      },
+      {
+        "operator_id": "mh0.interaction0.harmonics",
+        "kind": "spherical_harmonic",
+        "capability_key": "harmonics",
+        "implementation_id": "generic_harmonics",
+        "selected_implementation_id": "generic_harmonics",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'generic_harmonics'"
+      },
+      {
+        "operator_id": "mh0.interaction0.m0",
+        "kind": "tensor_product",
+        "capability_key": "m0",
+        "implementation_id": "builtin_m0",
+        "selected_implementation_id": "builtin_m0",
+        "tier": "frozen",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified frozen implementation 'builtin_m0'"
+      },
+      {
+        "operator_id": "mh0.interaction0.h1",
+        "kind": "linear",
+        "capability_key": "h1",
+        "implementation_id": "generic_h1",
+        "selected_implementation_id": "generic_h1",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'generic_h1'"
+      },
+      {
+        "operator_id": "mh0.interaction0.phi1",
+        "kind": "tensor_product",
+        "capability_key": "phi1",
+        "implementation_id": "generated_phi1",
+        "selected_implementation_id": "generated_phi1",
+        "tier": "generated",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified generated implementation 'generated_phi1'"
+      },
+      {
+        "operator_id": "mh0.interaction0.a1",
+        "kind": "linear",
+        "capability_key": "a1",
+        "implementation_id": "blas_batched_a1",
+        "selected_implementation_id": "blas_batched_a1",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'blas_batched_a1'"
+      },
+      {
+        "operator_id": "mh0.interaction0.m1",
+        "kind": "tensor_product",
+        "capability_key": "m1",
+        "implementation_id": "device_m1_terms",
+        "selected_implementation_id": "device_m1_terms",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'device_m1_terms'"
+      },
+      {
+        "operator_id": "mh0.interaction0.h2",
+        "kind": "linear",
+        "capability_key": "h2",
+        "implementation_id": "device_h2_stages",
+        "selected_implementation_id": "device_h2_stages",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'device_h2_stages'"
+      },
+      {
+        "operator_id": "mh0.interaction1.r0",
+        "kind": "radial",
+        "capability_key": "r0",
+        "implementation_id": "builtin_r0",
+        "selected_implementation_id": "builtin_r0",
+        "tier": "frozen",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified frozen implementation 'builtin_r0'"
+      },
+      {
+        "operator_id": "mh0.interaction1.harmonics",
+        "kind": "spherical_harmonic",
+        "capability_key": "harmonics",
+        "implementation_id": "generic_harmonics",
+        "selected_implementation_id": "generic_harmonics",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'generic_harmonics'"
+      },
+      {
+        "operator_id": "mh0.interaction1.m0",
+        "kind": "tensor_product",
+        "capability_key": "m0",
+        "implementation_id": "builtin_m0",
+        "selected_implementation_id": "builtin_m0",
+        "tier": "frozen",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified frozen implementation 'builtin_m0'"
+      },
+      {
+        "operator_id": "mh0.interaction1.h1",
+        "kind": "linear",
+        "capability_key": "h1",
+        "implementation_id": "generic_h1",
+        "selected_implementation_id": "generic_h1",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'generic_h1'"
+      },
+      {
+        "operator_id": "mh0.interaction1.phi1",
+        "kind": "tensor_product",
+        "capability_key": "phi1",
+        "implementation_id": "generated_phi1",
+        "selected_implementation_id": "generated_phi1",
+        "tier": "generated",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified generated implementation 'generated_phi1'"
+      },
+      {
+        "operator_id": "mh0.interaction1.a1",
+        "kind": "linear",
+        "capability_key": "a1",
+        "implementation_id": "blas_batched_a1",
+        "selected_implementation_id": "blas_batched_a1",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'blas_batched_a1'"
+      },
+      {
+        "operator_id": "mh0.interaction1.m1",
+        "kind": "tensor_product",
+        "capability_key": "m1",
+        "implementation_id": "device_m1_terms",
+        "selected_implementation_id": "device_m1_terms",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'device_m1_terms'"
+      },
+      {
+        "operator_id": "mh0.interaction1.h2",
+        "kind": "linear",
+        "capability_key": "h2",
+        "implementation_id": "device_h2_stages",
+        "selected_implementation_id": "device_h2_stages",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'device_h2_stages'"
+      },
+      {
+        "operator_id": "mh0.readout",
+        "kind": "readout",
+        "capability_key": "readout",
+        "implementation_id": "generated_readout",
+        "selected_implementation_id": "generated_readout",
+        "tier": "generated",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified generated implementation 'generated_readout'"
+      },
+      {
+        "operator_id": "mh0.reduce_forces",
+        "kind": "reduction",
+        "capability_key": "reduce_forces",
+        "implementation_id": "generic_reduce_forces",
+        "selected_implementation_id": "generic_reduce_forces",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'generic_reduce_forces'"
+      },
+      {
+        "operator_id": "mh0.reduce_stress",
+        "kind": "reduction",
+        "capability_key": "reduce_stress",
+        "implementation_id": "generic_reduce_stress",
+        "selected_implementation_id": "generic_reduce_stress",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'generic_reduce_stress'"
+      }
+    ],
+    "model_type": "MACE",
+    "mace_les_parameters_sha256": null,
+    "mace_les_evaluator_fingerprint": "fb0c39d081c917018793e6e7210e8e2d3a6296d3a100796de3da29dc5f3987c6"
+  },
+  "xl_r0": {
+    "implementation": "generated",
+    "backend": "cuda",
+    "artifact_origin": null,
+    "schedule": "frozen",
+    "profile": "fixed-weight-coordinate",
+    "artifact_id": "standard-r0-module-module-v2"
+  },
+  "xl_r1": null,
+  "xl_neighbor_backend": "kokkos",
+  "xl_selector": "cuda12-sm70",
+  "dtype": "float64",
+  "resident_skin_A": 1.0,
+  "xl_skin_A": 1.0,
+  "dt_fs": 0.5,
+  "velocity_source": "input momenta",
+  "cpu_threads": 1,
+  "steps": 24,
+  "warmup": 5,
+  "repeats": 4,
+  "frame": 0,
+  "transform_info": {
+    "bothfolded": {
+      "operator": "grouped_species_first_interaction",
+      "kernel": "Triton segmented edge moments and adjoint, batched FP64 projection",
+      "atoms": 108,
+      "species": 1,
+      "dense_group_slots": 108,
+      "fold_receiver_linear": true
+    },
+    "second": {
+      "second_interaction": "segmented_scalar_uvu",
+      "channels": 128,
+      "l_max": 3
+    }
+  },
+  "scope": "Synchronized complete fixed-cell velocity-Verlet steps. Each path first ran the entire trajectory untimed. Resident controls retain tensors on GPU. Native XL returns energy, forces and stress to ASE. The efs controls request native MACE stress, edgeefs derives stress via edge vectors, and ef requests energy and force. Both stress paths compute stress in each evaluation and validate it on common frames."
+}

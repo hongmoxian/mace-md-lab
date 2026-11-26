@@ -1,0 +1,150 @@
+{
+  "model": {
+    "framework": "torch_geometric",
+    "version": "2.6.1",
+    "model": "SchNet",
+    "target": "QM9 U0",
+    "pretrained": true,
+    "source": "https://www.quantum-machine.org/datasets/trained_schnet_models.zip",
+    "source_sha256": "ca567abbd43b5d0740a558d708761e232cf6d5e732f3ec498bc608e67105c62d",
+    "weights_sha256": "85f92d2b93f04f2329a276b1567fb19072abb4b72f6f3900dbd36ae5e94d2e65",
+    "hidden_channels": 128,
+    "interactions": 6,
+    "energy_unit": "eV",
+    "length_unit": "angstrom",
+    "native_edges": "all-pairs exact cutoff supplied to PyG SchNet.forward"
+  },
+  "framework": "schnet",
+  "device": "cuda",
+  "dtype": "float64",
+  "torch": "2.13.0+cu126",
+  "gpu": "Tesla V100-SXM2-16GB",
+  "cpu_threads": 1,
+  "structure": "ethanol8.extxyz",
+  "structure_sha256": "401de6bc9b06ef07dcedec4729049eacf0eb6413ec7abc8f7bfcab40395a8b35",
+  "atoms": 72,
+  "directed_edges": 576,
+  "occupied_groups": 208,
+  "allocated_groups": 216,
+  "input_source_types": 3,
+  "steps": 16,
+  "warmup": 5,
+  "dt_fs": 0.25,
+  "repeats": 6,
+  "velocity_seed": 17,
+  "cuda_graph": true,
+  "geometry": "analytic",
+  "passed": true,
+  "scope": "Full FP64 molecular velocity-Verlet using identical graph policy. Only first interaction differs.",
+  "checks": {
+    "stock": {
+      "passed": true,
+      "max_energy_error_eV_atom": 3.0316490059097606e-13,
+      "max_force_component_error_eV_A": 4.884981308350689e-15,
+      "same_initial_force_error_eV_A": 2.4424906541753444e-15,
+      "max_position_error_A": 3.3306690738754696e-16,
+      "max_velocity_error_A_fs": 6.543229150811e-17,
+      "max_NVE_change_difference_eV_atom": 4.0421986745463475e-13,
+      "fd_displacements_A": [
+        0.001,
+        0.0003
+      ],
+      "fd_errors_eV_A": [
+        3.0733716382957965e-07,
+        2.114949768095009e-08
+      ],
+      "fd_tolerance_eV_A": 0.0005,
+      "force_projection_eV_A": -0.11202987487123639
+    },
+    "grouped": {
+      "passed": true,
+      "max_energy_error_eV_atom": 3.0316490059097606e-13,
+      "max_force_component_error_eV_A": 5.10702591327572e-15,
+      "same_initial_force_error_eV_A": 1.7763568394002505e-15,
+      "max_position_error_A": 4.440892098500626e-16,
+      "max_velocity_error_A_fs": 5.997960054910085e-17,
+      "max_NVE_change_difference_eV_atom": 3.0316490059097606e-13,
+      "fd_displacements_A": [
+        0.001,
+        0.0003
+      ],
+      "fd_errors_eV_A": [
+        3.0733716357977947e-07,
+        4.540268946917614e-08
+      ],
+      "fd_tolerance_eV_A": 0.0005,
+      "force_projection_eV_A": -0.11202987487123664
+    }
+  },
+  "trials": {
+    "stock": [
+      {
+        "ms_step": 1.7762354400474578,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.6978391940938309,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.7015896883094683,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.698385807685554,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.7001890591927804,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.6988111892715096,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      }
+    ],
+    "grouped": [
+      {
+        "ms_step": 1.783176623575855,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.707302566501312,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.7061309335986152,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.706865368760191,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.7041604951373301,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.7424111865693703,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      }
+    ]
+  },
+  "median_ms_step": {
+    "stock": 1.699500124232145,
+    "grouped": 1.7070839676307514
+  },
+  "relative_step_time_reduction": -0.0044623964955772255
+}

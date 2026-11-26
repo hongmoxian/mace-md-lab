@@ -1,0 +1,1478 @@
+{
+  "passed": true,
+  "gates": {
+    "energy_eV_atom": 1e-08,
+    "force_eV_A": 1e-06,
+    "position_A": 1e-06,
+    "velocity_A_fs": 1e-07,
+    "nve_difference_eV_atom": 1e-08,
+    "stress_eV_A3": 1e-07
+  },
+  "checks": {
+    "base_ef": {
+      "errors": {
+        "energy_eV_atom": 0.0,
+        "force_eV_A": 2.7200464103316335e-15,
+        "position_A": 1.0658141036401503e-14,
+        "velocity_A_fs": 5.918876500032866e-15,
+        "nve_difference_eV_atom": 1.1842333754244483e-15
+      },
+      "passed": true,
+      "nve_excursion_meV_atom": 0.14257356260571896
+    },
+    "base_efs": {
+      "errors": {
+        "energy_eV_atom": 0.0,
+        "force_eV_A": 2.55351295663786e-15,
+        "position_A": 8.881784197001252e-15,
+        "velocity_A_fs": 6.050715484207103e-15,
+        "nve_difference_eV_atom": 5.921234639758022e-16,
+        "stress_eV_A3": 2.688821387764051e-17
+      },
+      "passed": true,
+      "nve_excursion_meV_atom": 0.14257356260571896
+    },
+    "first_ef": {
+      "errors": {
+        "energy_eV_atom": 0.0,
+        "force_eV_A": 3.164135620181696e-15,
+        "position_A": 8.881784197001252e-15,
+        "velocity_A_fs": 4.388850394221322e-15,
+        "nve_difference_eV_atom": 1.1842333754244483e-15
+      },
+      "passed": true,
+      "nve_excursion_meV_atom": 0.14257356260571896
+    },
+    "first_efs": {
+      "errors": {
+        "energy_eV_atom": 0.0,
+        "force_eV_A": 3.83026943495679e-15,
+        "position_A": 1.0658141036401503e-14,
+        "velocity_A_fs": 5.797445856714489e-15,
+        "nve_difference_eV_atom": 5.921234639758022e-16,
+        "stress_eV_A3": 3.122502256758253e-17
+      },
+      "passed": true,
+      "nve_excursion_meV_atom": 0.14257356260571896
+    },
+    "folded_ef": {
+      "errors": {
+        "energy_eV_atom": 0.0,
+        "force_eV_A": 3.9968028886505635e-15,
+        "position_A": 1.0658141036401503e-14,
+        "velocity_A_fs": 5.9396931817445875e-15,
+        "nve_difference_eV_atom": 5.921370165029582e-16
+      },
+      "passed": true,
+      "nve_excursion_meV_atom": 0.14257356260571896
+    },
+    "folded_efs": {
+      "errors": {
+        "energy_eV_atom": 0.0,
+        "force_eV_A": 3.885780586188048e-15,
+        "position_A": 8.881784197001252e-15,
+        "velocity_A_fs": 6.033368249447335e-15,
+        "nve_difference_eV_atom": 1.1842333754244483e-15,
+        "stress_eV_A3": 1.214306433183765e-17
+      },
+      "passed": true,
+      "nve_excursion_meV_atom": 0.14257356260571896
+    },
+    "second_ef": {
+      "errors": {
+        "energy_eV_atom": 0.0,
+        "force_eV_A": 2.4424906541753444e-15,
+        "position_A": 8.881784197001252e-15,
+        "velocity_A_fs": 5.800915303666443e-15,
+        "nve_difference_eV_atom": 5.921234639758022e-16
+      },
+      "passed": true,
+      "nve_excursion_meV_atom": 0.14257356260512685
+    },
+    "second_efs": {
+      "errors": {
+        "energy_eV_atom": 0.0,
+        "force_eV_A": 2.886579864025407e-15,
+        "position_A": 8.881784197001252e-15,
+        "velocity_A_fs": 5.689893001203927e-15,
+        "nve_difference_eV_atom": 5.921234639758022e-16,
+        "stress_eV_A3": 2.2551405187698492e-17
+      },
+      "passed": true,
+      "nve_excursion_meV_atom": 0.14257356260571896
+    },
+    "both_ef": {
+      "errors": {
+        "energy_eV_atom": 0.0,
+        "force_eV_A": 3.6637359812630166e-15,
+        "position_A": 1.0658141036401503e-14,
+        "velocity_A_fs": 5.9396931817445875e-15,
+        "nve_difference_eV_atom": 5.921234639758022e-16
+      },
+      "passed": true,
+      "nve_excursion_meV_atom": 0.14257356260571896
+    },
+    "both_efs": {
+      "errors": {
+        "energy_eV_atom": 0.0,
+        "force_eV_A": 3.3306690738754696e-15,
+        "position_A": 1.0658141036401503e-14,
+        "velocity_A_fs": 6.2727600891321345e-15,
+        "nve_difference_eV_atom": 5.921234639758022e-16,
+        "stress_eV_A3": 1.3877787807814457e-17
+      },
+      "passed": true,
+      "nve_excursion_meV_atom": 0.14257356260571896
+    },
+    "bothfolded_ef": {
+      "errors": {
+        "energy_eV_atom": 0.0,
+        "force_eV_A": 3.7192471324942744e-15,
+        "position_A": 1.0658141036401503e-14,
+        "velocity_A_fs": 6.0298988024953815e-15,
+        "nve_difference_eV_atom": 1.1842333754244483e-15
+      },
+      "passed": true,
+      "nve_excursion_meV_atom": 0.14257356260571896
+    },
+    "bothfolded_efs": {
+      "errors": {
+        "energy_eV_atom": 0.0,
+        "force_eV_A": 3.4416913763379853e-15,
+        "position_A": 1.0658141036401503e-14,
+        "velocity_A_fs": 5.887651477465283e-15,
+        "nve_difference_eV_atom": 5.921234639758022e-16,
+        "stress_eV_A3": 2.949029909160572e-17
+      },
+      "passed": true,
+      "nve_excursion_meV_atom": 0.14257356260571896
+    },
+    "xl_efs": {
+      "errors": {
+        "energy_eV_atom": 5.655457139634261e-09,
+        "force_eV_A": 8.485269864522138e-08,
+        "position_A": 6.067157087841224e-08,
+        "velocity_A_fs": 4.817451130720296e-09,
+        "nve_difference_eV_atom": 5.771264947873871e-11,
+        "stress_eV_A3": 8.888903745007948e-10
+      },
+      "passed": true,
+      "nve_excursion_meV_atom": 0.14257356409312175
+    }
+  },
+  "median_ms_step": {
+    "base_ef": 19.416244813328376,
+    "base_efs": 22.29492804084051,
+    "first_ef": 15.723055354707565,
+    "first_efs": 18.597872719207466,
+    "folded_ef": 14.919017281499691,
+    "folded_efs": 17.798870312011182,
+    "second_ef": 15.624637896204755,
+    "second_efs": 18.511920386420876,
+    "both_ef": 12.880487968989957,
+    "both_efs": 15.576134865114,
+    "bothfolded_ef": 11.513113198210098,
+    "bothfolded_efs": 14.214595812518382,
+    "xl_efs": 6.1003720948065165
+  },
+  "raw_ms_step": {
+    "base_ef": [
+      19.45794550071393,
+      19.407409835063543,
+      19.42507979159321,
+      19.39048745650022,
+      19.40690541717534,
+      19.45280408350906
+    ],
+    "base_efs": [
+      22.305073604608577,
+      22.31781541680296,
+      22.302450270217378,
+      22.280263248831034,
+      22.28740581146364,
+      22.27326764599032
+    ],
+    "first_ef": [
+      15.735623417034125,
+      15.698804250860121,
+      15.718508291077645,
+      15.687794771414096,
+      15.727602418337483,
+      15.730061124486383
+    ],
+    "first_efs": [
+      18.652858105876174,
+      18.599975395773072,
+      18.590747541262925,
+      18.59193493874045,
+      18.595770042641863,
+      18.603244228870608
+    ],
+    "folded_ef": [
+      14.917971833104579,
+      14.90577322935375,
+      14.924137603278117,
+      14.967874497718489,
+      14.898358414939139,
+      14.920062729894804
+    ],
+    "folded_efs": [
+      17.805747042681713,
+      17.783824499929324,
+      17.793277790284872,
+      17.77455664462953,
+      17.80446283373749,
+      17.82509362480293
+    ],
+    "second_ef": [
+      15.643775417023184,
+      15.620872916770168,
+      15.631574960328484,
+      15.600912772545902,
+      15.62372075083355,
+      15.625555041575959
+    ],
+    "second_efs": [
+      18.51644279183044,
+      18.564043813967146,
+      18.502306583589718,
+      18.51271495979745,
+      18.5111258130443,
+      18.506104376380488
+    ],
+    "both_ef": [
+      12.896793227506956,
+      12.880652083064584,
+      12.880323854915332,
+      12.860673748946283,
+      12.881473541104546,
+      12.861125146931348
+    ],
+    "both_efs": [
+      15.61693974993735,
+      15.585599292535335,
+      15.541872540779877,
+      15.578676126703309,
+      15.560984167677816,
+      15.57359360352469
+    ],
+    "bothfolded_ef": [
+      11.514504791800087,
+      11.50225364593401,
+      11.513493021387452,
+      11.520165479547964,
+      11.507813020822747,
+      11.512733375032743
+    ],
+    "bothfolded_efs": [
+      14.289565061820516,
+      14.226905334605059,
+      14.216143812518567,
+      14.213047812518198,
+      14.210871064278763,
+      14.212107979498493
+    ],
+    "xl_efs": [
+      6.065632980607916,
+      6.136502646162019,
+      6.024042042554356,
+      6.0600029391935095,
+      6.135111209005117,
+      6.2559956665306045
+    ]
+  },
+  "timed_graph_updates": {
+    "base_ef": [
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      }
+    ],
+    "base_efs": [
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      }
+    ],
+    "first_ef": [
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      }
+    ],
+    "first_efs": [
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      }
+    ],
+    "folded_ef": [
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      }
+    ],
+    "folded_efs": [
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      }
+    ],
+    "second_ef": [
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      }
+    ],
+    "second_efs": [
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      }
+    ],
+    "both_ef": [
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      }
+    ],
+    "both_efs": [
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      }
+    ],
+    "bothfolded_ef": [
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      }
+    ],
+    "bothfolded_efs": [
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 24,
+        "certificate_hits": 0,
+        "edge_refreshes": 48,
+        "captures": 0,
+        "replays": 0,
+        "fallback_evaluations": 0
+      }
+    ],
+    "xl_efs": [
+      {
+        "neighbor_rebuilds": 3
+      },
+      {
+        "neighbor_rebuilds": 3
+      },
+      {
+        "neighbor_rebuilds": 3
+      },
+      {
+        "neighbor_rebuilds": 3
+      },
+      {
+        "neighbor_rebuilds": 3
+      },
+      {
+        "neighbor_rebuilds": 3
+      }
+    ]
+  },
+  "orders": [
+    [
+      "base_ef",
+      "base_efs",
+      "first_ef",
+      "first_efs",
+      "folded_ef",
+      "folded_efs",
+      "second_ef",
+      "second_efs",
+      "both_ef",
+      "both_efs",
+      "bothfolded_ef",
+      "bothfolded_efs",
+      "xl_efs"
+    ],
+    [
+      "xl_efs",
+      "bothfolded_efs",
+      "bothfolded_ef",
+      "both_efs",
+      "both_ef",
+      "second_efs",
+      "second_ef",
+      "folded_efs",
+      "folded_ef",
+      "first_efs",
+      "first_ef",
+      "base_efs",
+      "base_ef"
+    ],
+    [
+      "base_efs",
+      "first_ef",
+      "first_efs",
+      "folded_ef",
+      "folded_efs",
+      "second_ef",
+      "second_efs",
+      "both_ef",
+      "both_efs",
+      "bothfolded_ef",
+      "bothfolded_efs",
+      "xl_efs",
+      "base_ef"
+    ],
+    [
+      "base_ef",
+      "xl_efs",
+      "bothfolded_efs",
+      "bothfolded_ef",
+      "both_efs",
+      "both_ef",
+      "second_efs",
+      "second_ef",
+      "folded_efs",
+      "folded_ef",
+      "first_efs",
+      "first_ef",
+      "base_efs"
+    ],
+    [
+      "first_ef",
+      "first_efs",
+      "folded_ef",
+      "folded_efs",
+      "second_ef",
+      "second_efs",
+      "both_ef",
+      "both_efs",
+      "bothfolded_ef",
+      "bothfolded_efs",
+      "xl_efs",
+      "base_ef",
+      "base_efs"
+    ],
+    [
+      "base_efs",
+      "base_ef",
+      "xl_efs",
+      "bothfolded_efs",
+      "bothfolded_ef",
+      "both_efs",
+      "both_ef",
+      "second_efs",
+      "second_ef",
+      "folded_efs",
+      "folded_ef",
+      "first_efs",
+      "first_ef"
+    ]
+  ],
+  "source_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736",
+  "structure_sha256": "674186cd63ac40385917aa952cf204c88d263fac13d2af3f5257c01e1d3a24a5",
+  "xl_json_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+  "model": "mace-mp-0-small.model",
+  "formula": "H96Au48O48",
+  "atoms": 192,
+  "device": "Tesla V100-SXM2-16GB",
+  "torch": "2.13.0+cu126",
+  "mace": "0.3.16",
+  "symmetrix": "0.2.0",
+  "xl_plan": {
+    "requested_algorithm": "direct",
+    "requested_profile": "speed",
+    "selection_source": "native_request",
+    "state": "active",
+    "selected_id": "mh0-direct-speed",
+    "selection_reason": "low_memory=False: exact speed graph fits advisory device-memory budget",
+    "available_bytes": 12257983448,
+    "reserve_bytes": 846417100,
+    "boundary_attempt": false,
+    "candidates": [
+      {
+        "id": "mh0-direct-speed",
+        "qualified": true,
+        "estimated_bytes": 23980948,
+        "reason": "estimated fit"
+      },
+      {
+        "id": "mh0-direct-capacity-y-only",
+        "qualified": true,
+        "estimated_bytes": 15371332,
+        "reason": "qualified"
+      },
+      {
+        "id": "mh0-direct-capacity-retained",
+        "qualified": true,
+        "estimated_bytes": 23980948,
+        "reason": "qualified"
+      },
+      {
+        "id": "mh0-single-layer-tiled-v1",
+        "qualified": false,
+        "estimated_bytes": 0,
+        "reason": "fixed-workspace execution requires explicit opt-in via allow_fixed_workspace"
+      },
+      {
+        "id": "mh0-dual-layer-tiled-v1",
+        "qualified": false,
+        "estimated_bytes": 20000220,
+        "reason": "fixed-workspace execution requires explicit opt-in via allow_fixed_workspace"
+      }
+    ],
+    "binding_report_version": 1,
+    "bindings": [
+      {
+        "operator_id": "mh0.geometry",
+        "kind": "geometry",
+        "capability_key": "geometry",
+        "implementation_id": "generic_geometry",
+        "selected_implementation_id": "generic_geometry",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'generic_geometry'"
+      },
+      {
+        "operator_id": "mh0.interaction0.r0",
+        "kind": "radial",
+        "capability_key": "r0",
+        "implementation_id": "builtin_r0",
+        "selected_implementation_id": "builtin_r0",
+        "tier": "frozen",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified frozen implementation 'builtin_r0'"
+      },
+      {
+        "operator_id": "mh0.interaction0.harmonics",
+        "kind": "spherical_harmonic",
+        "capability_key": "harmonics",
+        "implementation_id": "generic_harmonics",
+        "selected_implementation_id": "generic_harmonics",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'generic_harmonics'"
+      },
+      {
+        "operator_id": "mh0.interaction0.m0",
+        "kind": "tensor_product",
+        "capability_key": "m0",
+        "implementation_id": "builtin_m0",
+        "selected_implementation_id": "builtin_m0",
+        "tier": "frozen",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified frozen implementation 'builtin_m0'"
+      },
+      {
+        "operator_id": "mh0.interaction0.h1",
+        "kind": "linear",
+        "capability_key": "h1",
+        "implementation_id": "generic_h1",
+        "selected_implementation_id": "generic_h1",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'generic_h1'"
+      },
+      {
+        "operator_id": "mh0.interaction0.phi1",
+        "kind": "tensor_product",
+        "capability_key": "phi1",
+        "implementation_id": "generated_phi1",
+        "selected_implementation_id": "generated_phi1",
+        "tier": "generated",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified generated implementation 'generated_phi1'"
+      },
+      {
+        "operator_id": "mh0.interaction0.a1",
+        "kind": "linear",
+        "capability_key": "a1",
+        "implementation_id": "blas_batched_a1",
+        "selected_implementation_id": "blas_batched_a1",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'blas_batched_a1'"
+      },
+      {
+        "operator_id": "mh0.interaction0.m1",
+        "kind": "tensor_product",
+        "capability_key": "m1",
+        "implementation_id": "device_m1_terms",
+        "selected_implementation_id": "device_m1_terms",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'device_m1_terms'"
+      },
+      {
+        "operator_id": "mh0.interaction0.h2",
+        "kind": "linear",
+        "capability_key": "h2",
+        "implementation_id": "device_h2_stages",
+        "selected_implementation_id": "device_h2_stages",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'device_h2_stages'"
+      },
+      {
+        "operator_id": "mh0.interaction1.r0",
+        "kind": "radial",
+        "capability_key": "r0",
+        "implementation_id": "builtin_r0",
+        "selected_implementation_id": "builtin_r0",
+        "tier": "frozen",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified frozen implementation 'builtin_r0'"
+      },
+      {
+        "operator_id": "mh0.interaction1.harmonics",
+        "kind": "spherical_harmonic",
+        "capability_key": "harmonics",
+        "implementation_id": "generic_harmonics",
+        "selected_implementation_id": "generic_harmonics",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'generic_harmonics'"
+      },
+      {
+        "operator_id": "mh0.interaction1.m0",
+        "kind": "tensor_product",
+        "capability_key": "m0",
+        "implementation_id": "builtin_m0",
+        "selected_implementation_id": "builtin_m0",
+        "tier": "frozen",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified frozen implementation 'builtin_m0'"
+      },
+      {
+        "operator_id": "mh0.interaction1.h1",
+        "kind": "linear",
+        "capability_key": "h1",
+        "implementation_id": "generic_h1",
+        "selected_implementation_id": "generic_h1",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'generic_h1'"
+      },
+      {
+        "operator_id": "mh0.interaction1.phi1",
+        "kind": "tensor_product",
+        "capability_key": "phi1",
+        "implementation_id": "generated_phi1",
+        "selected_implementation_id": "generated_phi1",
+        "tier": "generated",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified generated implementation 'generated_phi1'"
+      },
+      {
+        "operator_id": "mh0.interaction1.a1",
+        "kind": "linear",
+        "capability_key": "a1",
+        "implementation_id": "blas_batched_a1",
+        "selected_implementation_id": "blas_batched_a1",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'blas_batched_a1'"
+      },
+      {
+        "operator_id": "mh0.interaction1.m1",
+        "kind": "tensor_product",
+        "capability_key": "m1",
+        "implementation_id": "device_m1_terms",
+        "selected_implementation_id": "device_m1_terms",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'device_m1_terms'"
+      },
+      {
+        "operator_id": "mh0.interaction1.h2",
+        "kind": "linear",
+        "capability_key": "h2",
+        "implementation_id": "device_h2_stages",
+        "selected_implementation_id": "device_h2_stages",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'device_h2_stages'"
+      },
+      {
+        "operator_id": "mh0.readout",
+        "kind": "readout",
+        "capability_key": "readout",
+        "implementation_id": "generated_readout",
+        "selected_implementation_id": "generated_readout",
+        "tier": "generated",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified generated implementation 'generated_readout'"
+      },
+      {
+        "operator_id": "mh0.reduce_forces",
+        "kind": "reduction",
+        "capability_key": "reduce_forces",
+        "implementation_id": "generic_reduce_forces",
+        "selected_implementation_id": "generic_reduce_forces",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'generic_reduce_forces'"
+      },
+      {
+        "operator_id": "mh0.reduce_stress",
+        "kind": "reduction",
+        "capability_key": "reduce_stress",
+        "implementation_id": "generic_reduce_stress",
+        "selected_implementation_id": "generic_reduce_stress",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'generic_reduce_stress'"
+      }
+    ],
+    "model_type": "MACE",
+    "mace_les_parameters_sha256": null,
+    "mace_les_evaluator_fingerprint": "fb0c39d081c917018793e6e7210e8e2d3a6296d3a100796de3da29dc5f3987c6"
+  },
+  "xl_r0": {
+    "implementation": "generated",
+    "backend": "cuda",
+    "artifact_origin": null,
+    "schedule": "frozen",
+    "profile": "fixed-weight-coordinate",
+    "artifact_id": "standard-r0-module-module-v2"
+  },
+  "xl_r1": null,
+  "xl_neighbor_backend": "kokkos",
+  "xl_selector": "cuda12-sm70",
+  "dtype": "float64",
+  "resident_skin_A": 0.12,
+  "xl_skin_A": 1.0,
+  "dt_fs": 0.5,
+  "velocity_source": "input momenta",
+  "cpu_threads": 1,
+  "steps": 48,
+  "warmup": 5,
+  "repeats": 6,
+  "frame": 0,
+  "transform_info": {
+    "first": {
+      "operator": "grouped_species_first_interaction",
+      "kernel": "Triton segmented edge moments and adjoint, batched FP64 projection",
+      "atoms": 192,
+      "species": 3,
+      "dense_group_slots": 576,
+      "fold_receiver_linear": false
+    },
+    "folded": {
+      "operator": "grouped_species_first_interaction",
+      "kernel": "Triton segmented edge moments and adjoint, batched FP64 projection",
+      "atoms": 192,
+      "species": 3,
+      "dense_group_slots": 576,
+      "fold_receiver_linear": true
+    },
+    "second": {
+      "second_interaction": "segmented_scalar_uvu",
+      "channels": 128,
+      "l_max": 3
+    },
+    "both": {
+      "operator": "grouped_species_first_interaction",
+      "kernel": "Triton segmented edge moments and adjoint, batched FP64 projection",
+      "atoms": 192,
+      "species": 3,
+      "dense_group_slots": 576,
+      "fold_receiver_linear": false
+    },
+    "bothfolded": {
+      "operator": "grouped_species_first_interaction",
+      "kernel": "Triton segmented edge moments and adjoint, batched FP64 projection",
+      "atoms": 192,
+      "species": 3,
+      "dense_group_slots": 576,
+      "fold_receiver_linear": true
+    }
+  },
+  "scope": "Synchronized complete fixed-cell velocity-Verlet steps. Each path first ran the entire trajectory untimed. The resident controls retain tensors on GPU. Native XL returns energy, forces and stress to ASE. The efs controls request and validate stress every evaluation; ef controls request energy and force."
+}

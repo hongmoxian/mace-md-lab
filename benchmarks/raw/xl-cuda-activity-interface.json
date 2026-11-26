@@ -1,0 +1,340 @@
+{
+  "symmetrix": "0.2.0",
+  "torch": "2.13.0+cu126",
+  "cuda": "12.6",
+  "gpu": "Tesla V100-SXM2-16GB",
+  "engine": "{'requested_algorithm': 'direct', 'requested_profile': 'speed', 'selection_source': 'native_request', 'state': 'active', 'selected_id': 'mh0-direct-speed', 'selection_reason': 'low_memory=False: exact speed graph fits advisory device-memory budget', 'available_bytes': 13289763272, 'reserve_bytes': 846417100, 'boundary_attempt': False, 'candidates': [{'id': 'mh0-direct-speed', 'qualified': True, 'estimated_bytes': 23936708, 'reason': 'estimated fit'}, {'id': 'mh0-direct-capacity-y-only', 'qualified': True, 'estimated_bytes': 15355652, 'reason': 'qualified'}, {'id': 'mh0-direct-capacity-retained', 'qualified': True, 'estimated_bytes': 23936708, 'reason': 'qualified'}, {'id': 'mh0-single-layer-tiled-v1', 'qualified': False, 'estimated_bytes': 0, 'reason': 'fixed-workspace execution requires explicit opt-in via allow_fixed_workspace'}, {'id': 'mh0-dual-layer-tiled-v1', 'qualified': False, 'estimated_bytes': 19984820, 'reason': 'fixed-workspace execution requires explicit opt-in via allow_fixed_workspace'}], 'binding_report_version': 1, 'bindings': [{'operator_id': 'mh0.geometry', 'kind': 'geometry', 'capability_key': 'geometry', 'implementation_id': 'generic_geometry', 'selected_implementation_id': 'generic_geometry', 'tier': 'portable', 'target': 'cuda', 'precision': {'compute': 'float64', 'accumulator': 'float64'}, 'identity_fingerprint': '', 'qualified': True, 'portable_covered': True, 'artifact_required': False, 'reason': \"qualified portable implementation 'generic_geometry'\"}, {'operator_id': 'mh0.interaction0.r0', 'kind': 'radial', 'capability_key': 'r0', 'implementation_id': 'builtin_r0', 'selected_implementation_id': 'builtin_r0', 'tier': 'frozen', 'target': 'cuda', 'precision': {'compute': 'float64', 'accumulator': 'float64'}, 'identity_fingerprint': '', 'qualified': True, 'portable_covered': True, 'artifact_required': False, 'reason': \"qualified frozen implementation 'builtin_r0'\"}, {'operator_id': 'mh0.interaction0.harmonics', 'kind': 'spherical_harmonic', 'capability_key': 'harmonics', 'implementation_id': 'generic_harmonics', 'selected_implementation_id': 'generic_harmonics', 'tier': 'portable', 'target': 'cuda', 'precision': {'compute': 'float64', 'accumulator': 'float64'}, 'identity_fingerprint': '', 'qualified': True, 'portable_covered': True, 'artifact_required': False, 'reason': \"qualified portable implementation 'generic_harmonics'\"}, {'operator_id': 'mh0.interaction0.m0', 'kind': 'tensor_product', 'capability_key': 'm0', 'implementation_id': 'builtin_m0', 'selected_implementation_id': 'builtin_m0', 'tier': 'frozen', 'target': 'cuda', 'precision': {'compute': 'float64', 'accumulator': 'float64'}, 'identity_fingerprint': '', 'qualified': True, 'portable_covered': True, 'artifact_required': False, 'reason': \"qualified frozen implementation 'builtin_m0'\"}, {'operator_id': 'mh0.interaction0.h1', 'kind': 'linear', 'capability_key': 'h1', 'implementation_id': 'generic_h1', 'selected_implementation_id': 'generic_h1', 'tier': 'portable', 'target': 'cuda', 'precision': {'compute': 'float64', 'accumulator': 'float64'}, 'identity_fingerprint': '', 'qualified': True, 'portable_covered': True, 'artifact_required': False, 'reason': \"qualified portable implementation 'generic_h1'\"}, {'operator_id': 'mh0.interaction0.phi1', 'kind': 'tensor_product', 'capability_key': 'phi1', 'implementation_id': 'generated_phi1', 'selected_implementation_id': 'generated_phi1', 'tier': 'generated', 'target': 'cuda', 'precision': {'compute': 'float64', 'accumulator': 'float64'}, 'identity_fingerprint': '', 'qualified': True, 'portable_covered': True, 'artifact_required': False, 'reason': \"qualified generated implementation 'generated_phi1'\"}, {'operator_id': 'mh0.interaction0.a1', 'kind': 'linear', 'capability_key': 'a1', 'implementation_id': 'blas_batched_a1', 'selected_implementation_id': 'blas_batched_a1', 'tier': 'portable', 'target': 'cuda', 'precision': {'compute': 'float64', 'accumulator': 'float64'}, 'identity_fingerprint': '', 'qualified': True, 'portable_covered': True, 'artifact_required': False, 'reason': \"qualified portable implementation 'blas_batched_a1'\"}, {'operator_id': 'mh0.interaction0.m1', 'kind': 'tensor_product', 'capability_key': 'm1', 'implementation_id': 'device_m1_terms', 'selected_implementation_id': 'device_m1_terms', 'tier': 'portable', 'target': 'cuda', 'precision': {'compute': 'float64', 'accumulator': 'float64'}, 'identity_fingerprint': '', 'qualified': True, 'portable_covered': True, 'artifact_required': False, 'reason': \"qualified portable implementation 'device_m1_terms'\"}, {'operator_id': 'mh0.interaction0.h2', 'kind': 'linear', 'capability_key': 'h2', 'implementation_id': 'device_h2_stages', 'selected_implementation_id': 'device_h2_stages', 'tier': 'portable', 'target': 'cuda', 'precision': {'compute': 'float64', 'accumulator': 'float64'}, 'identity_fingerprint': '', 'qualified': True, 'portable_covered': True, 'artifact_required': False, 'reason': \"qualified portable implementation 'device_h2_stages'\"}, {'operator_id': 'mh0.interaction1.r0', 'kind': 'radial', 'capability_key': 'r0', 'implementation_id': 'builtin_r0', 'selected_implementation_id': 'builtin_r0', 'tier': 'frozen', 'target': 'cuda', 'precision': {'compute': 'float64', 'accumulator': 'float64'}, 'identity_fingerprint': '', 'qualified': True, 'portable_covered': True, 'artifact_required': False, 'reason': \"qualified frozen implementation 'builtin_r0'\"}, {'operator_id': 'mh0.interaction1.harmonics', 'kind': 'spherical_harmonic', 'capability_key': 'harmonics', 'implementation_id': 'generic_harmonics', 'selected_implementation_id': 'generic_harmonics', 'tier': 'portable', 'target': 'cuda', 'precision': {'compute': 'float64', 'accumulator': 'float64'}, 'identity_fingerprint': '', 'qualified': True, 'portable_covered': True, 'artifact_required': False, 'reason': \"qualified portable implementation 'generic_harmonics'\"}, {'operator_id': 'mh0.interaction1.m0', 'kind': 'tensor_product', 'capability_key': 'm0', 'implementation_id': 'builtin_m0', 'selected_implementation_id': 'builtin_m0', 'tier': 'frozen', 'target': 'cuda', 'precision': {'compute': 'float64', 'accumulator': 'float64'}, 'identity_fingerprint': '', 'qualified': True, 'portable_covered': True, 'artifact_required': False, 'reason': \"qualified frozen implementation 'builtin_m0'\"}, {'operator_id': 'mh0.interaction1.h1', 'kind': 'linear', 'capability_key': 'h1', 'implementation_id': 'generic_h1', 'selected_implementation_id': 'generic_h1', 'tier': 'portable', 'target': 'cuda', 'precision': {'compute': 'float64', 'accumulator': 'float64'}, 'identity_fingerprint': '', 'qualified': True, 'portable_covered': True, 'artifact_required': False, 'reason': \"qualified portable implementation 'generic_h1'\"}, {'operator_id': 'mh0.interaction1.phi1', 'kind': 'tensor_product', 'capability_key': 'phi1', 'implementation_id': 'generated_phi1', 'selected_implementation_id': 'generated_phi1', 'tier': 'generated', 'target': 'cuda', 'precision': {'compute': 'float64', 'accumulator': 'float64'}, 'identity_fingerprint': '', 'qualified': True, 'portable_covered': True, 'artifact_required': False, 'reason': \"qualified generated implementation 'generated_phi1'\"}, {'operator_id': 'mh0.interaction1.a1', 'kind': 'linear', 'capability_key': 'a1', 'implementation_id': 'blas_batched_a1', 'selected_implementation_id': 'blas_batched_a1', 'tier': 'portable', 'target': 'cuda', 'precision': {'compute': 'float64', 'accumulator': 'float64'}, 'identity_fingerprint': '', 'qualified': True, 'portable_covered': True, 'artifact_required': False, 'reason': \"qualified portable implementation 'blas_batched_a1'\"}, {'operator_id': 'mh0.interaction1.m1', 'kind': 'tensor_product', 'capability_key': 'm1', 'implementation_id': 'device_m1_terms', 'selected_implementation_id': 'device_m1_terms', 'tier': 'portable', 'target': 'cuda', 'precision': {'compute': 'float64', 'accumulator': 'float64'}, 'identity_fingerprint': '', 'qualified': True, 'portable_covered': True, 'artifact_required': False, 'reason': \"qualified portable implementation 'device_m1_terms'\"}, {'operator_id': 'mh0.interaction1.h2', 'kind': 'linear', 'capability_key': 'h2', 'implementation_id': 'device_h2_stages', 'selected_implementation_id': 'device_h2_stages', 'tier': 'portable', 'target': 'cuda', 'precision': {'compute': 'float64', 'accumulator': 'float64'}, 'identity_fingerprint': '', 'qualified': True, 'portable_covered': True, 'artifact_required': False, 'reason': \"qualified portable implementation 'device_h2_stages'\"}, {'operator_id': 'mh0.readout', 'kind': 'readout', 'capability_key': 'readout', 'implementation_id': 'generated_readout', 'selected_implementation_id': 'generated_readout', 'tier': 'generated', 'target': 'cuda', 'precision': {'compute': 'float64', 'accumulator': 'float64'}, 'identity_fingerprint': '', 'qualified': True, 'portable_covered': True, 'artifact_required': False, 'reason': \"qualified generated implementation 'generated_readout'\"}, {'operator_id': 'mh0.reduce_forces', 'kind': 'reduction', 'capability_key': 'reduce_forces', 'implementation_id': 'generic_reduce_forces', 'selected_implementation_id': 'generic_reduce_forces', 'tier': 'portable', 'target': 'cuda', 'precision': {'compute': 'float64', 'accumulator': 'float64'}, 'identity_fingerprint': '', 'qualified': True, 'portable_covered': True, 'artifact_required': False, 'reason': \"qualified portable implementation 'generic_reduce_forces'\"}, {'operator_id': 'mh0.reduce_stress', 'kind': 'reduction', 'capability_key': 'reduce_stress', 'implementation_id': 'generic_reduce_stress', 'selected_implementation_id': 'generic_reduce_stress', 'tier': 'portable', 'target': 'cuda', 'precision': {'compute': 'float64', 'accumulator': 'float64'}, 'identity_fingerprint': '', 'qualified': True, 'portable_covered': True, 'artifact_required': False, 'reason': \"qualified portable implementation 'generic_reduce_stress'\"}], 'model_type': 'MACE', 'mace_les_parameters_sha256': None, 'mace_les_evaluator_fingerprint': 'fb0c39d081c917018793e6e7210e8e2d3a6296d3a100796de3da29dc5f3987c6'}",
+  "r0_diagnostics": {
+    "implementation": "generated",
+    "backend": "cuda",
+    "artifact_origin": null,
+    "schedule": "frozen",
+    "profile": "fixed-weight-coordinate",
+    "artifact_id": "standard-r0-module-module-v2"
+  },
+  "steps": 12,
+  "warmup": 5,
+  "dt_fs": 0.5,
+  "skin_A": 1.0,
+  "builder": "kokkos",
+  "atoms": 192,
+  "dtype": "float64",
+  "observables": [
+    "energy",
+    "forces",
+    "stress"
+  ],
+  "velocity_source": "input momenta",
+  "structure_sha256": "674186cd63ac40385917aa952cf204c88d263fac13d2af3f5257c01e1d3a24a5",
+  "converted_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+  "max_displacement_A": 0.3572142608454385,
+  "uninstrumented_ms_step": [
+    6.44614274885195,
+    6.060365250353546,
+    6.124037250022714
+  ],
+  "median_uninstrumented_ms_step": 6.124037250022714,
+  "activity": {
+    "per_step": [
+      {
+        "wall_ms": 18.646969000000002,
+        "gpu_busy_union_ms": 3.9505507812500014,
+        "no_device_event_ms": 14.69641821875,
+        "group_ms": {
+          "device_copy_or_set": 0.0613095703125,
+          "other_kernels": 2.9519941406250014,
+          "r1_forward": 0.2722236328125,
+          "r1_reverse": 0.6650234375
+        },
+        "calls": {
+          "device_copy_or_set": 36,
+          "other_kernels": 41,
+          "r1_forward": 1,
+          "r1_reverse": 1
+        }
+      },
+      {
+        "wall_ms": 5.765372999999999,
+        "gpu_busy_union_ms": 3.9332353515625007,
+        "no_device_event_ms": 1.8321376484374987,
+        "group_ms": {
+          "device_copy_or_set": 0.0609228515625,
+          "other_kernels": 2.9336250000000006,
+          "r1_forward": 0.2749443359375,
+          "r1_reverse": 0.6637431640625
+        },
+        "calls": {
+          "device_copy_or_set": 36,
+          "other_kernels": 41,
+          "r1_forward": 1,
+          "r1_reverse": 1
+        }
+      },
+      {
+        "wall_ms": 5.727841000000001,
+        "gpu_busy_union_ms": 3.9433750000000014,
+        "no_device_event_ms": 1.7844659999999992,
+        "group_ms": {
+          "device_copy_or_set": 0.06124023437499999,
+          "other_kernels": 2.9369853515625013,
+          "r1_forward": 0.2745908203125,
+          "r1_reverse": 0.67055859375
+        },
+        "calls": {
+          "device_copy_or_set": 36,
+          "other_kernels": 41,
+          "r1_forward": 1,
+          "r1_reverse": 1
+        }
+      },
+      {
+        "wall_ms": 5.6762250000000005,
+        "gpu_busy_union_ms": 3.9272158203125005,
+        "no_device_event_ms": 1.7490091796875,
+        "group_ms": {
+          "device_copy_or_set": 0.061275390624999995,
+          "other_kernels": 2.9241191406250007,
+          "r1_forward": 0.27052734375,
+          "r1_reverse": 0.6712939453125
+        },
+        "calls": {
+          "device_copy_or_set": 36,
+          "other_kernels": 41,
+          "r1_forward": 1,
+          "r1_reverse": 1
+        }
+      },
+      {
+        "wall_ms": 5.687919,
+        "gpu_busy_union_ms": 3.940880859375001,
+        "no_device_event_ms": 1.747038140624999,
+        "group_ms": {
+          "device_copy_or_set": 0.06095312499999999,
+          "other_kernels": 2.941082031250001,
+          "r1_forward": 0.2730869140625,
+          "r1_reverse": 0.6657587890625
+        },
+        "calls": {
+          "device_copy_or_set": 36,
+          "other_kernels": 41,
+          "r1_forward": 1,
+          "r1_reverse": 1
+        }
+      },
+      {
+        "wall_ms": 5.697532,
+        "gpu_busy_union_ms": 3.9373984375000006,
+        "no_device_event_ms": 1.7601335624999992,
+        "group_ms": {
+          "device_copy_or_set": 0.0608291015625,
+          "other_kernels": 2.9274511718750005,
+          "r1_forward": 0.277087890625,
+          "r1_reverse": 0.6720302734375
+        },
+        "calls": {
+          "device_copy_or_set": 36,
+          "other_kernels": 41,
+          "r1_forward": 1,
+          "r1_reverse": 1
+        }
+      },
+      {
+        "wall_ms": 5.689785,
+        "gpu_busy_union_ms": 3.9347050781250004,
+        "no_device_event_ms": 1.7550799218749993,
+        "group_ms": {
+          "device_copy_or_set": 0.060856445312499986,
+          "other_kernels": 2.9375625000000003,
+          "r1_forward": 0.2736630859375,
+          "r1_reverse": 0.662623046875
+        },
+        "calls": {
+          "device_copy_or_set": 36,
+          "other_kernels": 41,
+          "r1_forward": 1,
+          "r1_reverse": 1
+        }
+      },
+      {
+        "wall_ms": 5.702934,
+        "gpu_busy_union_ms": 3.9385205078125014,
+        "no_device_event_ms": 1.7644134921874985,
+        "group_ms": {
+          "device_copy_or_set": 0.0612763671875,
+          "other_kernels": 2.933468750000001,
+          "r1_forward": 0.2721279296875,
+          "r1_reverse": 0.6716474609375
+        },
+        "calls": {
+          "device_copy_or_set": 36,
+          "other_kernels": 41,
+          "r1_forward": 1,
+          "r1_reverse": 1
+        }
+      },
+      {
+        "wall_ms": 5.684864999999999,
+        "gpu_busy_union_ms": 3.9348037109375,
+        "no_device_event_ms": 1.7500612890624994,
+        "group_ms": {
+          "device_copy_or_set": 0.06153417968749999,
+          "other_kernels": 2.9262958984375,
+          "r1_forward": 0.27155078125,
+          "r1_reverse": 0.6754228515625
+        },
+        "calls": {
+          "device_copy_or_set": 36,
+          "other_kernels": 41,
+          "r1_forward": 1,
+          "r1_reverse": 1
+        }
+      },
+      {
+        "wall_ms": 5.696235,
+        "gpu_busy_union_ms": 3.9395722656250016,
+        "no_device_event_ms": 1.756662734374998,
+        "group_ms": {
+          "device_copy_or_set": 0.061212890624999995,
+          "other_kernels": 2.9338808593750016,
+          "r1_forward": 0.27148828125,
+          "r1_reverse": 0.672990234375
+        },
+        "calls": {
+          "device_copy_or_set": 36,
+          "other_kernels": 41,
+          "r1_forward": 1,
+          "r1_reverse": 1
+        }
+      },
+      {
+        "wall_ms": 5.723758,
+        "gpu_busy_union_ms": 3.950030273437501,
+        "no_device_event_ms": 1.773727726562499,
+        "group_ms": {
+          "device_copy_or_set": 0.060955078124999985,
+          "other_kernels": 2.939413085937501,
+          "r1_forward": 0.2696953125,
+          "r1_reverse": 0.679966796875
+        },
+        "calls": {
+          "device_copy_or_set": 36,
+          "other_kernels": 41,
+          "r1_forward": 1,
+          "r1_reverse": 1
+        }
+      },
+      {
+        "wall_ms": 10.79248,
+        "gpu_busy_union_ms": 8.180205078124999,
+        "no_device_event_ms": 2.6122749218750005,
+        "group_ms": {
+          "device_copy_or_set": 0.10502050781250004,
+          "other_kernels": 7.130098632812499,
+          "r1_forward": 0.2757109375,
+          "r1_reverse": 0.669375
+        },
+        "calls": {
+          "device_copy_or_set": 68,
+          "other_kernels": 60,
+          "r1_forward": 1,
+          "r1_reverse": 1
+        }
+      }
+    ],
+    "mean_group_ms": {
+      "device_copy_or_set": 0.06478214518229167,
+      "other_kernels": 3.2846647135416673,
+      "r1_forward": 0.27305810546875,
+      "r1_reverse": 0.6700361328125001
+    },
+    "observed_streams": [
+      "13",
+      "7"
+    ],
+    "mean_gpu_busy_union_ms": 4.292541097005209,
+    "mean_traced_wall_ms": 7.207659666666667,
+    "top_kernel_duration_sum_ms_step": [
+      {
+        "kernel": "void Kokkos::Impl::cuda_parallel_launch_local_memory<Kokkos::Impl::ParallelFor<MACEKokkos<double>::reverse_M1(int, Kokkos::View<int const*>)::{lambda(Kokkos::Impl::CudaTeamMember const&)#1}, Kokkos::TeamPolicy<>, Kokkos::Cuda> >(Kokkos::Impl::ParallelFor<MACEKokkos<double>::reverse_M1(int, Kokkos::View<int const*>)::{lambda(Kokkos::Impl::CudaTeamMember const&)#1}, Kokkos::TeamPolicy<>, Kokkos::Cuda>)",
+        "ms": 0.8947342122395835
+      },
+      {
+        "kernel": "void Kokkos::Impl::cuda_parallel_launch_local_memory<Kokkos::Impl::ParallelFor<symmetrix::standard_r0::launch_coordinate_reverse_edge_owned<false, 16, 16, Kokkos::Cuda, Kokkos::View<int const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<int const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<int const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<double const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<double const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<int const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<double const****, Kokkos::LayoutRight, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<double***, Kokkos::LayoutRight, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<double const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<double const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, symmetrix::standard_r0::detail::LogicalSplineView<double>, Kokkos::View<double*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<double*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> > >(Kokkos::Cuda const&, int, unsigned long, int, double, double, double, Kokkos::View<int const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<int const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<int const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<double const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<double const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, bool, Kokkos::View<int const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<double const****, Kokkos::LayoutRight, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, bool, symmetrix::standard_r0::detail::LogicalSplineView<double>, Kokkos::View<double*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<double***, Kokkos::LayoutRight, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<double const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<double const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<double*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, double const*)::{lambda(Kokkos::Impl::CudaTeamMember const&)#1}, Kokkos::TeamPolicy<Kokkos::Cuda>, Kokkos::Cuda> >(Kokkos::Impl::ParallelFor<symmetrix::standard_r0::launch_coordinate_reverse_edge_owned<false, 16, 16, Kokkos::Cuda, Kokkos::View<int const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<int const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<int const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<double const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<double const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<int const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<double const****, Kokkos::LayoutRight, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<double***, Kokkos::LayoutRight, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<double const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<double const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, symmetrix::standard_r0::detail::LogicalSplineView<double>, Kokkos::View<double*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<double*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> > >(Kokkos::Cuda const&, int, unsigned long, int, double, double, double, Kokkos::View<int const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<int const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<int const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<double const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<double const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, bool, Kokkos::View<int const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<double const****, Kokkos::LayoutRight, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, bool, symmetrix::standard_r0::detail::LogicalSplineView<double>, Kokkos::View<double*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<double***, Kokkos::LayoutRight, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<double const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<double const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<double*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, double const*)::{lambda(Kokkos::Impl::CudaTeamMember const&)#1}, Kokkos::TeamPolicy<Kokkos::Cuda>, Kokkos::Cuda>)",
+        "ms": 0.8361983235677085
+      },
+      {
+        "kernel": "symmetrix_factorized_reverse_fused_v2",
+        "ms": 0.6700361328124999
+      },
+      {
+        "kernel": "void Kokkos::Impl::cuda_parallel_launch_local_memory<Kokkos::Impl::ParallelFor<symmetrix::standard_r0::launch_forward<false, Kokkos::Cuda, Kokkos::View<int const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<int const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<int const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<int const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<double const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<int const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<double const****, Kokkos::LayoutRight, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<double const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<double*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<double***, Kokkos::LayoutRight, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> > >(Kokkos::Cuda const&, int, int, double, double, double, Kokkos::View<int const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<int const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<int const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<int const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<double const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<int const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<double const****, Kokkos::LayoutRight, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<double const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, bool, Kokkos::View<double*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<double***, Kokkos::LayoutRight, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, int, double const*)::{lambda(Kokkos::Impl::CudaTeamMember const&)#1}, Kokkos::TeamPolicy<Kokkos::Cuda>, Kokkos::Cuda> >(Kokkos::Impl::ParallelFor<symmetrix::standard_r0::launch_forward<false, Kokkos::Cuda, Kokkos::View<int const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<int const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<int const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<int const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<double const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<int const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<double const****, Kokkos::LayoutRight, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<double const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<double*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<double***, Kokkos::LayoutRight, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> > >(Kokkos::Cuda const&, int, int, double, double, double, Kokkos::View<int const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<int const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<int const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<int const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<double const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<int const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<double const****, Kokkos::LayoutRight, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<double const*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, bool, Kokkos::View<double*, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, Kokkos::View<double***, Kokkos::LayoutRight, Kokkos::CudaSpace, Kokkos::MemoryTraits<1u> >, int, double const*)::{lambda(Kokkos::Impl::CudaTeamMember const&)#1}, Kokkos::TeamPolicy<Kokkos::Cuda>, Kokkos::Cuda>)",
+        "ms": 0.35423917643229164
+      },
+      {
+        "kernel": "symmetrix_factorized_forward_v2",
+        "ms": 0.27305810546875
+      },
+      {
+        "kernel": "void Kokkos::Impl::cuda_parallel_launch_local_memory<Kokkos::Impl::ParallelFor<MACEKokkos<double>::compute_Y(Kokkos::View<double const*>, Kokkos::View<double const*>, bool, int, int)::{lambda(int)#2}, Kokkos::RangePolicy<Kokkos::Cuda>, Kokkos::Cuda> >(Kokkos::Impl::ParallelFor<MACEKokkos<double>::compute_Y(Kokkos::View<double const*>, Kokkos::View<double const*>, bool, int, int)::{lambda(int)#2}, Kokkos::RangePolicy<Kokkos::Cuda>, Kokkos::Cuda>)",
+        "ms": 0.18901318359375
+      },
+      {
+        "kernel": "void Kokkos::Impl::cuda_parallel_launch_local_memory<Kokkos::Impl::ParallelFor<symmetrix::execution::build_periodic_neighbor_graph_kokkos(std::span<double const, 18446744073709551615ul>, std::span<double const, 18446744073709551615ul>, std::span<double const, 18446744073709551615ul>, double, bool, std::function<void (symmetrix::execution::KokkosNeighborGraph&)> const&)::{lambda(int)#8}, Kokkos::RangePolicy<Kokkos::Cuda>, Kokkos::Cuda> >(Kokkos::Impl::ParallelFor<symmetrix::execution::build_periodic_neighbor_graph_kokkos(std::span<double const, 18446744073709551615ul>, std::span<double const, 18446744073709551615ul>, std::span<double const, 18446744073709551615ul>, double, bool, std::function<void (symmetrix::execution::KokkosNeighborGraph&)> const&)::{lambda(int)#8}, Kokkos::RangePolicy<Kokkos::Cuda>, Kokkos::Cuda>)",
+        "ms": 0.14894376627604167
+      },
+      {
+        "kernel": "void Kokkos::Impl::cuda_parallel_launch_local_memory<Kokkos::Impl::ParallelFor<symmetrix::execution::build_periodic_neighbor_graph_kokkos(std::span<double const, 18446744073709551615ul>, std::span<double const, 18446744073709551615ul>, std::span<double const, 18446744073709551615ul>, double, bool, std::function<void (symmetrix::execution::KokkosNeighborGraph&)> const&)::{lambda(int)#6}, Kokkos::RangePolicy<Kokkos::Cuda>, Kokkos::Cuda> >(Kokkos::Impl::ParallelFor<symmetrix::execution::build_periodic_neighbor_graph_kokkos(std::span<double const, 18446744073709551615ul>, std::span<double const, 18446744073709551615ul>, std::span<double const, 18446744073709551615ul>, double, bool, std::function<void (symmetrix::execution::KokkosNeighborGraph&)> const&)::{lambda(int)#6}, Kokkos::RangePolicy<Kokkos::Cuda>, Kokkos::Cuda>)",
+        "ms": 0.12979174804687502
+      },
+      {
+        "kernel": "void Kokkos::Impl::cuda_parallel_launch_local_memory<Kokkos::Impl::ParallelReduce<Kokkos::Impl::CombinedFunctorReducer<MACEKokkos<double>::reduce_stress(double, Kokkos::View<double const*>)::{lambda(unsigned long, double&)#1}, Kokkos::Impl::FunctorAnalysis<Kokkos::Impl::FunctorPatternInterface::REDUCE, Kokkos::RangePolicy<Kokkos::Cuda, Kokkos::IndexType<unsigned long> >, MACEKokkos<double>::reduce_stress(double, Kokkos::View<double const*>)::{lambda(unsigned long, double&)#1}, double>::Reducer, void>, Kokkos::RangePolicy<Kokkos::Cuda, Kokkos::IndexType<unsigned long> >, Kokkos::Cuda> >(Kokkos::Impl::ParallelReduce<Kokkos::Impl::CombinedFunctorReducer<MACEKokkos<double>::reduce_stress(double, Kokkos::View<double const*>)::{lambda(unsigned long, double&)#1}, Kokkos::Impl::FunctorAnalysis<Kokkos::Impl::FunctorPatternInterface::REDUCE, Kokkos::RangePolicy<Kokkos::Cuda, Kokkos::IndexType<unsigned long> >, MACEKokkos<double>::reduce_stress(double, Kokkos::View<double const*>)::{lambda(unsigned long, double&)#1}, double>::Reducer, void>, Kokkos::RangePolicy<Kokkos::Cuda, Kokkos::IndexType<unsigned long> >, Kokkos::Cuda>)",
+        "ms": 0.06255192057291666
+      },
+      {
+        "kernel": "void Kokkos::Impl::cuda_parallel_launch_local_memory<Kokkos::Impl::ParallelFor<MACEKokkos<double>::prepare_periodic_factorized_graph(std::span<int const, 18446744073709551615ul>, std::span<double const, 18446744073709551615ul>, std::span<double const, 18446744073709551615ul>, std::span<double const, 18446744073709551615ul>, double)::{lambda(int)#3}, Kokkos::RangePolicy<Kokkos::Cuda>, Kokkos::Cuda> >(Kokkos::Impl::ParallelFor<MACEKokkos<double>::prepare_periodic_factorized_graph(std::span<int const, 18446744073709551615ul>, std::span<double const, 18446744073709551615ul>, std::span<double const, 18446744073709551615ul>, std::span<double const, 18446744073709551615ul>, double)::{lambda(int)#3}, Kokkos::RangePolicy<Kokkos::Cuda>, Kokkos::Cuda>)",
+        "ms": 0.059114501953125
+      },
+      {
+        "kernel": "void Kokkos::Impl::cuda_parallel_launch_local_memory<Kokkos::Impl::ParallelFor<MACEKokkos<double>::compute_M1(int, Kokkos::View<int const*>)::{lambda(unsigned long)#1}, Kokkos::RangePolicy<>, Kokkos::Cuda> >(Kokkos::Impl::ParallelFor<MACEKokkos<double>::compute_M1(int, Kokkos::View<int const*>)::{lambda(unsigned long)#1}, Kokkos::RangePolicy<>, Kokkos::Cuda>)",
+        "ms": 0.05374658203125
+      },
+      {
+        "kernel": "void gemmSN_NN_kernel<double, 128, 2, 4, 8, 4, 4, false, cublasGemvTensorBatched<double const>, cublasGemvTensorBatched<double const>, cublasGemvTensorBatched<double> >(cublasGemmSmallNParams<cublasGemvTensorBatched<double const>, cublasGemvTensorBatched<double const>, cublasGemvTensorBatched<double>, double>)",
+        "ms": 0.04952001953124999
+      },
+      {
+        "kernel": "void Kokkos::Impl::cuda_parallel_launch_local_memory<Kokkos::Impl::ParallelFor<MACEKokkos<double>::compute_H2(int, Kokkos::View<int const*>)::{lambda(int)#1}, Kokkos::RangePolicy<Kokkos::Cuda>, Kokkos::Cuda> >(Kokkos::Impl::ParallelFor<MACEKokkos<double>::compute_H2(int, Kokkos::View<int const*>)::{lambda(int)#1}, Kokkos::RangePolicy<Kokkos::Cuda>, Kokkos::Cuda>)",
+        "ms": 0.04738387044270834
+      },
+      {
+        "kernel": "void Kokkos::Impl::cuda_parallel_launch_local_memory<Kokkos::Impl::ParallelFor<MACEKokkos<double>::reverse_H2(int, Kokkos::View<int const*>, bool)::{lambda(int)#1}, Kokkos::RangePolicy<Kokkos::Cuda>, Kokkos::Cuda> >(Kokkos::Impl::ParallelFor<MACEKokkos<double>::reverse_H2(int, Kokkos::View<int const*>, bool)::{lambda(int)#1}, Kokkos::RangePolicy<Kokkos::Cuda>, Kokkos::Cuda>)",
+        "ms": 0.045690673828125
+      },
+      {
+        "kernel": "void Kokkos::Impl::cuda_parallel_launch_local_memory<Kokkos::Impl::ParallelFor<MACEKokkos<double>::compute_readout_1(int, Kokkos::View<int const*>, bool)::{lambda(int)#1}, Kokkos::RangePolicy<Kokkos::Cuda>, Kokkos::Cuda> >(Kokkos::Impl::ParallelFor<MACEKokkos<double>::compute_readout_1(int, Kokkos::View<int const*>, bool)::{lambda(int)#1}, Kokkos::RangePolicy<Kokkos::Cuda>, Kokkos::Cuda>)",
+        "ms": 0.04489851888020833
+      },
+      {
+        "kernel": "void spherical_harmonics_kernel<double>(double const*, int, double const*, int, int, int, bool, bool, bool, double*, double*, double*)",
+        "ms": 0.039279785156250004
+      },
+      {
+        "kernel": "void Kokkos::Impl::cuda_parallel_launch_local_memory<Kokkos::Impl::ParallelFor<MACEKokkos<double>::add_h1_affine_direct_adjoint(int)::{lambda(int)#2}, Kokkos::RangePolicy<Kokkos::Cuda>, Kokkos::Cuda> >(Kokkos::Impl::ParallelFor<MACEKokkos<double>::add_h1_affine_direct_adjoint(int)::{lambda(int)#2}, Kokkos::RangePolicy<Kokkos::Cuda>, Kokkos::Cuda>)",
+        "ms": 0.038952067057291664
+      },
+      {
+        "kernel": "void Kokkos::Impl::cuda_parallel_launch_local_memory<Kokkos::Impl::ParallelFor<MACEKokkos<double>::reverse_H1_fused(int)::{lambda(Kokkos::Impl::CudaTeamMember)#1}, Kokkos::TeamPolicy<>, Kokkos::Cuda> >(Kokkos::Impl::ParallelFor<MACEKokkos<double>::reverse_H1_fused(int)::{lambda(Kokkos::Impl::CudaTeamMember)#1}, Kokkos::TeamPolicy<>, Kokkos::Cuda>)",
+        "ms": 0.032565104166666664
+      },
+      {
+        "kernel": "void Kokkos::Impl::cuda_parallel_launch_local_memory<Kokkos::Impl::ParallelFor<MACEKokkos<double>::compute_H1(int)::{lambda(Kokkos::Impl::CudaTeamMember)#1}, Kokkos::TeamPolicy<>, Kokkos::Cuda> >(Kokkos::Impl::ParallelFor<MACEKokkos<double>::compute_H1(int)::{lambda(Kokkos::Impl::CudaTeamMember)#1}, Kokkos::TeamPolicy<>, Kokkos::Cuda>)",
+        "ms": 0.031714599609375
+      },
+      {
+        "kernel": "void gemmSN_NN_kernel<double, 128, 2, 4, 8, 5, 4, false, cublasGemvTensorBatched<double const>, cublasGemvTensorBatched<double const>, cublasGemvTensorBatched<double> >(cublasGemmSmallNParams<cublasGemvTensorBatched<double const>, cublasGemvTensorBatched<double const>, cublasGemvTensorBatched<double>, double>)",
+        "ms": 0.03113053385416667
+      }
+    ]
+  },
+  "scope": "CUDA kernel and copy activity partitioned by union within per-step host markers. Unrecognized kernels remain other_kernels. Trace times include profiling overhead. Individual top-name totals can overlap across streams."
+}

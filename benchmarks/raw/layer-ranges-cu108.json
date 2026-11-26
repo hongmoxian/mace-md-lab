@@ -1,0 +1,203 @@
+{
+  "passed": true,
+  "checkpoint_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736",
+  "structure_sha256": "caf53b8fdc45601d1d781b1f91467a58bae78db87be195d4de6bae55124cd7f9",
+  "atoms": 108,
+  "formula": "Cu108",
+  "mace": "0.3.16",
+  "torch": "2.13.0+cu126",
+  "gpu": "Tesla V100-SXM2-16GB",
+  "dtype": "float64",
+  "adjoint": "both",
+  "mode": "eager",
+  "skin_A": 0.12,
+  "dt_fs": 0.5,
+  "velocity_source": "input momenta",
+  "force_scope": "Prepared graphs from moving MD frames. Marked ranges are in situ CUDA event spans across first/second interaction forward and coordinate-adjoint boundaries on the current stream. They include launch gaps and internal reductions. Their disjoint reverse order is checked. Hooks may change autograd scheduling. Plain timings omit boundaries. Neither includes graph preparation or integration.",
+  "step_scope": "Independent hook-free E/F moving velocity-Verlet trials with endpoint synchronization, neighbor updates and integration. One warmup sequence before each trial.",
+  "timed_steps": 48,
+  "warmup_steps": 5,
+  "samples": [
+    {
+      "md_step": 7,
+      "directed_edges": 8424,
+      "plain": {
+        "energy_forward": 4.70527982711792,
+        "energy_to_force_reverse": 8.017919540405273,
+        "energy_and_force": 12.723199844360352
+      },
+      "plain_errors": {
+        "energy_eV_atom": 0.0,
+        "force_eV_A": 6.106226635438361e-16
+      },
+      "marked": {
+        "energy_forward": 4.855807781219482,
+        "energy_to_force_reverse": 8.183808326721191,
+        "energy_and_force": 13.039615631103516,
+        "interaction_2_forward": 1.652735948562622,
+        "interaction_2_reverse": 3.9178240299224854,
+        "interaction_1_forward": 1.772544026374817,
+        "interaction_1_reverse": 2.8528640270233154
+      },
+      "marked_errors": {
+        "energy_eV_atom": 0.0,
+        "force_eV_A": 5.551115123125783e-16
+      }
+    },
+    {
+      "md_step": 9,
+      "directed_edges": 8424,
+      "marked": {
+        "energy_forward": 4.9203200340271,
+        "energy_to_force_reverse": 7.965695858001709,
+        "energy_and_force": 12.886015892028809,
+        "interaction_2_forward": 1.5708160400390625,
+        "interaction_2_reverse": 3.8287360668182373,
+        "interaction_1_forward": 1.7285120487213135,
+        "interaction_1_reverse": 2.766848087310791
+      },
+      "marked_errors": {
+        "energy_eV_atom": 0.0,
+        "force_eV_A": 7.771561172376096e-16
+      },
+      "plain": {
+        "energy_forward": 4.4912638664245605,
+        "energy_to_force_reverse": 7.915520191192627,
+        "energy_and_force": 12.406784057617188
+      },
+      "plain_errors": {
+        "energy_eV_atom": 0.0,
+        "force_eV_A": 5.551115123125783e-16
+      }
+    },
+    {
+      "md_step": 11,
+      "directed_edges": 8424,
+      "plain": {
+        "energy_forward": 4.655104160308838,
+        "energy_to_force_reverse": 7.902207851409912,
+        "energy_and_force": 12.55731201171875
+      },
+      "plain_errors": {
+        "energy_eV_atom": 5.26327952414889e-16,
+        "force_eV_A": 5.551115123125783e-16
+      },
+      "marked": {
+        "energy_forward": 4.91212797164917,
+        "energy_to_force_reverse": 7.9923200607299805,
+        "energy_and_force": 12.904447555541992,
+        "interaction_2_forward": 1.558527946472168,
+        "interaction_2_reverse": 3.843071937561035,
+        "interaction_1_forward": 1.7408000230789185,
+        "interaction_1_reverse": 2.766848087310791
+      },
+      "marked_errors": {
+        "energy_eV_atom": 5.26327952414889e-16,
+        "force_eV_A": 5.698566618583811e-16
+      }
+    },
+    {
+      "md_step": 13,
+      "directed_edges": 8424,
+      "marked": {
+        "energy_forward": 4.898816108703613,
+        "energy_to_force_reverse": 7.968768119812012,
+        "energy_and_force": 12.867584228515625,
+        "interaction_2_forward": 1.556480050086975,
+        "interaction_2_reverse": 3.8410239219665527,
+        "interaction_1_forward": 1.7408000230789185,
+        "interaction_1_reverse": 2.76582407951355
+      },
+      "marked_errors": {
+        "energy_eV_atom": 0.0,
+        "force_eV_A": 5.551115123125783e-16
+      },
+      "plain": {
+        "energy_forward": 4.485119819641113,
+        "energy_to_force_reverse": 7.903232097625732,
+        "energy_and_force": 12.388352394104004
+      },
+      "plain_errors": {
+        "energy_eV_atom": 0.0,
+        "force_eV_A": 7.216449660063518e-16
+      }
+    },
+    {
+      "md_step": 15,
+      "directed_edges": 8424,
+      "plain": {
+        "energy_forward": 4.480000019073486,
+        "energy_to_force_reverse": 7.927807807922363,
+        "energy_and_force": 12.407808303833008
+      },
+      "plain_errors": {
+        "energy_eV_atom": 0.0,
+        "force_eV_A": 5.724587470723463e-16
+      },
+      "marked": {
+        "energy_forward": 4.889599800109863,
+        "energy_to_force_reverse": 7.973887920379639,
+        "energy_and_force": 12.86348819732666,
+        "interaction_2_forward": 1.5656960010528564,
+        "interaction_2_reverse": 3.836927890777588,
+        "interaction_1_forward": 1.738752007484436,
+        "interaction_1_reverse": 2.7791359424591064
+      },
+      "marked_errors": {
+        "energy_eV_atom": 5.26327952414889e-16,
+        "force_eV_A": 5.551115123125783e-16
+      }
+    },
+    {
+      "md_step": 17,
+      "directed_edges": 8424,
+      "marked": {
+        "energy_forward": 4.883456230163574,
+        "energy_to_force_reverse": 7.974912166595459,
+        "energy_and_force": 12.858367919921875,
+        "interaction_2_forward": 1.5523840188980103,
+        "interaction_2_reverse": 3.8399999141693115,
+        "interaction_1_forward": 1.7408000230789185,
+        "interaction_1_reverse": 2.7678720951080322
+      },
+      "marked_errors": {
+        "energy_eV_atom": 5.26327952414889e-16,
+        "force_eV_A": 5.551115123125783e-16
+      },
+      "plain": {
+        "energy_forward": 4.485119819641113,
+        "energy_to_force_reverse": 7.9042558670043945,
+        "energy_and_force": 12.389375686645508
+      },
+      "plain_errors": {
+        "energy_eV_atom": 5.26327952414889e-16,
+        "force_eV_A": 4.996003610813204e-16
+      }
+    }
+  ],
+  "median_force_ms": {
+    "plain": {
+      "energy_forward": 4.488191843032837,
+      "energy_to_force_reverse": 7.909888029098511,
+      "energy_and_force": 12.407296180725098
+    },
+    "marked": {
+      "energy_forward": 4.894207954406738,
+      "energy_to_force_reverse": 7.974400043487549,
+      "energy_and_force": 12.876800060272217,
+      "interaction_2_forward": 1.5621119737625122,
+      "interaction_2_reverse": 3.840511918067932,
+      "interaction_1_forward": 1.7408000230789185,
+      "interaction_1_reverse": 2.7673600912094116
+    }
+  },
+  "raw_md_ms_step": [
+    12.77242372937811,
+    12.750037957933577,
+    12.748279499646742,
+    12.759835311347464,
+    12.772594064396495,
+    12.744417979168551
+  ],
+  "median_md_ms_step": 12.75493663464052
+}
