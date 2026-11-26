@@ -1,0 +1,122 @@
+{
+  "fixture": "cu.extxyz",
+  "gpu": "Tesla V100-SXM2-16GB",
+  "trials": [
+    {
+      "bare_ms": 32.188828743528575,
+      "traced_ms": 31.87691725906916,
+      "ms": {
+        "SeZM/input_type_cast": 0.027136000338941813,
+        "SeZM/build_neighbor_list": 1.8992559909820557,
+        "type_embedding": 0.050688001327216625,
+        "build_edge_cache": 2.2008320093154907,
+        "radial_embedding": 0.17151999846100807,
+        "env_film": 0.6993919909000397,
+        "gie": 0.21094399690628052,
+        "radial_fuse": 0.058624000288546085,
+        "block_0": 4.19379198551178,
+        "block_1": 4.09062397480011,
+        "blocks": 8.373759984970093,
+        "output_ffn": 0.9205759912729263,
+        "SeZM/descriptor": 12.956415891647339,
+        "SeZM/fitting_net": 0.4042240008711815,
+        "SeZM/apply_out_stat": 0.1013760007917881,
+        "force_and_virial": 13.74182415008545,
+        "SeZM/core_compute": 27.436543941497803,
+        "SeZM/forward_common": 29.519871711730957
+      }
+    },
+    {
+      "traced_ms": 32.308596768416464,
+      "ms": {
+        "SeZM/input_type_cast": 0.027392000425606966,
+        "SeZM/build_neighbor_list": 1.945855975151062,
+        "type_embedding": 0.05222400091588497,
+        "build_edge_cache": 2.205184042453766,
+        "radial_embedding": 0.17740799859166145,
+        "env_film": 0.6932480037212372,
+        "gie": 0.21964799985289574,
+        "radial_fuse": 0.061952000483870506,
+        "block_0": 4.342015862464905,
+        "block_1": 4.230911910533905,
+        "blocks": 8.665600061416626,
+        "output_ffn": 0.9574400186538696,
+        "SeZM/descriptor": 13.311487913131714,
+        "SeZM/fitting_net": 0.41548799723386765,
+        "SeZM/apply_out_stat": 0.10854400135576725,
+        "force_and_virial": 13.752064228057861,
+        "SeZM/core_compute": 27.82592010498047,
+        "SeZM/forward_common": 29.959935665130615
+      },
+      "bare_ms": 32.18598151579499
+    },
+    {
+      "bare_ms": 31.65129298577085,
+      "traced_ms": 31.65367350447923,
+      "ms": {
+        "SeZM/input_type_cast": 0.026879999320954084,
+        "SeZM/build_neighbor_list": 1.8795519769191742,
+        "type_embedding": 0.05094400141388178,
+        "build_edge_cache": 2.121728003025055,
+        "radial_embedding": 0.17075200006365776,
+        "env_film": 0.667136013507843,
+        "gie": 0.2088959962129593,
+        "radial_fuse": 0.05913600046187639,
+        "block_0": 4.174848020076752,
+        "block_1": 4.0826879143714905,
+        "blocks": 8.348160028457642,
+        "output_ffn": 0.9192960262298584,
+        "SeZM/descriptor": 12.812544107437134,
+        "SeZM/fitting_net": 0.3998720049858093,
+        "SeZM/apply_out_stat": 0.1008640006184578,
+        "force_and_virial": 13.726207971572876,
+        "SeZM/core_compute": 27.26860761642456,
+        "SeZM/forward_common": 29.326591968536377
+      }
+    },
+    {
+      "traced_ms": 31.931410019751638,
+      "ms": {
+        "SeZM/input_type_cast": 0.026624000165611506,
+        "SeZM/build_neighbor_list": 1.9033600389957428,
+        "type_embedding": 0.05196800082921982,
+        "build_edge_cache": 2.178048014640808,
+        "radial_embedding": 0.1733120009303093,
+        "env_film": 0.6789120137691498,
+        "gie": 0.21299199759960175,
+        "radial_fuse": 0.06067200005054474,
+        "block_0": 4.259839951992035,
+        "block_1": 4.14028799533844,
+        "blocks": 8.493055939674377,
+        "output_ffn": 0.9402880072593689,
+        "SeZM/descriptor": 13.063423871994019,
+        "SeZM/fitting_net": 0.40217600017786026,
+        "SeZM/apply_out_stat": 0.10291200131177902,
+        "force_and_virial": 13.726464033126831,
+        "SeZM/core_compute": 27.53049612045288,
+        "SeZM/forward_common": 29.611263751983643
+      },
+      "bare_ms": 30.78334851306863
+    }
+  ],
+  "stage_medians_ms": {
+    "SeZM/input_type_cast": 0.02700799982994795,
+    "SeZM/build_neighbor_list": 1.9013080149888992,
+    "type_embedding": 0.0514560011215508,
+    "build_edge_cache": 2.1894400119781494,
+    "radial_embedding": 0.17241599969565868,
+    "env_film": 0.6860800087451935,
+    "gie": 0.21196799725294113,
+    "radial_fuse": 0.059904000256210566,
+    "block_0": 4.226815968751907,
+    "block_1": 4.115455985069275,
+    "blocks": 8.433407962322235,
+    "output_ffn": 0.9304319992661476,
+    "SeZM/descriptor": 13.009919881820679,
+    "SeZM/fitting_net": 0.4032000005245209,
+    "SeZM/apply_out_stat": 0.10214400105178356,
+    "force_and_virial": 13.73414409160614,
+    "SeZM/core_compute": 27.483520030975342,
+    "SeZM/forward_common": 29.5655677318573
+  }
+}

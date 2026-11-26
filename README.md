@@ -8,7 +8,7 @@ Run a fixed-cell molecular dynamics benchmark with an existing MACE checkpoint, 
 
 ## Measure periodic transfer and GPU capacity
 
-[DPA4 SO(2) message reverse](benchmarks/dpa4-message-reverse.md) gives the hotspot profile, same-driver MD timings and per-block gradient checks.
+[DPA4 SO(2) message reverse](benchmarks/dpa4-message-reverse.md) gives the hotspot profile, same-driver MD timings and per-block gradient checks. [DPA4 forward replay](benchmarks/dpa4-forward-replay.md) compares forward-only and full energy/force replay, including a matched stock-kernel replay control.
 
 [SevenNet message-passing reverse](benchmarks/sevennet-message-reverse.md) gives the five-layer profile, the edge adjoint and matched full-step measurements.
 

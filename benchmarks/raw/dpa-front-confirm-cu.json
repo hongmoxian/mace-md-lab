@@ -1,0 +1,267 @@
+{
+  "fixture": "cu.extxyz",
+  "atoms": 108,
+  "gpu": "Tesla V100-SXM2-16GB",
+  "torch": "2.12.0",
+  "deepmd": "3.2.0",
+  "model_sha256": "13edeea63448c0f8a0b38e08fd8ba196fb1e2fad5f12486b1cd23320829da268",
+  "fixture_sha256": "caf53b8fdc45601d1d781b1f91467a58bae78db87be195d4de6bae55124cd7f9",
+  "dt_fs": 0.5,
+  "bucket_policy": "headroom",
+  "steps": 18,
+  "warmup": 3,
+  "orders": [
+    [
+      "stockgraph",
+      "joint",
+      "front",
+      "local",
+      "stock"
+    ],
+    [
+      "joint",
+      "front",
+      "local",
+      "stock",
+      "stockgraph"
+    ],
+    [
+      "front",
+      "local",
+      "stock",
+      "stockgraph",
+      "joint"
+    ],
+    [
+      "local",
+      "stock",
+      "stockgraph",
+      "joint",
+      "front"
+    ],
+    [
+      "stock",
+      "stockgraph",
+      "joint",
+      "front",
+      "local"
+    ]
+  ],
+  "trials": [
+    {
+      "stockgraph": 17.035299439966266,
+      "joint": 12.99854533539878,
+      "front": 17.985357670113444,
+      "local": 31.269225718763966,
+      "stock": 34.82286405697879
+    },
+    {
+      "joint": 12.999225498384071,
+      "front": 17.994851055037643,
+      "local": 31.332423334889526,
+      "stock": 35.2871464436046,
+      "stockgraph": 19.28295605790077
+    },
+    {
+      "front": 17.99460971960798,
+      "local": 31.419341497692383,
+      "stock": 35.01781061317565,
+      "stockgraph": 16.980692614904708,
+      "joint": 12.995165274737197
+    },
+    {
+      "local": 30.96687505280392,
+      "stock": 35.13648644244919,
+      "stockgraph": 16.922849443896364,
+      "joint": 13.004436222318974,
+      "front": 17.901763449319535
+    },
+    {
+      "stock": 34.53443177406572,
+      "stockgraph": 16.948448170700836,
+      "joint": 13.000924942187137,
+      "front": 17.9353093327437,
+      "local": 31.173442774969672
+    }
+  ],
+  "medians": {
+    "stockgraph": 16.980692614904708,
+    "joint": 12.999225498384071,
+    "front": 17.985357670113444,
+    "local": 31.269225718763966,
+    "stock": 35.01781061317565
+  },
+  "cold": {
+    "stockgraph": {
+      "total_ms": 315.038908040151,
+      "steps": 12,
+      "force_calls": 13,
+      "metrics": {
+        "calls": 13,
+        "min_edges": 8426,
+        "max_edges": 8426,
+        "capacity": 8640,
+        "captures": 1,
+        "capture_seconds": 0.08699266100302339
+      }
+    },
+    "joint": {
+      "total_ms": 2222.3556509707123,
+      "steps": 12,
+      "force_calls": 13,
+      "metrics": {
+        "calls": 13,
+        "min_edges": 8426,
+        "max_edges": 8426,
+        "capacity": 8640,
+        "captures": 1,
+        "capture_seconds": 2.0486967279575765
+      }
+    },
+    "front": {
+      "total_ms": 275.80778393894434,
+      "steps": 12,
+      "force_calls": 13,
+      "metrics": {
+        "calls": 13,
+        "min_edges": 8426,
+        "max_edges": 8426,
+        "capacity": 8640,
+        "captures": 1,
+        "capture_seconds": 0.03769673500210047
+      }
+    },
+    "local": {
+      "total_ms": 416.15497891325504,
+      "steps": 12,
+      "force_calls": 13,
+      "metrics": {}
+    },
+    "stock": {
+      "total_ms": 452.33993604779243,
+      "steps": 12,
+      "force_calls": 13,
+      "metrics": {}
+    }
+  },
+  "timed_captures": [
+    {
+      "stockgraph": 0,
+      "joint": 0,
+      "front": 0,
+      "local": 0,
+      "stock": 0
+    },
+    {
+      "joint": 0,
+      "front": 0,
+      "local": 0,
+      "stock": 0,
+      "stockgraph": 0
+    },
+    {
+      "front": 0,
+      "local": 0,
+      "stock": 0,
+      "stockgraph": 0,
+      "joint": 0
+    },
+    {
+      "local": 0,
+      "stock": 0,
+      "stockgraph": 0,
+      "joint": 0,
+      "front": 0
+    },
+    {
+      "stock": 0,
+      "stockgraph": 0,
+      "joint": 0,
+      "front": 0,
+      "local": 0
+    }
+  ],
+  "efs_max_abs": {
+    "stockgraph": [
+      3.09061121057581e-08,
+      7.090887379490596e-07,
+      6.979136216861415e-09
+    ],
+    "joint": [
+      5.132622188991971e-08,
+      7.37348468504706e-07,
+      9.821860977310415e-09
+    ],
+    "front": [
+      3.311369154188368e-08,
+      7.56692770664813e-07,
+      8.536975507587863e-09
+    ],
+    "local": [
+      4.801485273573134e-08,
+      7.753126283205347e-07,
+      1.1891819903797618e-08
+    ],
+    "stock": [
+      3.808074527316623e-08,
+      8.417499088864133e-07,
+      8.699426280039946e-09
+    ]
+  },
+  "gate_metrics": {
+    "stockgraph": {
+      "calls": 22,
+      "min_edges": 8422,
+      "max_edges": 8426,
+      "capacity": 8640,
+      "captures": 1,
+      "capture_seconds": 0.08699266100302339
+    },
+    "joint": {
+      "calls": 22,
+      "min_edges": 8422,
+      "max_edges": 8426,
+      "capacity": 8640,
+      "captures": 1,
+      "capture_seconds": 2.0486967279575765
+    },
+    "front": {
+      "calls": 22,
+      "min_edges": 8422,
+      "max_edges": 8426,
+      "capacity": 8640,
+      "captures": 1,
+      "capture_seconds": 0.03769673500210047
+    },
+    "local": {},
+    "stock": {}
+  },
+  "final_metrics": {
+    "stockgraph": {
+      "calls": 132,
+      "min_edges": 8422,
+      "max_edges": 8426,
+      "capacity": 8640,
+      "captures": 1,
+      "capture_seconds": 0.08699266100302339
+    },
+    "joint": {
+      "calls": 132,
+      "min_edges": 8422,
+      "max_edges": 8426,
+      "capacity": 8640,
+      "captures": 1,
+      "capture_seconds": 2.0486967279575765
+    },
+    "front": {
+      "calls": 132,
+      "min_edges": 8422,
+      "max_edges": 8426,
+      "capacity": 8640,
+      "captures": 1,
+      "capture_seconds": 0.03769673500210047
+    },
+    "local": {},
+    "stock": {}
+  }
+}

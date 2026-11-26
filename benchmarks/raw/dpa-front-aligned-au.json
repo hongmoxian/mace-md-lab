@@ -1,0 +1,257 @@
+{
+  "fixture": "au-water-seed109.extxyz",
+  "atoms": 192,
+  "gpu": "Tesla V100-SXM2-16GB",
+  "torch": "2.12.0",
+  "deepmd": "3.2.0",
+  "model_sha256": "13edeea63448c0f8a0b38e08fd8ba196fb1e2fad5f12486b1cd23320829da268",
+  "fixture_sha256": "f87aa8aeffcef2c334d0b94ea4d7eb9109f01f1c7a746345fc4ded509c93ac2c",
+  "dt_fs": 0.5,
+  "steps": 8,
+  "warmup": 3,
+  "orders": [
+    [
+      "stock",
+      "local",
+      "front",
+      "joint",
+      "stockgraph"
+    ],
+    [
+      "local",
+      "front",
+      "joint",
+      "stockgraph",
+      "stock"
+    ],
+    [
+      "front",
+      "joint",
+      "stockgraph",
+      "stock",
+      "local"
+    ],
+    [
+      "joint",
+      "stockgraph",
+      "stock",
+      "local",
+      "front"
+    ],
+    [
+      "stockgraph",
+      "stock",
+      "local",
+      "front",
+      "joint"
+    ]
+  ],
+  "trials": [
+    {
+      "stock": 35.09557250072248,
+      "local": 30.021968006622046,
+      "front": 41.52420624450315,
+      "joint": 52.64745025488082,
+      "stockgraph": 64.22573888266925
+    },
+    {
+      "local": 30.560693630832247,
+      "front": 42.12714974710252,
+      "joint": 51.757992870989256,
+      "stockgraph": 64.3051348743029,
+      "stock": 34.970761626027524
+    },
+    {
+      "front": 42.637547754566185,
+      "joint": 51.935768249677494,
+      "stockgraph": 70.60914937756024,
+      "stock": 35.14898287539836,
+      "local": 30.330007008160464
+    },
+    {
+      "joint": 53.68801312579308,
+      "stockgraph": 64.3728561262833,
+      "stock": 35.191270741051994,
+      "local": 31.21691338310484,
+      "front": 47.336996634840034
+    },
+    {
+      "stockgraph": 64.95251138403546,
+      "stock": 34.864699744503014,
+      "local": 30.955481619457714,
+      "front": 41.8664883763995,
+      "joint": 52.8830949915573
+    }
+  ],
+  "medians": {
+    "stock": 35.09557250072248,
+    "local": 30.560693630832247,
+    "front": 42.12714974710252,
+    "joint": 52.64745025488082,
+    "stockgraph": 64.3728561262833
+  },
+  "cold": {
+    "stock": {
+      "total_ms": 458.31099594943225,
+      "steps": 12,
+      "force_calls": 13,
+      "metrics": {}
+    },
+    "local": {
+      "total_ms": 2316.9235259993,
+      "steps": 12,
+      "force_calls": 13,
+      "metrics": {}
+    },
+    "front": {
+      "total_ms": 467.12391695473343,
+      "steps": 12,
+      "force_calls": 13,
+      "metrics": {
+        "calls": 13,
+        "min_edges": 13240,
+        "max_edges": 13260,
+        "captures": 5,
+        "capture_seconds": 0.21275595377665013
+      }
+    },
+    "joint": {
+      "total_ms": 576.7668229527771,
+      "steps": 12,
+      "force_calls": 13,
+      "metrics": {
+        "calls": 13,
+        "min_edges": 13240,
+        "max_edges": 13260,
+        "captures": 5,
+        "capture_seconds": 0.36263551004230976
+      }
+    },
+    "stockgraph": {
+      "total_ms": 711.0910910414532,
+      "steps": 12,
+      "force_calls": 13,
+      "metrics": {
+        "calls": 13,
+        "min_edges": 13240,
+        "max_edges": 13260,
+        "captures": 5,
+        "capture_seconds": 0.4265381689183414
+      }
+    }
+  },
+  "timed_captures": [
+    {
+      "stock": 0,
+      "local": 0,
+      "front": 4,
+      "joint": 4,
+      "stockgraph": 4
+    },
+    {
+      "local": 0,
+      "front": 4,
+      "joint": 4,
+      "stockgraph": 4,
+      "stock": 0
+    },
+    {
+      "front": 4,
+      "joint": 4,
+      "stockgraph": 4,
+      "stock": 0,
+      "local": 0
+    },
+    {
+      "joint": 4,
+      "stockgraph": 4,
+      "stock": 0,
+      "local": 0,
+      "front": 4
+    },
+    {
+      "stockgraph": 4,
+      "stock": 0,
+      "local": 0,
+      "front": 4,
+      "joint": 4
+    }
+  ],
+  "efs_max_abs": {
+    "stock": [
+      4.951531688372294e-08,
+      1.2625754578721171e-05,
+      8.687322975570178e-09
+    ],
+    "local": [
+      6.418364743391673e-08,
+      1.1946817018326783e-05,
+      8.249238382662671e-09
+    ],
+    "front": [
+      7.388492425282796e-08,
+      1.2825171559427417e-05,
+      8.077493791891488e-09
+    ],
+    "joint": [
+      5.4327150185902916e-08,
+      1.5028376282089084e-05,
+      9.71536748620161e-09
+    ],
+    "stockgraph": [
+      2.995754281679789e-08,
+      1.313792217416676e-05,
+      1.0400519334652358e-08
+    ]
+  },
+  "gate_metrics": {
+    "stock": {},
+    "local": {},
+    "front": {
+      "calls": 22,
+      "min_edges": 13240,
+      "max_edges": 13306,
+      "captures": 7,
+      "capture_seconds": 0.2920511367265135
+    },
+    "joint": {
+      "calls": 22,
+      "min_edges": 13240,
+      "max_edges": 13306,
+      "captures": 7,
+      "capture_seconds": 0.5021690761204809
+    },
+    "stockgraph": {
+      "calls": 22,
+      "min_edges": 13240,
+      "max_edges": 13306,
+      "captures": 7,
+      "capture_seconds": 0.5930129737826064
+    }
+  },
+  "final_metrics": {
+    "stock": {},
+    "local": {},
+    "front": {
+      "calls": 82,
+      "min_edges": 13240,
+      "max_edges": 13306,
+      "captures": 27,
+      "capture_seconds": 1.1853953575482592
+    },
+    "joint": {
+      "calls": 82,
+      "min_edges": 13240,
+      "max_edges": 13306,
+      "captures": 27,
+      "capture_seconds": 1.95203170820605
+    },
+    "stockgraph": {
+      "calls": 82,
+      "min_edges": 13240,
+      "max_edges": 13306,
+      "captures": 27,
+      "capture_seconds": 2.3033442969899625
+    }
+  }
+}
