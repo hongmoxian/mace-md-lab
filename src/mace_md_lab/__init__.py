@@ -1,3 +1,6 @@
-"""Benchmark and run fixed-cell molecular dynamics with standard MACE checkpoints."""
+"""MACE dynamics and cross-framework conservative force benchmarks."""
 
-from . import _e3nn as _e3nn
+from importlib.util import find_spec
+
+if find_spec("e3nn") is not None:
+    from . import _e3nn as _e3nn

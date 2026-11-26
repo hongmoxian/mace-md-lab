@@ -1,0 +1,645 @@
+{
+  "checkpoint": "mace-mp-0-small.model",
+  "checkpoint_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736",
+  "structure": "cu.extxyz",
+  "structure_sha256": "4176326e59a1b43f2747e266f69165c147206d7f80fe5e575196e41923abc4c0",
+  "formula": "Cu32",
+  "atoms": 32,
+  "device": "cuda",
+  "gpu": "Tesla V100-SXM2-16GB",
+  "torch": "2.13.0+cu126",
+  "mace": "0.3.16",
+  "dtype": "float64",
+  "torch_threads": 1,
+  "ase": "3.29.0",
+  "replay": "padded",
+  "certify_edges": true,
+  "dt_fs": 0.5,
+  "steps": 12,
+  "warmup": 3,
+  "repeats": 5,
+  "skin_A": 0.12,
+  "initial_velocities": "input momenta",
+  "selected_head": "Default",
+  "scope": "Same input, frozen checkpoint and precision. Setup and initial force are separate. Timed Verlet steps include the topology check, all refreshes, recaptures and CUDA synchronization. The ASE E/F path copies outputs to the host. One-time model transformation is measured separately.",
+  "force_tolerances": {
+    "energy_eV_atom": 1e-08,
+    "force_eV_A": 1e-06,
+    "position_A": 1e-06,
+    "velocity_A_fs": 1e-07,
+    "nve_difference_eV_atom": 1e-08
+  },
+  "validation": {
+    "ase_ef": {
+      "metrics": {
+        "max_error": {
+          "energy_eV_atom": 0.0,
+          "force_eV_A": 7.771561172376096e-16,
+          "position_A": 3.469446951953614e-18,
+          "velocity_A_fs": 1.3010426069826053e-18,
+          "nve_difference_eV_atom": 4.440892098500626e-16
+        },
+        "stress_returned": false,
+        "topology_counts_in_validation_including_initial": {},
+        "max_nve_excursion_meV_atom": 0.0005264718052622186,
+        "end_nve_change_meV_atom": 0.0005264718052622186
+      },
+      "errors": []
+    },
+    "none": {
+      "metrics": {
+        "max_error": {
+          "energy_eV_atom": 0.0,
+          "force_eV_A": 8.881784197001252e-16,
+          "position_A": 1.3877787807814457e-17,
+          "velocity_A_fs": 4.336808689942018e-18,
+          "nve_difference_eV_atom": 4.440892098500626e-16
+        },
+        "stress_returned": false,
+        "topology_counts_in_validation_including_initial": {
+          "neighbor_rebuilds": 1,
+          "certificate_hits": 0,
+          "edge_refreshes": 13,
+          "captures": 1,
+          "replays": 13,
+          "fallback_evaluations": 0
+        },
+        "max_nve_excursion_meV_atom": 0.0005264718052622186,
+        "end_nve_change_meV_atom": 0.0005264718052622186
+      },
+      "errors": []
+    },
+    "angular": {
+      "metrics": {
+        "max_error": {
+          "energy_eV_atom": 0.0,
+          "force_eV_A": 7.771561172376096e-16,
+          "position_A": 2.220446049250313e-16,
+          "velocity_A_fs": 4.336808689942018e-18,
+          "nve_difference_eV_atom": 4.440892098500626e-16
+        },
+        "stress_returned": false,
+        "topology_counts_in_validation_including_initial": {
+          "neighbor_rebuilds": 1,
+          "certificate_hits": 0,
+          "edge_refreshes": 13,
+          "captures": 1,
+          "replays": 13,
+          "fallback_evaluations": 0
+        },
+        "max_nve_excursion_meV_atom": 0.0005264718052622186,
+        "end_nve_change_meV_atom": 0.0005264718052622186
+      },
+      "errors": []
+    },
+    "product": {
+      "metrics": {
+        "max_error": {
+          "energy_eV_atom": 0.0,
+          "force_eV_A": 6.661338147750939e-16,
+          "position_A": 1.3877787807814457e-17,
+          "velocity_A_fs": 4.336808689942018e-18,
+          "nve_difference_eV_atom": 4.440892098500626e-16
+        },
+        "stress_returned": false,
+        "topology_counts_in_validation_including_initial": {
+          "neighbor_rebuilds": 1,
+          "certificate_hits": 0,
+          "edge_refreshes": 13,
+          "captures": 1,
+          "replays": 13,
+          "fallback_evaluations": 0
+        },
+        "max_nve_excursion_meV_atom": 0.0005264718052622186,
+        "end_nve_change_meV_atom": 0.0005264718052622186
+      },
+      "errors": []
+    },
+    "both": {
+      "metrics": {
+        "max_error": {
+          "energy_eV_atom": 0.0,
+          "force_eV_A": 8.881784197001252e-16,
+          "position_A": 1.3877787807814457e-17,
+          "velocity_A_fs": 4.336808689942018e-18,
+          "nve_difference_eV_atom": 4.440892098500626e-16
+        },
+        "stress_returned": false,
+        "topology_counts_in_validation_including_initial": {
+          "neighbor_rebuilds": 1,
+          "certificate_hits": 0,
+          "edge_refreshes": 13,
+          "captures": 1,
+          "replays": 13,
+          "fallback_evaluations": 0
+        },
+        "max_nve_excursion_meV_atom": 0.0005264718048181294,
+        "end_nve_change_meV_atom": 0.0005264718048181294
+      },
+      "errors": []
+    }
+  },
+  "transforms": {
+    "none": {
+      "mode": "none",
+      "specialized_product_layers": 0,
+      "transform_ms": 0.03346707671880722
+    },
+    "angular": {
+      "mode": "angular",
+      "specialized_product_layers": 0,
+      "transform_ms": 16.56752498820424
+    },
+    "product": {
+      "mode": "product",
+      "specialized_product_layers": 2,
+      "transform_ms": 72.50921393278986
+    },
+    "both": {
+      "mode": "both",
+      "specialized_product_layers": 2,
+      "transform_ms": 337.3856279067695
+    }
+  },
+  "trials": {
+    "ase_ef": [
+      {
+        "repeat": 1,
+        "seconds": 0.2112124339910224,
+        "setup_and_first_force_ms": 20.690934034064412,
+        "counts_before_timed_steps": {},
+        "ms_step": 17.601036165918533
+      },
+      {
+        "repeat": 2,
+        "seconds": 0.2159570389194414,
+        "setup_and_first_force_ms": 19.922810955904424,
+        "counts_before_timed_steps": {},
+        "ms_step": 17.99641990995345
+      },
+      {
+        "repeat": 3,
+        "seconds": 0.21071049803867936,
+        "setup_and_first_force_ms": 20.087168901227415,
+        "counts_before_timed_steps": {},
+        "ms_step": 17.559208169889946
+      },
+      {
+        "repeat": 4,
+        "seconds": 0.21070627495646477,
+        "setup_and_first_force_ms": 19.878378021530807,
+        "counts_before_timed_steps": {},
+        "ms_step": 17.558856246372063
+      },
+      {
+        "repeat": 5,
+        "seconds": 0.2105994839221239,
+        "setup_and_first_force_ms": 20.20615595392883,
+        "counts_before_timed_steps": {},
+        "ms_step": 17.549956993510325
+      }
+    ],
+    "none": [
+      {
+        "repeat": 1,
+        "seconds": 0.08549993892665952,
+        "setup_and_first_force_ms": 79.00514302309602,
+        "counts_before_timed_steps": {
+          "neighbor_rebuilds": 1,
+          "certificate_hits": 0,
+          "edge_refreshes": 4,
+          "captures": 1,
+          "replays": 4,
+          "fallback_evaluations": 0
+        },
+        "ms_step": 7.12499491055496,
+        "neighbor_rebuilds": 0,
+        "certificate_hits": 0,
+        "edge_refreshes": 12,
+        "captures": 0,
+        "replays": 12,
+        "fallback_evaluations": 0,
+        "final_capacity_edges": 2792
+      },
+      {
+        "repeat": 2,
+        "seconds": 0.08543155889492482,
+        "setup_and_first_force_ms": 77.07599399145693,
+        "counts_before_timed_steps": {
+          "neighbor_rebuilds": 1,
+          "certificate_hits": 0,
+          "edge_refreshes": 4,
+          "captures": 1,
+          "replays": 4,
+          "fallback_evaluations": 0
+        },
+        "ms_step": 7.119296574577068,
+        "neighbor_rebuilds": 0,
+        "certificate_hits": 0,
+        "edge_refreshes": 12,
+        "captures": 0,
+        "replays": 12,
+        "fallback_evaluations": 0,
+        "final_capacity_edges": 2792
+      },
+      {
+        "repeat": 3,
+        "seconds": 0.08544813701882958,
+        "setup_and_first_force_ms": 78.38818908203393,
+        "counts_before_timed_steps": {
+          "neighbor_rebuilds": 1,
+          "certificate_hits": 0,
+          "edge_refreshes": 4,
+          "captures": 1,
+          "replays": 4,
+          "fallback_evaluations": 0
+        },
+        "ms_step": 7.120678084902465,
+        "neighbor_rebuilds": 0,
+        "certificate_hits": 0,
+        "edge_refreshes": 12,
+        "captures": 0,
+        "replays": 12,
+        "fallback_evaluations": 0,
+        "final_capacity_edges": 2792
+      },
+      {
+        "repeat": 4,
+        "seconds": 0.08541713596787304,
+        "setup_and_first_force_ms": 78.57321097981185,
+        "counts_before_timed_steps": {
+          "neighbor_rebuilds": 1,
+          "certificate_hits": 0,
+          "edge_refreshes": 4,
+          "captures": 1,
+          "replays": 4,
+          "fallback_evaluations": 0
+        },
+        "ms_step": 7.11809466398942,
+        "neighbor_rebuilds": 0,
+        "certificate_hits": 0,
+        "edge_refreshes": 12,
+        "captures": 0,
+        "replays": 12,
+        "fallback_evaluations": 0,
+        "final_capacity_edges": 2792
+      },
+      {
+        "repeat": 5,
+        "seconds": 0.085364910075441,
+        "setup_and_first_force_ms": 77.11329101584852,
+        "counts_before_timed_steps": {
+          "neighbor_rebuilds": 1,
+          "certificate_hits": 0,
+          "edge_refreshes": 4,
+          "captures": 1,
+          "replays": 4,
+          "fallback_evaluations": 0
+        },
+        "ms_step": 7.1137425062867505,
+        "neighbor_rebuilds": 0,
+        "certificate_hits": 0,
+        "edge_refreshes": 12,
+        "captures": 0,
+        "replays": 12,
+        "fallback_evaluations": 0,
+        "final_capacity_edges": 2792
+      }
+    ],
+    "angular": [
+      {
+        "repeat": 1,
+        "seconds": 0.08330374595243484,
+        "setup_and_first_force_ms": 71.72146602533758,
+        "counts_before_timed_steps": {
+          "neighbor_rebuilds": 1,
+          "certificate_hits": 0,
+          "edge_refreshes": 4,
+          "captures": 1,
+          "replays": 4,
+          "fallback_evaluations": 0
+        },
+        "ms_step": 6.94197882936957,
+        "neighbor_rebuilds": 0,
+        "certificate_hits": 0,
+        "edge_refreshes": 12,
+        "captures": 0,
+        "replays": 12,
+        "fallback_evaluations": 0,
+        "final_capacity_edges": 2792
+      },
+      {
+        "repeat": 2,
+        "seconds": 0.08329848002176732,
+        "setup_and_first_force_ms": 72.63416599016637,
+        "counts_before_timed_steps": {
+          "neighbor_rebuilds": 1,
+          "certificate_hits": 0,
+          "edge_refreshes": 4,
+          "captures": 1,
+          "replays": 4,
+          "fallback_evaluations": 0
+        },
+        "ms_step": 6.9415400018139435,
+        "neighbor_rebuilds": 0,
+        "certificate_hits": 0,
+        "edge_refreshes": 12,
+        "captures": 0,
+        "replays": 12,
+        "fallback_evaluations": 0,
+        "final_capacity_edges": 2792
+      },
+      {
+        "repeat": 3,
+        "seconds": 0.0833070439985022,
+        "setup_and_first_force_ms": 75.45521203428507,
+        "counts_before_timed_steps": {
+          "neighbor_rebuilds": 1,
+          "certificate_hits": 0,
+          "edge_refreshes": 4,
+          "captures": 1,
+          "replays": 4,
+          "fallback_evaluations": 0
+        },
+        "ms_step": 6.942253666541849,
+        "neighbor_rebuilds": 0,
+        "certificate_hits": 0,
+        "edge_refreshes": 12,
+        "captures": 0,
+        "replays": 12,
+        "fallback_evaluations": 0,
+        "final_capacity_edges": 2792
+      },
+      {
+        "repeat": 4,
+        "seconds": 0.08331668202299625,
+        "setup_and_first_force_ms": 73.49242107011378,
+        "counts_before_timed_steps": {
+          "neighbor_rebuilds": 1,
+          "certificate_hits": 0,
+          "edge_refreshes": 4,
+          "captures": 1,
+          "replays": 4,
+          "fallback_evaluations": 0
+        },
+        "ms_step": 6.9430568352496875,
+        "neighbor_rebuilds": 0,
+        "certificate_hits": 0,
+        "edge_refreshes": 12,
+        "captures": 0,
+        "replays": 12,
+        "fallback_evaluations": 0,
+        "final_capacity_edges": 2792
+      },
+      {
+        "repeat": 5,
+        "seconds": 0.08326677000150084,
+        "setup_and_first_force_ms": 71.9900419935584,
+        "counts_before_timed_steps": {
+          "neighbor_rebuilds": 1,
+          "certificate_hits": 0,
+          "edge_refreshes": 4,
+          "captures": 1,
+          "replays": 4,
+          "fallback_evaluations": 0
+        },
+        "ms_step": 6.93889750012507,
+        "neighbor_rebuilds": 0,
+        "certificate_hits": 0,
+        "edge_refreshes": 12,
+        "captures": 0,
+        "replays": 12,
+        "fallback_evaluations": 0,
+        "final_capacity_edges": 2792
+      }
+    ],
+    "product": [
+      {
+        "repeat": 1,
+        "seconds": 0.07131355698220432,
+        "setup_and_first_force_ms": 67.73024704307318,
+        "counts_before_timed_steps": {
+          "neighbor_rebuilds": 1,
+          "certificate_hits": 0,
+          "edge_refreshes": 4,
+          "captures": 1,
+          "replays": 4,
+          "fallback_evaluations": 0
+        },
+        "ms_step": 5.942796415183693,
+        "neighbor_rebuilds": 0,
+        "certificate_hits": 0,
+        "edge_refreshes": 12,
+        "captures": 0,
+        "replays": 12,
+        "fallback_evaluations": 0,
+        "final_capacity_edges": 2792
+      },
+      {
+        "repeat": 2,
+        "seconds": 0.07143608597107232,
+        "setup_and_first_force_ms": 67.98364606220275,
+        "counts_before_timed_steps": {
+          "neighbor_rebuilds": 1,
+          "certificate_hits": 0,
+          "edge_refreshes": 4,
+          "captures": 1,
+          "replays": 4,
+          "fallback_evaluations": 0
+        },
+        "ms_step": 5.953007164256026,
+        "neighbor_rebuilds": 0,
+        "certificate_hits": 0,
+        "edge_refreshes": 12,
+        "captures": 0,
+        "replays": 12,
+        "fallback_evaluations": 0,
+        "final_capacity_edges": 2792
+      },
+      {
+        "repeat": 3,
+        "seconds": 0.07135078404098749,
+        "setup_and_first_force_ms": 69.16432292200625,
+        "counts_before_timed_steps": {
+          "neighbor_rebuilds": 1,
+          "certificate_hits": 0,
+          "edge_refreshes": 4,
+          "captures": 1,
+          "replays": 4,
+          "fallback_evaluations": 0
+        },
+        "ms_step": 5.945898670082291,
+        "neighbor_rebuilds": 0,
+        "certificate_hits": 0,
+        "edge_refreshes": 12,
+        "captures": 0,
+        "replays": 12,
+        "fallback_evaluations": 0,
+        "final_capacity_edges": 2792
+      },
+      {
+        "repeat": 4,
+        "seconds": 0.07129831495694816,
+        "setup_and_first_force_ms": 66.3333380362019,
+        "counts_before_timed_steps": {
+          "neighbor_rebuilds": 1,
+          "certificate_hits": 0,
+          "edge_refreshes": 4,
+          "captures": 1,
+          "replays": 4,
+          "fallback_evaluations": 0
+        },
+        "ms_step": 5.941526246412347,
+        "neighbor_rebuilds": 0,
+        "certificate_hits": 0,
+        "edge_refreshes": 12,
+        "captures": 0,
+        "replays": 12,
+        "fallback_evaluations": 0,
+        "final_capacity_edges": 2792
+      },
+      {
+        "repeat": 5,
+        "seconds": 0.07145742804277688,
+        "setup_and_first_force_ms": 66.65869907010347,
+        "counts_before_timed_steps": {
+          "neighbor_rebuilds": 1,
+          "certificate_hits": 0,
+          "edge_refreshes": 4,
+          "captures": 1,
+          "replays": 4,
+          "fallback_evaluations": 0
+        },
+        "ms_step": 5.954785670231407,
+        "neighbor_rebuilds": 0,
+        "certificate_hits": 0,
+        "edge_refreshes": 12,
+        "captures": 0,
+        "replays": 12,
+        "fallback_evaluations": 0,
+        "final_capacity_edges": 2792
+      }
+    ],
+    "both": [
+      {
+        "repeat": 1,
+        "seconds": 0.06955671601463109,
+        "setup_and_first_force_ms": 61.43553496804088,
+        "counts_before_timed_steps": {
+          "neighbor_rebuilds": 1,
+          "certificate_hits": 0,
+          "edge_refreshes": 4,
+          "captures": 1,
+          "replays": 4,
+          "fallback_evaluations": 0
+        },
+        "ms_step": 5.796393001219258,
+        "neighbor_rebuilds": 0,
+        "certificate_hits": 0,
+        "edge_refreshes": 12,
+        "captures": 0,
+        "replays": 12,
+        "fallback_evaluations": 0,
+        "final_capacity_edges": 2792
+      },
+      {
+        "repeat": 2,
+        "seconds": 0.0694441789528355,
+        "setup_and_first_force_ms": 61.49493798147887,
+        "counts_before_timed_steps": {
+          "neighbor_rebuilds": 1,
+          "certificate_hits": 0,
+          "edge_refreshes": 4,
+          "captures": 1,
+          "replays": 4,
+          "fallback_evaluations": 0
+        },
+        "ms_step": 5.787014912736292,
+        "neighbor_rebuilds": 0,
+        "certificate_hits": 0,
+        "edge_refreshes": 12,
+        "captures": 0,
+        "replays": 12,
+        "fallback_evaluations": 0,
+        "final_capacity_edges": 2792
+      },
+      {
+        "repeat": 3,
+        "seconds": 0.06947670690715313,
+        "setup_and_first_force_ms": 68.0808019824326,
+        "counts_before_timed_steps": {
+          "neighbor_rebuilds": 1,
+          "certificate_hits": 0,
+          "edge_refreshes": 4,
+          "captures": 1,
+          "replays": 4,
+          "fallback_evaluations": 0
+        },
+        "ms_step": 5.789725575596094,
+        "neighbor_rebuilds": 0,
+        "certificate_hits": 0,
+        "edge_refreshes": 12,
+        "captures": 0,
+        "replays": 12,
+        "fallback_evaluations": 0,
+        "final_capacity_edges": 2792
+      },
+      {
+        "repeat": 4,
+        "seconds": 0.06954723293893039,
+        "setup_and_first_force_ms": 61.4275389816612,
+        "counts_before_timed_steps": {
+          "neighbor_rebuilds": 1,
+          "certificate_hits": 0,
+          "edge_refreshes": 4,
+          "captures": 1,
+          "replays": 4,
+          "fallback_evaluations": 0
+        },
+        "ms_step": 5.795602744910866,
+        "neighbor_rebuilds": 0,
+        "certificate_hits": 0,
+        "edge_refreshes": 12,
+        "captures": 0,
+        "replays": 12,
+        "fallback_evaluations": 0,
+        "final_capacity_edges": 2792
+      },
+      {
+        "repeat": 5,
+        "seconds": 0.06939069496002048,
+        "setup_and_first_force_ms": 62.38225300330669,
+        "counts_before_timed_steps": {
+          "neighbor_rebuilds": 1,
+          "certificate_hits": 0,
+          "edge_refreshes": 4,
+          "captures": 1,
+          "replays": 4,
+          "fallback_evaluations": 0
+        },
+        "ms_step": 5.78255791333504,
+        "neighbor_rebuilds": 0,
+        "certificate_hits": 0,
+        "edge_refreshes": 12,
+        "captures": 0,
+        "replays": 12,
+        "fallback_evaluations": 0,
+        "final_capacity_edges": 2792
+      }
+    ]
+  },
+  "passed": true,
+  "median_ms_step": {
+    "ase_ef": 17.559208169889946,
+    "none": 7.119296574577068,
+    "angular": 6.94197882936957,
+    "product": 5.945898670082291,
+    "both": 5.789725575596094
+  },
+  "speedup_vs_stock_same_replay": {
+    "none": 1.0,
+    "angular": 1.0255428242531246,
+    "product": 1.1973457621131203,
+    "both": 1.2296431811181456
+  }
+}

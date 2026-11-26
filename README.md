@@ -1,8 +1,23 @@
 # MACE MD Lab
 
+Compare conservative MD implementations in three separately trained architectures using MACE, PyG SchNet, and SchNetPack PaiNN. The same Cartesian edge derivative and CUDA force replay can be enabled independently in all three. The frozen scalar product optimization below is specific to compatible MACE blocks. [Cross-framework results and reproduction](benchmarks/portable.md)
+
 Run a fixed-cell molecular dynamics benchmark with an existing MACE checkpoint, or measure force disagreement across several checkpoints on the same frames. The package compares every optimized path with the original member energies and forces. It writes timings, numerical errors, and neighbor-list rebuild counts to JSON.
 
 **Inputs** are trusted local MACE or ScaleShiftMACE checkpoints and ASE-readable periodic structures. **Outputs** include wall time per MD step, milliseconds per committee observation, per-member force errors, and the maximum atomic force disagreement on each sampled frame. The initial release targets scalar-energy MACE 0.3.16 on CPU or one GPU, with optional CUDA Graph replay.
+
+## Benchmark conservative force derivatives
+
+Use an existing frozen MACE checkpoint with the same weights and precision as the native reference. The GPU implementations use Triton for the angular derivative and CuPy/NVRTC for scalar product layers. For CUDA 12 on Linux, install PyTorch for the device and run `python -m pip install -e ".[cuda12]"`.
+
+```bash
+python examples/make_interface.py --output fixtures-interface/au-water.extxyz
+mace-md-adjoint --model mace-mp-0-small.model --structure fixtures-interface/au-water.extxyz \
+  --device cuda --dtype float64 --certify-edges --replay padded --skin 0.12 \
+  --steps 16 --warmup 3 --repeats 5 --output runs/adjoint.json
+```
+
+The report compares `none`, `angular`, `product`, and `both` with an identical replay policy and reports the separate ASE energy/force control. Use the transforms for first energy derivatives in fixed-weight inference. A local Python trajectory can select the same operators with `with optimized_model(calc.models[0], "both", atoms.numbers):` around creation and use of `ResidentMACE`. Import `optimized_model` from `mace_md_lab.transforms`. Operators support component-normalized spherical harmonics through degree three and scalar-output product layers through correlation order three. Compatible scalar blocks can be optimized in a model whose other blocks retain vector outputs. [Validation, data and commands](benchmarks/adjoints.md) · [Scalar product derivation](docs/frozen-product.md)
 
 ## Run a short benchmark
 

@@ -1,0 +1,147 @@
+{
+  "structure": "au-water.extxyz",
+  "structure_sha256": "674186cd63ac40385917aa952cf204c88d263fac13d2af3f5257c01e1d3a24a5",
+  "checkpoint": "mace-mp-0-small.model",
+  "checkpoint_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736",
+  "frame": 0,
+  "formula": "H96Au48O48",
+  "backend": "padded",
+  "adjoint": "both",
+  "device": "cuda",
+  "dtype": "float64",
+  "fd_h_A": 0.001,
+  "selection": {
+    "indices_zero_based": [
+      63,
+      65,
+      64
+    ],
+    "roles": [
+      "O",
+      "H",
+      "H"
+    ],
+    "OH_lengths_A": [
+      0.9571999924022065,
+      0.9571999998875174
+    ],
+    "unit_axis_cartesian": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "Au_surface_indices_zero_based": [
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47
+    ],
+    "Au_surface_coordinate_mod_period_A": 6.71407152125,
+    "normal_period_A": 30.158868795510585,
+    "oxygen_height_at_q0_A": 2.9469276887499998,
+    "surface_Au_layer_width_A": 0.6,
+    "positive_q": "rigid translation away from the selected outer Au plane into the water",
+    "selection": "Closest intact water to either outer Au plane by signed periodic normal height; surface plane is the mean of Au atoms within 0.6 A of the outermost Au."
+  },
+  "torch": "2.13.0+cu126",
+  "mace": "0.3.16",
+  "points": [
+    {
+      "q_A": -0.2,
+      "O_height_A": 2.7469276887499996,
+      "native_relative_E_eV": 0.052777058859305725,
+      "optimized_relative_E_eV": 0.052777058859305725,
+      "native_Fq_eV_A": 0.4651715133577864,
+      "optimized_Fq_eV_A": 0.46517151335778684,
+      "native_minus_dE_dq_FD_eV_A": 0.4651726750353191,
+      "optimized_minus_dE_dq_FD_eV_A": 0.4651726750353191,
+      "absolute_relative_energy_error_eV": 0.0,
+      "absolute_projected_force_error_eV_A": 4.440892098500626e-16,
+      "native_FD_absolute_error_eV_A": 1.1616775327238926e-06,
+      "optimized_FD_absolute_error_eV_A": 1.1616775322798034e-06
+    },
+    {
+      "q_A": -0.1,
+      "O_height_A": 2.8469276887499997,
+      "native_relative_E_eV": 0.017581250092234768,
+      "optimized_relative_E_eV": 0.017581250092234768,
+      "native_Fq_eV_A": 0.2516457505027285,
+      "optimized_Fq_eV_A": 0.25164575050272886,
+      "native_minus_dE_dq_FD_eV_A": 0.2516470079854116,
+      "optimized_minus_dE_dq_FD_eV_A": 0.2516470079854116,
+      "absolute_relative_energy_error_eV": 0.0,
+      "absolute_projected_force_error_eV_A": 3.3306690738754696e-16,
+      "native_FD_absolute_error_eV_A": 1.257482683092448e-06,
+      "optimized_FD_absolute_error_eV_A": 1.257482682759381e-06
+    },
+    {
+      "q_A": 0.0,
+      "O_height_A": 2.9469276887499998,
+      "native_relative_E_eV": 0.0,
+      "optimized_relative_E_eV": 0.0,
+      "native_Fq_eV_A": 0.11026811121138202,
+      "optimized_Fq_eV_A": 0.11026811121138214,
+      "native_minus_dE_dq_FD_eV_A": 0.11026885982801105,
+      "optimized_minus_dE_dq_FD_eV_A": 0.11026885982801105,
+      "absolute_relative_energy_error_eV": 0.0,
+      "absolute_projected_force_error_eV_A": 1.1102230246251565e-16,
+      "native_FD_absolute_error_eV_A": 7.486166290204821e-07,
+      "optimized_FD_absolute_error_eV_A": 7.486166289094598e-07
+    },
+    {
+      "q_A": 0.1,
+      "O_height_A": 3.04692768875,
+      "native_relative_E_eV": -0.005980139080747904,
+      "optimized_relative_E_eV": -0.005980139080634217,
+      "native_Fq_eV_A": 0.014313790191687659,
+      "optimized_Fq_eV_A": 0.01431379019168777,
+      "native_minus_dE_dq_FD_eV_A": 0.014314105499124707,
+      "optimized_minus_dE_dq_FD_eV_A": 0.014314105499124707,
+      "absolute_relative_energy_error_eV": 1.1368683772161603e-13,
+      "absolute_projected_force_error_eV_A": 1.1102230246251565e-16,
+      "native_FD_absolute_error_eV_A": 3.1530743704877295e-07,
+      "optimized_FD_absolute_error_eV_A": 3.1530743693775065e-07
+    },
+    {
+      "q_A": 0.2,
+      "O_height_A": 3.14692768875,
+      "native_relative_E_eV": -0.0035237523077285005,
+      "optimized_relative_E_eV": -0.0035237523077285005,
+      "native_Fq_eV_A": -0.061252948622756875,
+      "optimized_Fq_eV_A": -0.061252948622756986,
+      "native_minus_dE_dq_FD_eV_A": -0.06125281430513496,
+      "optimized_minus_dE_dq_FD_eV_A": -0.06125281430513496,
+      "absolute_relative_energy_error_eV": 0.0,
+      "absolute_projected_force_error_eV_A": 1.1102230246251565e-16,
+      "native_FD_absolute_error_eV_A": 1.3431762191373764e-07,
+      "optimized_FD_absolute_error_eV_A": 1.3431762202475994e-07
+    }
+  ],
+  "scope": "Instantaneous fixed-geometry potential-energy slice for a rigid translation of one water. Other atoms, the cell and water orientation are fixed. Adsorption free energy requires ensemble sampling and a thermodynamic reference.",
+  "head": "Default",
+  "tolerances": {
+    "energy_eV_atom": 1e-08,
+    "projected_force_eV_A": 1e-06,
+    "directional_FD_atol_eV_A": 0.0001,
+    "directional_FD_rtol": 0.0001
+  },
+  "optimization": {
+    "mode": "both",
+    "specialized_product_layers": 2,
+    "product_schedule": "precompute"
+  },
+  "passed": true,
+  "issues": []
+}

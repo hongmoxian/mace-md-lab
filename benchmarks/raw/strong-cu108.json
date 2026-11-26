@@ -1,0 +1,233 @@
+{
+  "model_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736",
+  "converted_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+  "input_sha256": "caf53b8fdc45601d1d781b1f91467a58bae78db87be195d4de6bae55124cd7f9",
+  "atoms": 108,
+  "formula": "Cu108",
+  "input_velocities": "input momenta",
+  "frame": 0,
+  "device": "Tesla V100-SXM2-16GB",
+  "torch": "2.13.0+cu126",
+  "cuda": "12.6",
+  "mace": "0.3.16",
+  "symmetrix": "0.2.0",
+  "symmetrix_selected_backend": "cuda12-sm70",
+  "symmetrix_plan": {
+    "requested_profile": "speed",
+    "selection_source": "native_request",
+    "state": "active",
+    "selected_id": "mh0-direct-speed"
+  },
+  "compact_radial_spline_points": 8192,
+  "compact_atomic_numbers": [
+    1,
+    8,
+    29,
+    79
+  ],
+  "symmetrix_dtype": "float64",
+  "mace_dtype": "float64",
+  "warmup_steps": 3,
+  "steps": 12,
+  "repeats": 3,
+  "skin_A": 0.12,
+  "dt_fs": 0.5,
+  "max_errors_allowed": {
+    "energy_eV_atom": 1e-08,
+    "force_eV_A": 1e-06,
+    "position_A": 1e-06,
+    "velocity_A_fs": 1e-07,
+    "nve_difference_eV_atom": 1e-08
+  },
+  "checks": {
+    "ase_native": {
+      "errors": {
+        "energy_eV_atom": 5.26327952414889e-16,
+        "force_eV_A": 6.661338147750939e-16,
+        "position_A": 6.938893903907228e-18,
+        "velocity_A_fs": 1.3010426069826053e-18,
+        "nve_difference_eV_atom": 8.881784197001252e-16
+      },
+      "passed": true,
+      "stress_returned": true,
+      "max_NVE_excursion_meV_atom": 6.853413658802765e-05
+    },
+    "resident_capture": {
+      "errors": {
+        "energy_eV_atom": 0.0,
+        "force_eV_A": 5.342948306008566e-16,
+        "position_A": 1.3877787807814457e-17,
+        "velocity_A_fs": 5.637851296924623e-18,
+        "nve_difference_eV_atom": 8.881784197001252e-16
+      },
+      "passed": true,
+      "stress_returned": false,
+      "max_NVE_excursion_meV_atom": 6.853413658802765e-05
+    },
+    "resident_padded": {
+      "errors": {
+        "energy_eV_atom": 5.26327952414889e-16,
+        "force_eV_A": 5.551115123125783e-16,
+        "position_A": 2.0816681711721685e-17,
+        "velocity_A_fs": 5.637851296924623e-18,
+        "nve_difference_eV_atom": 8.881784197001252e-16
+      },
+      "passed": true,
+      "stress_returned": false,
+      "max_NVE_excursion_meV_atom": 6.853413658802765e-05
+    },
+    "both_exact": {
+      "errors": {
+        "energy_eV_atom": 5.26327952414889e-16,
+        "force_eV_A": 6.106226635438361e-16,
+        "position_A": 1.3877787807814457e-17,
+        "velocity_A_fs": 5.637851296924623e-18,
+        "nve_difference_eV_atom": 1.7763568394002505e-15
+      },
+      "passed": true,
+      "stress_returned": false,
+      "max_NVE_excursion_meV_atom": 6.853413747620607e-05
+    },
+    "both_padded": {
+      "errors": {
+        "energy_eV_atom": 5.26327952414889e-16,
+        "force_eV_A": 5.551115123125783e-16,
+        "position_A": 1.3877787807814457e-17,
+        "velocity_A_fs": 5.637851296924623e-18,
+        "nve_difference_eV_atom": 8.881784197001252e-16
+      },
+      "passed": true,
+      "stress_returned": false,
+      "max_NVE_excursion_meV_atom": 6.853413569984923e-05
+    },
+    "symmetrix_direct_ase": {
+      "errors": {
+        "energy_eV_atom": 3.8668262008017066e-11,
+        "force_eV_A": 3.3448072089825587e-09,
+        "position_A": 7.840839089112706e-12,
+        "velocity_A_fs": 2.681266233345303e-12,
+        "nve_difference_eV_atom": 3.6415315207705135e-14
+      },
+      "passed": true,
+      "stress_returned": true,
+      "max_NVE_excursion_meV_atom": 6.853410017271244e-05
+    }
+  },
+  "passed": true,
+  "transform": {
+    "mode": "both",
+    "specialized_product_layers": 2,
+    "product_schedule": "precompute"
+  },
+  "cuda_graph_diagnostics": {
+    "resident_capture": [
+      {
+        "replays": 12,
+        "fallbacks": 0,
+        "recaptures": 0
+      },
+      {
+        "replays": 12,
+        "fallbacks": 0,
+        "recaptures": 0
+      },
+      {
+        "replays": 12,
+        "fallbacks": 0,
+        "recaptures": 0
+      }
+    ],
+    "resident_padded": [
+      {
+        "replays": 12,
+        "fallbacks": 0,
+        "recaptures": 0
+      },
+      {
+        "replays": 12,
+        "fallbacks": 0,
+        "recaptures": 0
+      },
+      {
+        "replays": 12,
+        "fallbacks": 0,
+        "recaptures": 0
+      }
+    ],
+    "both_exact": [
+      {
+        "replays": 12,
+        "fallbacks": 0,
+        "recaptures": 0
+      },
+      {
+        "replays": 12,
+        "fallbacks": 0,
+        "recaptures": 0
+      },
+      {
+        "replays": 12,
+        "fallbacks": 0,
+        "recaptures": 0
+      }
+    ],
+    "both_padded": [
+      {
+        "replays": 12,
+        "fallbacks": 0,
+        "recaptures": 0
+      },
+      {
+        "replays": 12,
+        "fallbacks": 0,
+        "recaptures": 0
+      },
+      {
+        "replays": 12,
+        "fallbacks": 0,
+        "recaptures": 0
+      }
+    ]
+  },
+  "raw_ms_per_step": {
+    "ase_native": [
+      28.247251835030813,
+      28.115064837038517,
+      27.97758641342322
+    ],
+    "resident_capture": [
+      13.84655133006163,
+      13.8831380851722,
+      13.873914256691933
+    ],
+    "resident_padded": [
+      14.964646504571041,
+      14.946084750893837,
+      14.957604580558836
+    ],
+    "both_exact": [
+      10.422131754846001,
+      10.399545504090687,
+      10.415606501434619
+    ],
+    "both_padded": [
+      11.52470166562125,
+      11.51531258559165,
+      11.584438742526496
+    ],
+    "symmetrix_direct_ase": [
+      4.103092670751114,
+      4.226083498603354,
+      4.106914246222004
+    ]
+  },
+  "median_ms_per_step": {
+    "ase_native": 28.115064837038517,
+    "resident_capture": 13.873914256691933,
+    "resident_padded": 14.957604580558836,
+    "both_exact": 10.415606501434619,
+    "both_padded": 11.52470166562125,
+    "symmetrix_direct_ase": 4.106914246222004
+  },
+  "timing_scope": "Single trajectory on one GPU. Warmed full velocity-Verlet steps with no logging and synchronized endpoints. Symmetrix uses native compiled direct/speed via ASE. Original MACE uses ASE; resident exact-size and padded paths use device-resident state. Compilation, initial forces and validation excluded."
+}

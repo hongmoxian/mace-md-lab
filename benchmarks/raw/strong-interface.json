@@ -1,0 +1,233 @@
+{
+  "model_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736",
+  "converted_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+  "input_sha256": "674186cd63ac40385917aa952cf204c88d263fac13d2af3f5257c01e1d3a24a5",
+  "atoms": 192,
+  "formula": "H96Au48O48",
+  "input_velocities": "input momenta",
+  "frame": 0,
+  "device": "Tesla V100-SXM2-16GB",
+  "torch": "2.13.0+cu126",
+  "cuda": "12.6",
+  "mace": "0.3.16",
+  "symmetrix": "0.2.0",
+  "symmetrix_selected_backend": "cuda12-sm70",
+  "symmetrix_plan": {
+    "requested_profile": "speed",
+    "selection_source": "native_request",
+    "state": "active",
+    "selected_id": "mh0-direct-speed"
+  },
+  "compact_radial_spline_points": 8192,
+  "compact_atomic_numbers": [
+    1,
+    8,
+    29,
+    79
+  ],
+  "symmetrix_dtype": "float64",
+  "mace_dtype": "float64",
+  "warmup_steps": 3,
+  "steps": 12,
+  "repeats": 3,
+  "skin_A": 0.12,
+  "dt_fs": 0.5,
+  "max_errors_allowed": {
+    "energy_eV_atom": 1e-08,
+    "force_eV_A": 1e-06,
+    "position_A": 1e-06,
+    "velocity_A_fs": 1e-07,
+    "nve_difference_eV_atom": 1e-08
+  },
+  "checks": {
+    "ase_native": {
+      "errors": {
+        "energy_eV_atom": 0.0,
+        "force_eV_A": 2.4424906541753444e-15,
+        "position_A": 1.7763568394002505e-15,
+        "velocity_A_fs": 1.0842021724855044e-15,
+        "nve_difference_eV_atom": 0.0
+      },
+      "passed": true,
+      "stress_returned": true,
+      "max_NVE_excursion_meV_atom": 0.14257356260571896
+    },
+    "resident_capture": {
+      "errors": {
+        "energy_eV_atom": 0.0,
+        "force_eV_A": 1.7763568394002505e-15,
+        "position_A": 1.7763568394002505e-15,
+        "velocity_A_fs": 3.3371742869103826e-16,
+        "nve_difference_eV_atom": 8.881784197001252e-16
+      },
+      "passed": true,
+      "stress_returned": false,
+      "max_NVE_excursion_meV_atom": 0.14257356260483078
+    },
+    "resident_padded": {
+      "errors": {
+        "energy_eV_atom": 0.0,
+        "force_eV_A": 2.220446049250313e-15,
+        "position_A": 1.7763568394002505e-15,
+        "velocity_A_fs": 6.696032617270475e-16,
+        "nve_difference_eV_atom": 8.881784197001252e-16
+      },
+      "passed": true,
+      "stress_returned": false,
+      "max_NVE_excursion_meV_atom": 0.14257356260483078
+    },
+    "both_exact": {
+      "errors": {
+        "energy_eV_atom": 0.0,
+        "force_eV_A": 2.7200464103316335e-15,
+        "position_A": 3.552713678800501e-15,
+        "velocity_A_fs": 4.718447854656915e-16,
+        "nve_difference_eV_atom": 0.0
+      },
+      "passed": true,
+      "stress_returned": false,
+      "max_NVE_excursion_meV_atom": 0.14257356260571896
+    },
+    "both_padded": {
+      "errors": {
+        "energy_eV_atom": 0.0,
+        "force_eV_A": 2.6645352591003757e-15,
+        "position_A": 3.552713678800501e-15,
+        "velocity_A_fs": 9.922618282587337e-16,
+        "nve_difference_eV_atom": 0.0
+      },
+      "passed": true,
+      "stress_returned": false,
+      "max_NVE_excursion_meV_atom": 0.14257356260571896
+    },
+    "symmetrix_direct_ase": {
+      "errors": {
+        "energy_eV_atom": 5.655457139634261e-09,
+        "force_eV_A": 6.667963498019347e-08,
+        "position_A": 4.451123913895572e-09,
+        "velocity_A_fs": 1.2222021988222975e-09,
+        "nve_difference_eV_atom": 1.9563017872314958e-11
+      },
+      "passed": true,
+      "stress_returned": true,
+      "max_NVE_excursion_meV_atom": 0.14257356409341782
+    }
+  },
+  "passed": true,
+  "transform": {
+    "mode": "both",
+    "specialized_product_layers": 2,
+    "product_schedule": "precompute"
+  },
+  "cuda_graph_diagnostics": {
+    "resident_capture": [
+      {
+        "replays": 12,
+        "fallbacks": 0,
+        "recaptures": 12
+      },
+      {
+        "replays": 12,
+        "fallbacks": 0,
+        "recaptures": 12
+      },
+      {
+        "replays": 12,
+        "fallbacks": 0,
+        "recaptures": 12
+      }
+    ],
+    "resident_padded": [
+      {
+        "replays": 12,
+        "fallbacks": 0,
+        "recaptures": 0
+      },
+      {
+        "replays": 12,
+        "fallbacks": 0,
+        "recaptures": 0
+      },
+      {
+        "replays": 12,
+        "fallbacks": 0,
+        "recaptures": 0
+      }
+    ],
+    "both_exact": [
+      {
+        "replays": 12,
+        "fallbacks": 0,
+        "recaptures": 12
+      },
+      {
+        "replays": 12,
+        "fallbacks": 0,
+        "recaptures": 12
+      },
+      {
+        "replays": 12,
+        "fallbacks": 0,
+        "recaptures": 12
+      }
+    ],
+    "both_padded": [
+      {
+        "replays": 12,
+        "fallbacks": 0,
+        "recaptures": 0
+      },
+      {
+        "replays": 12,
+        "fallbacks": 0,
+        "recaptures": 0
+      },
+      {
+        "replays": 12,
+        "fallbacks": 0,
+        "recaptures": 0
+      }
+    ]
+  },
+  "raw_ms_per_step": {
+    "ase_native": [
+      34.53274791051323,
+      34.35703908326104,
+      34.32631567314578
+    ],
+    "resident_capture": [
+      116.80852132849395,
+      116.59664849867113,
+      116.65678557862218
+    ],
+    "resident_padded": [
+      26.428331339654203,
+      26.45941433729604,
+      26.451975252712145
+    ],
+    "both_exact": [
+      90.21031074613954,
+      91.28966833425996,
+      90.80997999990359
+    ],
+    "both_padded": [
+      20.754278171807528,
+      20.729859834924962,
+      20.741659003154684
+    ],
+    "symmetrix_direct_ase": [
+      8.224465505918488,
+      8.141924006243547,
+      8.123408498552939
+    ]
+  },
+  "median_ms_per_step": {
+    "ase_native": 34.35703908326104,
+    "resident_capture": 116.65678557862218,
+    "resident_padded": 26.451975252712145,
+    "both_exact": 90.80997999990359,
+    "both_padded": 20.741659003154684,
+    "symmetrix_direct_ase": 8.141924006243547
+  },
+  "timing_scope": "Single trajectory on one GPU. Warmed full velocity-Verlet steps with no logging and synchronized endpoints. Symmetrix uses native compiled direct/speed via ASE. Original MACE uses ASE; resident exact-size and padded paths use device-resident state. Compilation, initial forces and validation excluded."
+}

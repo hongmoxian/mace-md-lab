@@ -1,0 +1,289 @@
+{
+  "framework": "schnet",
+  "checkpoint": "pyg-u0.pt",
+  "checkpoint_sha256": "85f92d2b93f04f2329a276b1567fb19072abb4b72f6f3900dbd36ae5e94d2e65",
+  "structure": "benzene.extxyz",
+  "structure_sha256": "9624e1421d280def3013de42d7361590fcd9de8eec2f72d7829f6538f9258e87",
+  "formula": "C6H6",
+  "atoms": 12,
+  "dtype": "float64",
+  "gpu": "Tesla V100-SXM2-16GB",
+  "steps": 12,
+  "repeats": 5,
+  "warmup": 3,
+  "dt_fs": 0.25,
+  "velocity_seed": 17,
+  "torch": "2.13.0+cu126",
+  "scope": "Full synchronized velocity-Verlet on one finite molecule. Each timed window excludes setup and warmup and includes graph selection, force evaluation and integration. All four paths share weights, code for topology and units. Native upstream energy is a separate reference.",
+  "validation": {
+    "native_eager": {
+      "passed": true,
+      "max_energy_error_eV_atom": 0.0,
+      "max_force_component_error_eV_A": 7.355227538141662e-15,
+      "same_initial_force_error_eV_A": 2.6645352591003757e-15,
+      "max_position_error_A": 1.0408340855860843e-17,
+      "max_velocity_error_A_fs": 1.7721245616779794e-17,
+      "max_NVE_change_difference_eV_atom": 0.0,
+      "fd_displacements_A": [
+        0.001,
+        0.0003
+      ],
+      "fd_errors_eV_A": [
+        8.253827278315029e-07,
+        7.095687271085893e-08
+      ],
+      "fd_tolerance_eV_A": 0.0005,
+      "force_projection_eV_A": -0.3600997770100488
+    },
+    "analytic_eager": {
+      "passed": true,
+      "max_energy_error_eV_atom": 0.0,
+      "max_force_component_error_eV_A": 1.3766765505351941e-14,
+      "same_initial_force_error_eV_A": 3.552713678800501e-15,
+      "max_position_error_A": 5.551115123125783e-17,
+      "max_velocity_error_A_fs": 2.89674207197362e-17,
+      "max_NVE_change_difference_eV_atom": 0.0,
+      "fd_displacements_A": [
+        0.001,
+        0.0003
+      ],
+      "fd_errors_eV_A": [
+        8.253827287196813e-07,
+        7.095687359903735e-08
+      ],
+      "fd_tolerance_eV_A": 0.0005,
+      "force_projection_eV_A": -0.3600997770100479
+    },
+    "native_capture": {
+      "passed": true,
+      "max_energy_error_eV_atom": 0.0,
+      "max_force_component_error_eV_A": 4.440892098500626e-15,
+      "same_initial_force_error_eV_A": 1.7763568394002505e-15,
+      "max_position_error_A": 1.3877787807814457e-17,
+      "max_velocity_error_A_fs": 1.303533932388129e-17,
+      "max_NVE_change_difference_eV_atom": 0.0,
+      "fd_displacements_A": [
+        0.001,
+        0.0003
+      ],
+      "fd_errors_eV_A": [
+        8.253827290527482e-07,
+        7.095687393210426e-08
+      ],
+      "fd_tolerance_eV_A": 0.0005,
+      "force_projection_eV_A": -0.3600997770100476
+    },
+    "analytic_capture": {
+      "passed": true,
+      "max_energy_error_eV_atom": 0.0,
+      "max_force_component_error_eV_A": 1.2878587085651816e-14,
+      "same_initial_force_error_eV_A": 2.6645352591003757e-15,
+      "max_position_error_A": 1.3877787807814457e-17,
+      "max_velocity_error_A_fs": 2.7263454795045837e-17,
+      "max_NVE_change_difference_eV_atom": 0.0,
+      "fd_displacements_A": [
+        0.001,
+        0.0003
+      ],
+      "fd_errors_eV_A": [
+        8.253827296078597e-07,
+        7.095687448721577e-08
+      ],
+      "fd_tolerance_eV_A": 0.0005,
+      "force_projection_eV_A": -0.36009977701004703
+    }
+  },
+  "trials": {
+    "native_eager": [
+      {
+        "ms_step": 5.653492747417961,
+        "setup_and_first_force_ms": 6.436025956645608,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 0,
+        "final_directed_edges": 132
+      },
+      {
+        "ms_step": 5.630731175187975,
+        "setup_and_first_force_ms": 6.691638962365687,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 0,
+        "final_directed_edges": 132
+      },
+      {
+        "ms_step": 5.611607077298686,
+        "setup_and_first_force_ms": 6.662701023742557,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 0,
+        "final_directed_edges": 132
+      },
+      {
+        "ms_step": 5.6232479206907255,
+        "setup_and_first_force_ms": 6.684465100988746,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 0,
+        "final_directed_edges": 132
+      },
+      {
+        "ms_step": 5.627090751659125,
+        "setup_and_first_force_ms": 6.781909032724798,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 0,
+        "final_directed_edges": 132
+      }
+    ],
+    "analytic_eager": [
+      {
+        "ms_step": 5.6777148371717585,
+        "setup_and_first_force_ms": 6.181753007695079,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 0,
+        "final_directed_edges": 132
+      },
+      {
+        "ms_step": 5.6959353387355804,
+        "setup_and_first_force_ms": 6.677547004073858,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 0,
+        "final_directed_edges": 132
+      },
+      {
+        "ms_step": 5.684293088658403,
+        "setup_and_first_force_ms": 6.120441015809774,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 0,
+        "final_directed_edges": 132
+      },
+      {
+        "ms_step": 5.695297082032387,
+        "setup_and_first_force_ms": 6.14356598816812,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 0,
+        "final_directed_edges": 132
+      },
+      {
+        "ms_step": 5.680688501646121,
+        "setup_and_first_force_ms": 6.175974034704268,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 0,
+        "final_directed_edges": 132
+      }
+    ],
+    "native_capture": [
+      {
+        "ms_step": 1.4416457464297612,
+        "setup_and_first_force_ms": 26.788737974129617,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 12,
+        "final_directed_edges": 132
+      },
+      {
+        "ms_step": 1.3581769987164687,
+        "setup_and_first_force_ms": 26.7032019328326,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 12,
+        "final_directed_edges": 132
+      },
+      {
+        "ms_step": 1.3272866684322555,
+        "setup_and_first_force_ms": 26.620767079293728,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 12,
+        "final_directed_edges": 132
+      },
+      {
+        "ms_step": 1.3269067470294733,
+        "setup_and_first_force_ms": 27.01457403600216,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 12,
+        "final_directed_edges": 132
+      },
+      {
+        "ms_step": 1.3295611618862797,
+        "setup_and_first_force_ms": 26.5358000760898,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 12,
+        "final_directed_edges": 132
+      }
+    ],
+    "analytic_capture": [
+      {
+        "ms_step": 1.401598584682991,
+        "setup_and_first_force_ms": 26.601598947308958,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 12,
+        "final_directed_edges": 132
+      },
+      {
+        "ms_step": 1.3157409169555951,
+        "setup_and_first_force_ms": 26.553318952210248,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 12,
+        "final_directed_edges": 132
+      },
+      {
+        "ms_step": 1.2908264179714024,
+        "setup_and_first_force_ms": 26.28942602314055,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 12,
+        "final_directed_edges": 132
+      },
+      {
+        "ms_step": 1.2903660826850682,
+        "setup_and_first_force_ms": 26.64975600782782,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 12,
+        "final_directed_edges": 132
+      },
+      {
+        "ms_step": 1.2892098360074062,
+        "setup_and_first_force_ms": 26.385189965367317,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 12,
+        "final_directed_edges": 132
+      }
+    ]
+  },
+  "model": {
+    "framework": "torch_geometric",
+    "version": "2.6.1",
+    "model": "SchNet",
+    "target": "QM9 U0",
+    "pretrained": true,
+    "source": "https://www.quantum-machine.org/datasets/trained_schnet_models.zip",
+    "source_sha256": "ca567abbd43b5d0740a558d708761e232cf6d5e732f3ec498bc608e67105c62d",
+    "weights_sha256": "85f92d2b93f04f2329a276b1567fb19072abb4b72f6f3900dbd36ae5e94d2e65",
+    "hidden_channels": 128,
+    "interactions": 6,
+    "energy_unit": "eV",
+    "length_unit": "angstrom",
+    "native_edges": "all-pairs exact cutoff supplied to PyG SchNet.forward"
+  },
+  "cutoff_A": 10.0,
+  "median_ms_step": {
+    "native_eager": 5.627090751659125,
+    "analytic_eager": 5.684293088658403,
+    "native_capture": 1.3295611618862797,
+    "analytic_capture": 1.2908264179714024
+  },
+  "passed": true
+}

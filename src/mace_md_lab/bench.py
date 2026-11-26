@@ -408,7 +408,7 @@ def arguments(argv=None):
     )
     p.add_argument("--steps", type=int, default=20)
     p.add_argument("--warmup", type=int, default=3)
-    p.add_argument("--repeats", type=int, choices=(1, 2, 3), default=3)
+    p.add_argument("--repeats", type=int, choices=range(1, 10), default=3)
     p.add_argument("--dt-fs", type=float, default=0.5)
     p.add_argument("--skin", type=float, default=0.5)
     p.add_argument(

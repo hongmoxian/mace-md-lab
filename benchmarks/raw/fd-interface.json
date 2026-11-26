@@ -1,0 +1,143 @@
+{
+  "checkpoint": "mace-mp-0-small.model",
+  "checkpoint_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736",
+  "structure": "au-water.extxyz",
+  "structure_sha256": "674186cd63ac40385917aa952cf204c88d263fac13d2af3f5257c01e1d3a24a5",
+  "n_atoms": 192,
+  "formula": "H96Au48O48",
+  "frame": 0,
+  "device": "cuda",
+  "dtype": "float64",
+  "adjoint": "both",
+  "backend": "padded",
+  "skin_A": 0.12,
+  "certify_edges": true,
+  "velocity_source": "input momenta",
+  "torch": "2.13.0+cu126",
+  "mace": "0.3.16",
+  "scope": "Fixed-cell short NVE and independent finite differences on the same energy model.",
+  "head": "Default",
+  "optimization": {
+    "mode": "both",
+    "specialized_product_layers": 2
+  },
+  "static": {
+    "fixed_energy_error_eV_atom": 0.0,
+    "fixed_force_max_error_eV_A": 2.4424906541753444e-15,
+    "candidate_net_force_norm_eV_A": 3.581329789008719e-15,
+    "official_net_force_norm_eV_A": 3.5322991301293704e-15,
+    "net_force_norm_tolerance_eV_A": 1e-07,
+    "translation_energy_change_eV_atom": 0.0,
+    "translation_max_force_change_eV_A": 9.781064846947629e-14,
+    "finite_differences": [
+      {
+        "direction": "random_normalized",
+        "candidate_force_projection_eV_A": -0.28117024908055854,
+        "reference_force_projection_eV_A": -0.28117024908055943,
+        "absolute_tolerance_eV_A": 0.0001,
+        "required_passing_distinct_h": 2,
+        "samples": [
+          {
+            "h_A": 0.003,
+            "negative_dE_dh_eV_A": -0.28116694094630174,
+            "absolute_error_eV_A": 3.308134256807538e-06
+          },
+          {
+            "h_A": 0.001,
+            "negative_dE_dh_eV_A": -0.2811698815321506,
+            "absolute_error_eV_A": 3.6754840793129517e-07
+          },
+          {
+            "h_A": 0.0003,
+            "negative_dE_dh_eV_A": -0.2811702159988272,
+            "absolute_error_eV_A": 3.3081731354300814e-08
+          },
+          {
+            "h_A": 0.0001,
+            "negative_dE_dh_eV_A": -0.281170245557405,
+            "absolute_error_eV_A": 3.5231535466806463e-09
+          }
+        ]
+      },
+      {
+        "direction": "OH_stretch_48_49",
+        "candidate_force_projection_eV_A": 0.801290929239487,
+        "reference_force_projection_eV_A": 0.8012909292394843,
+        "absolute_tolerance_eV_A": 0.0001,
+        "required_passing_distinct_h": 2,
+        "samples": [
+          {
+            "h_A": 0.003,
+            "negative_dE_dh_eV_A": 0.8028282033099762,
+            "absolute_error_eV_A": 0.001537274070489203
+          },
+          {
+            "h_A": 0.001,
+            "negative_dE_dh_eV_A": 0.8014612024567214,
+            "absolute_error_eV_A": 0.0001702732172343957
+          },
+          {
+            "h_A": 0.0003,
+            "negative_dE_dh_eV_A": 0.8013062481874538,
+            "absolute_error_eV_A": 1.5318947966802554e-05
+          },
+          {
+            "h_A": 0.0001,
+            "negative_dE_dh_eV_A": 0.8012926315359437,
+            "absolute_error_eV_A": 1.7022964566848486e-06
+          }
+        ]
+      }
+    ]
+  },
+  "nve": {
+    "physical_time_fs": 24.0,
+    "dt_fs": 0.5,
+    "steps": 48,
+    "max_reference_error_all_steps": {
+      "position_A": 1.0658141036401503e-14,
+      "velocity_A_fs": 5.5268289944621074e-15,
+      "energy_eV_atom": 5.921189464667501e-16,
+      "force_eV_A": 3.6770586575585185e-13,
+      "nve_difference_eV_atom": 5.921235723960194e-16
+    },
+    "reference_match_tolerances": {
+      "energy_eV_atom": 1e-08,
+      "force_eV_A": 1e-06,
+      "position_A": 1e-06,
+      "velocity_A_fs": 1e-07,
+      "nve_difference_eV_atom": 1e-08
+    },
+    "max_excursion_meV_atom": {
+      "official": 0.14257356260512685,
+      "candidate": 0.14257356260571896,
+      "candidate_half_dt": 0.034589430888705884
+    },
+    "half_dt_fs": 0.25,
+    "half_dt_steps": 96,
+    "half_dt_to_full_dt_excursion_ratio": 0.24260760730487926,
+    "excursion_budget_meV_atom": 1.0,
+    "end_change_meV_atom": 0.10969563861055558,
+    "temperature_K_initial": 299.9999997877448,
+    "max_candidate_net_force_eV_A": 1.1445532494089748e-14,
+    "candidate_counts_including_initial": {
+      "neighbor_rebuilds": 24,
+      "certificate_hits": 0,
+      "edge_refreshes": 49,
+      "captures": 1,
+      "replays": 49,
+      "fallback_evaluations": 0
+    },
+    "half_step_candidate_counts_including_initial": {
+      "neighbor_rebuilds": 29,
+      "certificate_hits": 0,
+      "edge_refreshes": 97,
+      "captures": 1,
+      "replays": 97,
+      "fallback_evaluations": 0
+    },
+    "half_step_final_position_RMS_relative_to_full_A": 0.0008511220831935751
+  },
+  "passed": true,
+  "issues": []
+}

@@ -1,0 +1,286 @@
+{
+  "framework": "mace",
+  "checkpoint": "mace-mp-0-small.model",
+  "checkpoint_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736",
+  "structure": "ethanol8.extxyz",
+  "structure_sha256": "401de6bc9b06ef07dcedec4729049eacf0eb6413ec7abc8f7bfcab40395a8b35",
+  "formula": "C16H48O8",
+  "atoms": 72,
+  "dtype": "float64",
+  "gpu": "Tesla V100-SXM2-16GB",
+  "steps": 12,
+  "repeats": 5,
+  "warmup": 3,
+  "dt_fs": 0.25,
+  "velocity_seed": 17,
+  "torch": "2.13.0+cu126",
+  "scope": "Full synchronized velocity-Verlet on one finite molecule. Each timed window excludes setup and warmup and includes graph selection, force evaluation and integration. All four paths share weights, code for topology and units. Native upstream energy is a separate reference.",
+  "validation": {
+    "native_eager": {
+      "passed": true,
+      "max_energy_error_eV_atom": 7.894919286223335e-16,
+      "max_force_component_error_eV_A": 7.771561172376096e-15,
+      "same_initial_force_error_eV_A": 2.4424906541753444e-15,
+      "max_position_error_A": 2.220446049250313e-16,
+      "max_velocity_error_A_fs": 1.9084418356532087e-17,
+      "max_NVE_change_difference_eV_atom": 7.894919286223335e-16,
+      "fd_displacements_A": [
+        0.001,
+        0.0003
+      ],
+      "fd_errors_eV_A": [
+        8.881644102121111e-07,
+        8.010678939629479e-08
+      ],
+      "fd_tolerance_eV_A": 0.0005,
+      "force_projection_eV_A": 0.08026146186088809
+    },
+    "analytic_eager": {
+      "passed": true,
+      "max_energy_error_eV_atom": 7.894919286223335e-16,
+      "max_force_component_error_eV_A": 1.0033640585049852e-14,
+      "same_initial_force_error_eV_A": 6.994405055138486e-15,
+      "max_position_error_A": 2.220446049250313e-16,
+      "max_velocity_error_A_fs": 6.406911876835771e-17,
+      "max_NVE_change_difference_eV_atom": 7.894919286223335e-16,
+      "fd_displacements_A": [
+        0.001,
+        0.0003
+      ],
+      "fd_errors_eV_A": [
+        8.881928303811071e-07,
+        8.010678785586034e-08
+      ],
+      "fd_tolerance_eV_A": 0.0005,
+      "force_projection_eV_A": 0.08026146186088655
+    },
+    "native_capture": {
+      "passed": true,
+      "max_energy_error_eV_atom": 7.894919286223335e-16,
+      "max_force_component_error_eV_A": 7.105427357601002e-15,
+      "same_initial_force_error_eV_A": 1.3877787807814457e-15,
+      "max_position_error_A": 2.220446049250313e-16,
+      "max_velocity_error_A_fs": 2.998980027455042e-17,
+      "max_NVE_change_difference_eV_atom": 7.894919286223335e-16,
+      "fd_displacements_A": [
+        0.001,
+        0.0003
+      ],
+      "fd_errors_eV_A": [
+        8.881644092129104e-07,
+        8.010678839709406e-08
+      ],
+      "fd_tolerance_eV_A": 0.0005,
+      "force_projection_eV_A": 0.08026146186088709
+    },
+    "analytic_capture": {
+      "passed": true,
+      "max_energy_error_eV_atom": 7.894919286223335e-16,
+      "max_force_component_error_eV_A": 1.1046719095020308e-14,
+      "same_initial_force_error_eV_A": 6.6058269965196814e-15,
+      "max_position_error_A": 4.440892098500626e-16,
+      "max_velocity_error_A_fs": 5.316373685033938e-17,
+      "max_NVE_change_difference_eV_atom": 7.894919286223335e-16,
+      "fd_displacements_A": [
+        0.001,
+        0.0003
+      ],
+      "fd_errors_eV_A": [
+        8.881644088382101e-07,
+        8.010678802239379e-08
+      ],
+      "fd_tolerance_eV_A": 0.0005,
+      "force_projection_eV_A": 0.08026146186088672
+    }
+  },
+  "trials": {
+    "native_eager": [
+      {
+        "ms_step": 13.016462413361296,
+        "setup_and_first_force_ms": 14.52094898559153,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 0,
+        "final_directed_edges": 576
+      },
+      {
+        "ms_step": 12.889498340276381,
+        "setup_and_first_force_ms": 15.579172992147505,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 0,
+        "final_directed_edges": 576
+      },
+      {
+        "ms_step": 13.00302033390229,
+        "setup_and_first_force_ms": 15.606139088049531,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 0,
+        "final_directed_edges": 576
+      },
+      {
+        "ms_step": 12.894688251738748,
+        "setup_and_first_force_ms": 15.63965599052608,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 0,
+        "final_directed_edges": 576
+      },
+      {
+        "ms_step": 12.878367580318203,
+        "setup_and_first_force_ms": 15.637697069905698,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 0,
+        "final_directed_edges": 576
+      }
+    ],
+    "analytic_eager": [
+      {
+        "ms_step": 12.80850991800738,
+        "setup_and_first_force_ms": 13.347727013751864,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 0,
+        "final_directed_edges": 576
+      },
+      {
+        "ms_step": 12.790341667520503,
+        "setup_and_first_force_ms": 15.477796085178852,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 0,
+        "final_directed_edges": 576
+      },
+      {
+        "ms_step": 12.800656414280335,
+        "setup_and_first_force_ms": 13.268496026284993,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 0,
+        "final_directed_edges": 576
+      },
+      {
+        "ms_step": 12.792831005450958,
+        "setup_and_first_force_ms": 13.240376021713018,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 0,
+        "final_directed_edges": 576
+      },
+      {
+        "ms_step": 12.78704617288895,
+        "setup_and_first_force_ms": 13.257135986350477,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 0,
+        "final_directed_edges": 576
+      }
+    ],
+    "native_capture": [
+      {
+        "ms_step": 5.530210832754771,
+        "setup_and_first_force_ms": 72.49301997944713,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 12,
+        "final_directed_edges": 576
+      },
+      {
+        "ms_step": 5.5323342482248945,
+        "setup_and_first_force_ms": 69.10885800607502,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 12,
+        "final_directed_edges": 576
+      },
+      {
+        "ms_step": 5.538280335410188,
+        "setup_and_first_force_ms": 68.93592700362206,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 12,
+        "final_directed_edges": 576
+      },
+      {
+        "ms_step": 5.530907171002279,
+        "setup_and_first_force_ms": 70.8377460250631,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 12,
+        "final_directed_edges": 576
+      },
+      {
+        "ms_step": 5.531437336079155,
+        "setup_and_first_force_ms": 70.0118780368939,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 12,
+        "final_directed_edges": 576
+      }
+    ],
+    "analytic_capture": [
+      {
+        "ms_step": 5.469086492666975,
+        "setup_and_first_force_ms": 71.00342004559934,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 12,
+        "final_directed_edges": 576
+      },
+      {
+        "ms_step": 5.461373667155082,
+        "setup_and_first_force_ms": 68.3059369912371,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 12,
+        "final_directed_edges": 576
+      },
+      {
+        "ms_step": 5.456221668282524,
+        "setup_and_first_force_ms": 66.88501802273095,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 12,
+        "final_directed_edges": 576
+      },
+      {
+        "ms_step": 5.452720923737313,
+        "setup_and_first_force_ms": 69.64874500408769,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 12,
+        "final_directed_edges": 576
+      },
+      {
+        "ms_step": 5.462766673493509,
+        "setup_and_first_force_ms": 66.99264608323574,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 12,
+        "final_directed_edges": 576
+      }
+    ]
+  },
+  "model": {
+    "family": "MACE",
+    "checkpoint": "mace-mp-0-small.model",
+    "mace_version": "0.3.16",
+    "architecture": "ScaleShiftMACE",
+    "head": "Default",
+    "energy_unit": "eV",
+    "length_unit": "angstrom",
+    "periodic": false,
+    "geometry": "shared distance/unit vector, stock e3nn harmonics and interactions",
+    "cutoff_A": 6.0
+  },
+  "cutoff_A": 6.0,
+  "median_ms_step": {
+    "native_eager": 12.894688251738748,
+    "analytic_eager": 12.792831005450958,
+    "native_capture": 5.531437336079155,
+    "analytic_capture": 5.461373667155082
+  },
+  "passed": true
+}

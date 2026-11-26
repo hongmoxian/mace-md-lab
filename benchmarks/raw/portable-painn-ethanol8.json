@@ -1,0 +1,292 @@
+{
+  "framework": "painn",
+  "checkpoint": "best_model",
+  "checkpoint_sha256": "260f262f4021215dc65edec62c2c3128b910b413e3070024db3b21510ef30b29",
+  "structure": "ethanol8.extxyz",
+  "structure_sha256": "401de6bc9b06ef07dcedec4729049eacf0eb6413ec7abc8f7bfcab40395a8b35",
+  "formula": "C16H48O8",
+  "atoms": 72,
+  "dtype": "float64",
+  "gpu": "Tesla V100-SXM2-16GB",
+  "steps": 12,
+  "repeats": 5,
+  "warmup": 3,
+  "dt_fs": 0.25,
+  "velocity_seed": 17,
+  "torch": "2.13.0+cu126",
+  "scope": "Full synchronized velocity-Verlet on one finite molecule. Each timed window excludes setup and warmup and includes graph selection, force evaluation and integration. All four paths share weights, code for topology and units. Native upstream energy is a separate reference.",
+  "validation": {
+    "native_eager": {
+      "passed": true,
+      "max_energy_error_eV_atom": 0.0,
+      "max_force_component_error_eV_A": 7.105427357601002e-15,
+      "same_initial_force_error_eV_A": 1.1102230246251565e-15,
+      "max_position_error_A": 1.1102230246251565e-16,
+      "max_velocity_error_A_fs": 6.270594602860543e-17,
+      "max_NVE_change_difference_eV_atom": 0.0,
+      "fd_displacements_A": [
+        0.001,
+        0.0003
+      ],
+      "fd_errors_eV_A": [
+        8.08217845538195e-07,
+        7.698410531276068e-08
+      ],
+      "fd_tolerance_eV_A": 0.0005,
+      "force_projection_eV_A": -0.30897073461808855
+    },
+    "analytic_eager": {
+      "passed": true,
+      "max_energy_error_eV_atom": 0.0,
+      "max_force_component_error_eV_A": 2.1316282072803006e-14,
+      "same_initial_force_error_eV_A": 7.813194535799539e-15,
+      "max_position_error_A": 4.440892098500626e-16,
+      "max_velocity_error_A_fs": 7.633767342612835e-17,
+      "max_NVE_change_difference_eV_atom": 0.0,
+      "fd_displacements_A": [
+        0.001,
+        0.0003
+      ],
+      "fd_errors_eV_A": [
+        8.082178451496169e-07,
+        7.698410492418262e-08
+      ],
+      "fd_tolerance_eV_A": 0.0005,
+      "force_projection_eV_A": -0.30897073461808894
+    },
+    "native_capture": {
+      "passed": true,
+      "max_energy_error_eV_atom": 0.0,
+      "max_force_component_error_eV_A": 7.438494264988549e-15,
+      "same_initial_force_error_eV_A": 1.3322676295501878e-15,
+      "max_position_error_A": 1.1102230246251565e-16,
+      "max_velocity_error_A_fs": 5.725325506959625e-17,
+      "max_NVE_change_difference_eV_atom": 0.0,
+      "fd_displacements_A": [
+        0.001,
+        0.0003
+      ],
+      "fd_errors_eV_A": [
+        8.082178457047284e-07,
+        7.698410547929413e-08
+      ],
+      "fd_tolerance_eV_A": 0.0005,
+      "force_projection_eV_A": -0.3089707346180884
+    },
+    "analytic_capture": {
+      "passed": true,
+      "max_energy_error_eV_atom": 0.0,
+      "max_force_component_error_eV_A": 2.220446049250313e-14,
+      "same_initial_force_error_eV_A": 7.494005416219807e-15,
+      "max_position_error_A": 4.440892098500626e-16,
+      "max_velocity_error_A_fs": 7.633767342612835e-17,
+      "max_NVE_change_difference_eV_atom": 0.0,
+      "fd_displacements_A": [
+        0.001,
+        0.0003
+      ],
+      "fd_errors_eV_A": [
+        8.082178447055277e-07,
+        7.698410448009341e-08
+      ],
+      "fd_tolerance_eV_A": 0.0005,
+      "force_projection_eV_A": -0.3089707346180894
+    }
+  },
+  "trials": {
+    "native_eager": [
+      {
+        "ms_step": 5.825250089401379,
+        "setup_and_first_force_ms": 6.896281032823026,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 0,
+        "final_directed_edges": 576
+      },
+      {
+        "ms_step": 5.825270743419726,
+        "setup_and_first_force_ms": 7.44327309075743,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 0,
+        "final_directed_edges": 576
+      },
+      {
+        "ms_step": 5.806119084202995,
+        "setup_and_first_force_ms": 7.128185010515153,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 0,
+        "final_directed_edges": 576
+      },
+      {
+        "ms_step": 5.80840150360018,
+        "setup_and_first_force_ms": 7.109532016329467,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 0,
+        "final_directed_edges": 576
+      },
+      {
+        "ms_step": 5.805823825843011,
+        "setup_and_first_force_ms": 7.099441951140761,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 0,
+        "final_directed_edges": 576
+      }
+    ],
+    "analytic_eager": [
+      {
+        "ms_step": 5.678244585093732,
+        "setup_and_first_force_ms": 6.1405079904943705,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 0,
+        "final_directed_edges": 576
+      },
+      {
+        "ms_step": 5.680624909776573,
+        "setup_and_first_force_ms": 6.94052001927048,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 0,
+        "final_directed_edges": 576
+      },
+      {
+        "ms_step": 5.68004166901422,
+        "setup_and_first_force_ms": 6.216819048859179,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 0,
+        "final_directed_edges": 576
+      },
+      {
+        "ms_step": 5.681065502964581,
+        "setup_and_first_force_ms": 6.121739977970719,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 0,
+        "final_directed_edges": 576
+      },
+      {
+        "ms_step": 5.674446418803806,
+        "setup_and_first_force_ms": 6.131879054009914,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 0,
+        "final_directed_edges": 576
+      }
+    ],
+    "native_capture": [
+      {
+        "ms_step": 1.88351907612135,
+        "setup_and_first_force_ms": 30.80901294015348,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 12,
+        "final_directed_edges": 576
+      },
+      {
+        "ms_step": 1.7808766666955005,
+        "setup_and_first_force_ms": 30.727898003533483,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 12,
+        "final_directed_edges": 576
+      },
+      {
+        "ms_step": 1.780065077279384,
+        "setup_and_first_force_ms": 30.51572700496763,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 12,
+        "final_directed_edges": 576
+      },
+      {
+        "ms_step": 1.7805384995881468,
+        "setup_and_first_force_ms": 32.57105709053576,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 12,
+        "final_directed_edges": 576
+      },
+      {
+        "ms_step": 1.7803246640445043,
+        "setup_and_first_force_ms": 30.309109017252922,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 12,
+        "final_directed_edges": 576
+      }
+    ],
+    "analytic_capture": [
+      {
+        "ms_step": 1.7001020023599267,
+        "setup_and_first_force_ms": 29.62005289737135,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 12,
+        "final_directed_edges": 576
+      },
+      {
+        "ms_step": 1.6982956731226295,
+        "setup_and_first_force_ms": 35.588804981671274,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 12,
+        "final_directed_edges": 576
+      },
+      {
+        "ms_step": 1.6960504969271522,
+        "setup_and_first_force_ms": 29.256685986183584,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 12,
+        "final_directed_edges": 576
+      },
+      {
+        "ms_step": 1.6961135746290286,
+        "setup_and_first_force_ms": 30.616985051892698,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 12,
+        "final_directed_edges": 576
+      },
+      {
+        "ms_step": 1.6972714996275802,
+        "setup_and_first_force_ms": 29.7568830428645,
+        "timed_graph_refreshes": 0,
+        "timed_captures": 0,
+        "timed_replays": 12,
+        "final_directed_edges": 576
+      }
+    ]
+  },
+  "model": {
+    "family": "PaiNN",
+    "framework": "SchNetPack",
+    "schnetpack_version": "2.3.0",
+    "checkpoint": "rMD17 ethanol painn_1",
+    "checkpoint_sha256": "260f262f4021215dc65edec62c2c3128b910b413e3070024db3b21510ef30b29",
+    "checkpoint_url": "https://raw.githubusercontent.com/atomistic-machine-learning/schnetpack/69d26f3842a012f1f1e461ad7f1984d353843c8d/examples/trained_models/rmd17_ethanol/painn_1/best_model",
+    "training_molecule": "ethanol",
+    "n_atom_basis": 128,
+    "n_interactions": 3,
+    "native_energy_unit": "kcal/mol",
+    "energy_unit": "eV",
+    "native_energy_to_eV": 0.04336410390059322,
+    "length_unit": "angstrom",
+    "cutoff_A": 5.0,
+    "periodic": false,
+    "geometry": "radial distances and unit vectors for every PaiNN interaction"
+  },
+  "cutoff_A": 5.0,
+  "median_ms_step": {
+    "native_eager": 5.80840150360018,
+    "analytic_eager": 5.68004166901422,
+    "native_capture": 1.7805384995881468,
+    "analytic_capture": 1.6972714996275802
+  },
+  "passed": true
+}

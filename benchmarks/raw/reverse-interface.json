@@ -1,0 +1,269 @@
+{
+  "schema_version": 1,
+  "checkpoint": "mace-mp-0-small.model",
+  "checkpoint_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736",
+  "structure": "au-water.extxyz",
+  "structure_sha256": "674186cd63ac40385917aa952cf204c88d263fac13d2af3f5257c01e1d3a24a5",
+  "mode": "both",
+  "device": "cuda",
+  "dtype": "float64",
+  "torch": "2.13.0+cu126",
+  "mace": "0.3.16",
+  "gpu": "Tesla V100-SXM2-16GB",
+  "repeats": 5,
+  "frames": [
+    {
+      "source_index": 0,
+      "atoms": 192,
+      "edges": 13306,
+      "reference_instrumentation": {
+        "energy_error_eV_atom": 0.0,
+        "max_force_error_eV_A": 1.887379141862766e-15
+      },
+      "whole_reverse": {
+        "stock": {
+          "energy_error_eV_atom": 0.0,
+          "max_force_error_eV_A": 1.9984014443252818e-15,
+          "raw_ms": [
+            14.508031845092773,
+            14.305279731750488,
+            14.28275203704834,
+            14.295040130615234,
+            14.263296127319336
+          ],
+          "median_ms": 14.295040130615234
+        },
+        "both": {
+          "energy_error_eV_atom": 0.0,
+          "max_force_error_eV_A": 2.220446049250313e-15,
+          "raw_ms": [
+            13.339648246765137,
+            17.909759521484375,
+            11.095040321350098,
+            11.05510425567627,
+            10.977279663085938
+          ],
+          "median_ms": 11.095040321350098
+        }
+      },
+      "layers": {
+        "spherical_harmonics": {
+          "actual_output_cotangents": 1,
+          "stock": {
+            "on_position_gradient_path": true,
+            "median_ms": 0.7444480061531067,
+            "raw_ms": [
+              0.7802879810333252,
+              0.749567985534668,
+              0.7423999905586243,
+              0.7342079877853394,
+              0.7444480061531067
+            ],
+            "maximum_local_output_error": 8.881784197001252e-16,
+            "maximum_local_VJP_error": 0.0,
+            "reference_maximum_local_VJP": 0.436660178078819,
+            "requested_input_gradients": 1,
+            "used_input_gradients": 1
+          },
+          "both": {
+            "on_position_gradient_path": true,
+            "median_ms": 0.14028799533843994,
+            "raw_ms": [
+              0.16076800227165222,
+              0.13619199395179749,
+              0.14028799533843994,
+              0.14131200313568115,
+              0.13209599256515503
+            ],
+            "maximum_local_output_error": 2.220446049250313e-15,
+            "maximum_local_VJP_error": 7.528699885739343e-16,
+            "reference_maximum_local_VJP": 0.436660178078819,
+            "requested_input_gradients": 1,
+            "used_input_gradients": 1
+          }
+        },
+        "radial_embedding": {
+          "actual_output_cotangents": 1,
+          "stock": {
+            "on_position_gradient_path": true,
+            "median_ms": 0.5335040092468262,
+            "raw_ms": [
+              0.5478399991989136,
+              0.5335040092468262,
+              0.5355520248413086,
+              0.5294079780578613,
+              0.5314559936523438
+            ],
+            "maximum_local_output_error": 0.0,
+            "maximum_local_VJP_error": 0.0,
+            "reference_maximum_local_VJP": 0.7663263224095851,
+            "requested_input_gradients": 1,
+            "used_input_gradients": 1
+          },
+          "both": {
+            "on_position_gradient_path": true,
+            "median_ms": 0.5283839702606201,
+            "raw_ms": [
+              0.532480001449585,
+              0.5314559936523438,
+              0.5263360142707825,
+              0.5283839702606201,
+              0.5242879986763
+            ],
+            "maximum_local_output_error": 0.0,
+            "maximum_local_VJP_error": 0.0,
+            "reference_maximum_local_VJP": 0.7663263224095851,
+            "requested_input_gradients": 1,
+            "used_input_gradients": 1
+          }
+        },
+        "interactions[0]": {
+          "actual_output_cotangents": 1,
+          "stock": {
+            "on_position_gradient_path": true,
+            "median_ms": 4.831232070922852,
+            "raw_ms": [
+              4.831232070922852,
+              4.833280086517334,
+              4.828159809112549,
+              4.830207824707031,
+              4.831232070922852
+            ],
+            "maximum_local_output_error": 8.881784197001252e-16,
+            "maximum_local_VJP_error": 0.0,
+            "reference_maximum_local_VJP": 1.5709713725968877,
+            "requested_input_gradients": 2,
+            "used_input_gradients": 2
+          },
+          "both": {
+            "on_position_gradient_path": true,
+            "median_ms": 4.822015762329102,
+            "raw_ms": [
+              4.822015762329102,
+              4.8158721923828125,
+              4.823040008544922,
+              4.822015762329102,
+              4.831232070922852
+            ],
+            "maximum_local_output_error": 1.3322676295501878e-15,
+            "maximum_local_VJP_error": 0.0,
+            "reference_maximum_local_VJP": 1.5709713725968877,
+            "requested_input_gradients": 2,
+            "used_input_gradients": 2
+          }
+        },
+        "products[0]": {
+          "actual_output_cotangents": 1,
+          "stock": {
+            "on_position_gradient_path": true,
+            "median_ms": 1.8053120374679565,
+            "raw_ms": [
+              1.8247679471969604,
+              1.7971199750900269,
+              1.8053120374679565,
+              1.7940479516983032,
+              1.8063360452651978
+            ],
+            "maximum_local_output_error": 0.0,
+            "maximum_local_VJP_error": 0.0,
+            "reference_maximum_local_VJP": 1.1154715423250752,
+            "requested_input_gradients": 1,
+            "used_input_gradients": 1
+          },
+          "both": {
+            "on_position_gradient_path": true,
+            "median_ms": 0.21299199759960175,
+            "raw_ms": [
+              0.2242559939622879,
+              0.21606400609016418,
+              0.21299199759960175,
+              0.2088959962129593,
+              0.21094399690628052
+            ],
+            "maximum_local_output_error": 7.216449660063518e-16,
+            "maximum_local_VJP_error": 3.3306690738754696e-16,
+            "reference_maximum_local_VJP": 1.1154715423250752,
+            "requested_input_gradients": 1,
+            "used_input_gradients": 1
+          }
+        },
+        "interactions[1]": {
+          "actual_output_cotangents": 2,
+          "stock": {
+            "on_position_gradient_path": true,
+            "median_ms": 5.559296131134033,
+            "raw_ms": [
+              5.550079822540283,
+              5.562367916107178,
+              5.553152084350586,
+              5.559296131134033,
+              5.56441593170166
+            ],
+            "maximum_local_output_error": 2.220446049250313e-16,
+            "maximum_local_VJP_error": 0.0,
+            "reference_maximum_local_VJP": 0.6181929139019368,
+            "requested_input_gradients": 3,
+            "used_input_gradients": 3
+          },
+          "both": {
+            "on_position_gradient_path": true,
+            "median_ms": 5.558271884918213,
+            "raw_ms": [
+              5.558271884918213,
+              5.5654401779174805,
+              5.560319900512695,
+              5.550079822540283,
+              5.5511040687561035
+            ],
+            "maximum_local_output_error": 3.3306690738754696e-16,
+            "maximum_local_VJP_error": 0.0,
+            "reference_maximum_local_VJP": 0.6181929139019368,
+            "requested_input_gradients": 3,
+            "used_input_gradients": 3
+          }
+        },
+        "products[1]": {
+          "actual_output_cotangents": 1,
+          "stock": {
+            "on_position_gradient_path": true,
+            "median_ms": 1.814527988433838,
+            "raw_ms": [
+              1.8186240196228027,
+              1.8063360452651978,
+              1.814527988433838,
+              1.8083839416503906,
+              1.814527988433838
+            ],
+            "maximum_local_output_error": 0.0,
+            "maximum_local_VJP_error": 0.0,
+            "reference_maximum_local_VJP": 1.0651237535014157,
+            "requested_input_gradients": 2,
+            "used_input_gradients": 2
+          },
+          "both": {
+            "on_position_gradient_path": true,
+            "median_ms": 0.2170879989862442,
+            "raw_ms": [
+              0.23244799673557281,
+              0.22015999257564545,
+              0.2170879989862442,
+              0.21401600539684296,
+              0.21196800470352173
+            ],
+            "maximum_local_output_error": 5.551115123125783e-17,
+            "maximum_local_VJP_error": 2.220446049250313e-16,
+            "reference_maximum_local_VJP": 1.0651237535014157,
+            "requested_input_gradients": 2,
+            "used_input_gradients": 2
+          }
+        }
+      }
+    }
+  ],
+  "scope": "Isolated module VJPs use stock activations and cotangents intercepted from the full energy-to-position derivative. Local inputs are detached boundary leaves; only inputs that required grad in stock inference are differentiated. Each local backward uses a fresh untimed forward. Independent module timings include launch gaps and cannot be added to recover whole backward or MD time. Whole reverse is measured separately without module hooks. Repeated source indices reuse the same geometry.",
+  "optimization": {
+    "mode": "both",
+    "specialized_product_layers": 2
+  },
+  "passed": true
+}
