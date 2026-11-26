@@ -1,5 +1,7 @@
 # Grouped interactions in moving molecular dynamics
 
+The subsequent independent and native-combination tests use a stronger stock XL configuration and return all three observables to the host every step. [Full-step acceptance results](acceptance.md)
+
 **Final matched comparison.** All five routes below compute energy, forces and configurational stress on every moving velocity-Verlet step. Both resident MACE and Symmetrix-XL use a 1.0 Å neighbor buffer. The interface has 192 atoms and Cu has 108. Each column is a single interleaved experiment on one V100 with FP64 precision. Values are median ms per step.
 
 | Force and stress implementation | Au/water, 48 steps × 6 | Cu108, 24 steps × 4 |

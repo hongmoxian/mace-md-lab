@@ -3,7 +3,7 @@
 from contextlib import ExitStack, contextmanager
 
 BASE_MODES = ("none", "angular", "product", "both")
-MODES = (*BASE_MODES, "product_deferred", "both_deferred")
+MODES = (*BASE_MODES, "product_deferred", "both_deferred", "both_channel_tile")
 
 
 @contextmanager
@@ -17,11 +17,11 @@ def optimized_model(model, mode="none", atomic_numbers=None):
         raise ValueError(f"unknown adjoint mode {mode}")
     with ExitStack() as stack:
         metadata = {"mode": mode, "specialized_product_layers": 0}
-        if mode in ("angular", "both", "both_deferred"):
+        if mode in ("angular", "both", "both_deferred", "both_channel_tile"):
             from .adjoint import install_angular_adjoint
 
             stack.enter_context(install_angular_adjoint(model))
-        if mode in ("product", "both", "product_deferred", "both_deferred"):
+        if mode in ("product", "both", "product_deferred", "both_deferred", "both_channel_tile"):
             from .frozen_product import install_frozen_products
 
             for layer in model.products:
@@ -31,7 +31,8 @@ def optimized_model(model, mode="none", atomic_numbers=None):
                     "symmetric_contractions",
                     layer.symmetric_contractions,
                 )
-            schedule = "deferred" if mode.endswith("_deferred") else "precompute"
+            schedule = {"both_channel_tile": "channel_tile", "both_deferred": "deferred",
+                        "product_deferred": "deferred"}.get(mode, "precompute")
             count = install_frozen_products(model, atomic_numbers, schedule=schedule)
             metadata["product_schedule"] = schedule
             if not count:

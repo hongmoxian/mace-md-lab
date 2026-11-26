@@ -1,0 +1,66 @@
+{
+  "passed": true,
+  "knots": 8192,
+  "checkpoint_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736",
+  "gpu": "Tesla V100-SXM2-16GB",
+  "torch": "2.13.0+cu126",
+  "dtype": "float64",
+  "derivative_probe": "alternating component signs, unit 2-norm",
+  "scope": "internal units, every interval midpoint and explicit origin/cutoff/shell probes",
+  "cases": {
+    "first_hidden64": {
+      "all_interval_midpoints": {
+        "max_value_abs_difference": 3.66040466001985e-08,
+        "max_reference_abs_value": 241.22657233871237,
+        "max_projected_derivative_abs_difference": 9.452676863475062e-08,
+        "max_reference_abs_projected_derivative": 89.1536024729846,
+        "max_interpolated_fd_abs_difference": 8.437716303433263e-09,
+        "max_abs_exterior_value_or_derivative": 0.0
+      },
+      "origin_cutoff_and_shell": {
+        "max_value_abs_difference": 2.5949886683918066e-10,
+        "max_reference_abs_value": 241.22664130144767,
+        "max_projected_derivative_abs_difference": 1.7142274008918417e-07,
+        "max_reference_abs_projected_derivative": 82.19945674383223,
+        "max_interpolated_fd_abs_difference": 5.6655640179315014e-09,
+        "max_abs_exterior_value_or_derivative": 0.0
+      }
+    },
+    "second_64": {
+      "all_interval_midpoints": {
+        "max_value_abs_difference": 6.3359359980807994e-09,
+        "max_reference_abs_value": 103.86087792349942,
+        "max_projected_derivative_abs_difference": 1.5336112824115844e-08,
+        "max_reference_abs_projected_derivative": 29.01912650510619,
+        "max_interpolated_fd_abs_difference": 4.0758099117965685e-09,
+        "max_abs_exterior_value_or_derivative": 0.0
+      },
+      "origin_cutoff_and_shell": {
+        "max_value_abs_difference": 1.1189165149971814e-09,
+        "max_reference_abs_value": 103.86090708483228,
+        "max_projected_derivative_abs_difference": 2.512556741106399e-07,
+        "max_reference_abs_projected_derivative": 16.446355953126584,
+        "max_interpolated_fd_abs_difference": 1.3559571243604296e-09,
+        "max_abs_exterior_value_or_derivative": 0.0
+      }
+    },
+    "second_512": {
+      "all_interval_midpoints": {
+        "max_value_abs_difference": 4.3045993436408025e-09,
+        "max_reference_abs_value": 200.6579501035475,
+        "max_projected_derivative_abs_difference": 6.405116437235847e-09,
+        "max_reference_abs_projected_derivative": 106.27556477698175,
+        "max_interpolated_fd_abs_difference": 4.782052087648481e-09,
+        "max_abs_exterior_value_or_derivative": 0.0
+      },
+      "origin_cutoff_and_shell": {
+        "max_value_abs_difference": 7.369678201030183e-10,
+        "max_reference_abs_value": 200.6579988869796,
+        "max_projected_derivative_abs_difference": 3.3176308286980295e-07,
+        "max_reference_abs_projected_derivative": 67.25562860547733,
+        "max_interpolated_fd_abs_difference": 1.0024087115922953e-09,
+        "max_abs_exterior_value_or_derivative": 0.0
+      }
+    }
+  }
+}

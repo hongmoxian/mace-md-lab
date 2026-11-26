@@ -1,0 +1,152 @@
+{
+  "passed": true,
+  "module_executed": true,
+  "checks": {
+    "stock": {
+      "position_A": 1.7763568394002505e-15,
+      "velocity_A_fs": 6.071532165918825e-18,
+      "force_eV_A": 6.661338147750939e-16,
+      "energy_eV_atom": 0.0,
+      "stress_eV_A3": 0.0,
+      "nve_eV_atom": 1.052655904829778e-15
+    },
+    "upstream": {
+      "position_A": 1.7763568394002505e-15,
+      "velocity_A_fs": 5.854691731421724e-18,
+      "force_eV_A": 8.881784197001252e-16,
+      "energy_eV_atom": 0.0,
+      "stress_eV_A3": 1.3010426069826053e-18,
+      "nve_eV_atom": 1.052655904829778e-15
+    }
+  },
+  "gates": {
+    "position_A": 1e-06,
+    "velocity_A_fs": 1e-07,
+    "force_eV_A": 1e-06,
+    "energy_eV_atom": 1e-08,
+    "stress_eV_A3": 1e-07,
+    "nve_eV_atom": 1e-08
+  },
+  "traces": {
+    "stock": {
+      "calls_in_two_steps": {
+        "symmetrix_r0_forward": 2,
+        "symmetrix_m1_forward": 2,
+        "symmetrix_m1_reverse": 2,
+        "symmetrix_r0_coordinate_reverse": 2
+      },
+      "ms_per_step": {
+        "symmetrix_r0_forward": 0.2805075,
+        "symmetrix_m1_forward": 0.008672000000000001,
+        "symmetrix_m1_reverse": 0.009712,
+        "symmetrix_r0_coordinate_reverse": 0.2541235
+      }
+    },
+    "upstream": {
+      "calls_in_two_steps": {
+        "symmetrix_r0_forward": 2,
+        "symmetrix_m0_forward": 2,
+        "symmetrix_m1_forward": 2,
+        "symmetrix_m1_reverse": 2,
+        "symmetrix_m0_reverse": 2,
+        "symmetrix_r0_coordinate_reverse": 2
+      },
+      "ms_per_step": {
+        "symmetrix_r0_forward": 0.2882515,
+        "symmetrix_m0_forward": 0.009824,
+        "symmetrix_m1_forward": 0.009248,
+        "symmetrix_m1_reverse": 0.010368,
+        "symmetrix_m0_reverse": 0.0126075,
+        "symmetrix_r0_coordinate_reverse": 0.26430000000000003
+      }
+    }
+  },
+  "stage": "m0",
+  "all_paths_use_upstream_generated_m1": true,
+  "common_modules": {
+    "m1": {
+      "source_sha256": "8aa139b19fe1981c9d8e30679bf02d5de0ca18dc7b44ec300651f5096d628ffd",
+      "cubin_sha256": "de8257c5ac17e1ead737225643620c2ec9d8c07986487080ab2a3c0174ec8f80",
+      "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+      "artifact_id": "jit-m1-gen19-f64-198de909c403f357-c128-chunk32-r3-sm_70",
+      "variant": "upstream",
+      "structure": "sha256:198de909c403f357759b9f9cbf0a60330815da0853d2101a2a9f02efc1f2053f"
+    },
+    "r0": {
+      "source_sha256": "7051c1df15ef19c6d4f0c309b04e2cf11a6901161dce52b18d7ea7f6839b19c2",
+      "cubin_sha256": "ade00d2fcb0639a5f8db41e7f24743abec13d3355942b1f7fa01a0ed8e63cd08",
+      "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+      "artifact_id": "generated-r0-gen19-cuda-f64-1adb0508937bf91e836ab42d98c17f2035f23607a7962549d30c64c3e7076b06",
+      "variant": "upstream",
+      "structure": "sha256:87d40a97a59259e75e7d3f51451a9b4b635349e610415f0aadd7199db238364d"
+    }
+  },
+  "kernel_launch_policy": "static",
+  "artifact": {
+    "upstream": {
+      "source_sha256": "7d98411a114f1c171aeb9dfc14a8f22b0b3993bd3546d03c324e338fd7ae765b",
+      "cubin_sha256": "1497ead93d0cff219e17e818427a4dfb70e078b01b30fabe1f28a2e32bf498a3",
+      "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+      "artifact_id": "jit-m0-gen19-f64-3b4ab2d979488798-c128-chunk32-r2-sm_70",
+      "variant": "upstream",
+      "structure": "sha256:3b4ab2d979488798a05c07b5d54c4c96c1026da3ee1eb93069fd2bacec76ac90"
+    }
+  },
+  "steps": 24,
+  "warmup": 5,
+  "repeats": 4,
+  "atoms": 108,
+  "velocity_source": "input momenta",
+  "dt_fs": 0.5,
+  "selector": "cuda12-sm70",
+  "dtype": "float64",
+  "profile": "speed",
+  "skin_A": 1.0,
+  "neighbor_builder": "kokkos",
+  "gpu": "Tesla V100-SXM2-16GB",
+  "precision": "float64",
+  "observables": [
+    "energy",
+    "forces",
+    "stress"
+  ],
+  "driver": "ASE VelocityVerlet",
+  "structure_sha256": "caf53b8fdc45601d1d781b1f91467a58bae78db87be195d4de6bae55124cd7f9",
+  "model_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+  "raw_ms_step": {
+    "stock": [
+      3.6936193355359137,
+      3.444656787905842,
+      3.838426375295967,
+      3.462992414521674
+    ],
+    "upstream": [
+      3.3752453746274114,
+      3.6441524571273476,
+      3.597215002325053,
+      3.301416252118846
+    ]
+  },
+  "median_ms_step": {
+    "stock": 3.5783058750287937,
+    "upstream": 3.486230188476232
+  },
+  "orders": [
+    [
+      "stock",
+      "upstream"
+    ],
+    [
+      "upstream",
+      "stock"
+    ],
+    [
+      "upstream",
+      "stock"
+    ],
+    [
+      "stock",
+      "upstream"
+    ]
+  ]
+}

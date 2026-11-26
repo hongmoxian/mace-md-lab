@@ -1,0 +1,100 @@
+{
+  "passed": true,
+  "route": "schedtangent",
+  "rows": [
+    {
+      "offset_from_cutoff_A": -0.0003,
+      "lattice_shift_applied": false,
+      "macro_builds": 1,
+      "candidate_refreshes": 1,
+      "captures": 1,
+      "replays": 1,
+      "active": 13306,
+      "padded_candidate_capacity": 14464,
+      "energy_eV_atom": 0.0,
+      "force_eV_A": 3.552713678800501e-15,
+      "stress_eV_A3": 3.469446951953614e-17
+    },
+    {
+      "offset_from_cutoff_A": 0.0003,
+      "lattice_shift_applied": false,
+      "macro_builds": 1,
+      "candidate_refreshes": 1,
+      "captures": 1,
+      "replays": 2,
+      "active": 13304,
+      "padded_candidate_capacity": 14464,
+      "energy_eV_atom": 5.921189464667501e-16,
+      "force_eV_A": 4.218847493575595e-15,
+      "stress_eV_A3": 2.0816681711721685e-17
+    },
+    {
+      "offset_from_cutoff_A": -0.0003,
+      "lattice_shift_applied": false,
+      "macro_builds": 1,
+      "candidate_refreshes": 1,
+      "captures": 1,
+      "replays": 3,
+      "active": 13306,
+      "padded_candidate_capacity": 14464,
+      "energy_eV_atom": 0.0,
+      "force_eV_A": 3.4416913763379853e-15,
+      "stress_eV_A3": 5.551115123125783e-17
+    },
+    {
+      "offset_from_cutoff_A": 0.16,
+      "lattice_shift_applied": false,
+      "macro_builds": 1,
+      "candidate_refreshes": 2,
+      "captures": 1,
+      "replays": 4,
+      "active": 13300,
+      "padded_candidate_capacity": 14464,
+      "energy_eV_atom": 0.0,
+      "force_eV_A": 4.274358644806853e-15,
+      "stress_eV_A3": 1.3877787807814457e-17
+    },
+    {
+      "offset_from_cutoff_A": -0.0003,
+      "lattice_shift_applied": true,
+      "macro_builds": 2,
+      "candidate_refreshes": 3,
+      "captures": 1,
+      "replays": 5,
+      "active": 13306,
+      "padded_candidate_capacity": 14464,
+      "energy_eV_atom": 0.0,
+      "force_eV_A": 4.440892098500626e-15,
+      "stress_eV_A3": 2.7755575615628914e-17
+    },
+    {
+      "offset_from_cutoff_A": -0.0003,
+      "lattice_shift_applied": false,
+      "macro_builds": 3,
+      "candidate_refreshes": 4,
+      "captures": 1,
+      "replays": 6,
+      "active": 13306,
+      "padded_candidate_capacity": 14464,
+      "energy_eV_atom": 0.0,
+      "force_eV_A": 3.219646771412954e-15,
+      "stress_eV_A3": 5.204170427930421e-17
+    }
+  ],
+  "gates": {
+    "energy_eV_atom": 1e-08,
+    "force_eV_A": 1e-06,
+    "stress_eV_A3": 1e-07
+  },
+  "skin_A": 0.15,
+  "cutoff_A": 6.0,
+  "structure_sha256": "674186cd63ac40385917aa952cf204c88d263fac13d2af3f5257c01e1d3a24a5",
+  "model_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736",
+  "selected_sender": 151,
+  "selected_receiver": 168,
+  "selected_cartesian_shift_A": [
+    0.0,
+    0.0,
+    0.0
+  ]
+}

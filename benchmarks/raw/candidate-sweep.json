@@ -1,0 +1,1806 @@
+{
+  "passed": true,
+  "gates": {
+    "energy_eV_atom": 1e-08,
+    "force_eV_A": 1e-06,
+    "position_A": 1e-06,
+    "velocity_A_fs": 1e-07,
+    "nve_difference_eV_atom": 1e-08,
+    "stress_eV_A3": 1e-07
+  },
+  "checks": {
+    "replay_edgeefs_skin0.12": {
+      "errors": {
+        "energy_eV_atom": 0.0,
+        "force_eV_A": 3.6637359812630166e-15,
+        "position_A": 7.105427357601002e-15,
+        "velocity_A_fs": 2.949029909160572e-15,
+        "nve_difference_eV_atom": 5.921234639758022e-16,
+        "stress_eV_A3": 3.122502256758253e-17
+      },
+      "passed": true,
+      "nve_excursion_meV_atom": 0.14257356260571896
+    },
+    "replay_edgeefs_skin0.25": {
+      "errors": {
+        "energy_eV_atom": 0.0,
+        "force_eV_A": 3.608224830031759e-15,
+        "position_A": 7.105427357601002e-15,
+        "velocity_A_fs": 3.0010716134398763e-15,
+        "nve_difference_eV_atom": 5.921234639758022e-16,
+        "stress_eV_A3": 3.122502256758253e-17
+      },
+      "passed": true,
+      "nve_excursion_meV_atom": 0.14257356260571896
+    },
+    "replay_edgeefs_skin0.45": {
+      "errors": {
+        "energy_eV_atom": 0.0,
+        "force_eV_A": 3.608224830031759e-15,
+        "position_A": 7.105427357601002e-15,
+        "velocity_A_fs": 4.263950303950992e-15,
+        "nve_difference_eV_atom": 1.1842469279516044e-15,
+        "stress_eV_A3": 3.122502256758253e-17
+      },
+      "passed": true,
+      "nve_excursion_meV_atom": 0.14257356260571896
+    },
+    "replaytable_edgeefs_skin0.12": {
+      "errors": {
+        "energy_eV_atom": 2.1926164587663757e-12,
+        "force_eV_A": 4.620046534231648e-08,
+        "position_A": 1.405723537573067e-09,
+        "velocity_A_fs": 1.0660473510892832e-09,
+        "nve_difference_eV_atom": 5.9924805867256e-11,
+        "stress_eV_A3": 2.8311943935099837e-10
+      },
+      "passed": true,
+      "nve_excursion_meV_atom": 0.14257356014131992
+    },
+    "replaytable_edgeefs_skin0.25": {
+      "errors": {
+        "energy_eV_atom": 2.1926164587663757e-12,
+        "force_eV_A": 4.6200465231294174e-08,
+        "position_A": 1.405723537573067e-09,
+        "velocity_A_fs": 1.0660475384394186e-09,
+        "nve_difference_eV_atom": 5.992539797716745e-11,
+        "stress_eV_A3": 2.831194289426575e-10
+      },
+      "passed": true,
+      "nve_excursion_meV_atom": 0.14257356014072778
+    },
+    "replaytable_edgeefs_skin0.45": {
+      "errors": {
+        "energy_eV_atom": 2.192024339819909e-12,
+        "force_eV_A": 4.620046600845029e-08,
+        "position_A": 1.405723537573067e-09,
+        "velocity_A_fs": 1.066047944364712e-09,
+        "nve_difference_eV_atom": 5.9924805867256e-11,
+        "stress_eV_A3": 2.8311942547321056e-10
+      },
+      "passed": true,
+      "nve_excursion_meV_atom": 0.14257356014131992
+    },
+    "xl_efs": {
+      "errors": {
+        "energy_eV_atom": 5.6569125680046755e-09,
+        "force_eV_A": 8.82169265414845e-08,
+        "position_A": 2.7055772733319827e-08,
+        "velocity_A_fs": 3.775270734918124e-09,
+        "nve_difference_eV_atom": 5.771264947873871e-11,
+        "stress_eV_A3": 8.588729623337787e-10
+      },
+      "passed": true,
+      "nve_excursion_meV_atom": 0.14257356409312175
+    }
+  },
+  "median_ms_step": {
+    "replay_edgeefs_skin0.12": 5.606733358945348,
+    "replay_edgeefs_skin0.25": 5.5882609685795614,
+    "replay_edgeefs_skin0.45": 5.883061798158451,
+    "replaytable_edgeefs_skin0.12": 4.2863859052886255,
+    "replaytable_edgeefs_skin0.25": 4.217571202389081,
+    "replaytable_edgeefs_skin0.45": 4.37865984349628,
+    "xl_efs": 6.094459296946297
+  },
+  "raw_ms_step": {
+    "replay_edgeefs_skin0.12": [
+      5.607847029750701,
+      5.605481408565538,
+      5.605619688139996,
+      5.611888187559089
+    ],
+    "replay_edgeefs_skin0.25": [
+      5.5868734380055685,
+      5.5963231570785865,
+      5.586560000665486,
+      5.589648499153554
+    ],
+    "replay_edgeefs_skin0.45": [
+      5.8874448732240126,
+      5.8774256249307655,
+      5.878847718122415,
+      5.887275878194487
+    ],
+    "replaytable_edgeefs_skin0.12": [
+      4.289172877179226,
+      4.284300001017982,
+      4.284847906092182,
+      4.287923904485069
+    ],
+    "replaytable_edgeefs_skin0.25": [
+      4.221903498546453,
+      4.207838966976851,
+      4.213238906231709,
+      4.2241724077030085
+    ],
+    "replaytable_edgeefs_skin0.45": [
+      4.367846748209558,
+      4.385645592265064,
+      4.373213247163221,
+      4.384106439829338
+    ],
+    "xl_efs": [
+      5.991512782202335,
+      6.256492371903732,
+      6.0474618439911865,
+      6.141456749901408
+    ]
+  },
+  "timed_graph_updates": {
+    "replay_edgeefs_skin0.12": [
+      {
+        "neighbor_rebuilds": 2,
+        "certificate_hits": 15,
+        "edge_refreshes": 17,
+        "captures": 0,
+        "replays": 32,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 2,
+        "certificate_hits": 15,
+        "edge_refreshes": 17,
+        "captures": 0,
+        "replays": 32,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 2,
+        "certificate_hits": 15,
+        "edge_refreshes": 17,
+        "captures": 0,
+        "replays": 32,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 2,
+        "certificate_hits": 15,
+        "edge_refreshes": 17,
+        "captures": 0,
+        "replays": 32,
+        "fallback_evaluations": 0
+      }
+    ],
+    "replay_edgeefs_skin0.25": [
+      {
+        "neighbor_rebuilds": 2,
+        "certificate_hits": 23,
+        "edge_refreshes": 9,
+        "captures": 0,
+        "replays": 32,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 2,
+        "certificate_hits": 23,
+        "edge_refreshes": 9,
+        "captures": 0,
+        "replays": 32,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 2,
+        "certificate_hits": 23,
+        "edge_refreshes": 9,
+        "captures": 0,
+        "replays": 32,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 2,
+        "certificate_hits": 23,
+        "edge_refreshes": 9,
+        "captures": 0,
+        "replays": 32,
+        "fallback_evaluations": 0
+      }
+    ],
+    "replay_edgeefs_skin0.45": [
+      {
+        "neighbor_rebuilds": 2,
+        "certificate_hits": 25,
+        "edge_refreshes": 7,
+        "captures": 0,
+        "replays": 32,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 2,
+        "certificate_hits": 25,
+        "edge_refreshes": 7,
+        "captures": 0,
+        "replays": 32,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 2,
+        "certificate_hits": 25,
+        "edge_refreshes": 7,
+        "captures": 0,
+        "replays": 32,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 2,
+        "certificate_hits": 25,
+        "edge_refreshes": 7,
+        "captures": 0,
+        "replays": 32,
+        "fallback_evaluations": 0
+      }
+    ],
+    "replaytable_edgeefs_skin0.12": [
+      {
+        "neighbor_rebuilds": 2,
+        "certificate_hits": 15,
+        "edge_refreshes": 17,
+        "captures": 0,
+        "replays": 32,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 2,
+        "certificate_hits": 15,
+        "edge_refreshes": 17,
+        "captures": 0,
+        "replays": 32,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 2,
+        "certificate_hits": 15,
+        "edge_refreshes": 17,
+        "captures": 0,
+        "replays": 32,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 2,
+        "certificate_hits": 15,
+        "edge_refreshes": 17,
+        "captures": 0,
+        "replays": 32,
+        "fallback_evaluations": 0
+      }
+    ],
+    "replaytable_edgeefs_skin0.25": [
+      {
+        "neighbor_rebuilds": 2,
+        "certificate_hits": 23,
+        "edge_refreshes": 9,
+        "captures": 0,
+        "replays": 32,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 2,
+        "certificate_hits": 23,
+        "edge_refreshes": 9,
+        "captures": 0,
+        "replays": 32,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 2,
+        "certificate_hits": 23,
+        "edge_refreshes": 9,
+        "captures": 0,
+        "replays": 32,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 2,
+        "certificate_hits": 23,
+        "edge_refreshes": 9,
+        "captures": 0,
+        "replays": 32,
+        "fallback_evaluations": 0
+      }
+    ],
+    "replaytable_edgeefs_skin0.45": [
+      {
+        "neighbor_rebuilds": 2,
+        "certificate_hits": 25,
+        "edge_refreshes": 7,
+        "captures": 0,
+        "replays": 32,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 2,
+        "certificate_hits": 25,
+        "edge_refreshes": 7,
+        "captures": 0,
+        "replays": 32,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 2,
+        "certificate_hits": 25,
+        "edge_refreshes": 7,
+        "captures": 0,
+        "replays": 32,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 2,
+        "certificate_hits": 25,
+        "edge_refreshes": 7,
+        "captures": 0,
+        "replays": 32,
+        "fallback_evaluations": 0
+      }
+    ],
+    "xl_efs": [
+      {
+        "neighbor_rebuilds": 2
+      },
+      {
+        "neighbor_rebuilds": 2
+      },
+      {
+        "neighbor_rebuilds": 2
+      },
+      {
+        "neighbor_rebuilds": 2
+      }
+    ]
+  },
+  "orders": [
+    [
+      "replay_edgeefs_skin0.12",
+      "replay_edgeefs_skin0.25",
+      "replay_edgeefs_skin0.45",
+      "replaytable_edgeefs_skin0.12",
+      "replaytable_edgeefs_skin0.25",
+      "replaytable_edgeefs_skin0.45",
+      "xl_efs"
+    ],
+    [
+      "xl_efs",
+      "replaytable_edgeefs_skin0.45",
+      "replaytable_edgeefs_skin0.25",
+      "replaytable_edgeefs_skin0.12",
+      "replay_edgeefs_skin0.45",
+      "replay_edgeefs_skin0.25",
+      "replay_edgeefs_skin0.12"
+    ],
+    [
+      "replay_edgeefs_skin0.25",
+      "replay_edgeefs_skin0.45",
+      "replaytable_edgeefs_skin0.12",
+      "replaytable_edgeefs_skin0.25",
+      "replaytable_edgeefs_skin0.45",
+      "xl_efs",
+      "replay_edgeefs_skin0.12"
+    ],
+    [
+      "replay_edgeefs_skin0.12",
+      "xl_efs",
+      "replaytable_edgeefs_skin0.45",
+      "replaytable_edgeefs_skin0.25",
+      "replaytable_edgeefs_skin0.12",
+      "replay_edgeefs_skin0.45",
+      "replay_edgeefs_skin0.25"
+    ]
+  ],
+  "source_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736",
+  "structure_sha256": "674186cd63ac40385917aa952cf204c88d263fac13d2af3f5257c01e1d3a24a5",
+  "xl_json_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+  "untimed_candidate_edge_audit": {
+    "replay_edgeefs_skin0.12": [
+      {
+        "active": 13306,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13310,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13308,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13308,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13312,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13304,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13298,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13294,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13288,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13302,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13306,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13304,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13298,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13294,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13276,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13282,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13272,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13258,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13276,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13272,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13286,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13290,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13290,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13284,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13280,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13264,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13264,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13262,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13244,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13228,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13210,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13230,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13226,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13240,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13240,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13248,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13264,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13250,
+        "padded_candidate_capacity": 14336
+      }
+    ],
+    "replay_edgeefs_skin0.25": [
+      {
+        "active": 13306,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13310,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13308,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13308,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13312,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13304,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13298,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13294,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13288,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13302,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13306,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13304,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13298,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13294,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13276,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13282,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13272,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13258,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13276,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13272,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13286,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13290,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13290,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13284,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13280,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13264,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13264,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13262,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13244,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13228,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13210,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13230,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13226,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13240,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13240,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13248,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13264,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13250,
+        "padded_candidate_capacity": 15104
+      }
+    ],
+    "replay_edgeefs_skin0.45": [
+      {
+        "active": 13306,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13310,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13308,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13308,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13312,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13304,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13298,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13294,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13288,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13302,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13306,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13304,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13298,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13294,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13276,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13282,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13272,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13258,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13276,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13272,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13286,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13290,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13290,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13284,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13280,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13264,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13264,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13262,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13244,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13228,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13210,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13230,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13226,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13240,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13240,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13248,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13264,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13250,
+        "padded_candidate_capacity": 16768
+      }
+    ],
+    "replaytable_edgeefs_skin0.12": [
+      {
+        "active": 13306,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13310,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13308,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13308,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13312,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13304,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13298,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13294,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13288,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13302,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13306,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13304,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13298,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13294,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13276,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13282,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13272,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13258,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13276,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13272,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13286,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13290,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13290,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13284,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13280,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13264,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13264,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13262,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13244,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13228,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13210,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13230,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13226,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13240,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13240,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13248,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13264,
+        "padded_candidate_capacity": 14336
+      },
+      {
+        "active": 13250,
+        "padded_candidate_capacity": 14336
+      }
+    ],
+    "replaytable_edgeefs_skin0.25": [
+      {
+        "active": 13306,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13310,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13308,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13308,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13312,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13304,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13298,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13294,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13288,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13302,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13306,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13304,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13298,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13294,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13276,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13282,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13272,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13258,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13276,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13272,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13286,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13290,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13290,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13284,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13280,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13264,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13264,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13262,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13244,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13228,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13210,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13230,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13226,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13240,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13240,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13248,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13264,
+        "padded_candidate_capacity": 15104
+      },
+      {
+        "active": 13250,
+        "padded_candidate_capacity": 15104
+      }
+    ],
+    "replaytable_edgeefs_skin0.45": [
+      {
+        "active": 13306,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13310,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13308,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13308,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13312,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13304,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13298,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13294,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13288,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13302,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13306,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13304,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13298,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13294,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13276,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13282,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13272,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13258,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13276,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13272,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13286,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13290,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13290,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13284,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13280,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13264,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13264,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13262,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13244,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13228,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13210,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13230,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13226,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13240,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13240,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13248,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13264,
+        "padded_candidate_capacity": 16768
+      },
+      {
+        "active": 13250,
+        "padded_candidate_capacity": 16768
+      }
+    ]
+  },
+  "candidate_macro_extension_A": 1.0,
+  "table_knots": 8192,
+  "host_efs_each_step": false,
+  "model": "mace-mp-0-small.model",
+  "formula": "H96Au48O48",
+  "atoms": 192,
+  "device": "Tesla V100-SXM2-16GB",
+  "torch": "2.13.0+cu126",
+  "mace": "0.3.16",
+  "symmetrix": "0.2.0",
+  "xl_plan": {
+    "requested_algorithm": "direct",
+    "requested_profile": "speed",
+    "selection_source": "native_request",
+    "state": "active",
+    "selected_id": "mh0-direct-speed",
+    "selection_reason": "low_memory=False: exact speed graph fits advisory device-memory budget",
+    "available_bytes": 12497056248,
+    "reserve_bytes": 846417100,
+    "boundary_attempt": false,
+    "candidates": [
+      {
+        "id": "mh0-direct-speed",
+        "qualified": true,
+        "estimated_bytes": 23939236,
+        "reason": "estimated fit"
+      },
+      {
+        "id": "mh0-direct-capacity-y-only",
+        "qualified": true,
+        "estimated_bytes": 15356548,
+        "reason": "qualified"
+      },
+      {
+        "id": "mh0-direct-capacity-retained",
+        "qualified": true,
+        "estimated_bytes": 23939236,
+        "reason": "qualified"
+      },
+      {
+        "id": "mh0-single-layer-tiled-v1",
+        "qualified": false,
+        "estimated_bytes": 0,
+        "reason": "fixed-workspace execution requires explicit opt-in via allow_fixed_workspace"
+      },
+      {
+        "id": "mh0-dual-layer-tiled-v1",
+        "qualified": false,
+        "estimated_bytes": 19985700,
+        "reason": "fixed-workspace execution requires explicit opt-in via allow_fixed_workspace"
+      }
+    ],
+    "binding_report_version": 1,
+    "bindings": [
+      {
+        "operator_id": "mh0.geometry",
+        "kind": "geometry",
+        "capability_key": "geometry",
+        "implementation_id": "generic_geometry",
+        "selected_implementation_id": "generic_geometry",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'generic_geometry'"
+      },
+      {
+        "operator_id": "mh0.interaction0.r0",
+        "kind": "radial",
+        "capability_key": "r0",
+        "implementation_id": "builtin_r0",
+        "selected_implementation_id": "builtin_r0",
+        "tier": "frozen",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified frozen implementation 'builtin_r0'"
+      },
+      {
+        "operator_id": "mh0.interaction0.harmonics",
+        "kind": "spherical_harmonic",
+        "capability_key": "harmonics",
+        "implementation_id": "generic_harmonics",
+        "selected_implementation_id": "generic_harmonics",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'generic_harmonics'"
+      },
+      {
+        "operator_id": "mh0.interaction0.m0",
+        "kind": "tensor_product",
+        "capability_key": "m0",
+        "implementation_id": "builtin_m0",
+        "selected_implementation_id": "builtin_m0",
+        "tier": "frozen",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified frozen implementation 'builtin_m0'"
+      },
+      {
+        "operator_id": "mh0.interaction0.h1",
+        "kind": "linear",
+        "capability_key": "h1",
+        "implementation_id": "generic_h1",
+        "selected_implementation_id": "generic_h1",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'generic_h1'"
+      },
+      {
+        "operator_id": "mh0.interaction0.phi1",
+        "kind": "tensor_product",
+        "capability_key": "phi1",
+        "implementation_id": "generated_phi1",
+        "selected_implementation_id": "generated_phi1",
+        "tier": "generated",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified generated implementation 'generated_phi1'"
+      },
+      {
+        "operator_id": "mh0.interaction0.a1",
+        "kind": "linear",
+        "capability_key": "a1",
+        "implementation_id": "blas_batched_a1",
+        "selected_implementation_id": "blas_batched_a1",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'blas_batched_a1'"
+      },
+      {
+        "operator_id": "mh0.interaction0.m1",
+        "kind": "tensor_product",
+        "capability_key": "m1",
+        "implementation_id": "device_m1_terms",
+        "selected_implementation_id": "device_m1_terms",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'device_m1_terms'"
+      },
+      {
+        "operator_id": "mh0.interaction0.h2",
+        "kind": "linear",
+        "capability_key": "h2",
+        "implementation_id": "device_h2_stages",
+        "selected_implementation_id": "device_h2_stages",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'device_h2_stages'"
+      },
+      {
+        "operator_id": "mh0.interaction1.r0",
+        "kind": "radial",
+        "capability_key": "r0",
+        "implementation_id": "builtin_r0",
+        "selected_implementation_id": "builtin_r0",
+        "tier": "frozen",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified frozen implementation 'builtin_r0'"
+      },
+      {
+        "operator_id": "mh0.interaction1.harmonics",
+        "kind": "spherical_harmonic",
+        "capability_key": "harmonics",
+        "implementation_id": "generic_harmonics",
+        "selected_implementation_id": "generic_harmonics",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'generic_harmonics'"
+      },
+      {
+        "operator_id": "mh0.interaction1.m0",
+        "kind": "tensor_product",
+        "capability_key": "m0",
+        "implementation_id": "builtin_m0",
+        "selected_implementation_id": "builtin_m0",
+        "tier": "frozen",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified frozen implementation 'builtin_m0'"
+      },
+      {
+        "operator_id": "mh0.interaction1.h1",
+        "kind": "linear",
+        "capability_key": "h1",
+        "implementation_id": "generic_h1",
+        "selected_implementation_id": "generic_h1",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'generic_h1'"
+      },
+      {
+        "operator_id": "mh0.interaction1.phi1",
+        "kind": "tensor_product",
+        "capability_key": "phi1",
+        "implementation_id": "generated_phi1",
+        "selected_implementation_id": "generated_phi1",
+        "tier": "generated",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified generated implementation 'generated_phi1'"
+      },
+      {
+        "operator_id": "mh0.interaction1.a1",
+        "kind": "linear",
+        "capability_key": "a1",
+        "implementation_id": "blas_batched_a1",
+        "selected_implementation_id": "blas_batched_a1",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'blas_batched_a1'"
+      },
+      {
+        "operator_id": "mh0.interaction1.m1",
+        "kind": "tensor_product",
+        "capability_key": "m1",
+        "implementation_id": "device_m1_terms",
+        "selected_implementation_id": "device_m1_terms",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'device_m1_terms'"
+      },
+      {
+        "operator_id": "mh0.interaction1.h2",
+        "kind": "linear",
+        "capability_key": "h2",
+        "implementation_id": "device_h2_stages",
+        "selected_implementation_id": "device_h2_stages",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'device_h2_stages'"
+      },
+      {
+        "operator_id": "mh0.readout",
+        "kind": "readout",
+        "capability_key": "readout",
+        "implementation_id": "generated_readout",
+        "selected_implementation_id": "generated_readout",
+        "tier": "generated",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified generated implementation 'generated_readout'"
+      },
+      {
+        "operator_id": "mh0.reduce_forces",
+        "kind": "reduction",
+        "capability_key": "reduce_forces",
+        "implementation_id": "generic_reduce_forces",
+        "selected_implementation_id": "generic_reduce_forces",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'generic_reduce_forces'"
+      },
+      {
+        "operator_id": "mh0.reduce_stress",
+        "kind": "reduction",
+        "capability_key": "reduce_stress",
+        "implementation_id": "generic_reduce_stress",
+        "selected_implementation_id": "generic_reduce_stress",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'generic_reduce_stress'"
+      }
+    ],
+    "model_type": "MACE",
+    "mace_les_parameters_sha256": null,
+    "mace_les_evaluator_fingerprint": "fb0c39d081c917018793e6e7210e8e2d3a6296d3a100796de3da29dc5f3987c6"
+  },
+  "xl_r0": {
+    "implementation": "generated",
+    "backend": "cuda",
+    "artifact_origin": null,
+    "schedule": "frozen",
+    "profile": "fixed-weight-coordinate",
+    "artifact_id": "standard-r0-module-module-v2"
+  },
+  "xl_prepared_product": null,
+  "xl_r1": null,
+  "xl_neighbor_backend": "kokkos",
+  "xl_selector": "cuda12-sm70",
+  "dtype": "float64",
+  "resident_skin_A": [
+    0.12,
+    0.25,
+    0.45
+  ],
+  "xl_skin_A": 1.0,
+  "dt_fs": 0.5,
+  "velocity_source": "input momenta",
+  "cpu_threads": 1,
+  "steps": 32,
+  "warmup": 5,
+  "repeats": 4,
+  "frame": 0,
+  "transform_info": {
+    "replay": {
+      "operator": "grouped_species_first_interaction",
+      "kernel": "Triton segmented edge moments and adjoint, batched FP64 projection",
+      "atoms": 192,
+      "species": 3,
+      "dense_group_slots": 576,
+      "fold_receiver_linear": true
+    },
+    "second": {
+      "second_interaction": "segmented_scalar_uvu",
+      "channels": 128,
+      "l_max": 3
+    },
+    "replaytable": {
+      "operator": "grouped_species_first_interaction",
+      "kernel": "Triton segmented edge moments and adjoint, batched FP64 projection",
+      "atoms": 192,
+      "species": 3,
+      "dense_group_slots": 576,
+      "fold_receiver_linear": true
+    }
+  },
+  "scope": "Synchronized complete fixed-cell velocity-Verlet steps. Each path first ran the entire trajectory untimed. Resident controls retain tensors on GPU. Native XL returns energy, forces and stress to ASE. The efs controls request native MACE stress, edgeefs derives stress via edge vectors, and ef requests energy and force. Both stress paths compute stress in each evaluation and validate it on common frames."
+}

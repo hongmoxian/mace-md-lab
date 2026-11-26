@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "model_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736",
+  "structure_sha256": "674186cd63ac40385917aa952cf204c88d263fac13d2af3f5257c01e1d3a24a5",
+  "atoms": 192,
+  "gpu": "Tesla V100-SXM2-16GB",
+  "torch": "2.13.0+cu126",
+  "dtype": "float64",
+  "rows": {
+    "tangentedge": {
+      "errors_vs_original": {
+        "energy_eV_atom": 0.0,
+        "force_eV_A": 4.9960036108132044e-15,
+        "stress_eV_A3": 2.0816681711721685e-17
+      },
+      "force_differences": [
+        {
+          "direction": "random_normalized",
+          "projection_eV_A": -0.2811702490805564,
+          "absolute_error_eV_A": {
+            "0.0002": 1.4607618059603311e-08,
+            "0.0001": 3.5231513817457483e-09
+          }
+        },
+        {
+          "direction": "OH_stretch_48_49",
+          "projection_eV_A": 0.8012909292394872,
+          "absolute_error_eV_A": {
+            "0.0002": 6.808256555634884e-06,
+            "0.0001": 1.702296456462804e-06
+          }
+        }
+      ],
+      "strain_difference_errors_eV_A3": {
+        "xx": {
+          "2e-05": 4.09138209422899e-10,
+          "1e-05": 1.0159373342588651e-10
+        },
+        "zz": {
+          "2e-05": 2.469725188247729e-10,
+          "1e-05": 6.211865744010225e-11
+        },
+        "xy": {
+          "2e-05": 9.217056371607635e-13,
+          "1e-05": 1.0376812256684964e-13
+        }
+      },
+      "passed": true
+    }
+  }
+}

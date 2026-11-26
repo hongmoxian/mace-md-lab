@@ -1,0 +1,211 @@
+{
+  "passed": true,
+  "gates": {
+    "energy_eV_atom": 1e-08,
+    "force_eV_A": 1e-06,
+    "position_A": 1e-06,
+    "velocity_A_fs": 1e-07,
+    "nve_difference_eV_atom": 1e-08,
+    "stress_eV_A3": 1e-07
+  },
+  "results": {
+    "ase": {
+      "errors": {
+        "energy_eV_atom": 5.613392878095274e-11,
+        "force_eV_A": 4.735654424159463e-09,
+        "stress_eV_A3": 6.467757926453821e-11,
+        "position_A": 4.440892098500626e-16,
+        "velocity_A_fs": 2.6020852139652106e-18,
+        "nve_difference_eV_atom": 5.26327952414889e-16
+      },
+      "common_frames_vs_xl": {
+        "force_eV_A": 9.547918011776346e-15,
+        "energy_eV_atom": 1.052655904829778e-15,
+        "stress_eV_A3": 2.47198095326695e-17
+      },
+      "passed": true,
+      "trials_ms": [
+        4.342711210483685,
+        4.403312418920298,
+        4.428746125389201,
+        4.520526374108158
+      ],
+      "timed_rebuilds": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "median_ms_step": 4.416029272154749
+    },
+    "certificate": {
+      "errors": {
+        "energy_eV_atom": 5.613392878095274e-11,
+        "force_eV_A": 4.7356539800702535e-09,
+        "stress_eV_A3": 6.467757926453821e-11,
+        "position_A": 1.3877787807814457e-17,
+        "velocity_A_fs": 2.6020852139652106e-18,
+        "nve_difference_eV_atom": 5.26327952414889e-16
+      },
+      "common_frames_vs_xl": {
+        "force_eV_A": 9.492406860545088e-15,
+        "energy_eV_atom": 1.052655904829778e-15,
+        "stress_eV_A3": 2.47198095326695e-17
+      },
+      "passed": true,
+      "trials_ms": [
+        4.104325208269681,
+        4.22012454267436,
+        4.133057625343402,
+        4.2519898755320655
+      ],
+      "timed_rebuilds": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "median_ms_step": 4.176591084008881
+    },
+    "ase_prepared": {
+      "errors": {
+        "energy_eV_atom": 5.613392878095274e-11,
+        "force_eV_A": 4.7356542021148584e-09,
+        "stress_eV_A3": 6.467757926453821e-11,
+        "position_A": 4.440892098500626e-16,
+        "velocity_A_fs": 2.168404344971009e-18,
+        "nve_difference_eV_atom": 5.26327952414889e-16
+      },
+      "common_frames_vs_xl": {
+        "force_eV_A": 9.492406860545088e-15,
+        "energy_eV_atom": 1.052655904829778e-15,
+        "stress_eV_A3": 2.47198095326695e-17
+      },
+      "passed": true,
+      "trials_ms": [
+        3.4205710398964584,
+        3.5234129172749817,
+        3.606785374965208,
+        3.618946914987949
+      ],
+      "timed_rebuilds": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "median_ms_step": 3.5650991461200947
+    },
+    "arrays_stock": {
+      "errors": {
+        "energy_eV_atom": 5.613392878095274e-11,
+        "force_eV_A": 4.735654313137161e-09,
+        "stress_eV_A3": 6.467757926453821e-11,
+        "position_A": 4.440892098500626e-16,
+        "velocity_A_fs": 2.168404344971009e-18,
+        "nve_difference_eV_atom": 5.345518266713717e-16
+      },
+      "common_frames_vs_xl": {
+        "force_eV_A": 9.325873406851315e-15,
+        "energy_eV_atom": 1.052655904829778e-15,
+        "stress_eV_A3": 2.47198095326695e-17
+      },
+      "passed": true,
+      "trials_ms": [
+        4.0678688722740235,
+        4.04941187298391,
+        3.9912358770379797,
+        4.063568752220211
+      ],
+      "timed_rebuilds": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "median_ms_step": 4.05649031260206
+    },
+    "arrays_prepared": {
+      "errors": {
+        "energy_eV_atom": 5.613392878095274e-11,
+        "force_eV_A": 4.735654535181766e-09,
+        "stress_eV_A3": 6.467757926453821e-11,
+        "position_A": 4.440892098500626e-16,
+        "velocity_A_fs": 2.6020852139652106e-18,
+        "nve_difference_eV_atom": 5.345518266713717e-16
+      },
+      "common_frames_vs_xl": {
+        "force_eV_A": 9.492406860545088e-15,
+        "energy_eV_atom": 1.052655904829778e-15,
+        "stress_eV_A3": 2.47198095326695e-17
+      },
+      "passed": true,
+      "trials_ms": [
+        3.1826250439432138,
+        2.9705720032022023,
+        3.0325921688927338,
+        2.9537078322997936
+      ],
+      "timed_rebuilds": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "median_ms_step": 3.001582086047468
+    }
+  },
+  "trial_orders": [
+    [
+      "ase",
+      "certificate",
+      "ase_prepared",
+      "arrays_stock",
+      "arrays_prepared"
+    ],
+    [
+      "arrays_prepared",
+      "arrays_stock",
+      "ase_prepared",
+      "certificate",
+      "ase"
+    ],
+    [
+      "certificate",
+      "ase_prepared",
+      "arrays_stock",
+      "arrays_prepared",
+      "ase"
+    ],
+    [
+      "ase",
+      "arrays_prepared",
+      "arrays_stock",
+      "ase_prepared",
+      "certificate"
+    ]
+  ],
+  "model_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736",
+  "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+  "structure_sha256": "caf53b8fdc45601d1d781b1f91467a58bae78db87be195d4de6bae55124cd7f9",
+  "fixture": "cu.extxyz",
+  "atoms": 108,
+  "velocities": "input momenta",
+  "period": "fixed-cell fully periodic",
+  "dt_fs": 0.5,
+  "warmup": 5,
+  "steps": 24,
+  "repeats": 4,
+  "skin_A": 1.0,
+  "selected_plan": "mh0-direct-speed",
+  "gpu": "Tesla V100-SXM2-16GB",
+  "symmetrix": "0.2.0",
+  "selector": "cuda12-sm70",
+  "native_neighbor_builder": "kokkos",
+  "dtype": "float64",
+  "observables": "E/F/stress on host every step",
+  "kernel_launch_policy": "automatic",
+  "launch_tuning_status": "resource_default",
+  "numerical_scope": "Common frames against original MACE and XL; all moving frames against stock XL",
+  "product_info": null
+}

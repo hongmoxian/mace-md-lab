@@ -1,0 +1,172 @@
+{
+  "passed": true,
+  "module_executed": true,
+  "checks": {
+    "stock": {
+      "position_A": 6.217248937900877e-15,
+      "velocity_A_fs": 3.1519925558498585e-15,
+      "force_eV_A": 3.1086244689504383e-15,
+      "energy_eV_atom": 0.0,
+      "stress_eV_A3": 0.0,
+      "nve_eV_atom": 1.1842378929335002e-15
+    },
+    "upstream": {
+      "position_A": 8.881784197001252e-15,
+      "velocity_A_fs": 3.5041414214731503e-15,
+      "force_eV_A": 3.552713678800501e-15,
+      "energy_eV_atom": 0.0,
+      "stress_eV_A3": 6.938893903907228e-18,
+      "nve_eV_atom": 1.1842378929335002e-15
+    },
+    "horner": {
+      "position_A": 8.881784197001252e-15,
+      "velocity_A_fs": 4.5232914636095245e-15,
+      "force_eV_A": 3.9968028886505635e-15,
+      "energy_eV_atom": 1.1842378929335002e-15,
+      "stress_eV_A3": 6.938893903907228e-18,
+      "nve_eV_atom": 1.1842378929335002e-15
+    }
+  },
+  "gates": {
+    "position_A": 1e-06,
+    "velocity_A_fs": 1e-07,
+    "force_eV_A": 1e-06,
+    "energy_eV_atom": 1e-08,
+    "stress_eV_A3": 1e-07,
+    "nve_eV_atom": 1e-08
+  },
+  "traces": {
+    "stock": {
+      "calls_in_two_steps": {
+        "::compute_M1": 2,
+        "::reverse_M1": 2
+      },
+      "ms_per_step": {
+        "::compute_M1": 0.0529275,
+        "::reverse_M1": 0.9071784999999999
+      }
+    },
+    "upstream": {
+      "calls_in_two_steps": {
+        "symmetrix_m1_forward": 2,
+        "symmetrix_m1_reverse": 2
+      },
+      "ms_per_step": {
+        "symmetrix_m1_forward": 0.011504,
+        "symmetrix_m1_reverse": 0.0184
+      }
+    },
+    "horner": {
+      "calls_in_two_steps": {
+        "symmetrix_m1_forward": 2,
+        "symmetrix_m1_reverse": 2
+      },
+      "ms_per_step": {
+        "symmetrix_m1_forward": 0.013616,
+        "symmetrix_m1_reverse": 0.022112
+      }
+    }
+  },
+  "artifact": {
+    "upstream": {
+      "source_sha256": "8aa139b19fe1981c9d8e30679bf02d5de0ca18dc7b44ec300651f5096d628ffd",
+      "cubin_sha256": "de8257c5ac17e1ead737225643620c2ec9d8c07986487080ab2a3c0174ec8f80",
+      "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+      "artifact_id": "jit-m1-gen19-f64-198de909c403f357-c128-chunk32-r3-sm_70",
+      "variant": "upstream",
+      "structure": "sha256:198de909c403f357759b9f9cbf0a60330815da0853d2101a2a9f02efc1f2053f"
+    },
+    "horner": {
+      "source_sha256": "3a1ffe8d0fcc9247297693185d815a2974dc58aafa9ad7b092d7959c763e1990",
+      "cubin_sha256": "3747622636bd1b4e29aa2d62d87a345d6041e92ea44fb221d3b951ea23f05b70",
+      "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+      "artifact_id": "jit-m1-gen19-f64-198de909c403f357-c128-chunk32-r3-sm_70",
+      "variant": "horner",
+      "structure": "sha256:198de909c403f357759b9f9cbf0a60330815da0853d2101a2a9f02efc1f2053f"
+    }
+  },
+  "steps": 48,
+  "warmup": 5,
+  "repeats": 6,
+  "atoms": 192,
+  "velocity_source": "input momenta",
+  "dt_fs": 0.5,
+  "selector": "cuda12-sm70",
+  "dtype": "float64",
+  "profile": "speed",
+  "skin_A": 1.0,
+  "neighbor_builder": "kokkos",
+  "gpu": "Tesla V100-SXM2-16GB",
+  "precision": "float64",
+  "observables": [
+    "energy",
+    "forces",
+    "stress"
+  ],
+  "driver": "ASE VelocityVerlet",
+  "structure_sha256": "674186cd63ac40385917aa952cf204c88d263fac13d2af3f5257c01e1d3a24a5",
+  "model_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+  "raw_ms_step": {
+    "stock": [
+      6.0922559156703455,
+      6.189622976914204,
+      6.098045625549275,
+      6.069390520375843,
+      6.039296667343781,
+      6.077453855444522
+    ],
+    "upstream": [
+      5.171419999290568,
+      5.2842231234535575,
+      5.330122541636229,
+      5.383445396243284,
+      5.281442771471727,
+      5.341292395314667
+    ],
+    "horner": [
+      5.290460624867895,
+      5.36347197824701,
+      5.212803082637644,
+      5.113022625058268,
+      5.189875208695109,
+      5.287668978174527
+    ]
+  },
+  "median_ms_step": {
+    "stock": 6.084854885557434,
+    "upstream": 5.307172832544893,
+    "horner": 5.250236030406086
+  },
+  "orders": [
+    [
+      "stock",
+      "upstream",
+      "horner"
+    ],
+    [
+      "horner",
+      "upstream",
+      "stock"
+    ],
+    [
+      "upstream",
+      "horner",
+      "stock"
+    ],
+    [
+      "stock",
+      "horner",
+      "upstream"
+    ],
+    [
+      "horner",
+      "stock",
+      "upstream"
+    ],
+    [
+      "upstream",
+      "stock",
+      "horner"
+    ]
+  ]
+}

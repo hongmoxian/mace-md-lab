@@ -1,0 +1,186 @@
+{
+  "passed": true,
+  "module_executed": true,
+  "checks": {
+    "stock": {
+      "position_A": 7.993605777301127e-15,
+      "velocity_A_fs": 3.5839387013680835e-15,
+      "force_eV_A": 3.552713678800501e-15,
+      "energy_eV_atom": 0.0,
+      "stress_eV_A3": 0.0,
+      "nve_eV_atom": 1.1842378929335002e-15
+    },
+    "upstream": {
+      "position_A": 8.881784197001252e-15,
+      "velocity_A_fs": 5.530298441414061e-15,
+      "force_eV_A": 3.9968028886505635e-15,
+      "energy_eV_atom": 0.0,
+      "stress_eV_A3": 6.938893903907228e-18,
+      "nve_eV_atom": 1.1842378929335002e-15
+    },
+    "factored": {
+      "position_A": 8.881784197001252e-15,
+      "velocity_A_fs": 4.073130721593543e-15,
+      "force_eV_A": 3.9968028886505635e-15,
+      "energy_eV_atom": 0.0,
+      "stress_eV_A3": 5.204170427930421e-18,
+      "nve_eV_atom": 1.1842378929335002e-15
+    }
+  },
+  "gates": {
+    "position_A": 1e-06,
+    "velocity_A_fs": 1e-07,
+    "force_eV_A": 1e-06,
+    "energy_eV_atom": 1e-08,
+    "stress_eV_A3": 1e-07,
+    "nve_eV_atom": 1e-08
+  },
+  "traces": {
+    "stock": {
+      "calls_in_two_steps": {
+        "standard_r0::launch_forward": 2,
+        "symmetrix_m1_forward": 2,
+        "symmetrix_m1_reverse": 2,
+        "standard_r0::launch_coordinate_reverse": 2
+      },
+      "ms_per_step": {
+        "standard_r0::launch_forward": 0.35294250000000005,
+        "symmetrix_m1_forward": 0.011488,
+        "symmetrix_m1_reverse": 0.0192,
+        "standard_r0::launch_coordinate_reverse": 0.838347
+      }
+    },
+    "upstream": {
+      "calls_in_two_steps": {
+        "symmetrix_r0_forward": 2,
+        "symmetrix_m1_forward": 2,
+        "symmetrix_m1_reverse": 2,
+        "symmetrix_r0_coordinate_reverse": 2
+      },
+      "ms_per_step": {
+        "symmetrix_r0_forward": 0.402494,
+        "symmetrix_m1_forward": 0.011504,
+        "symmetrix_m1_reverse": 0.018656,
+        "symmetrix_r0_coordinate_reverse": 0.43244550000000004
+      }
+    },
+    "factored": {
+      "calls_in_two_steps": {
+        "symmetrix_r0_forward": 2,
+        "symmetrix_m1_forward": 2,
+        "symmetrix_m1_reverse": 2,
+        "symmetrix_r0_coordinate_reverse": 2
+      },
+      "ms_per_step": {
+        "symmetrix_r0_forward": 0.40022199999999997,
+        "symmetrix_m1_forward": 0.011392,
+        "symmetrix_m1_reverse": 0.018687999999999996,
+        "symmetrix_r0_coordinate_reverse": 0.30684599999999995
+      }
+    }
+  },
+  "stage": "r0",
+  "all_paths_use_upstream_generated_m1": true,
+  "artifact": {
+    "upstream": {
+      "source_sha256": "7051c1df15ef19c6d4f0c309b04e2cf11a6901161dce52b18d7ea7f6839b19c2",
+      "cubin_sha256": "ade00d2fcb0639a5f8db41e7f24743abec13d3355942b1f7fa01a0ed8e63cd08",
+      "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+      "artifact_id": "generated-r0-gen19-cuda-f64-1adb0508937bf91e836ab42d98c17f2035f23607a7962549d30c64c3e7076b06",
+      "variant": "upstream",
+      "structure": "sha256:87d40a97a59259e75e7d3f51451a9b4b635349e610415f0aadd7199db238364d"
+    },
+    "factored": {
+      "source_sha256": "df20ad0be36c47d72106af5c4f2357796a5cd95e91dda35e08166ac61e9ad884",
+      "cubin_sha256": "a73a3fce2f34886fe6486c7784c7a382e0bc28f6d13dc6da1a2c00136d71ca3d",
+      "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+      "artifact_id": "generated-r0-gen19-cuda-f64-1adb0508937bf91e836ab42d98c17f2035f23607a7962549d30c64c3e7076b06",
+      "variant": "factored",
+      "structure": "sha256:87d40a97a59259e75e7d3f51451a9b4b635349e610415f0aadd7199db238364d"
+    }
+  },
+  "steps": 48,
+  "warmup": 5,
+  "repeats": 6,
+  "atoms": 192,
+  "velocity_source": "input momenta",
+  "dt_fs": 0.5,
+  "selector": "cuda12-sm70",
+  "dtype": "float64",
+  "profile": "speed",
+  "skin_A": 1.0,
+  "neighbor_builder": "kokkos",
+  "gpu": "Tesla V100-SXM2-16GB",
+  "precision": "float64",
+  "observables": [
+    "energy",
+    "forces",
+    "stress"
+  ],
+  "driver": "ASE VelocityVerlet",
+  "structure_sha256": "674186cd63ac40385917aa952cf204c88d263fac13d2af3f5257c01e1d3a24a5",
+  "model_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+  "raw_ms_step": {
+    "stock": [
+      5.153557040709226,
+      5.491449521893325,
+      5.312165791110601,
+      5.403859686339274,
+      5.302891457783214,
+      5.316033918158307
+    ],
+    "upstream": [
+      4.947860332322307,
+      4.970446292039317,
+      5.045857581232364,
+      5.04746522832041,
+      4.916126604560607,
+      5.023961062155043
+    ],
+    "factored": [
+      4.986650271651645,
+      4.743604084069375,
+      4.765877167907699,
+      4.679998584227481,
+      4.7709880212399485,
+      4.7050381447964655
+    ]
+  },
+  "median_ms_step": {
+    "stock": 5.3140998546344544,
+    "upstream": 4.99720367709718,
+    "factored": 4.754740625988537
+  },
+  "orders": [
+    [
+      "stock",
+      "upstream",
+      "factored"
+    ],
+    [
+      "factored",
+      "upstream",
+      "stock"
+    ],
+    [
+      "upstream",
+      "factored",
+      "stock"
+    ],
+    [
+      "stock",
+      "factored",
+      "upstream"
+    ],
+    [
+      "factored",
+      "stock",
+      "upstream"
+    ],
+    [
+      "upstream",
+      "stock",
+      "factored"
+    ]
+  ]
+}

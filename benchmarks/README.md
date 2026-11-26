@@ -1,5 +1,7 @@
 # V100 benchmarks
 
+[Current acceptance results and reproduction](acceptance.md) cover the independent analytic tangent and its comparison with the combined native XL route.
+
 MACE-MP-0 Small ran at **6.34 ms/step for 32 Cu atoms** and **14.27 ms/step for 108 Cu atoms** with exact-size CUDA Graph replay. Both trajectories kept a constant number of active edges during timing. A separate 32-atom trajectory deliberately crossed the 6 Å cutoff. On that trajectory, reserving edge capacity reduced time from **16.82 to 7.13 ms/step**, with identical physical edges supplied to the model.
 
 ## Matched MD measurements

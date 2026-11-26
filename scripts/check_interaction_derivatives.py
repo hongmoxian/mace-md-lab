@@ -80,12 +80,13 @@ def main():
     parser.add_argument("--model", type=Path, required=True)
     parser.add_argument("--structure", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
-    parser.add_argument("--modes", nargs="+", choices=["first", "folded", "second", "both", "bothfolded", "bothfoldededge"],
+    table_widths = {"table64edge": 64, "table512edge": 512}
+    parser.add_argument("--modes", nargs="+", choices=["first", "folded", "second", "both", "bothfolded", "bothfoldededge", "tangentedge", *table_widths],
                         default=["first", "second", "bothfolded"])
     args = parser.parse_args()
     if args.output.resolve() in (args.model.resolve(), args.structure.resolve()):
         parser.error("output overlaps an input")
-    if "bothfoldededge" in args.modes:
+    if set(args.modes).intersection(("bothfoldededge", "tangentedge", *table_widths)):
         from mace_md_lab.edge_virial import verify_edge_checkpoint
 
         verify_edge_checkpoint(args.model)
@@ -97,17 +98,28 @@ def main():
     for mode in args.modes:
         with ExitStack() as stack:
             stack.enter_context(optimized_model(model, "both", atoms.numbers))
-            if mode in ("first", "folded", "both", "bothfolded", "bothfoldededge"):
+            route = mode
+            if mode == "tangentedge":
+                from mace_md_lab.exact_packed_radial import install_exact_packed_radials
+
+                stack.enter_context(install_exact_packed_radials(model, tangent=True))
+                route = "bothfoldededge"
+            if mode in table_widths:
+                from mace_md_lab.radial_table import install_radial_table
+
+                stack.enter_context(install_radial_table(model, second_width=table_widths[mode]))
+                route = "bothfoldededge"
+            if route in ("first", "folded", "both", "bothfolded", "bothfoldededge"):
                 from mace_md_lab.grouped_first import install_grouped_first
 
                 stack.enter_context(install_grouped_first(
-                    model, atoms.numbers, fold_linear=mode in ("folded", "bothfolded", "bothfoldededge")
+                    model, atoms.numbers, fold_linear=route in ("folded", "bothfolded", "bothfoldededge")
                 ))
-            if mode in ("second", "both", "bothfolded", "bothfoldededge"):
+            if route in ("second", "both", "bothfolded", "bothfoldededge"):
                 from mace_md_lab.grouped_second import install_second_interaction
 
                 stack.enter_context(install_second_interaction(model, atoms.numbers))
-            if mode == "bothfoldededge":
+            if route == "bothfoldededge":
                 from mace_md_lab.edge_virial import install_edge_virial
 
                 stack.enter_context(install_edge_virial(model, None, {}))

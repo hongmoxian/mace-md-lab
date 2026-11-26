@@ -1,0 +1,231 @@
+{
+  "model": {
+    "family": "PaiNN",
+    "framework": "SchNetPack",
+    "schnetpack_version": "2.3.0",
+    "checkpoint": "rMD17 ethanol painn_1",
+    "checkpoint_sha256": "260f262f4021215dc65edec62c2c3128b910b413e3070024db3b21510ef30b29",
+    "checkpoint_url": "https://raw.githubusercontent.com/atomistic-machine-learning/schnetpack/69d26f3842a012f1f1e461ad7f1984d353843c8d/examples/trained_models/rmd17_ethanol/painn_1/best_model",
+    "training_molecule": "ethanol",
+    "n_atom_basis": 128,
+    "n_interactions": 3,
+    "native_energy_unit": "kcal/mol",
+    "energy_unit": "eV",
+    "native_energy_to_eV": 0.04336410390059322,
+    "length_unit": "angstrom",
+    "cutoff_A": 5.0,
+    "periodic": false,
+    "geometry": "radial distances and unit vectors for every PaiNN interaction"
+  },
+  "framework": "painn",
+  "device": "cuda",
+  "dtype": "float64",
+  "torch": "2.13.0+cu126",
+  "gpu": "Tesla V100-SXM2-16GB",
+  "cpu_threads": 1,
+  "structure": "ethanol.xyz",
+  "structure_sha256": "edbce53d31f89531c17d36fac0f4e7f467f95b62c213776d70b0fab116821613",
+  "atoms": 9,
+  "directed_edges": 72,
+  "occupied_groups": 26,
+  "allocated_groups": 27,
+  "input_source_types": 3,
+  "steps": 16,
+  "warmup": 5,
+  "dt_fs": 0.25,
+  "repeats": 6,
+  "velocity_seed": 17,
+  "cuda_graph": true,
+  "geometry": "analytic",
+  "passed": true,
+  "checks": {
+    "stock": {
+      "passed": true,
+      "max_energy_error_eV_atom": 0.0,
+      "max_force_component_error_eV_A": 2.3148150063434514e-14,
+      "same_initial_force_error_eV_A": 3.497202527569243e-15,
+      "max_position_error_A": 4.440892098500626e-16,
+      "max_velocity_error_A_fs": 1.9084418356532086e-16,
+      "max_NVE_change_difference_eV_atom": 0.0,
+      "fd_displacements_A": [
+        0.001,
+        0.0003
+      ],
+      "fd_errors_eV_A": [
+        1.3905954395765363e-05,
+        1.251548280234438e-06
+      ],
+      "fd_tolerance_eV_A": 0.0005,
+      "force_projection_eV_A": 0.5232885243835395,
+      "own_energy_fd_errors_eV_A": [
+        1.3905954395765363e-05,
+        1.251548280234438e-06
+      ]
+    },
+    "exact": {
+      "passed": true,
+      "max_energy_error_eV_atom": 0.0,
+      "max_force_component_error_eV_A": 2.2537527399890678e-14,
+      "same_initial_force_error_eV_A": 2.7200464103316335e-15,
+      "max_position_error_A": 8.881784197001252e-16,
+      "max_velocity_error_A_fs": 1.8266514712680712e-16,
+      "max_NVE_change_difference_eV_atom": 0.0,
+      "fd_displacements_A": [
+        0.001,
+        0.0003
+      ],
+      "fd_errors_eV_A": [
+        1.3905954395876385e-05,
+        1.2515482803454603e-06
+      ],
+      "fd_tolerance_eV_A": 0.0005,
+      "force_projection_eV_A": 0.5232885243835393,
+      "own_energy_fd_errors_eV_A": [
+        1.3905954396209452e-05,
+        1.2515482806785272e-06
+      ]
+    },
+    "hermite": {
+      "passed": true,
+      "max_energy_error_eV_atom": 3.476290860109859e-11,
+      "max_force_component_error_eV_A": 2.075887761687767e-08,
+      "same_initial_force_error_eV_A": 1.5405559494752197e-08,
+      "max_position_error_A": 1.4155443484042962e-10,
+      "max_velocity_error_A_fs": 6.898303478639815e-11,
+      "max_NVE_change_difference_eV_atom": 3.89061622425086e-11,
+      "fd_displacements_A": [
+        0.001,
+        0.0003
+      ],
+      "fd_errors_eV_A": [
+        1.3915295996369537e-05,
+        1.2608898808386115e-06
+      ],
+      "fd_tolerance_eV_A": 0.0005,
+      "force_projection_eV_A": 0.5232885150419389,
+      "own_energy_fd_errors_eV_A": [
+        1.3913931754538922e-05,
+        1.2517949340429269e-06
+      ]
+    }
+  },
+  "trials": {
+    "stock": [
+      {
+        "ms_step": 1.167798378446605,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.144521935202647,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.1413195679779164,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.140307002060581,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.1404740653233603,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.1417616260587238,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      }
+    ],
+    "exact": [
+      {
+        "ms_step": 1.1775021848734468,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.155965874204412,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.1567045585252345,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.155801750428509,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.1558202459127642,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.1555762466741726,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      }
+    ],
+    "hermite": [
+      {
+        "ms_step": 1.0436895609018393,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.0241036216029897,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.0224475627182983,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.02070137654664,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.02293449890567,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.0239178081974387,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      }
+    ]
+  },
+  "median_ms_step": {
+    "stock": 1.1415405970183201,
+    "exact": 1.1558930600585882,
+    "hermite": 1.0234261535515543
+  },
+  "scope": "Full FP64 molecular velocity-Verlet. All layers use original weights and identical physical edges.",
+  "radial_filters": {
+    "exact": {
+      "schedule": "exact"
+    },
+    "hermite": {
+      "schedule": "hermite",
+      "knots": 4097,
+      "width": 1152,
+      "table_bytes": 150994944,
+      "table_and_grid_validation_s": 0.4810897649731487,
+      "max_off_grid_value_error": 1.923350367860621e-12,
+      "max_off_grid_slope_error": 3.4842001506163456e-09,
+      "validation_grid_interior_fraction": 0.371
+    }
+  }
+}

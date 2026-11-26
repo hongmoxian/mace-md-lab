@@ -128,6 +128,11 @@ class GroupedFirst:
 
 def main():
     p = argparse.ArgumentParser(description=__doc__)
+    p.add_argument("--experiment", choices=("grouped", "radial"), default="grouped")
+    p.add_argument("--knots", type=int, default=4097)
+    p.add_argument("--fused-basis", action="store_true", help="include exact fused Gaussian/cutoff derivatives")
+    p.add_argument("--direct-control", action="store_true",
+                   help="add stock layer-wise filters with the same explicit message code")
     p.add_argument("--framework", choices=("schnet", "painn"), required=True)
     p.add_argument("--model", type=Path, required=True)
     p.add_argument("--structure", type=Path, required=True)
@@ -151,7 +156,18 @@ def main():
     atoms.set_velocities(velocity - np.average(velocity, axis=0, weights=mass))
     module = import_module("mace_md_lab.portable." + args.framework)
     stock = module.load_adapter(args.model, device, dtype, torch.as_tensor(atoms.numbers.copy(), device=device))
-    grouped = GroupedFirst(stock, args.framework)
+    if args.experiment == "grouped":
+        grouped = GroupedFirst(stock, args.framework)
+        variants = {"stock": stock, "grouped": grouped}
+    else:
+        from mace_md_lab.portable.radial_filters import RadialFilters
+
+        variants = {"stock": stock}
+        schedules = ("direct", "exact", "hermite") if args.direct_control else ("exact", "hermite")
+        if args.fused_basis:
+            schedules = (*schedules, "gaussian")
+        for schedule in schedules:
+            variants[schedule] = RadialFilters(stock, args.framework, schedule, args.knots)
     ref = reference(stock, atoms, device, dtype, args.dt_fs, args.steps + args.warmup)
     direction = rng.normal(size=(len(atoms), 3))
     direction -= direction.mean(axis=0)
@@ -163,16 +179,31 @@ def main():
     def build(adapter):
         return MolecularNVE(atoms, adapter, dtype, device, "analytic", capture, args.dt_fs)
     check, results = {}, {}
-    variants = {"stock": stock, "grouped": grouped}
     for name, adapter in variants.items():
         md = build(adapter)
         check[name] = validate(md, ref, stock, len(atoms), dtype, direction)
+        if args.experiment == "radial":
+            x = ref[0][0]
+            edges = md.graph.update(x)
+            _, f = md.call(x, edges)
+            proj = float((f * direction).sum())
+            own_errors = []
+            for step in (0.001, 0.0003):
+                ep = adapter.energy(x + step * direction, edges, "analytic")
+                em = adapter.energy(x - step * direction, edges, "analytic")
+                own_errors.append(abs(float((em - ep) / (2 * step)) - proj))
+            check[name]["own_energy_fd_errors_eV_A"] = own_errors
+            check[name]["passed"] &= max(own_errors) <= check[name]["fd_tolerance_eV_A"]
         if not check[name]["passed"]:
             raise RuntimeError(f"{name} numerical gate failed: {check[name]}")
         results[name] = []
         del md
     for trial in range(args.repeats):
-        for name in (list(variants) if trial % 2 == 0 else list(reversed(variants))):
+        order = list(variants)
+        if args.experiment == "radial" and (args.direct_control or args.fused_basis):
+            shift = (trial // 2) % len(order)
+            order = order[shift:] + order[:shift]
+        for name in (order if trial % 2 == 0 else list(reversed(order))):
             md = build(variants[name])
             for _ in range(args.warmup):
                 md.step()
@@ -188,20 +219,28 @@ def main():
             del md
     init = build(stock)
     sender, center = init.graph.edges
-    counts = len(torch.unique(center * grouped.s + grouped.species[sender]))
+    numbers = stock.numbers if args.framework == "schnet" else stock.z
+    elements, species = torch.unique(numbers, sorted=True, return_inverse=True)
+    counts = len(torch.unique(center * len(elements) + species[sender]))
     medians = {k: median(v["ms_step"] for v in rows) for k, rows in results.items()}
+    fields = (
+        {"scope": "Full FP64 molecular velocity-Verlet using identical graph policy. Only first interaction differs.",
+         "relative_step_time_reduction": 1 - medians["grouped"] / medians["stock"]}
+        if args.experiment == "grouped" else {
+            "scope": "Full FP64 molecular velocity-Verlet. All layers use original weights and identical physical edges.",
+            "radial_filters": {name: a.report for name, a in variants.items() if name != "stock"},
+        }
+    )
     dump(args.output, dict(
         model=stock.metadata, framework=args.framework, device=str(device), dtype="float64",
         torch=str(torch.__version__), gpu=torch.cuda.get_device_name(device) if capture else None,
         cpu_threads=torch.get_num_threads(), structure=args.structure.name,
         structure_sha256=hashlib.sha256(args.structure.read_bytes()).hexdigest(),
         atoms=len(atoms), directed_edges=len(sender), occupied_groups=counts,
-        allocated_groups=grouped.s * grouped.n, input_source_types=grouped.s,
+        allocated_groups=len(elements) * len(numbers), input_source_types=len(elements),
         steps=args.steps, warmup=args.warmup, dt_fs=args.dt_fs, repeats=args.repeats,
         velocity_seed=17, cuda_graph=capture, geometry="analytic", passed=True,
-        scope="Full FP64 molecular velocity-Verlet using identical graph policy. Only first interaction differs.",
-        checks=check, trials=results, median_ms_step=medians,
-        relative_step_time_reduction=1-medians["grouped"]/medians["stock"],
+        checks=check, trials=results, median_ms_step=medians, **fields,
     ))
     print(args.framework, medians, flush=True)
 

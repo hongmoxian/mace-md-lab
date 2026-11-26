@@ -1,0 +1,330 @@
+{
+  "passed": true,
+  "gates": {
+    "energy_eV_atom": 1e-08,
+    "force_eV_A": 1e-06,
+    "position_A": 1e-06,
+    "velocity_A_fs": 1e-07,
+    "nve_difference_eV_atom": 1e-08,
+    "stress_eV_A3": 1e-07
+  },
+  "results": {
+    "ase_upstream": {
+      "errors": {
+        "energy_eV_atom": 5.655457139634261e-09,
+        "force_eV_A": 8.485273050862219e-08,
+        "stress_eV_A3": 8.888908255288985e-10,
+        "position_A": 8.659739592076221e-15,
+        "velocity_A_fs": 3.982925100842749e-15,
+        "nve_difference_eV_atom": 5.921189464667501e-16
+      },
+      "common_frames_vs_xl": {
+        "force_eV_A": 1.5298873279334657e-13,
+        "energy_eV_atom": 0.0,
+        "stress_eV_A3": 8.229094489164979e-17
+      },
+      "passed": true,
+      "trials_ms": [
+        4.837083581757422,
+        4.692331041345217,
+        4.751778811623808,
+        4.727637230341013,
+        4.768822436744813,
+        4.719887292594649
+      ],
+      "timed_rebuilds": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "median_ms_step": 4.739708020982411
+    },
+    "ase_upstream_r0": {
+      "errors": {
+        "energy_eV_atom": 5.655457139634261e-09,
+        "force_eV_A": 8.485273017555528e-08,
+        "stress_eV_A3": 8.888908255288985e-10,
+        "position_A": 1.4210854715202004e-14,
+        "velocity_A_fs": 7.304920557338335e-15,
+        "nve_difference_eV_atom": 1.1842378929335002e-15
+      },
+      "common_frames_vs_xl": {
+        "force_eV_A": 1.5343282200319663e-13,
+        "energy_eV_atom": 0.0,
+        "stress_eV_A3": 8.245357521752261e-17
+      },
+      "passed": true,
+      "trials_ms": [
+        4.373205146597077,
+        4.371617644210346,
+        4.418294770099844,
+        4.303366687963717,
+        4.433627771504689,
+        4.415347102622036
+      ],
+      "timed_rebuilds": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "trace": {
+        "calls_in_two_steps": {
+          "symmetrix_r0_forward": 2,
+          "symmetrix_m1_forward": 2,
+          "symmetrix_m1_reverse": 2,
+          "symmetrix_r0_coordinate_reverse": 2
+        },
+        "ms_per_step": {
+          "symmetrix_r0_forward": 0.396557,
+          "symmetrix_m1_forward": 0.0113275,
+          "symmetrix_m1_reverse": 0.018639999999999997,
+          "symmetrix_r0_coordinate_reverse": 0.431709
+        }
+      },
+      "modules_executed": true,
+      "median_ms_step": 4.394276124609556
+    },
+    "ase_factored_r0": {
+      "errors": {
+        "energy_eV_atom": 5.655457139634261e-09,
+        "force_eV_A": 8.485273073066679e-08,
+        "stress_eV_A3": 8.888908255288985e-10,
+        "position_A": 1.0658141036401503e-14,
+        "velocity_A_fs": 6.073266889394802e-15,
+        "nve_difference_eV_atom": 1.1842378929335002e-15
+      },
+      "common_frames_vs_xl": {
+        "force_eV_A": 1.5343282200319663e-13,
+        "energy_eV_atom": 0.0,
+        "stress_eV_A3": 8.212831456577696e-17
+      },
+      "passed": true,
+      "trials_ms": [
+        4.542302604628882,
+        4.370110875849302,
+        4.210958853946067,
+        4.213876251014881,
+        4.299692729546223,
+        4.348232541815378
+      ],
+      "timed_rebuilds": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "trace": {
+        "calls_in_two_steps": {
+          "symmetrix_r0_forward": 2,
+          "symmetrix_m1_forward": 2,
+          "symmetrix_m1_reverse": 2,
+          "symmetrix_r0_coordinate_reverse": 2
+        },
+        "ms_per_step": {
+          "symmetrix_r0_forward": 0.402543,
+          "symmetrix_m1_forward": 0.011408,
+          "symmetrix_m1_reverse": 0.019007999999999997,
+          "symmetrix_r0_coordinate_reverse": 0.30657500000000004
+        }
+      },
+      "modules_executed": true,
+      "median_ms_step": 4.3239626356808
+    },
+    "arrays_upstream_r0": {
+      "errors": {
+        "energy_eV_atom": 5.655457139634261e-09,
+        "force_eV_A": 8.485273039759988e-08,
+        "stress_eV_A3": 8.888908255288985e-10,
+        "position_A": 1.4210854715202004e-14,
+        "velocity_A_fs": 9.443834603217738e-15,
+        "nve_difference_eV_atom": 1.1842378929335002e-15
+      },
+      "common_frames_vs_xl": {
+        "force_eV_A": 1.5343282200319663e-13,
+        "energy_eV_atom": 0.0,
+        "stress_eV_A3": 8.245357521752261e-17
+      },
+      "passed": true,
+      "trials_ms": [
+        3.4275733123649843,
+        3.4430247906129807,
+        3.359033585487244,
+        3.3577016244331994,
+        3.368634083017241,
+        3.392145168618299
+      ],
+      "timed_rebuilds": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "trace": {
+        "calls_in_two_steps": {
+          "symmetrix_r0_forward": 2,
+          "symmetrix_m1_forward": 2,
+          "symmetrix_m1_reverse": 2,
+          "symmetrix_r0_coordinate_reverse": 2
+        },
+        "ms_per_step": {
+          "symmetrix_r0_forward": 0.39595,
+          "symmetrix_m1_forward": 0.0113755,
+          "symmetrix_m1_reverse": 0.018368,
+          "symmetrix_r0_coordinate_reverse": 0.43083000000000005
+        }
+      },
+      "modules_executed": true,
+      "median_ms_step": 3.38038962581777
+    },
+    "arrays_factored_r0": {
+      "errors": {
+        "energy_eV_atom": 5.655457139634261e-09,
+        "force_eV_A": 8.485273017555528e-08,
+        "stress_eV_A3": 8.888908255288985e-10,
+        "position_A": 1.554312234475219e-14,
+        "velocity_A_fs": 9.63812363252714e-15,
+        "nve_difference_eV_atom": 1.1842378929335002e-15
+      },
+      "common_frames_vs_xl": {
+        "force_eV_A": 1.5332179970073412e-13,
+        "energy_eV_atom": 0.0,
+        "stress_eV_A3": 8.212831456577696e-17
+      },
+      "passed": true,
+      "trials_ms": [
+        3.413797979495333,
+        3.3056265844303803,
+        3.416029520546241,
+        3.225749998819083,
+        3.221841832176627,
+        3.2398392286268063
+      ],
+      "timed_rebuilds": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "trace": {
+        "calls_in_two_steps": {
+          "symmetrix_r0_forward": 2,
+          "symmetrix_m1_forward": 2,
+          "symmetrix_m1_reverse": 2,
+          "symmetrix_r0_coordinate_reverse": 2
+        },
+        "ms_per_step": {
+          "symmetrix_r0_forward": 0.398158,
+          "symmetrix_m1_forward": 0.011488,
+          "symmetrix_m1_reverse": 0.018656,
+          "symmetrix_r0_coordinate_reverse": 0.30470300000000006
+        }
+      },
+      "modules_executed": true,
+      "median_ms_step": 3.272732906528593
+    }
+  },
+  "trial_orders": [
+    [
+      "ase_upstream",
+      "ase_upstream_r0",
+      "ase_factored_r0",
+      "arrays_upstream_r0",
+      "arrays_factored_r0"
+    ],
+    [
+      "arrays_factored_r0",
+      "arrays_upstream_r0",
+      "ase_factored_r0",
+      "ase_upstream_r0",
+      "ase_upstream"
+    ],
+    [
+      "ase_upstream_r0",
+      "ase_factored_r0",
+      "arrays_upstream_r0",
+      "arrays_factored_r0",
+      "ase_upstream"
+    ],
+    [
+      "ase_upstream",
+      "arrays_factored_r0",
+      "arrays_upstream_r0",
+      "ase_factored_r0",
+      "ase_upstream_r0"
+    ],
+    [
+      "ase_factored_r0",
+      "arrays_upstream_r0",
+      "arrays_factored_r0",
+      "ase_upstream",
+      "ase_upstream_r0"
+    ],
+    [
+      "ase_upstream_r0",
+      "ase_upstream",
+      "arrays_factored_r0",
+      "arrays_upstream_r0",
+      "ase_factored_r0"
+    ]
+  ],
+  "model_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736",
+  "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+  "structure_sha256": "674186cd63ac40385917aa952cf204c88d263fac13d2af3f5257c01e1d3a24a5",
+  "fixture": "au-water.extxyz",
+  "atoms": 192,
+  "velocities": "input momenta",
+  "period": "fixed-cell fully periodic",
+  "dt_fs": 0.5,
+  "warmup": 5,
+  "steps": 48,
+  "repeats": 6,
+  "skin_A": 1.0,
+  "selected_plan": "mh0-direct-speed",
+  "gpu": "Tesla V100-SXM2-16GB",
+  "symmetrix": "0.2.0",
+  "selector": "cuda12-sm70",
+  "native_neighbor_builder": "kokkos",
+  "dtype": "float64",
+  "observables": "E/F/stress on host every step",
+  "kernel_launch_policy": "static",
+  "launch_tuning_status": "static",
+  "numerical_scope": "Common frames against original MACE and XL; all moving frames against stock XL",
+  "product_info": {
+    "upstream": {
+      "source_sha256": "8aa139b19fe1981c9d8e30679bf02d5de0ca18dc7b44ec300651f5096d628ffd",
+      "cubin_sha256": "de8257c5ac17e1ead737225643620c2ec9d8c07986487080ab2a3c0174ec8f80",
+      "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+      "artifact_id": "jit-m1-gen19-f64-198de909c403f357-c128-chunk32-r3-sm_70",
+      "variant": "upstream",
+      "structure": "sha256:198de909c403f357759b9f9cbf0a60330815da0853d2101a2a9f02efc1f2053f"
+    },
+    "r0_upstream": {
+      "source_sha256": "7051c1df15ef19c6d4f0c309b04e2cf11a6901161dce52b18d7ea7f6839b19c2",
+      "cubin_sha256": "ade00d2fcb0639a5f8db41e7f24743abec13d3355942b1f7fa01a0ed8e63cd08",
+      "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+      "artifact_id": "generated-r0-gen19-cuda-f64-1adb0508937bf91e836ab42d98c17f2035f23607a7962549d30c64c3e7076b06",
+      "variant": "upstream",
+      "structure": "sha256:87d40a97a59259e75e7d3f51451a9b4b635349e610415f0aadd7199db238364d"
+    },
+    "r0_factored": {
+      "source_sha256": "df20ad0be36c47d72106af5c4f2357796a5cd95e91dda35e08166ac61e9ad884",
+      "cubin_sha256": "a73a3fce2f34886fe6486c7784c7a382e0bc28f6d13dc6da1a2c00136d71ca3d",
+      "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+      "artifact_id": "generated-r0-gen19-cuda-f64-1adb0508937bf91e836ab42d98c17f2035f23607a7962549d30c64c3e7076b06",
+      "variant": "factored",
+      "structure": "sha256:87d40a97a59259e75e7d3f51451a9b4b635349e610415f0aadd7199db238364d"
+    }
+  }
+}

@@ -1,0 +1,519 @@
+{
+  "passed": true,
+  "variant": "replay",
+  "host_efs_each_step": true,
+  "steps": 10,
+  "warmup": 5,
+  "trials": 3,
+  "dt_fs": 0.5,
+  "dtype": "float64",
+  "atoms": 192,
+  "skin_A": 0.25,
+  "macro_extension_A": 1.0,
+  "velocity_source": "input momenta",
+  "gpu": "Tesla V100-SXM2-16GB",
+  "torch": "2.13.0+cu126",
+  "cuda": "12.6",
+  "mace": "0.3.16",
+  "model_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736",
+  "structure_sha256": "674186cd63ac40385917aa952cf204c88d263fac13d2af3f5257c01e1d3a24a5",
+  "max_displacement_A": 0.30168174588262886,
+  "traced_graph_updates": {
+    "captures": 0,
+    "replays": 10,
+    "rebuilds": 0,
+    "edge_refreshes": 2
+  },
+  "edge_membership_final": {
+    "active": 13282,
+    "padded_candidate_capacity": 15104
+  },
+  "uninstrumented_ms_step": [
+    6.135429802816361,
+    5.452879297081381,
+    5.314380093477666
+  ],
+  "median_uninstrumented_ms_step": 5.452879297081381,
+  "activity": {
+    "per_step": [
+      {
+        "wall_ms": 17.371277,
+        "gpu_busy_union_ms": 5.0936689453124995,
+        "no_device_event_ms": 12.2776080546875,
+        "group_ms": {
+          "other_elementwise": 2.2384824218749997,
+          "other_reductions": 0.10803125000000001,
+          "device_copy_or_set": 0.039521484375,
+          "indexing_sorting_scatter": 0.10243164062500001,
+          "dense_linear_algebra": 1.499927734375,
+          "angular": 0.019423828125,
+          "grouped_first": 0.2783662109375,
+          "frozen_scalar_product": 0.1921904296875,
+          "other_kernels": 0.06895996093749997,
+          "grouped_second": 0.546078125,
+          "overlapping_groups": 0.000255859375
+        },
+        "calls": {
+          "other_elementwise": 269,
+          "other_reductions": 14,
+          "device_copy_or_set": 22,
+          "indexing_sorting_scatter": 20,
+          "dense_linear_algebra": 42,
+          "angular": 2,
+          "grouped_first": 2,
+          "frozen_scalar_product": 2,
+          "other_kernels": 23,
+          "grouped_second": 2
+        }
+      },
+      {
+        "wall_ms": 5.916705,
+        "gpu_busy_union_ms": 5.084693359375,
+        "no_device_event_ms": 0.8320116406250007,
+        "group_ms": {
+          "other_elementwise": 2.23485546875,
+          "other_reductions": 0.107646484375,
+          "device_copy_or_set": 0.0394248046875,
+          "indexing_sorting_scatter": 0.10073535156249999,
+          "dense_linear_algebra": 1.4964990234374995,
+          "angular": 0.01983984375,
+          "grouped_first": 0.27823828125,
+          "frozen_scalar_product": 0.19190234374999998,
+          "other_kernels": 0.0687041015625,
+          "grouped_second": 0.546654296875,
+          "overlapping_groups": 0.000193359375
+        },
+        "calls": {
+          "other_elementwise": 269,
+          "other_reductions": 14,
+          "device_copy_or_set": 22,
+          "indexing_sorting_scatter": 20,
+          "dense_linear_algebra": 42,
+          "angular": 2,
+          "grouped_first": 2,
+          "frozen_scalar_product": 2,
+          "other_kernels": 23,
+          "grouped_second": 2
+        }
+      },
+      {
+        "wall_ms": 5.862861,
+        "gpu_busy_union_ms": 5.0817626953124995,
+        "no_device_event_ms": 0.7810983046875002,
+        "group_ms": {
+          "other_elementwise": 2.2298808593749992,
+          "other_reductions": 0.10741992187499999,
+          "device_copy_or_set": 0.0397412109375,
+          "indexing_sorting_scatter": 0.10147363281249999,
+          "dense_linear_algebra": 1.4967880859375002,
+          "angular": 0.019072265625,
+          "grouped_first": 0.2784306640625,
+          "frozen_scalar_product": 0.191837890625,
+          "other_kernels": 0.06928124999999997,
+          "grouped_second": 0.54761328125,
+          "overlapping_groups": 0.0002236328125
+        },
+        "calls": {
+          "other_elementwise": 269,
+          "other_reductions": 14,
+          "device_copy_or_set": 22,
+          "indexing_sorting_scatter": 20,
+          "dense_linear_algebra": 42,
+          "angular": 2,
+          "grouped_first": 2,
+          "frozen_scalar_product": 2,
+          "other_kernels": 23,
+          "grouped_second": 2
+        }
+      },
+      {
+        "wall_ms": 7.363013,
+        "gpu_busy_union_ms": 5.303740234375001,
+        "no_device_event_ms": 2.059272765624999,
+        "group_ms": {
+          "other_elementwise": 2.2655185546875005,
+          "other_reductions": 0.11414257812499999,
+          "device_copy_or_set": 0.065626953125,
+          "indexing_sorting_scatter": 0.24595507812500006,
+          "other_kernels": 0.07315136718749995,
+          "dense_linear_algebra": 1.5027119140625003,
+          "angular": 0.01916796875,
+          "grouped_first": 0.27855859375,
+          "frozen_scalar_product": 0.1911357421875,
+          "grouped_second": 0.5472919921875,
+          "overlapping_groups": 0.0004794921875
+        },
+        "calls": {
+          "other_elementwise": 279,
+          "other_reductions": 16,
+          "device_copy_or_set": 41,
+          "indexing_sorting_scatter": 43,
+          "other_kernels": 25,
+          "dense_linear_algebra": 42,
+          "angular": 2,
+          "grouped_first": 2,
+          "frozen_scalar_product": 2,
+          "grouped_second": 2
+        }
+      },
+      {
+        "wall_ms": 5.85234,
+        "gpu_busy_union_ms": 5.084892578125001,
+        "no_device_event_ms": 0.7674474218749987,
+        "group_ms": {
+          "other_elementwise": 2.2377392578125015,
+          "other_reductions": 0.10636523437499999,
+          "device_copy_or_set": 0.0382099609375,
+          "indexing_sorting_scatter": 0.100544921875,
+          "dense_linear_algebra": 1.4977841796875,
+          "angular": 0.0192958984375,
+          "grouped_first": 0.2776953125,
+          "frozen_scalar_product": 0.1922861328125,
+          "other_kernels": 0.06847851562499999,
+          "overlapping_groups": 0.00048046875,
+          "grouped_second": 0.5460126953125
+        },
+        "calls": {
+          "other_elementwise": 269,
+          "other_reductions": 14,
+          "device_copy_or_set": 22,
+          "indexing_sorting_scatter": 20,
+          "dense_linear_algebra": 42,
+          "angular": 2,
+          "grouped_first": 2,
+          "frozen_scalar_product": 2,
+          "other_kernels": 23,
+          "grouped_second": 2
+        }
+      },
+      {
+        "wall_ms": 5.8533599999999995,
+        "gpu_busy_union_ms": 5.085219726562499,
+        "no_device_event_ms": 0.7681402734375,
+        "group_ms": {
+          "other_elementwise": 2.2341699218749986,
+          "other_reductions": 0.10787304687499999,
+          "device_copy_or_set": 0.038814453125,
+          "indexing_sorting_scatter": 0.10070117187499998,
+          "dense_linear_algebra": 1.4997978515625003,
+          "angular": 0.0194560546875,
+          "grouped_first": 0.279005859375,
+          "frozen_scalar_product": 0.1916806640625,
+          "other_kernels": 0.06803027343749998,
+          "overlapping_groups": 0.0005742187500000001,
+          "grouped_second": 0.5451162109375001
+        },
+        "calls": {
+          "other_elementwise": 269,
+          "other_reductions": 14,
+          "device_copy_or_set": 22,
+          "indexing_sorting_scatter": 20,
+          "dense_linear_algebra": 42,
+          "angular": 2,
+          "grouped_first": 2,
+          "frozen_scalar_product": 2,
+          "other_kernels": 23,
+          "grouped_second": 2
+        }
+      },
+      {
+        "wall_ms": 5.872868,
+        "gpu_busy_union_ms": 5.093509765625,
+        "no_device_event_ms": 0.7793582343750005,
+        "group_ms": {
+          "other_elementwise": 2.2336796875,
+          "other_reductions": 0.10726367187499998,
+          "device_copy_or_set": 0.038529296875,
+          "indexing_sorting_scatter": 0.100607421875,
+          "dense_linear_algebra": 1.5049208984375,
+          "angular": 0.019263671875,
+          "grouped_first": 0.2774697265625,
+          "frozen_scalar_product": 0.1924130859375,
+          "other_kernels": 0.069123046875,
+          "overlapping_groups": 0.00029003906250000004,
+          "grouped_second": 0.5499492187499999
+        },
+        "calls": {
+          "other_elementwise": 269,
+          "other_reductions": 14,
+          "device_copy_or_set": 22,
+          "indexing_sorting_scatter": 20,
+          "dense_linear_algebra": 42,
+          "angular": 2,
+          "grouped_first": 2,
+          "frozen_scalar_product": 2,
+          "other_kernels": 23,
+          "grouped_second": 2
+        }
+      },
+      {
+        "wall_ms": 6.829686,
+        "gpu_busy_union_ms": 5.30369140625,
+        "no_device_event_ms": 1.5259945937500001,
+        "group_ms": {
+          "other_elementwise": 2.2603427734374995,
+          "other_reductions": 0.1148486328125,
+          "device_copy_or_set": 0.06745800781250001,
+          "indexing_sorting_scatter": 0.24502734375000002,
+          "other_kernels": 0.07199902343749999,
+          "dense_linear_algebra": 1.5027099609375003,
+          "angular": 0.019423828125,
+          "grouped_first": 0.2799345703125,
+          "frozen_scalar_product": 0.1925732421875,
+          "overlapping_groups": 0.0003525390625,
+          "grouped_second": 0.549021484375
+        },
+        "calls": {
+          "other_elementwise": 279,
+          "other_reductions": 16,
+          "device_copy_or_set": 41,
+          "indexing_sorting_scatter": 43,
+          "other_kernels": 25,
+          "dense_linear_algebra": 42,
+          "angular": 2,
+          "grouped_first": 2,
+          "frozen_scalar_product": 2,
+          "grouped_second": 2
+        }
+      },
+      {
+        "wall_ms": 5.861149999999999,
+        "gpu_busy_union_ms": 5.088610351562502,
+        "no_device_event_ms": 0.7725396484374976,
+        "group_ms": {
+          "other_elementwise": 2.2349980468750013,
+          "other_reductions": 0.10732812499999998,
+          "device_copy_or_set": 0.0385595703125,
+          "indexing_sorting_scatter": 0.10022363281250002,
+          "dense_linear_algebra": 1.5002773437500003,
+          "angular": 0.0194873046875,
+          "grouped_first": 0.27894140625,
+          "frozen_scalar_product": 0.192255859375,
+          "other_kernels": 0.06937402343749999,
+          "overlapping_groups": 0.0002255859375,
+          "grouped_second": 0.546939453125
+        },
+        "calls": {
+          "other_elementwise": 269,
+          "other_reductions": 14,
+          "device_copy_or_set": 22,
+          "indexing_sorting_scatter": 20,
+          "dense_linear_algebra": 42,
+          "angular": 2,
+          "grouped_first": 2,
+          "frozen_scalar_product": 2,
+          "other_kernels": 23,
+          "grouped_second": 2
+        }
+      },
+      {
+        "wall_ms": 5.865970999999999,
+        "gpu_busy_union_ms": 5.096018554687503,
+        "no_device_event_ms": 0.7699524453124962,
+        "group_ms": {
+          "other_elementwise": 2.2414599609375023,
+          "other_reductions": 0.10729687500000001,
+          "device_copy_or_set": 0.038015625,
+          "indexing_sorting_scatter": 0.10044921875000001,
+          "dense_linear_algebra": 1.5024296875000003,
+          "angular": 0.01948828125,
+          "grouped_first": 0.2779833984375,
+          "frozen_scalar_product": 0.1923173828125,
+          "other_kernels": 0.06886718749999998,
+          "grouped_second": 0.547486328125,
+          "overlapping_groups": 0.000224609375
+        },
+        "calls": {
+          "other_elementwise": 269,
+          "other_reductions": 14,
+          "device_copy_or_set": 22,
+          "indexing_sorting_scatter": 20,
+          "dense_linear_algebra": 42,
+          "angular": 2,
+          "grouped_first": 2,
+          "frozen_scalar_product": 2,
+          "other_kernels": 23,
+          "grouped_second": 2
+        }
+      }
+    ],
+    "mean_group_ms": {
+      "angular": 0.019391894531250002,
+      "dense_linear_algebra": 1.5003846679687503,
+      "device_copy_or_set": 0.04439013671875,
+      "frozen_scalar_product": 0.19205927734375,
+      "grouped_first": 0.27846240234374997,
+      "grouped_second": 0.54721630859375,
+      "indexing_sorting_scatter": 0.12981494140625,
+      "other_elementwise": 2.2411126953125002,
+      "other_kernels": 0.06959687499999997,
+      "other_reductions": 0.10882158203124999,
+      "overlapping_groups": 0.00032998046875
+    },
+    "observed_streams": [
+      "7"
+    ],
+    "mean_gpu_busy_union_ms": 5.13158076171875,
+    "mean_traced_wall_ms": 7.2649231,
+    "top_kernel_duration_sum_ms_step": [
+      {
+        "kernel": "volta_dgemm_64x64_tn",
+        "ms": 0.57912646484375,
+        "calls_per_step": 10.0
+      },
+      {
+        "kernel": "void at::native::vectorized_elementwise_kernel<2, at::native::AUnaryFunctor<double, double, double, at::native::binary_internal::MulFunctor<double> >, std::array<char*, 2ul> >(int, at::native::AUnaryFunctor<double, double, double, at::native::binary_internal::MulFunctor<double> >, std::array<char*, 2ul>)",
+        "ms": 0.54148447265625,
+        "calls_per_step": 54.0
+      },
+      {
+        "kernel": "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<double, double, double, at::native::binary_internal::MulFunctor<double> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<double, double, double, at::native::binary_internal::MulFunctor<double> > const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<double, double, double, at::native::binary_internal::MulFunctor<double> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<double, double, double, at::native::binary_internal::MulFunctor<double> > const&)::{lambda(int)#1})",
+        "ms": 0.5081000976562497,
+        "calls_per_step": 16.0
+      },
+      {
+        "kernel": "_message_vjp",
+        "ms": 0.41052568359375,
+        "calls_per_step": 1.0
+      },
+      {
+        "kernel": "volta_dgemm_128x64_nn",
+        "ms": 0.36512392578124997,
+        "calls_per_step": 3.0
+      },
+      {
+        "kernel": "volta_dgemm_64x64_nn",
+        "ms": 0.29434384765625016,
+        "calls_per_step": 8.0
+      },
+      {
+        "kernel": "void at::native::vectorized_elementwise_kernel<2, at::native::(anonymous namespace)::silu_backward_kernel(at::TensorIteratorBase&)::{lambda()#1}::operator()() const::{lambda()#1}::operator()() const::{lambda(double, double)#1}, std::array<char*, 3ul> >(int, at::native::(anonymous namespace)::silu_backward_kernel(at::TensorIteratorBase&)::{lambda()#1}::operator()() const::{lambda()#1}::operator()() const::{lambda(double, double)#1}, std::array<char*, 3ul>)",
+        "ms": 0.2167859375,
+        "calls_per_step": 7.0
+      },
+      {
+        "kernel": "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#6}::operator()() const::{lambda(double)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#6}::operator()() const::{lambda(double)#1} const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#6}::operator()() const::{lambda(double)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#6}::operator()() const::{lambda(double)#1} const&)::{lambda(int)#1})",
+        "ms": 0.1925144531250001,
+        "calls_per_step": 27.4
+      },
+      {
+        "kernel": "scalar_product",
+        "ms": 0.19205927734375003,
+        "calls_per_step": 2.0
+      },
+      {
+        "kernel": "_group_moments",
+        "ms": 0.17451416015625,
+        "calls_per_step": 1.0
+      },
+      {
+        "kernel": "void at::native::vectorized_elementwise_kernel<2, at::native::(anonymous namespace)::silu_kernel(at::TensorIteratorBase&)::{lambda()#1}::operator()() const::{lambda()#1}::operator()() const::{lambda(double)#1}, std::array<char*, 2ul> >(int, at::native::(anonymous namespace)::silu_kernel(at::TensorIteratorBase&)::{lambda()#1}::operator()() const::{lambda()#1}::operator()() const::{lambda(double)#1}, std::array<char*, 2ul>)",
+        "ms": 0.15304589843749997,
+        "calls_per_step": 7.0
+      },
+      {
+        "kernel": "_reduce_by_receiver",
+        "ms": 0.136690625,
+        "calls_per_step": 1.0
+      },
+      {
+        "kernel": "void at::native::vectorized_elementwise_kernel<2, at::native::CUDAFunctor_add<double>, std::array<char*, 3ul> >(int, at::native::CUDAFunctor_add<double>, std::array<char*, 3ul>)",
+        "ms": 0.12525429687500006,
+        "calls_per_step": 31.4
+      },
+      {
+        "kernel": "_moment_adjoint",
+        "ms": 0.10394824218750001,
+        "calls_per_step": 1.0
+      },
+      {
+        "kernel": "void dgemm_largek<true, false, 4, 4, 4, 3, 3, 18>(double*, double const*, double const*, int, int, int, int, int, int, double const*, double const*, double, double, int, int, int*, int*)",
+        "ms": 0.07220449218750002,
+        "calls_per_step": 6.0
+      },
+      {
+        "kernel": "void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl<at::native::(anonymous namespace)::pow_tensor_tensor_kernel(at::TensorIteratorBase&)::{lambda()#1}::operator()() const::{lambda()#6}::operator()() const::{lambda(double, double)#1}>(at::TensorIteratorBase&, at::native::(anonymous namespace)::pow_tensor_tensor_kernel(at::TensorIteratorBase&)::{lambda()#1}::operator()() const::{lambda()#6}::operator()() const::{lambda(double, double)#1} const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl<at::native::(anonymous namespace)::pow_tensor_tensor_kernel(at::TensorIteratorBase&)::{lambda()#1}::operator()() const::{lambda()#6}::operator()() const::{lambda(double, double)#1}>(at::TensorIteratorBase&, at::native::(anonymous namespace)::pow_tensor_tensor_kernel(at::TensorIteratorBase&)::{lambda()#1}::operator()() const::{lambda()#6}::operator()() const::{lambda(double, double)#1} const&)::{lambda(int)#1})",
+        "ms": 0.06868984375000001,
+        "calls_per_step": 6.0
+      },
+      {
+        "kernel": "void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl<at::native::BinaryFunctor<double, double, double, at::native::binary_internal::MulFunctor<double> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<double, double, double, at::native::binary_internal::MulFunctor<double> > const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl<at::native::BinaryFunctor<double, double, double, at::native::binary_internal::MulFunctor<double> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<double, double, double, at::native::binary_internal::MulFunctor<double> > const&)::{lambda(int)#1})",
+        "ms": 0.06733388671874999,
+        "calls_per_step": 9.0
+      },
+      {
+        "kernel": "void dgemm_largek<false, false, 5, 5, 4, 4, 4, 32>(double*, double const*, double const*, int, int, int, int, int, int, double const*, double const*, double, double, int, int, int*, int*)",
+        "ms": 0.06455009765624999,
+        "calls_per_step": 5.0
+      },
+      {
+        "kernel": "void at::native::vectorized_elementwise_kernel<2, at::native::FillFunctor<double>, std::array<char*, 1ul> >(int, at::native::FillFunctor<double>, std::array<char*, 1ul>)",
+        "ms": 0.058662207031250045,
+        "calls_per_step": 21.0
+      },
+      {
+        "kernel": "void at::native::index_elementwise_kernel<128, 4, at::native::gpu_index_kernel<at::native::index_kernel_impl<at::native::OpaqueType<8> >(at::TensorIteratorBase&, c10::ArrayRef<long>, c10::ArrayRef<long>)::{lambda(char*, char const*, long)#1}>(at::TensorIteratorBase&, c10::ArrayRef<long>, c10::ArrayRef<long>, at::native::index_kernel_impl<at::native::OpaqueType<8> >(at::TensorIteratorBase&, c10::ArrayRef<long>, c10::ArrayRef<long>)::{lambda(char*, char const*, long)#1} const&, bool)::{lambda(int)#1}>(long, at::native::gpu_index_kernel<at::native::index_kernel_impl<at::native::OpaqueType<8> >(at::TensorIteratorBase&, c10::ArrayRef<long>, c10::ArrayRef<long>)::{lambda(char*, char const*, long)#1}>(at::TensorIteratorBase&, c10::ArrayRef<long>, c10::ArrayRef<long>, at::native::index_kernel_impl<at::native::OpaqueType<8> >(at::TensorIteratorBase&, c10::ArrayRef<long>, c10::ArrayRef<long>)::{lambda(char*, char const*, long)#1} const&, bool)::{lambda(int)#1})",
+        "ms": 0.04882890625000001,
+        "calls_per_step": 8.4
+      }
+    ]
+  },
+  "host_cuda_api": [
+    {
+      "api": "cudaMemcpyAsync",
+      "category": "cuda_runtime",
+      "calls_per_step": 8.8,
+      "ms_step": 4.550846191406251
+    },
+    {
+      "api": "cudaGraphLaunch",
+      "category": "cuda_runtime",
+      "calls_per_step": 1.0,
+      "ms_step": 0.5237875
+    },
+    {
+      "api": "cudaLaunchKernel",
+      "category": "cuda_runtime",
+      "calls_per_step": 40.4,
+      "ms_step": 0.19856250000000017
+    },
+    {
+      "api": "cudaStreamSynchronize",
+      "category": "cuda_runtime",
+      "calls_per_step": 2.2,
+      "ms_step": 0.01471123046875
+    },
+    {
+      "api": "cudaMemsetAsync",
+      "category": "cuda_runtime",
+      "calls_per_step": 2.0,
+      "ms_step": 0.0072733398437500015
+    },
+    {
+      "api": "cudaStreamIsCapturing",
+      "category": "cuda_runtime",
+      "calls_per_step": 1.0,
+      "ms_step": 0.0008768554687499999
+    },
+    {
+      "api": "cudaOccupancyMaxActiveBlocksPerMultiprocessorWithFlags",
+      "category": "cuda_runtime",
+      "calls_per_step": 0.6,
+      "ms_step": 0.00074482421875
+    },
+    {
+      "api": "cudaDeviceGetAttribute",
+      "category": "cuda_runtime",
+      "calls_per_step": 0.8,
+      "ms_step": 0.00043369140625
+    },
+    {
+      "api": "cudaPeekAtLastError",
+      "category": "cuda_runtime",
+      "calls_per_step": 3.6,
+      "ms_step": 0.00024833984374999997
+    }
+  ],
+  "gpu_kernel_calls_per_step": 383.4,
+  "scope": "Whole moving steps include CPU delivery of E/F/stress. Device time is the union inside CPU markers. API duration overlaps device work and is not additive. The part of marker wall without device activity includes profiler perturbation."
+}

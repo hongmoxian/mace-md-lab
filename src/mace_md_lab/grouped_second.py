@@ -72,7 +72,7 @@ def _message_vjp(X, Y, W, SEND, RECV, G, DX, DY, DW, CHANNELS: tl.constexpr):
 
 class _ScalarConvolution(torch.autograd.Function):
     @staticmethod
-    def forward(ctx, features, harmonics, weights, senders, receivers):
+    def forward(ctx, features, harmonics, weights, senders, receivers, layout):
         nodes, channels = features.shape
         output = features.new_empty((nodes, 16 * channels))
         if senders.numel() == 0:
@@ -80,10 +80,13 @@ class _ScalarConvolution(torch.autograd.Function):
         else:
             # Derive all metadata from this call's actual active edges. Two
             # graphs with equal numbers of edges can have different endpoints.
-            sorted_receivers, order = receivers.sort()
-            boundaries = torch.searchsorted(
-                sorted_receivers, torch.arange(nodes + 1, device=receivers.device, dtype=receivers.dtype)
-            )
+            if layout is None:
+                sorted_receivers, order = receivers.sort()
+                boundaries = torch.searchsorted(
+                    sorted_receivers, torch.arange(nodes + 1, device=receivers.device, dtype=receivers.dtype)
+                )
+            else:
+                order, boundaries = layout.order, layout.receiver_offsets
             with torch.cuda.device(features.device):
                 _reduce_by_receiver[(nodes, channels // 32, 4)](
                     features, harmonics, weights, senders, order, boundaries, output,
@@ -105,10 +108,14 @@ class _ScalarConvolution(torch.autograd.Function):
                     features, harmonics, weights, senders, receivers, gradient.contiguous(),
                     grad_x, grad_y, grad_w, features.shape[1], num_warps=4,
                 )
-        return grad_x, grad_y, grad_w, None, None
+        return grad_x, grad_y, grad_w, None, None, None
 
 
 class _FusedTensorProduct(torch.nn.Module):
+    def __init__(self, layout):
+        super().__init__()
+        self.layout = layout
+
     def forward(self, node_features, edge_attrs, weights, edge_index):
         edges = edge_index.shape[1]
         if (not node_features.is_cuda or node_features.dtype != torch.float64
@@ -120,12 +127,12 @@ class _FusedTensorProduct(torch.nn.Module):
             raise ValueError("expected GPU FP64 scalar UVU tensors for one MP-0 Small interaction")
         return _ScalarConvolution.apply(
             node_features.contiguous(), edge_attrs.contiguous(), weights.contiguous(),
-            edge_index[0].contiguous(), edge_index[1].contiguous(),
+            edge_index[0].contiguous(), edge_index[1].contiguous(), self.layout,
         )
 
 
 @contextmanager
-def install_second_interaction(model, atomic_numbers=None):
+def install_second_interaction(model, atomic_numbers=None, *, layout=None):
     """Temporarily replace only the second interaction's tensor product and reduction.
 
     The node order and composition may change on each call. The optional atom
@@ -141,9 +148,9 @@ def install_second_interaction(model, atomic_numbers=None):
     original = layer.conv_tp
     if type(layer) is not RealAgnosticResidualInteractionBlock or hasattr(layer, "conv_fusion"):
         raise ValueError("expected the ordinary e3nn residual interaction")
-    layout = (str(original.irreps_in1), str(original.irreps_in2), str(original.irreps_out))
-    if layout != ("128x0e", "1x0e+1x1o+1x2e+1x3o", "128x0e+128x1o+128x2e+128x3o"):
-        raise ValueError(f"unsupported scalar tensor-product layout {layout}")
+    irreps = (str(original.irreps_in1), str(original.irreps_in2), str(original.irreps_out))
+    if irreps != ("128x0e", "1x0e+1x1o+1x2e+1x3o", "128x0e+128x1o+128x2e+128x3o"):
+        raise ValueError(f"unsupported scalar tensor-product layout {irreps}")
     if len(original.instructions) != 4 or any(
         (i.i_in1, i.i_in2, i.i_out, i.connection_mode, i.has_weight, i.path_shape)
         != (0, degree, degree, "uvu", True, (128, 1))
@@ -151,7 +158,7 @@ def install_second_interaction(model, atomic_numbers=None):
         for degree, i in enumerate(original.instructions)
     ):
         raise ValueError("tensor-product paths differ from the normalized scalar UVU layout")
-    layer.conv_tp = _FusedTensorProduct()
+    layer.conv_tp = _FusedTensorProduct(layout)
     layer.conv_fusion = True
     try:
         yield {"second_interaction": "segmented_scalar_uvu", "channels": 128, "l_max": 3}

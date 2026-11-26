@@ -6,6 +6,10 @@ Run a fixed-cell molecular dynamics benchmark with an existing MACE checkpoint, 
 
 **Inputs** are trusted local MACE or ScaleShiftMACE checkpoints and ASE-readable periodic structures. **Outputs** include wall time per MD step, milliseconds per committee observation, per-member force errors, and the maximum atomic force disagreement on each sampled frame. The initial release targets scalar-energy MACE 0.3.16 on CPU or one GPU, with optional CUDA Graph replay.
 
+## Reproduce the full-step acceptance tests
+
+Run the frozen-checkpoint MACE implementation and the prepared Symmetrix-XL driver on the same moving structures. Both return the energy, conservative forces and stress to the host at every step. The report compares against XL with its upstream generated kernels enabled and includes separate tests of real SchNet and PaiNN models. [Protocol, results and commands](benchmarks/acceptance.md)
+
 ## Benchmark conservative force derivatives
 
 Use an existing frozen MACE checkpoint with the same weights and precision as the native reference. The GPU implementations use Triton for the angular derivative and CuPy/NVRTC for scalar product layers. For CUDA 12 on Linux, install PyTorch for the device and run `python -m pip install -e ".[cuda12]"`.
@@ -96,6 +100,6 @@ The profiler separates the energy forward pass from the position gradient. It ti
 
 ## Scope
 
-The trajectory runner implements unconstrained, fully periodic, fixed-cell velocity Verlet with positions and velocities resident on the integration device. It supports a single scalar head selection per run, one fixed elemental encoding, and energies and conservative forces. Model weights and requested precision are the same in each comparison. The official calculator remains the reference for observables. Stress, barostats, enhanced sampling, long-range polar models and custom constant-potential or magnetic-MACE subclasses require separate validation. Existing biased trajectories can be replayed for committee diagnostics using a compatible energy model.
+The trajectory runner implements unconstrained, fully periodic, fixed-cell velocity Verlet with positions and velocities resident on the integration device. It supports a single scalar head selection per run, one fixed elemental encoding, and energies and conservative forces. Model weights and requested precision are the same in each comparison. The official calculator remains the reference for observables. The periodic acceptance driver additionally supports the fixed-cell global stress for its qualified checkpoint. Barostats, enhanced sampling, long-range polar models and custom constant-potential or magnetic-MACE subclasses require separate validation. Existing biased trajectories can be replayed for committee diagnostics using a compatible energy model.
 
 Neighbor candidates include periodic images out to the physical cutoff plus a skin. Atoms can move across cell boundaries. The optional certificate tracks both the neighbor-list reference and the last exactly filtered edge graph. The host rebuilds a candidate list when necessary. A displacement check transfers a scalar on GPU. Regression tests compare the physical image tuples against fresh upstream MACE graphs as atoms cross the cutoff in skew and small periodic cells.

@@ -1,0 +1,330 @@
+{
+  "model": {
+    "family": "PaiNN",
+    "framework": "SchNetPack",
+    "schnetpack_version": "2.3.0",
+    "checkpoint": "rMD17 ethanol painn_1",
+    "checkpoint_sha256": "260f262f4021215dc65edec62c2c3128b910b413e3070024db3b21510ef30b29",
+    "checkpoint_url": "https://raw.githubusercontent.com/atomistic-machine-learning/schnetpack/69d26f3842a012f1f1e461ad7f1984d353843c8d/examples/trained_models/rmd17_ethanol/painn_1/best_model",
+    "training_molecule": "ethanol",
+    "n_atom_basis": 128,
+    "n_interactions": 3,
+    "native_energy_unit": "kcal/mol",
+    "energy_unit": "eV",
+    "native_energy_to_eV": 0.04336410390059322,
+    "length_unit": "angstrom",
+    "cutoff_A": 5.0,
+    "periodic": false,
+    "geometry": "radial distances and unit vectors for every PaiNN interaction"
+  },
+  "framework": "painn",
+  "device": "cuda",
+  "dtype": "float64",
+  "torch": "2.13.0+cu126",
+  "gpu": "Tesla V100-SXM2-16GB",
+  "cpu_threads": 1,
+  "structure": "ethanol8.extxyz",
+  "structure_sha256": "401de6bc9b06ef07dcedec4729049eacf0eb6413ec7abc8f7bfcab40395a8b35",
+  "atoms": 72,
+  "directed_edges": 576,
+  "occupied_groups": 208,
+  "allocated_groups": 216,
+  "input_source_types": 3,
+  "steps": 16,
+  "warmup": 5,
+  "dt_fs": 0.25,
+  "repeats": 8,
+  "velocity_seed": 17,
+  "cuda_graph": true,
+  "geometry": "analytic",
+  "passed": true,
+  "checks": {
+    "stock": {
+      "passed": true,
+      "max_energy_error_eV_atom": 0.0,
+      "max_force_component_error_eV_A": 2.398081733190338e-14,
+      "same_initial_force_error_eV_A": 7.605027718682322e-15,
+      "max_position_error_A": 4.440892098500626e-16,
+      "max_velocity_error_A_fs": 1.35465291012884e-16,
+      "max_NVE_change_difference_eV_atom": 0.0,
+      "fd_displacements_A": [
+        0.001,
+        0.0003
+      ],
+      "fd_errors_eV_A": [
+        8.082178449830835e-07,
+        7.698410475764916e-08
+      ],
+      "fd_tolerance_eV_A": 0.0005,
+      "force_projection_eV_A": -0.3089707346180891,
+      "own_energy_fd_errors_eV_A": [
+        8.082178449830835e-07,
+        7.698410475764916e-08
+      ]
+    },
+    "direct": {
+      "passed": true,
+      "max_energy_error_eV_atom": 0.0,
+      "max_force_component_error_eV_A": 2.398081733190338e-14,
+      "same_initial_force_error_eV_A": 7.452372052796363e-15,
+      "max_position_error_A": 4.440892098500626e-16,
+      "max_velocity_error_A_fs": 1.35465291012884e-16,
+      "max_NVE_change_difference_eV_atom": 0.0,
+      "fd_displacements_A": [
+        0.001,
+        0.0003
+      ],
+      "fd_errors_eV_A": [
+        8.082178450941058e-07,
+        7.698410486867147e-08
+      ],
+      "fd_tolerance_eV_A": 0.0005,
+      "force_projection_eV_A": -0.308970734618089,
+      "own_energy_fd_errors_eV_A": [
+        8.082178449275723e-07,
+        7.698410470213801e-08
+      ]
+    },
+    "exact": {
+      "passed": true,
+      "max_energy_error_eV_atom": 0.0,
+      "max_force_component_error_eV_A": 2.5757174171303632e-14,
+      "same_initial_force_error_eV_A": 7.674416657721395e-15,
+      "max_position_error_A": 4.440892098500626e-16,
+      "max_velocity_error_A_fs": 1.676702469895319e-16,
+      "max_NVE_change_difference_eV_atom": 0.0,
+      "fd_displacements_A": [
+        0.001,
+        0.0003
+      ],
+      "fd_errors_eV_A": [
+        8.082178445945054e-07,
+        7.69841043690711e-08
+      ],
+      "fd_tolerance_eV_A": 0.0005,
+      "force_projection_eV_A": -0.3089707346180895,
+      "own_energy_fd_errors_eV_A": [
+        8.082178448720612e-07,
+        7.698410464662686e-08
+      ]
+    },
+    "hermite": {
+      "passed": true,
+      "max_energy_error_eV_atom": 6.063298011819522e-12,
+      "max_force_component_error_eV_A": 2.4275143450935843e-08,
+      "same_initial_force_error_eV_A": 1.5405602793450157e-08,
+      "max_position_error_A": 2.740401239265111e-10,
+      "max_velocity_error_A_fs": 1.5443409323666675e-10,
+      "max_NVE_change_difference_eV_atom": 1.2631870857957337e-11,
+      "fd_displacements_A": [
+        0.001,
+        0.0003
+      ],
+      "fd_errors_eV_A": [
+        7.999609186737366e-07,
+        6.872717844830234e-08
+      ],
+      "fd_tolerance_eV_A": 0.0005,
+      "force_projection_eV_A": -0.3089707428750154,
+      "own_energy_fd_errors_eV_A": [
+        8.035988977583841e-07,
+        6.87271787258581e-08
+      ]
+    }
+  },
+  "trials": {
+    "stock": [
+      {
+        "ms_step": 1.6925488744163886,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.696266066574026,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.6917922475840896,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.692543999524787,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.694652994046919,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.692080062639434,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.6968189374892972,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.69189056759933,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      }
+    ],
+    "direct": [
+      {
+        "ms_step": 1.7262361288885586,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.7285287540289573,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.7279103194596246,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.7279308740398847,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.7284187561017461,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.724692185234744,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.7265220667468384,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.7273503763135523,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      }
+    ],
+    "exact": [
+      {
+        "ms_step": 1.6601058741798624,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.6566368722124025,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.6541141230845824,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.6578062495682389,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.6597911235294305,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.6588754951953888,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.6565916885156184,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.6587491263635457,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      }
+    ],
+    "hermite": [
+      {
+        "ms_step": 1.518221375590656,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.5226375035126694,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.5208753175102174,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.5229437485686503,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.524084436823614,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.5224891903926618,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.5261908120010048,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.521698126452975,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      }
+    ]
+  },
+  "median_ms_step": {
+    "stock": 1.6925464369705878,
+    "direct": 1.7276303478865884,
+    "exact": 1.6582776879658923,
+    "hermite": 1.5225633469526656
+  },
+  "scope": "Full FP64 molecular velocity-Verlet. All layers use original weights and identical physical edges.",
+  "radial_filters": {
+    "direct": {
+      "schedule": "direct"
+    },
+    "exact": {
+      "schedule": "exact"
+    },
+    "hermite": {
+      "schedule": "hermite",
+      "knots": 4097,
+      "width": 1152,
+      "table_bytes": 150994944,
+      "table_and_grid_validation_s": 0.4887604379327968,
+      "max_off_grid_value_error": 1.923350367860621e-12,
+      "max_off_grid_slope_error": 3.4842001506163456e-09,
+      "validation_grid_interior_fraction": 0.371
+    }
+  }
+}

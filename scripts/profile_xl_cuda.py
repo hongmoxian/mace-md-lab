@@ -32,10 +32,10 @@ def activity_group(event):
     return "other_kernels"
 
 
-def summarize_trace(trace, step_count):
+def summarize_trace(trace, step_count, *, prefix="xl-md-step-", classify=activity_group):
     events = trace["traceEvents"]
     markers = {e["name"]: e for e in events if e.get("cat") == "user_annotation"
-               and e["name"].startswith("xl-md-step-") and e.get("ph") == "X"}
+               and e["name"].startswith(prefix) and e.get("ph") == "X"}
     if len(markers) != step_count:
         raise RuntimeError("CUPTI trace lacks the requested CPU step boundaries")
     device_events = [e for e in events if e.get("cat") in {"kernel", "gpu_memcpy", "gpu_memset"}
@@ -43,7 +43,7 @@ def summarize_trace(trace, step_count):
     per_step, kernel_names = [], Counter()
     stream_ids = set()
     for step in range(step_count):
-        marker = markers[f"xl-md-step-{step}"]
+        marker = markers[f"{prefix}{step}"]
         start, end = marker["ts"], marker["ts"] + marker["dur"]
         changes = defaultdict(Counter)
         count = Counter()
@@ -51,7 +51,7 @@ def summarize_trace(trace, step_count):
             left, right = max(start, event["ts"]), min(end, event["ts"] + event["dur"])
             if left >= right:
                 continue
-            group = activity_group(event)
+            group = classify(event)
             changes[left][group] += 1
             changes[right][group] -= 1
             stream_ids.add(str(event["args"].get("stream")))

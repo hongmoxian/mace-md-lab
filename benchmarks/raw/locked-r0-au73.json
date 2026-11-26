@@ -1,0 +1,1259 @@
+{
+  "passed": true,
+  "gates": {
+    "energy_eV_atom": 1e-08,
+    "force_eV_A": 1e-06,
+    "position_A": 1e-06,
+    "velocity_A_fs": 1e-07,
+    "nve_difference_eV_atom": 1e-08,
+    "stress_eV_A3": 1e-07
+  },
+  "checks": {
+    "schedtangent_edgeefs": {
+      "errors": {
+        "energy_eV_atom": 0.0,
+        "force_eV_A": 4.884981308350689e-15,
+        "position_A": 1.0658141036401503e-14,
+        "velocity_A_fs": 4.4738518445441855e-15,
+        "nve_difference_eV_atom": 5.921234639758022e-16,
+        "stress_eV_A3": 6.071532165918825e-17
+      },
+      "passed": true,
+      "nve_excursion_meV_atom": 0.12869003027423295
+    },
+    "schedtable_edgeefs": {
+      "errors": {
+        "energy_eV_atom": 2.213340621892712e-12,
+        "force_eV_A": 5.772314337626483e-08,
+        "position_A": 2.1545121242638743e-09,
+        "velocity_A_fs": 1.2506598100897603e-09,
+        "nve_difference_eV_atom": 3.3789859799071564e-11,
+        "stress_eV_A3": 2.784743095840536e-10
+      },
+      "passed": true,
+      "nve_excursion_meV_atom": 0.1286900494363863
+    },
+    "xl_efs": {
+      "errors": {
+        "energy_eV_atom": 5.5852951893105756e-09,
+        "force_eV_A": 7.312037864082299e-08,
+        "position_A": 5.447660811341848e-08,
+        "velocity_A_fs": 4.50593369560881e-09,
+        "nve_difference_eV_atom": 3.5510557459762695e-11,
+        "stress_eV_A3": 8.389014413689999e-10
+      },
+      "passed": true,
+      "nve_excursion_meV_atom": 0.1286900513986685
+    },
+    "xl_prepared_efs": {
+      "errors": {
+        "energy_eV_atom": 5.5852951893105756e-09,
+        "force_eV_A": 7.312037864082299e-08,
+        "position_A": 5.447660633706164e-08,
+        "velocity_A_fs": 4.505932571507998e-09,
+        "nve_difference_eV_atom": 3.550996534307498e-11,
+        "stress_eV_A3": 8.389014413689999e-10
+      },
+      "passed": true,
+      "nve_excursion_meV_atom": 0.1286900513986685
+    },
+    "xl_prepared_factored_efs": {
+      "errors": {
+        "energy_eV_atom": 5.5852951893105756e-09,
+        "force_eV_A": 7.312037841877839e-08,
+        "position_A": 5.447660633706164e-08,
+        "velocity_A_fs": 4.505932703346982e-09,
+        "nve_difference_eV_atom": 3.5510557459762695e-11,
+        "stress_eV_A3": 8.389014413689999e-10
+      },
+      "passed": true,
+      "nve_excursion_meV_atom": 0.1286900513986685
+    }
+  },
+  "median_ms_step": {
+    "schedtangent_edgeefs": 4.530105394223938,
+    "schedtable_edgeefs": 4.104123718813449,
+    "xl_efs": 4.3642912605719175,
+    "xl_prepared_efs": 3.4094931458336455,
+    "xl_prepared_factored_efs": 3.329573605393913
+  },
+  "raw_ms_step": {
+    "schedtangent_edgeefs": [
+      4.54397956248916,
+      4.5207119595337035,
+      4.531311373284552,
+      4.530354060989339,
+      4.529856727458537,
+      4.521843397621221
+    ],
+    "schedtable_edgeefs": [
+      4.103375749158052,
+      4.115428416601692,
+      4.10387858331281,
+      4.104368854314089,
+      4.110606792285883,
+      4.097876376666439
+    ],
+    "xl_efs": [
+      4.296008499901897,
+      4.315986875250625,
+      4.371886083390564,
+      4.429281708629181,
+      4.373497290847202,
+      4.356696437753271
+    ],
+    "xl_prepared_efs": [
+      3.3872317095908024,
+      3.3171084796776995,
+      3.538248480860299,
+      3.541032917079671,
+      3.4037182073613317,
+      3.4152680843059593
+    ],
+    "xl_prepared_factored_efs": [
+      3.320868772182924,
+      3.323182167756992,
+      3.446469270177962,
+      3.3359650430308343,
+      3.3142366883112118,
+      3.4203744362457655
+    ]
+  },
+  "timed_graph_updates": {
+    "schedtangent_edgeefs": [
+      {
+        "neighbor_rebuilds": 3,
+        "certificate_hits": 26,
+        "edge_refreshes": 22,
+        "captures": 0,
+        "replays": 48,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 3,
+        "certificate_hits": 26,
+        "edge_refreshes": 22,
+        "captures": 0,
+        "replays": 48,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 3,
+        "certificate_hits": 26,
+        "edge_refreshes": 22,
+        "captures": 0,
+        "replays": 48,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 3,
+        "certificate_hits": 26,
+        "edge_refreshes": 22,
+        "captures": 0,
+        "replays": 48,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 3,
+        "certificate_hits": 26,
+        "edge_refreshes": 22,
+        "captures": 0,
+        "replays": 48,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 3,
+        "certificate_hits": 26,
+        "edge_refreshes": 22,
+        "captures": 0,
+        "replays": 48,
+        "fallback_evaluations": 0
+      }
+    ],
+    "schedtable_edgeefs": [
+      {
+        "neighbor_rebuilds": 3,
+        "certificate_hits": 26,
+        "edge_refreshes": 22,
+        "captures": 0,
+        "replays": 48,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 3,
+        "certificate_hits": 26,
+        "edge_refreshes": 22,
+        "captures": 0,
+        "replays": 48,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 3,
+        "certificate_hits": 26,
+        "edge_refreshes": 22,
+        "captures": 0,
+        "replays": 48,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 3,
+        "certificate_hits": 26,
+        "edge_refreshes": 22,
+        "captures": 0,
+        "replays": 48,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 3,
+        "certificate_hits": 26,
+        "edge_refreshes": 22,
+        "captures": 0,
+        "replays": 48,
+        "fallback_evaluations": 0
+      },
+      {
+        "neighbor_rebuilds": 3,
+        "certificate_hits": 26,
+        "edge_refreshes": 22,
+        "captures": 0,
+        "replays": 48,
+        "fallback_evaluations": 0
+      }
+    ],
+    "xl_efs": [
+      {
+        "neighbor_rebuilds": 3
+      },
+      {
+        "neighbor_rebuilds": 3
+      },
+      {
+        "neighbor_rebuilds": 3
+      },
+      {
+        "neighbor_rebuilds": 3
+      },
+      {
+        "neighbor_rebuilds": 3
+      },
+      {
+        "neighbor_rebuilds": 3
+      }
+    ],
+    "xl_prepared_efs": [
+      {
+        "neighbor_rebuilds": 3
+      },
+      {
+        "neighbor_rebuilds": 3
+      },
+      {
+        "neighbor_rebuilds": 3
+      },
+      {
+        "neighbor_rebuilds": 3
+      },
+      {
+        "neighbor_rebuilds": 3
+      },
+      {
+        "neighbor_rebuilds": 3
+      }
+    ],
+    "xl_prepared_factored_efs": [
+      {
+        "neighbor_rebuilds": 3
+      },
+      {
+        "neighbor_rebuilds": 3
+      },
+      {
+        "neighbor_rebuilds": 3
+      },
+      {
+        "neighbor_rebuilds": 3
+      },
+      {
+        "neighbor_rebuilds": 3
+      },
+      {
+        "neighbor_rebuilds": 3
+      }
+    ]
+  },
+  "orders": [
+    [
+      "schedtangent_edgeefs",
+      "schedtable_edgeefs",
+      "xl_efs",
+      "xl_prepared_efs",
+      "xl_prepared_factored_efs"
+    ],
+    [
+      "xl_prepared_factored_efs",
+      "xl_prepared_efs",
+      "xl_efs",
+      "schedtable_edgeefs",
+      "schedtangent_edgeefs"
+    ],
+    [
+      "schedtable_edgeefs",
+      "xl_efs",
+      "xl_prepared_efs",
+      "xl_prepared_factored_efs",
+      "schedtangent_edgeefs"
+    ],
+    [
+      "schedtangent_edgeefs",
+      "xl_prepared_factored_efs",
+      "xl_prepared_efs",
+      "xl_efs",
+      "schedtable_edgeefs"
+    ],
+    [
+      "xl_efs",
+      "xl_prepared_efs",
+      "xl_prepared_factored_efs",
+      "schedtangent_edgeefs",
+      "schedtable_edgeefs"
+    ],
+    [
+      "schedtable_edgeefs",
+      "schedtangent_edgeefs",
+      "xl_prepared_factored_efs",
+      "xl_prepared_efs",
+      "xl_efs"
+    ]
+  ],
+  "source_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736",
+  "structure_sha256": "ff5507e3036fe096dfa99e0ebdefaafd2289e88bc36fc02dcbda57caf7e277b8",
+  "xl_json_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+  "untimed_candidate_edge_audit": {
+    "schedtangent_edgeefs": [
+      {
+        "active": 13252,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13238,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13242,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13246,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13258,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13260,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13242,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13234,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13242,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13230,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13216,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13216,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13210,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13200,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13198,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13196,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13196,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13180,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13164,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13166,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13158,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13146,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13150,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13146,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13144,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13136,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13144,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13140,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13128,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13136,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13136,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13142,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13140,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13162,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13172,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13170,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13164,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13158,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13154,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13148,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13162,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13162,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13178,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13186,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13180,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13164,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13174,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13176,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13182,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13188,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13190,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13186,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13194,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13182,
+        "padded_candidate_capacity": 14464
+      }
+    ],
+    "schedtable_edgeefs": [
+      {
+        "active": 13252,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13238,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13242,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13246,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13258,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13260,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13242,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13234,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13242,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13230,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13216,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13216,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13210,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13200,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13198,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13196,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13196,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13180,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13164,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13166,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13158,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13146,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13150,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13146,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13144,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13136,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13144,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13140,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13128,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13136,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13136,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13142,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13140,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13162,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13172,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13170,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13164,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13158,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13154,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13148,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13162,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13162,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13178,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13186,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13180,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13164,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13174,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13176,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13182,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13188,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13190,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13186,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13194,
+        "padded_candidate_capacity": 14464
+      },
+      {
+        "active": 13182,
+        "padded_candidate_capacity": 14464
+      }
+    ]
+  },
+  "candidate_macro_extension_A": 1.0,
+  "table_knots": 8192,
+  "host_efs_each_step": true,
+  "model": "mace-mp-0-small.model",
+  "formula": "H96Au48O48",
+  "atoms": 192,
+  "device": "Tesla V100-SXM2-16GB",
+  "torch": "2.13.0+cu126",
+  "mace": "0.3.16",
+  "symmetrix": "0.2.0",
+  "xl_plan": {
+    "requested_algorithm": "direct",
+    "requested_profile": "speed",
+    "selection_source": "native_request",
+    "state": "active",
+    "selected_id": "mh0-direct-speed",
+    "selection_reason": "low_memory=False: exact speed graph fits advisory device-memory budget",
+    "available_bytes": 10315984040,
+    "reserve_bytes": 846417100,
+    "boundary_attempt": false,
+    "candidates": [
+      {
+        "id": "mh0-direct-speed",
+        "qualified": true,
+        "estimated_bytes": 23915220,
+        "reason": "estimated fit"
+      },
+      {
+        "id": "mh0-direct-capacity-y-only",
+        "qualified": true,
+        "estimated_bytes": 15348036,
+        "reason": "qualified"
+      },
+      {
+        "id": "mh0-direct-capacity-retained",
+        "qualified": true,
+        "estimated_bytes": 23915220,
+        "reason": "qualified"
+      },
+      {
+        "id": "mh0-single-layer-tiled-v1",
+        "qualified": false,
+        "estimated_bytes": 0,
+        "reason": "fixed-workspace execution requires explicit opt-in via allow_fixed_workspace"
+      },
+      {
+        "id": "mh0-dual-layer-tiled-v1",
+        "qualified": false,
+        "estimated_bytes": 19977340,
+        "reason": "fixed-workspace execution requires explicit opt-in via allow_fixed_workspace"
+      }
+    ],
+    "binding_report_version": 1,
+    "bindings": [
+      {
+        "operator_id": "mh0.geometry",
+        "kind": "geometry",
+        "capability_key": "geometry",
+        "implementation_id": "generic_geometry",
+        "selected_implementation_id": "generic_geometry",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'generic_geometry'"
+      },
+      {
+        "operator_id": "mh0.interaction0.r0",
+        "kind": "radial",
+        "capability_key": "r0",
+        "implementation_id": "generated_r0",
+        "selected_implementation_id": "generated_r0",
+        "tier": "generated",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified generated implementation 'generated_r0'"
+      },
+      {
+        "operator_id": "mh0.interaction0.harmonics",
+        "kind": "spherical_harmonic",
+        "capability_key": "harmonics",
+        "implementation_id": "generic_harmonics",
+        "selected_implementation_id": "generic_harmonics",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'generic_harmonics'"
+      },
+      {
+        "operator_id": "mh0.interaction0.m0",
+        "kind": "tensor_product",
+        "capability_key": "m0",
+        "implementation_id": "builtin_m0",
+        "selected_implementation_id": "builtin_m0",
+        "tier": "frozen",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified frozen implementation 'builtin_m0'"
+      },
+      {
+        "operator_id": "mh0.interaction0.h1",
+        "kind": "linear",
+        "capability_key": "h1",
+        "implementation_id": "generic_h1",
+        "selected_implementation_id": "generic_h1",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'generic_h1'"
+      },
+      {
+        "operator_id": "mh0.interaction0.phi1",
+        "kind": "tensor_product",
+        "capability_key": "phi1",
+        "implementation_id": "generated_phi1",
+        "selected_implementation_id": "generated_phi1",
+        "tier": "generated",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified generated implementation 'generated_phi1'"
+      },
+      {
+        "operator_id": "mh0.interaction0.a1",
+        "kind": "linear",
+        "capability_key": "a1",
+        "implementation_id": "blas_batched_a1",
+        "selected_implementation_id": "blas_batched_a1",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'blas_batched_a1'"
+      },
+      {
+        "operator_id": "mh0.interaction0.m1",
+        "kind": "tensor_product",
+        "capability_key": "m1",
+        "implementation_id": "generated_m1",
+        "selected_implementation_id": "generated_m1",
+        "tier": "generated",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified generated implementation 'generated_m1'"
+      },
+      {
+        "operator_id": "mh0.interaction0.h2",
+        "kind": "linear",
+        "capability_key": "h2",
+        "implementation_id": "device_h2_stages",
+        "selected_implementation_id": "device_h2_stages",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'device_h2_stages'"
+      },
+      {
+        "operator_id": "mh0.interaction1.r0",
+        "kind": "radial",
+        "capability_key": "r0",
+        "implementation_id": "generated_r0",
+        "selected_implementation_id": "generated_r0",
+        "tier": "generated",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified generated implementation 'generated_r0'"
+      },
+      {
+        "operator_id": "mh0.interaction1.harmonics",
+        "kind": "spherical_harmonic",
+        "capability_key": "harmonics",
+        "implementation_id": "generic_harmonics",
+        "selected_implementation_id": "generic_harmonics",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'generic_harmonics'"
+      },
+      {
+        "operator_id": "mh0.interaction1.m0",
+        "kind": "tensor_product",
+        "capability_key": "m0",
+        "implementation_id": "builtin_m0",
+        "selected_implementation_id": "builtin_m0",
+        "tier": "frozen",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified frozen implementation 'builtin_m0'"
+      },
+      {
+        "operator_id": "mh0.interaction1.h1",
+        "kind": "linear",
+        "capability_key": "h1",
+        "implementation_id": "generic_h1",
+        "selected_implementation_id": "generic_h1",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'generic_h1'"
+      },
+      {
+        "operator_id": "mh0.interaction1.phi1",
+        "kind": "tensor_product",
+        "capability_key": "phi1",
+        "implementation_id": "generated_phi1",
+        "selected_implementation_id": "generated_phi1",
+        "tier": "generated",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified generated implementation 'generated_phi1'"
+      },
+      {
+        "operator_id": "mh0.interaction1.a1",
+        "kind": "linear",
+        "capability_key": "a1",
+        "implementation_id": "blas_batched_a1",
+        "selected_implementation_id": "blas_batched_a1",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'blas_batched_a1'"
+      },
+      {
+        "operator_id": "mh0.interaction1.m1",
+        "kind": "tensor_product",
+        "capability_key": "m1",
+        "implementation_id": "generated_m1",
+        "selected_implementation_id": "generated_m1",
+        "tier": "generated",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified generated implementation 'generated_m1'"
+      },
+      {
+        "operator_id": "mh0.interaction1.h2",
+        "kind": "linear",
+        "capability_key": "h2",
+        "implementation_id": "device_h2_stages",
+        "selected_implementation_id": "device_h2_stages",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'device_h2_stages'"
+      },
+      {
+        "operator_id": "mh0.readout",
+        "kind": "readout",
+        "capability_key": "readout",
+        "implementation_id": "generated_readout",
+        "selected_implementation_id": "generated_readout",
+        "tier": "generated",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified generated implementation 'generated_readout'"
+      },
+      {
+        "operator_id": "mh0.reduce_forces",
+        "kind": "reduction",
+        "capability_key": "reduce_forces",
+        "implementation_id": "generic_reduce_forces",
+        "selected_implementation_id": "generic_reduce_forces",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'generic_reduce_forces'"
+      },
+      {
+        "operator_id": "mh0.reduce_stress",
+        "kind": "reduction",
+        "capability_key": "reduce_stress",
+        "implementation_id": "generic_reduce_stress",
+        "selected_implementation_id": "generic_reduce_stress",
+        "tier": "portable",
+        "target": "cuda",
+        "precision": {
+          "compute": "float64",
+          "accumulator": "float64"
+        },
+        "identity_fingerprint": "",
+        "qualified": true,
+        "portable_covered": true,
+        "artifact_required": false,
+        "reason": "qualified portable implementation 'generic_reduce_stress'"
+      }
+    ],
+    "model_type": "MACE",
+    "mace_les_parameters_sha256": null,
+    "mace_les_evaluator_fingerprint": "fb0c39d081c917018793e6e7210e8e2d3a6296d3a100796de3da29dc5f3987c6"
+  },
+  "xl_r0": {
+    "implementation": "generated",
+    "backend": "cuda",
+    "artifact_origin": null,
+    "schedule": "receiver-edge16",
+    "profile": "persistent-4",
+    "artifact_id": "generated-r0-gen19-cuda-f64-1adb0508937bf91e836ab42d98c17f2035f23607a7962549d30c64c3e7076b06"
+  },
+  "xl_prepared_product": null,
+  "xl_stock_product": {
+    "source_sha256": "8aa139b19fe1981c9d8e30679bf02d5de0ca18dc7b44ec300651f5096d628ffd",
+    "cubin_sha256": "de8257c5ac17e1ead737225643620c2ec9d8c07986487080ab2a3c0174ec8f80",
+    "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+    "artifact_id": "jit-m1-gen19-f64-198de909c403f357-c128-chunk32-r3-sm_70",
+    "variant": "upstream",
+    "structure": "sha256:198de909c403f357759b9f9cbf0a60330815da0853d2101a2a9f02efc1f2053f"
+  },
+  "xl_stock_r0": {
+    "source_sha256": "7051c1df15ef19c6d4f0c309b04e2cf11a6901161dce52b18d7ea7f6839b19c2",
+    "cubin_sha256": "ade00d2fcb0639a5f8db41e7f24743abec13d3355942b1f7fa01a0ed8e63cd08",
+    "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+    "artifact_id": "generated-r0-gen19-cuda-f64-1adb0508937bf91e836ab42d98c17f2035f23607a7962549d30c64c3e7076b06",
+    "variant": "upstream",
+    "structure": "sha256:87d40a97a59259e75e7d3f51451a9b4b635349e610415f0aadd7199db238364d"
+  },
+  "xl_factored_r0": {
+    "source_sha256": "df20ad0be36c47d72106af5c4f2357796a5cd95e91dda35e08166ac61e9ad884",
+    "cubin_sha256": "a73a3fce2f34886fe6486c7784c7a382e0bc28f6d13dc6da1a2c00136d71ca3d",
+    "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+    "artifact_id": "generated-r0-gen19-cuda-f64-1adb0508937bf91e836ab42d98c17f2035f23607a7962549d30c64c3e7076b06",
+    "variant": "factored",
+    "structure": "sha256:87d40a97a59259e75e7d3f51451a9b4b635349e610415f0aadd7199db238364d"
+  },
+  "xl_launch_policy": "static",
+  "xl_r1": null,
+  "xl_neighbor_backend": "kokkos",
+  "xl_selector": "cuda12-sm70",
+  "dtype": "float64",
+  "resident_skin_A": 0.15,
+  "xl_skin_A": 1.0,
+  "dt_fs": 0.5,
+  "velocity_source": "input momenta",
+  "cpu_threads": 1,
+  "steps": 48,
+  "warmup": 5,
+  "repeats": 6,
+  "frame": 0,
+  "transform_info": {
+    "schedtangent": {
+      "operator": "grouped_species_first_interaction",
+      "kernel": "Triton segmented edge moments and adjoint, batched FP64 projection",
+      "atoms": 192,
+      "species": 3,
+      "dense_group_slots": 576,
+      "fold_receiver_linear": true
+    },
+    "second": {
+      "second_interaction": "segmented_scalar_uvu",
+      "channels": 128,
+      "l_max": 3
+    },
+    "schedtable": {
+      "operator": "grouped_species_first_interaction",
+      "kernel": "Triton segmented edge moments and adjoint, batched FP64 projection",
+      "atoms": 192,
+      "species": 3,
+      "dense_group_slots": 576,
+      "fold_receiver_linear": true
+    }
+  },
+  "scope": "Synchronized complete fixed-cell velocity-Verlet steps. Each path first ran the entire trajectory untimed. Resident controls retain tensors on GPU. Native XL returns energy, forces and stress to ASE. The efs controls request native MACE stress, edgeefs derives stress via edge vectors, and ef requests energy and force. Both stress paths compute stress in each evaluation and validate it on common frames."
+}

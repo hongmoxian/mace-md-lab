@@ -1,0 +1,243 @@
+{
+  "passed": true,
+  "gates": {
+    "energy_eV_atom": 1e-08,
+    "force_eV_A": 1e-06,
+    "position_A": 1e-06,
+    "velocity_A_fs": 1e-07,
+    "nve_difference_eV_atom": 1e-08,
+    "stress_eV_A3": 1e-07
+  },
+  "results": {
+    "ase": {
+      "errors": {
+        "energy_eV_atom": 5.655457139634261e-09,
+        "force_eV_A": 8.485271618674517e-08,
+        "stress_eV_A3": 8.888907838955351e-10,
+        "position_A": 1.0658141036401503e-14,
+        "velocity_A_fs": 6.196865937058149e-15,
+        "nve_difference_eV_atom": 1.1842378929335002e-15
+      },
+      "common_frames_vs_xl": {
+        "force_eV_A": 1.6608936448392342e-13,
+        "energy_eV_atom": 5.921189464667501e-16,
+        "stress_eV_A3": 6.938893903907228e-17
+      },
+      "passed": true,
+      "trials_ms": [
+        6.118049311529224,
+        5.993715625663754,
+        6.3173924160461565,
+        6.085426228916428,
+        6.143983230382825,
+        6.3996298316245275
+      ],
+      "timed_rebuilds": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "median_ms_step": 6.1310162709560245
+    },
+    "certificate": {
+      "errors": {
+        "energy_eV_atom": 5.655457139634261e-09,
+        "force_eV_A": 8.485271596470056e-08,
+        "stress_eV_A3": 8.888907838955351e-10,
+        "position_A": 1.509903313490213e-14,
+        "velocity_A_fs": 9.384854005034526e-15,
+        "nve_difference_eV_atom": 1.1842378929335002e-15
+      },
+      "common_frames_vs_xl": {
+        "force_eV_A": 1.659783421814609e-13,
+        "energy_eV_atom": 5.921189464667501e-16,
+        "stress_eV_A3": 6.938893903907228e-17
+      },
+      "passed": true,
+      "trials_ms": [
+        5.945537894149311,
+        5.979061083053239,
+        5.828269832515313,
+        6.051853687192003,
+        5.947655251172061,
+        5.8449542096544365
+      ],
+      "timed_rebuilds": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "median_ms_step": 5.946596572660686
+    },
+    "ase_prepared": {
+      "errors": {
+        "energy_eV_atom": 5.655457139634261e-09,
+        "force_eV_A": 8.485271618674517e-08,
+        "stress_eV_A3": 8.888907838955351e-10,
+        "position_A": 1.4654943925052066e-14,
+        "velocity_A_fs": 9.554856905680253e-15,
+        "nve_difference_eV_atom": 1.1842378929335002e-15
+      },
+      "common_frames_vs_xl": {
+        "force_eV_A": 1.659783421814609e-13,
+        "energy_eV_atom": 5.921189464667501e-16,
+        "stress_eV_A3": 6.938893903907228e-17
+      },
+      "passed": true,
+      "trials_ms": [
+        5.080481144735434,
+        5.190878354672653,
+        5.178180707540984,
+        5.223603438935243,
+        5.133573252048033,
+        5.144521938442874
+      ],
+      "timed_rebuilds": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "median_ms_step": 5.161351322991929
+    },
+    "arrays_stock": {
+      "errors": {
+        "energy_eV_atom": 5.655457139634261e-09,
+        "force_eV_A": 8.485271596470056e-08,
+        "stress_eV_A3": 8.888907838955351e-10,
+        "position_A": 1.0658141036401503e-14,
+        "velocity_A_fs": 6.187324957940277e-15,
+        "nve_difference_eV_atom": 1.1842378929335002e-15
+      },
+      "common_frames_vs_xl": {
+        "force_eV_A": 1.659783421814609e-13,
+        "energy_eV_atom": 5.921189464667501e-16,
+        "stress_eV_A3": 6.938893903907228e-17
+      },
+      "passed": true,
+      "trials_ms": [
+        5.626418729661964,
+        5.710080040444154,
+        5.559726060406926,
+        5.813252728936884,
+        5.5996542068896815,
+        5.549426646515106
+      ],
+      "timed_rebuilds": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "median_ms_step": 5.613036468275823
+    },
+    "arrays_prepared": {
+      "errors": {
+        "energy_eV_atom": 5.655457139634261e-09,
+        "force_eV_A": 8.485271596470056e-08,
+        "stress_eV_A3": 8.888907838955351e-10,
+        "position_A": 1.4210854715202004e-14,
+        "velocity_A_fs": 9.509754095304856e-15,
+        "nve_difference_eV_atom": 1.7763568394002505e-15
+      },
+      "common_frames_vs_xl": {
+        "force_eV_A": 1.659783421814609e-13,
+        "energy_eV_atom": 5.921189464667501e-16,
+        "stress_eV_A3": 6.938893903907228e-17
+      },
+      "passed": true,
+      "trials_ms": [
+        4.626945667647912,
+        4.594059520362255,
+        4.566490958192541,
+        4.562528602643094,
+        4.70837593699495,
+        4.5621864798401175
+      ],
+      "timed_rebuilds": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "median_ms_step": 4.580275239277398
+    }
+  },
+  "trial_orders": [
+    [
+      "ase",
+      "certificate",
+      "ase_prepared",
+      "arrays_stock",
+      "arrays_prepared"
+    ],
+    [
+      "arrays_prepared",
+      "arrays_stock",
+      "ase_prepared",
+      "certificate",
+      "ase"
+    ],
+    [
+      "certificate",
+      "ase_prepared",
+      "arrays_stock",
+      "arrays_prepared",
+      "ase"
+    ],
+    [
+      "ase",
+      "arrays_prepared",
+      "arrays_stock",
+      "ase_prepared",
+      "certificate"
+    ],
+    [
+      "ase_prepared",
+      "arrays_stock",
+      "arrays_prepared",
+      "ase",
+      "certificate"
+    ],
+    [
+      "certificate",
+      "ase",
+      "arrays_prepared",
+      "arrays_stock",
+      "ase_prepared"
+    ]
+  ],
+  "model_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736",
+  "compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42",
+  "structure_sha256": "674186cd63ac40385917aa952cf204c88d263fac13d2af3f5257c01e1d3a24a5",
+  "fixture": "au-water.extxyz",
+  "atoms": 192,
+  "velocities": "input momenta",
+  "period": "fixed-cell fully periodic",
+  "dt_fs": 0.5,
+  "warmup": 5,
+  "steps": 48,
+  "repeats": 6,
+  "skin_A": 1.0,
+  "selected_plan": "mh0-direct-speed",
+  "gpu": "Tesla V100-SXM2-16GB",
+  "symmetrix": "0.2.0",
+  "selector": "cuda12-sm70",
+  "native_neighbor_builder": "kokkos",
+  "dtype": "float64",
+  "observables": "E/F/stress on host every step",
+  "numerical_scope": "Common frames against original MACE and XL; all moving frames against stock XL",
+  "product_info": null
+}

@@ -12,6 +12,7 @@ from pathlib import Path
 from statistics import median
 from time import perf_counter
 from unittest.mock import patch
+from types import SimpleNamespace
 import os
 
 import numpy as np
@@ -31,11 +32,26 @@ def arguments():
     parser.add_argument("--model", type=Path, required=True)
     parser.add_argument("--structure", type=Path, required=True)
     parser.add_argument("--symmetrix-json", type=Path)
+    parser.add_argument("--include-prepared-xl", action="store_true",
+                        help="also time the prepared native device graph with array Verlet")
+    parser.add_argument("--xl-product-dir", type=Path,
+                        help="also time the native compiled product with the prepared driver")
+    parser.add_argument("--xl-stock-product-dir", type=Path,
+                        help="use XL's upstream-generated product cubin in the stock reference")
+    parser.add_argument("--xl-stock-r0-dir", type=Path,
+                        help="also install XL's upstream-generated R0 in the stock and prepared references")
+    parser.add_argument("--xl-stock-m0-dir", type=Path,
+                        help="also install XL's upstream-generated M0 in all native evaluators")
+    parser.add_argument("--xl-factored-r0-dir", type=Path,
+                        help="also time the prepared driver with upstream M1 and the factored R0 reverse")
+    parser.add_argument("--xl-launch-policy", choices=("automatic", "static"), default="automatic")
+    parser.add_argument("--host-observables", action="store_true",
+                        help="deliver energy, forces and stress to host memory on every timed step")
     parser.add_argument("--selector", default="cuda12-sm70")
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument(
         "--variants", nargs="+",
-        choices=["base", "first", "folded", "second", "both", "bothfolded"],
+        choices=["base", "first", "folded", "second", "both", "bothfolded", "candidate", "replay", "sched", "schedtable", "schedpoly", "packed", "tangent", "schedpacked", "schedtangent", "table64", "table512", "replaytable", "replaytable512"],
         default=["base", "first"],
     )
     parser.add_argument("--outputs", nargs="+", choices=["ef", "efs", "edgeefs"], default=["ef", "efs"])
@@ -47,6 +63,9 @@ def arguments():
         "--resident-skins", type=float, nargs="+",
         help="compare multiple neighbor skins in the same invocation",
     )
+    parser.add_argument("--check-candidate-edges", action="store_true", help="verify current physical periodic image membership in candidate paths during validation")
+    parser.add_argument("--macro-extension", type=float, default=1.0)
+    parser.add_argument("--spline-points", type=int, default=8192)
     parser.add_argument("--xl-skin", type=float, default=1.0)
     parser.add_argument("--dt-fs", type=float, default=0.5)
     parser.add_argument("--frame", type=int, default=0)
@@ -54,6 +73,16 @@ def arguments():
     parser.add_argument("--temperature", type=float, default=300.0)
     args = parser.parse_args()
     args.dtype = "float64"
+    if args.xl_stock_r0_dir and not args.xl_stock_product_dir:
+        parser.error("stock R0 comparisons require the upstream stock M1")
+    if args.xl_factored_r0_dir and not args.xl_stock_r0_dir:
+        parser.error("the factored R0 comparison requires the matched upstream R0 reference")
+    if args.xl_stock_m0_dir and not args.xl_stock_r0_dir:
+        parser.error("the generated M0 comparison requires the matched upstream R0/M1 reference")
+    if (args.include_prepared_xl or args.xl_product_dir or args.xl_stock_product_dir) and not args.symmetrix_json:
+        parser.error("the combined native routes require the XL compact export")
+    if args.host_observables and "ef" in args.outputs:
+        parser.error("host-observables compares all three quantities; select efs or edgeefs")
     args.resident_skins = args.resident_skins or [args.skin]
     if (min(args.steps, args.repeats) < 1 or args.warmup < 0
             or min(*args.resident_skins, args.xl_skin, args.dt_fs) <= 0):
@@ -72,7 +101,8 @@ def load_xl(args):
         raise RuntimeError("expected the requested native CUDA backend")
     from symmetrix import Symmetrix
     return Symmetrix(str(args.symmetrix_json), dtype="float64", execution_profile="speed",
-                     streamed_edges="direct", neighbor_skin=args.xl_skin, dispersion=False)
+                     streamed_edges="direct", neighbor_skin=args.xl_skin, dispersion=False,
+                     kernel_launch_policy=args.xl_launch_policy)
 
 
 def stress_request(model, stress, stack):
@@ -88,6 +118,8 @@ def stress_request(model, stress, stack):
 
 def read_snapshot(path, stress):
     snap = path.snapshot()
+    if hasattr(path, "prepared_xl"):
+        return snap
     if stress is None:
         return (*snap, None)
     if isinstance(path, ASEPath):
@@ -100,6 +132,8 @@ def read_snapshot(path, stress):
 
 
 def count_updates(path):
+    if hasattr(path, "prepared_xl"):
+        return {"neighbor_rebuilds": path.prepared_xl.rebuilds}
     if isinstance(path, ASEPath):
         return {"neighbor_rebuilds": path.atoms.calc.neighbor_cache_build_count}
     return topology_counts(path)
@@ -127,16 +161,66 @@ def main():
             name += f"_skin{skin:g}"
         configs[name] = (variant, observable, skin)
     paths = list(configs)
-    xl = None
+    candidate_variants = {"candidate", "replay", "sched", "schedtable", "schedpoly", "replaytable", "replaytable512", "packed", "tangent", "schedpacked", "schedtangent"}
+    table_width = {"table64": 64, "table512": 512, "replaytable": 64, "replaytable512": 512, "schedtable": 64}
+    if candidate_variants.intersection(args.variants) and set(args.outputs) != {"edgeefs"}:
+        raise ValueError("candidate variants require edgeefs and a hash-qualified checkpoint")
+    tables = {}
+    if table_width.keys() & set(args.variants):
+        from mace_md_lab.radial_table import prepare_radial_tables
+        for width in sorted({table_width[v] for v in args.variants if v in table_width}):
+            tables[width] = prepare_radial_tables(model, knots=args.spline_points, second_width=width)
+    xl = product_xl = product_info = stock_product_info = None
+    factored_xl = stock_r0_info = factored_r0_info = stock_m0_info = None
     if args.symmetrix_json:
         with patch.dict(os.environ, SYMMETRIX_NEIGHBOR_BACKEND="kokkos"):
             xl = load_xl(args)
+            if args.xl_stock_product_dir:
+                from mace_md_lab.xl_product import install_xl_product
+                stock_product_info = install_xl_product(xl, args.xl_stock_product_dir, variant="upstream")
+            if args.xl_stock_r0_dir:
+                from mace_md_lab.xl_product import install_xl_r0
+                stock_r0_info = install_xl_r0(xl, args.xl_stock_r0_dir, variant="upstream")
+            if args.xl_stock_m0_dir:
+                stock_m0_info = install_xl_product(xl, args.xl_stock_m0_dir, stage="m0", variant="upstream")
         paths.append("xl_efs")
+        if args.include_prepared_xl or args.xl_product_dir:
+            paths.append("xl_prepared_efs")
+        if args.xl_product_dir:
+            from mace_md_lab.xl_product import install_xl_product
+            with patch.dict(os.environ, SYMMETRIX_NEIGHBOR_BACKEND="kokkos"):
+                product_xl = load_xl(args)
+                product_info = install_xl_product(product_xl, args.xl_product_dir)
+                if args.xl_stock_r0_dir:
+                    install_xl_r0(product_xl, args.xl_stock_r0_dir, variant="upstream")
+                if args.xl_stock_m0_dir:
+                    install_xl_product(product_xl, args.xl_stock_m0_dir, stage="m0", variant="upstream")
+            paths.append("xl_prepared_product_efs")
+        if args.xl_factored_r0_dir:
+            with patch.dict(os.environ, SYMMETRIX_NEIGHBOR_BACKEND="kokkos"):
+                factored_xl = load_xl(args)
+                install_xl_product(factored_xl, args.xl_stock_product_dir, variant="upstream")
+                factored_r0_info = install_xl_r0(factored_xl, args.xl_factored_r0_dir, variant="factored")
+                if args.xl_stock_m0_dir:
+                    install_xl_product(factored_xl, args.xl_stock_m0_dir, stage="m0", variant="upstream")
+            paths.append("xl_prepared_factored_efs")
     transform_info = {}
 
     @contextmanager
     def new_path(name, structure):
         with ExitStack() as stack:
+            if name.startswith("xl_prepared_"):
+                from mace_md_lab.xl_fixed_step import ArrayVerlet, PreparedXL
+                stack.enter_context(patch.dict(os.environ, SYMMETRIX_NEIGHBOR_BACKEND="kokkos"))
+                engine = {"xl_prepared_efs": xl, "xl_prepared_product_efs": product_xl,
+                          "xl_prepared_factored_efs": factored_xl}[name]
+                engine.reset()
+                engine._neighbor_cache = None
+                prepared = PreparedXL(structure, engine, args.xl_skin)
+                path = ArrayVerlet(structure, prepared.evaluate, args.dt_fs)
+                path.prepared_xl = prepared
+                yield path, {}
+                return
             if name == "xl_efs":
                 stack.enter_context(patch.dict(os.environ, SYMMETRIX_NEIGHBOR_BACKEND="kokkos"))
                 xl.reset()
@@ -152,30 +236,56 @@ def main():
                 yield ASEPath(structure, calc, args.dt_fs), {}
                 return
             variant, observable, skin = configs[name]
-            stack.enter_context(optimized_model(model, "both", structure.numbers))
-            if variant in ("first", "folded", "both", "bothfolded"):
+            product_mode = "both_channel_tile" if variant == "schedpoly" else "both"
+            stack.enter_context(optimized_model(model, product_mode, structure.numbers))
+            layout = SimpleNamespace() if variant in candidate_variants else None
+            if variant in ("packed", "tangent", "schedpacked", "schedtangent"):
+                from mace_md_lab.exact_packed_radial import install_exact_packed_radials
+                stack.enter_context(install_exact_packed_radials(model, tangent=variant in ("tangent", "schedtangent")))
+            if variant in table_width:
+                from mace_md_lab.radial_table import install_radial_table
+                stack.enter_context(install_radial_table(model, tables=tables[table_width[variant]]))
+            if layout is not None:
+                from mace_md_lab.candidate_replay import explicit_cutoff
+                stack.enter_context(explicit_cutoff(model, calc.r_max))
+            if variant in ("first", "folded", "both", "bothfolded") or layout is not None or variant in table_width:
                 from mace_md_lab.grouped_first import install_grouped_first
-                first_options = {"fold_linear": True} if variant in ("folded", "bothfolded") else {}
+                first_options = {"fold_linear": variant in ("folded", "bothfolded") or layout is not None or variant in table_width, "layout": layout}
                 transform_info[variant] = stack.enter_context(
                     install_grouped_first(model, structure.numbers, **first_options)
                 )
-            if variant in ("second", "both", "bothfolded"):
+            if variant in ("second", "both", "bothfolded") or layout is not None or variant in table_width:
                 from mace_md_lab.grouped_second import install_second_interaction
-                transform_info["second"] = stack.enter_context(install_second_interaction(model))
+                transform_info["second"] = stack.enter_context(install_second_interaction(model, layout=layout))
             stress = {} if observable != "ef" else None
             if observable == "edgeefs":
                 from mace_md_lab.edge_virial import install_edge_virial
                 stack.enter_context(install_edge_virial(model, structure.get_volume(), stress))
             elif observable == "efs":
                 stress_request(model, stress, stack)
-            yield ResidentPath(structure, calc, args.dt_fs, skin, certified=True), stress
+            if layout is not None:
+                from mace_md_lab.candidate_replay import CandidatePath
+                path_type = CandidatePath
+                if variant in ("sched", "schedtable", "schedpoly", "schedpacked", "schedtangent"):
+                    from mace_md_lab.candidate_schedule import ScheduledPath
+                    path_type = ScheduledPath
+                yield path_type(structure, calc, args.dt_fs, skin, layout, variant != "candidate", args.macro_extension), stress
+            else:
+                yield ResidentPath(structure, calc, args.dt_fs, skin, certified=True), stress
+
+    edge_audit = {}
 
     def trajectory(name):
         with new_path(name, atoms) as (path, stress):
             frames = [read_snapshot(path, stress)]
+            audit = args.check_candidate_edges and hasattr(getattr(path, "runner", None), "verify_physical_edges")
+            if audit:
+                edge_audit[name] = [path.runner.verify_physical_edges()]
             for _ in range(args.warmup + args.steps):
                 path.advance(1)
                 frames.append(read_snapshot(path, stress))
+                if audit:
+                    edge_audit[name].append(path.runner.verify_physical_edges())
         if not all(np.isfinite(v).all() for snap in frames for v in snap if v is not None):
             raise ValueError(f"nonfinite values on {name}")
         return frames
@@ -204,7 +314,7 @@ def main():
             "velocity_A_fs": max(np.max(np.abs(a[1] - b[1])) for a, b in zip(ref, frames)),
             "nve_difference_eV_atom": np.max(np.abs(drift - ref_drift)),
         }
-        if name == "xl_efs" or configs[name][1] != "ef":
+        if name.startswith("xl_") or configs[name][1] != "ef":
             errors["stress_eV_A3"] = max(np.max(np.abs(a[5] - b[5])) for a, b in common)
         checks[name] = {
             "errors": {k: float(v) for k, v in errors.items()},
@@ -226,12 +336,18 @@ def main():
             orders.append(order)
             print("Timing trial", rep + 1, flush=True)
             for name in order:
-                with new_path(name, atoms) as (path, _):
+                with new_path(name, atoms) as (path, stress):
                     path.advance(args.warmup)
                     before = count_updates(path)
                     sync(dev)
                     start = perf_counter()
-                    path.advance(args.steps)
+                    if args.host_observables and isinstance(path, ResidentPath):
+                        for _step in range(args.steps):
+                            path.advance(1)
+                            torch.cat((path.energy.reshape(-1), path.forces.reshape(-1),
+                                       stress["tensor"].reshape(-1))).cpu()
+                    else:
+                        path.advance(args.steps)
                     sync(dev)
                     times[name].append(1000.0 * (perf_counter() - start) / args.steps)
                     after = count_updates(path)
@@ -242,11 +358,21 @@ def main():
         "raw_ms_step": times, "timed_graph_updates": updates, "orders": orders,
         "source_sha256": file_hash(args.model), "structure_sha256": file_hash(args.structure),
         "xl_json_sha256": file_hash(args.symmetrix_json) if xl else None,
+        "untimed_candidate_edge_audit": edge_audit,
+        "candidate_macro_extension_A": args.macro_extension,
+        "table_knots": args.spline_points if tables else None,
+        "host_efs_each_step": args.host_observables,
         "model": args.model.name, "formula": atoms.get_chemical_formula(), "atoms": len(atoms),
         "device": torch.cuda.get_device_name(dev), "torch": str(torch.__version__),
         "mace": package_version("mace-torch"), "symmetrix": package_version("symmetrix-xl") if xl else None,
         "xl_plan": xl.execution_plan if xl else None,
         "xl_r0": xl.r0_diagnostics if xl else None,
+        "xl_prepared_product": product_info,
+        "xl_stock_product": stock_product_info,
+        "xl_stock_r0": stock_r0_info,
+        "xl_stock_m0": stock_m0_info,
+        "xl_factored_r0": factored_r0_info,
+        "xl_launch_policy": args.xl_launch_policy if xl else None,
         "xl_r1": getattr(xl.evaluator, "r1_implementation", None) if xl else None,
         "xl_neighbor_backend": "kokkos" if xl else None, "xl_selector": args.selector if xl else None,
         "dtype": args.dtype,

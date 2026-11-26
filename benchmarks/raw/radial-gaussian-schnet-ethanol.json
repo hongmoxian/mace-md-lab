@@ -1,0 +1,397 @@
+{
+  "model": {
+    "framework": "torch_geometric",
+    "version": "2.6.1",
+    "model": "SchNet",
+    "target": "QM9 U0",
+    "pretrained": true,
+    "source": "https://www.quantum-machine.org/datasets/trained_schnet_models.zip",
+    "source_sha256": "ca567abbd43b5d0740a558d708761e232cf6d5e732f3ec498bc608e67105c62d",
+    "weights_sha256": "85f92d2b93f04f2329a276b1567fb19072abb4b72f6f3900dbd36ae5e94d2e65",
+    "hidden_channels": 128,
+    "interactions": 6,
+    "energy_unit": "eV",
+    "length_unit": "angstrom",
+    "native_edges": "all-pairs exact cutoff supplied to PyG SchNet.forward"
+  },
+  "framework": "schnet",
+  "device": "cuda",
+  "dtype": "float64",
+  "torch": "2.13.0+cu126",
+  "gpu": "Tesla V100-SXM2-16GB",
+  "cpu_threads": 1,
+  "structure": "ethanol.xyz",
+  "structure_sha256": "edbce53d31f89531c17d36fac0f4e7f467f95b62c213776d70b0fab116821613",
+  "atoms": 9,
+  "directed_edges": 72,
+  "occupied_groups": 26,
+  "allocated_groups": 27,
+  "input_source_types": 3,
+  "steps": 16,
+  "warmup": 5,
+  "dt_fs": 0.25,
+  "repeats": 8,
+  "velocity_seed": 17,
+  "cuda_graph": true,
+  "geometry": "analytic",
+  "passed": true,
+  "checks": {
+    "stock": {
+      "passed": true,
+      "max_energy_error_eV_atom": 0.0,
+      "max_force_component_error_eV_A": 4.3298697960381105e-15,
+      "same_initial_force_error_eV_A": 1.0269562977782698e-15,
+      "max_position_error_A": 4.440892098500626e-16,
+      "max_velocity_error_A_fs": 4.9074218631082503e-17,
+      "max_NVE_change_difference_eV_atom": 0.0,
+      "fd_displacements_A": [
+        0.001,
+        0.0003
+      ],
+      "fd_errors_eV_A": [
+        6.009851583055337e-06,
+        5.415146886456057e-07
+      ],
+      "fd_tolerance_eV_A": 0.0005,
+      "force_projection_eV_A": 0.7682669142029197,
+      "own_energy_fd_errors_eV_A": [
+        6.009851583055337e-06,
+        5.415146886456057e-07
+      ]
+    },
+    "direct": {
+      "passed": true,
+      "max_energy_error_eV_atom": 0.0,
+      "max_force_component_error_eV_A": 3.9968028886505635e-15,
+      "same_initial_force_error_eV_A": 8.881784197001252e-16,
+      "max_position_error_A": 4.440892098500626e-16,
+      "max_velocity_error_A_fs": 5.180056411058709e-17,
+      "max_NVE_change_difference_eV_atom": 0.0,
+      "fd_displacements_A": [
+        0.001,
+        0.0003
+      ],
+      "fd_errors_eV_A": [
+        6.009851583388404e-06,
+        5.415146889786726e-07
+      ],
+      "fd_tolerance_eV_A": 0.0005,
+      "force_projection_eV_A": 0.76826691420292,
+      "own_energy_fd_errors_eV_A": [
+        6.0098515829443144e-06,
+        5.415146885345834e-07
+      ]
+    },
+    "exact": {
+      "passed": true,
+      "max_energy_error_eV_atom": 0.0,
+      "max_force_component_error_eV_A": 3.9968028886505635e-15,
+      "same_initial_force_error_eV_A": 1.7763568394002505e-15,
+      "max_position_error_A": 2.220446049250313e-16,
+      "max_velocity_error_A_fs": 4.362152767207334e-17,
+      "max_NVE_change_difference_eV_atom": 0.0,
+      "fd_displacements_A": [
+        0.001,
+        0.0003
+      ],
+      "fd_errors_eV_A": [
+        6.009851584276582e-06,
+        5.41514689866851e-07
+      ],
+      "fd_tolerance_eV_A": 0.0005,
+      "force_projection_eV_A": 0.7682669142029209,
+      "own_energy_fd_errors_eV_A": [
+        6.0098515829443144e-06,
+        5.415146885345834e-07
+      ]
+    },
+    "hermite": {
+      "passed": true,
+      "max_energy_error_eV_atom": 1.2227650990502703e-10,
+      "max_force_component_error_eV_A": 1.099396083059645e-07,
+      "same_initial_force_error_eV_A": 4.8574102962106736e-08,
+      "max_position_error_A": 8.969682774306875e-10,
+      "max_velocity_error_A_fs": 3.8087393412458576e-10,
+      "max_NVE_change_difference_eV_atom": 2.602165396739211e-10,
+      "fd_displacements_A": [
+        0.001,
+        0.0003
+      ],
+      "fd_errors_eV_A": [
+        5.985191908974841e-06,
+        5.168550145651096e-07
+      ],
+      "fd_tolerance_eV_A": 0.0005,
+      "force_projection_eV_A": 0.7682668895432456,
+      "own_energy_fd_errors_eV_A": [
+        5.9983795819285035e-06,
+        5.411082063533357e-07
+      ]
+    },
+    "gaussian": {
+      "passed": true,
+      "max_energy_error_eV_atom": 0.0,
+      "max_force_component_error_eV_A": 4.440892098500626e-15,
+      "same_initial_force_error_eV_A": 9.43689570931383e-16,
+      "max_position_error_A": 3.3306690738754696e-16,
+      "max_velocity_error_A_fs": 4.362152767207334e-17,
+      "max_NVE_change_difference_eV_atom": 0.0,
+      "fd_displacements_A": [
+        0.001,
+        0.0003
+      ],
+      "fd_errors_eV_A": [
+        6.0098515837214705e-06,
+        5.415146893117395e-07
+      ],
+      "fd_tolerance_eV_A": 0.0005,
+      "force_projection_eV_A": 0.7682669142029204,
+      "own_energy_fd_errors_eV_A": [
+        6.0098515837214705e-06,
+        5.415146893117395e-07
+      ]
+    }
+  },
+  "trials": {
+    "stock": [
+      {
+        "ms_step": 1.1993355001322925,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.1171571823069826,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.1205006812815554,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.1163838717038743,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.1181217487319373,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.1176979314768687,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.1199334330740385,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.1158313718624413,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      }
+    ],
+    "direct": [
+      {
+        "ms_step": 1.353061874397099,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.231803311384283,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.2206023748149164,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.2153236893936992,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.233908064023126,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.2325482530286536,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.2343951311777346,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 1.2212810615892522,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      }
+    ],
+    "exact": [
+      {
+        "ms_step": 0.9085008059628308,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 0.8668696900713257,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 0.8672823751112446,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 0.8579083150834776,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 0.8528893158654682,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 0.8683883133926429,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 0.8545009332010522,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 0.8685636857990175,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      }
+    ],
+    "hermite": [
+      {
+        "ms_step": 0.6262334354687482,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 0.582085813221056,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 0.5856289426446892,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 0.5827968707308173,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 0.5830548107041977,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 0.5810884977108799,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 0.5846061249030754,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 0.5806373155792244,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      }
+    ],
+    "gaussian": [
+      {
+        "ms_step": 0.860477244714275,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 0.8231192477978766,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 0.8245791905210353,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 0.8090536284726113,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 0.8068692550295964,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 0.8245501230703667,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 0.825758557766676,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      },
+      {
+        "ms_step": 0.8049152529565617,
+        "graph_refreshes": 0,
+        "graph_captures": 0
+      }
+    ]
+  },
+  "median_ms_step": {
+    "stock": 1.117909840104403,
+    "direct": 1.2321757822064683,
+    "exact": 0.8670760325912852,
+    "hermite": 0.5829258407175075,
+    "gaussian": 0.8238346854341216
+  },
+  "scope": "Full FP64 molecular velocity-Verlet. All layers use original weights and identical physical edges.",
+  "radial_filters": {
+    "direct": {
+      "schedule": "direct"
+    },
+    "exact": {
+      "schedule": "exact"
+    },
+    "hermite": {
+      "schedule": "hermite",
+      "knots": 4097,
+      "width": 768,
+      "table_bytes": 100663296,
+      "table_and_grid_validation_s": 0.32998560392297804,
+      "max_off_grid_value_error": 7.306577565202588e-11,
+      "max_off_grid_slope_error": 6.617473780057281e-08,
+      "validation_grid_interior_fraction": 0.371
+    },
+    "gaussian": {
+      "schedule": "gaussian",
+      "basis_width": 50
+    }
+  }
+}

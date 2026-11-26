@@ -45,7 +45,7 @@ def _combine(contraction):
 
 
 @lru_cache(maxsize=32)
-def _source(dimension, terms, scalar, stage):
+def _source(dimension, terms, scalar, stage, tiled=False):
     """One CUDA thread evaluates a channel. The JIT can keep x and its VJP in registers."""
     # Same term order, loads, coefficients and arithmetic in all three kernels.
     value_needed = stage in ("value", "value_and_derivative")
@@ -76,15 +76,75 @@ def _source(dimension, terms, scalar, stage):
     if stage == "vjp":
         # Here value_buffer is the incoming adjoint; we write the final dE/dx directly.
         output = "const real upstream = value_buffer[(long long)atom * channels + ch];"
-        output += "\n" + "\n".join(
-            f"dx[base + {i}] = upstream * g{i};" for i in range(dimension)
-        )
     else:
         output = "value_buffer[(long long)atom * channels + ch] = value;"
+    grad_factor = "upstream * " if stage == "vjp" else ""
+    if derivative_needed and not tiled:
+        output += "\n" + "\n".join(
+            f"dx[base + {i}] = {grad_factor}g{i};" for i in range(dimension)
+        )
+    if tiled:
+        # One warp cooperatively loads a consecutive C x D tile. Padding by one
+        # keeps same-component shared reads from different channels on different banks.
+        tile_header = f"""
+        __shared__ real tile[32][{dimension + 1}];
+        for (int k = threadIdx.x; k < 32 * {dimension}; k += 32) {{
+            const int row = k / {dimension};
+            const int col = k % {dimension};
+            tile[row][col] = x[((long long)atom * channels + 32 * blockIdx.y) * {dimension} + k];
+        }}
+        __syncwarp();
+        """
+        feature_loads = tile_header + "\n".join(
+            f"const real x{i} = tile[threadIdx.x][{i}];" for i in range(dimension)
+        )
         if derivative_needed:
-            output += "\n" + "\n".join(
-                f"dx[base + {i}] = g{i};" for i in range(dimension)
-            )
+            output += "\n__syncwarp();\n" + "\n".join(
+                f"tile[threadIdx.x][{i}] = {grad_factor}g{i};"
+                for i in range(dimension)
+            ) + f"""
+            __syncwarp();
+            for (int k = threadIdx.x; k < 32 * {dimension}; k += 32) {{
+                dx[((long long)atom * channels + 32 * blockIdx.y) * {dimension} + k] =
+                    tile[k / {dimension}][k % {dimension}];
+            }}
+            """
+    element_lookup = """
+        __shared__ int element;
+        __shared__ real factor;
+        if (threadIdx.x == 0) {
+            int which = -1;
+            real weight = 0;
+            for (int e = 0; e < ne; ++e) {
+                if (attrs[e] == 0) continue;
+                if (which >= 0) { which = -2; break; }
+                which = e;
+                weight = attrs[e];
+            }
+            element = which; factor = weight;
+        }
+        __syncthreads();
+        const int z = element;
+        const real scale = factor;
+    """
+    if tiled:
+        # Decode one-hot attributes in parallel. Dense or scaled attributes
+        # retain the exact weighted-coefficient path used by the original kernel.
+        element_lookup = """
+            int z = -1;
+            real scale = 0;
+            for (int start = 0; start < ne; start += 32) {
+                const int e = start + threadIdx.x;
+                const real attr = e < ne ? attrs[e] : 0;
+                const unsigned int mask = __ballot_sync(0xffffffffu, attr != 0);
+                if (mask) {
+                    if (z >= 0 || __popc(mask) > 1) { z = -2; break; }
+                    const int lane = __ffs(mask) - 1;
+                    z = start + lane;
+                    scale = __shfl_sync(0xffffffffu, attr, lane);
+                }
+            }
+        """
     operations = "\n".join(statements)
     return f"""
 typedef {scalar} real;
@@ -103,23 +163,8 @@ extern "C" __global__ void scalar_product(const real *x, const real *y, const re
     const int atom = blockIdx.x;
     const int ch = blockIdx.y * blockDim.x + threadIdx.x;
     const real *attrs = y + (long long)atom * ne;
-    __shared__ int element;
-    __shared__ real factor;
-    if (threadIdx.x == 0) {{
-        int which = -1;
-        real weight = 0;
-        for (int e = 0; e < ne; ++e) {{
-            if (attrs[e] == 0) continue;
-            if (which >= 0) {{ which = -2; break; }}
-            which = e;
-            weight = attrs[e];
-        }}
-        element = which; factor = weight;
-    }}
-    __syncthreads();
+    {element_lookup}
     if (ch >= channels) return;
-    const int z = element;
-    const real scale = factor;
     const long long base = ((long long)atom * channels + ch) * {dimension};
     {feature_loads}
     {grad_decl}
@@ -131,18 +176,18 @@ extern "C" __global__ void scalar_product(const real *x, const real *y, const re
 
 
 @lru_cache(maxsize=32)
-def _cuda_kernel(dimension, terms, dtype, stage):
+def _cuda_kernel(dimension, terms, dtype, stage, tiled):
     import cupy as cp
 
     return cp.RawKernel(
-        _source(dimension, terms, dtype, stage),
+        _source(dimension, terms, dtype, stage, tiled),
         "scalar_product",
         options=("--std=c++11",),
         backend="nvrtc",
     )
 
 
-def _launch(stage, x, attrs, table, value_buffer, dx, terms):
+def _launch(stage, x, attrs, table, value_buffer, dx, terms, tiled=False):
     import cupy as cp
 
     n, channels, dimension = x.shape
@@ -150,15 +195,17 @@ def _launch(stage, x, attrs, table, value_buffer, dx, terms):
         return
     with cp.cuda.Device(x.device.index):
         stream = cp.cuda.ExternalStream(torch.cuda.current_stream(x.device).cuda_stream)
+        tiled = tiled and channels % 32 == 0
+        threads = 32 if tiled else 64
         kernel = _cuda_kernel(
-            dimension, terms, "double" if x.dtype == torch.float64 else "float", stage
+            dimension, terms, "double" if x.dtype == torch.float64 else "float", stage, tiled
         )
         # RawKernel copies pointer values at launch; torch owns all the allocations.
         tensors = (x, attrs, table, value_buffer, dx)
         pointers = tuple(np.uint64(0 if t is None else t.data_ptr()) for t in tensors)
         kernel(
-            (n, (channels + 63) // 64),
-            (64,),
+            (n, (channels + threads - 1) // threads),
+            (threads,),
             (*pointers, np.int32(channels), np.int32(attrs.shape[1])),
             stream=stream,
         )
@@ -170,9 +217,9 @@ class _FrozenProductFn(torch.autograd.Function):
         x, attrs = x.contiguous(), attrs.contiguous()
         out = x.new_empty(x.shape[:2])
         ctx.schedule = schedule
-        if schedule == "precompute":
+        if schedule in ("precompute", "channel_tile"):
             dx = torch.empty_like(x)
-            _launch("value_and_derivative", x, attrs, table, out, dx, terms)
+            _launch("value_and_derivative", x, attrs, table, out, dx, terms, schedule == "channel_tile")
             ctx.save_for_backward(dx)
         else:
             _launch("value", x, attrs, table, out, None, terms)
@@ -198,7 +245,7 @@ class FrozenScalarProduct(nn.Module):
 
     def __init__(self, contraction, schedule="precompute"):
         super().__init__()
-        if schedule not in ("precompute", "deferred"):
+        if schedule not in ("precompute", "deferred", "channel_tile"):
             raise ValueError("unknown frozen product schedule")
         self.schedule = schedule
         dim, terms, table = _combine(contraction)

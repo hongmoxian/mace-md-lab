@@ -49,11 +49,9 @@ def _moment_adjoint(H, Y, group_index, dM, dH, dY, groups):
 
 class _Moments(torch.autograd.Function):
     @staticmethod
-    def forward(ctx, h, y, group_index, boundaries):
+    def forward(ctx, h, y, group_index, offsets, order):
         h, y = h.contiguous(), y.contiguous()
-        groups = boundaries.numel() - 1
-        sorted_group, order = torch.sort(group_index)
-        offsets = torch.searchsorted(sorted_group, boundaries)
+        groups = offsets.numel() - 1
         moments = h.new_empty((16, groups, 64))
         with torch.cuda.device(h.device):
             _group_moments[(groups, 16)](
@@ -73,11 +71,12 @@ class _Moments(torch.autograd.Function):
                 _moment_adjoint[(group_index.numel(),)](
                     h, y, group_index, dm.contiguous(), dh, dy, ctx.groups, num_warps=4
                 )
-        return dh, dy, None, None
+        return dh, dy, None, None, None
 
 
 class _FirstInteraction:
-    def __init__(self, model, atomic_numbers, fold_linear):
+    def __init__(self, model, atomic_numbers, fold_linear, layout):
+        self.layout = layout
         from mace.modules.blocks import RealAgnosticResidualInteractionBlock
         from mace.modules.models import MACE, ScaleShiftMACE
 
@@ -175,8 +174,13 @@ class _FirstInteraction:
         if cutoff is not None:
             hidden = hidden * cutoff
         # Distinct periodic images and any repeated input edges contribute independently.
-        group = edge_index[1] * self.n_species + self.species.index_select(0, edge_index[0])
-        moments = _Moments.apply(hidden, edge_attrs, group, self.boundaries)
+        if self.layout is None:
+            group = edge_index[1] * self.n_species + self.species.index_select(0, edge_index[0])
+            sorted_group, order = torch.sort(group)
+            offsets = torch.searchsorted(sorted_group, self.boundaries)
+        else:
+            group, offsets, order = self.layout.groups, self.layout.group_offsets, self.layout.order
+        moments = _Moments.apply(hidden, edge_attrs, group, offsets, order)
         message = torch.bmm(moments.view(16, self.n_atoms, self.n_species * 64), self.weight)
         if self.fold_linear:
             return message.permute(1, 2, 0).contiguous(), skip
@@ -189,9 +193,9 @@ class _FirstInteraction:
 
 
 @contextmanager
-def install_grouped_first(model, atomic_numbers, *, fold_linear=False):
+def install_grouped_first(model, atomic_numbers, *, fold_linear=False, layout=None):
     """Install the first-interaction replacement temporarily on one model instance."""
-    impl = _FirstInteraction(model, atomic_numbers, fold_linear)
+    impl = _FirstInteraction(model, atomic_numbers, fold_linear, layout)
     with patch.object(impl.layer, "forward", impl):
         yield {
             "operator": "grouped_species_first_interaction",
