@@ -1,0 +1,102 @@
+{
+  "model_sha256": "7052cb42b7b3be42b40b97fa0d21077a48c54b5548948fc4dcf346629f813c36",
+  "fixture": "cu.extxyz",
+  "fixture_sha256": "caf53b8fdc45601d1d781b1f91467a58bae78db87be195d4de6bae55124cd7f9",
+  "gpu": "Tesla V100-SXM2-16GB",
+  "atoms": 108,
+  "steps": 4,
+  "warmup": 3,
+  "dt_fs": 0.5,
+  "blocks": {
+    "0_convolution": {
+      "x": "128x0e",
+      "y": "1x0e+1x1e+1x2e",
+      "out": "128x0e+128x1e+128x2e",
+      "paths": 3,
+      "weights": 384
+    },
+    "1_convolution": {
+      "x": "128x0e+64x1e+32x2e",
+      "y": "1x0e+1x1e+1x2e",
+      "out": "128x0e+64x0e+32x0e+128x1e+64x1e+64x1e+64x1e+32x1e+32x1e+128x2e+64x2e+64x2e+32x2e+32x2e+32x2e",
+      "paths": 15,
+      "weights": 960
+    },
+    "2_convolution": {
+      "x": "128x0e+64x1e+32x2e",
+      "y": "1x0e+1x1e+1x2e",
+      "out": "128x0e+64x0e+32x0e+128x1e+64x1e+64x1e+64x1e+32x1e+32x1e+128x2e+64x2e+64x2e+32x2e+32x2e+32x2e",
+      "paths": 15,
+      "weights": 960
+    },
+    "3_convolution": {
+      "x": "128x0e+64x1e+32x2e",
+      "y": "1x0e+1x1e+1x2e",
+      "out": "128x0e+64x0e+32x0e+128x1e+64x1e+64x1e+64x1e+32x1e+32x1e+128x2e+64x2e+64x2e+32x2e+32x2e+32x2e",
+      "paths": 15,
+      "weights": 960
+    },
+    "4_convolution": {
+      "x": "128x0e+64x1e+32x2e",
+      "y": "1x0e+1x1e+1x2e",
+      "out": "128x0e+64x0e+32x0e",
+      "paths": 3,
+      "weights": 224
+    }
+  },
+  "trials": [
+    {
+      "stock_ms": 37.055248249089345,
+      "traced_ms": 38.47004525596276,
+      "reverse_union_ms": 14.749440670013428,
+      "layers": {
+        "0_convolution": 0.9510400146245956,
+        "1_convolution": 4.1303040981292725,
+        "2_convolution": 4.124927997589111,
+        "3_convolution": 4.126464128494263,
+        "4_convolution": 1.416703999042511
+      },
+      "forward_layers_ms": 6.648319944739342
+    },
+    {
+      "traced_ms": 38.34558100788854,
+      "reverse_union_ms": 14.727928876876831,
+      "layers": {
+        "0_convolution": 0.9454079866409302,
+        "1_convolution": 4.123648047447205,
+        "2_convolution": 4.122624039649963,
+        "3_convolution": 4.123136043548584,
+        "4_convolution": 1.4131200015544891
+      },
+      "forward_layers_ms": 6.6314240247011185,
+      "stock_ms": 36.81727426010184
+    },
+    {
+      "stock_ms": 36.800139263505116,
+      "traced_ms": 38.469252991490066,
+      "reverse_union_ms": 14.740482330322266,
+      "layers": {
+        "0_convolution": 0.948480024933815,
+        "1_convolution": 4.126464128494263,
+        "2_convolution": 4.122367858886719,
+        "3_convolution": 4.1233919858932495,
+        "4_convolution": 1.4197759926319122
+      },
+      "forward_layers_ms": 6.657535970211029
+    },
+    {
+      "traced_ms": 38.345432752976194,
+      "reverse_union_ms": 14.729986429214478,
+      "layers": {
+        "0_convolution": 0.9446399956941605,
+        "1_convolution": 4.122367978096008,
+        "2_convolution": 4.121599912643433,
+        "3_convolution": 4.128512144088745,
+        "4_convolution": 1.4128639996051788
+      },
+      "forward_layers_ms": 6.644991979002953,
+      "stock_ms": 36.96667400072329
+    }
+  ],
+  "share": 0.38374239089256096
+}

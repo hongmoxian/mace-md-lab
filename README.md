@@ -8,6 +8,8 @@ Run a fixed-cell molecular dynamics benchmark with an existing MACE checkpoint, 
 
 ## Measure periodic transfer and GPU capacity
 
+[SevenNet message-passing reverse](benchmarks/sevennet-message-reverse.md) gives the five-layer profile, the edge adjoint and matched full-step measurements.
+
 Run comparable short trajectories with the published SevenNet-0 or DPA4-Mini weights. Inspect per-trial speed and same-frame errors, or measure complete-process GPU peaks while increasing the periodic Au/water cell. [Results and benchmark commands](benchmarks/periodic-transfer-memory.md)
 
 ## Benchmark a native force algorithm

@@ -1,0 +1,72 @@
+{
+  "model_sha256": "7052cb42b7b3be42b40b97fa0d21077a48c54b5548948fc4dcf346629f813c36",
+  "fixture": "cu.extxyz",
+  "fixture_sha256": "caf53b8fdc45601d1d781b1f91467a58bae78db87be195d4de6bae55124cd7f9",
+  "gpu": "Tesla V100-SXM2-16GB",
+  "sevennet": "0.13.0",
+  "torch": "2.13.0+cu126",
+  "atoms": 108,
+  "steps": 8,
+  "warmup": 3,
+  "dt_fs": 0.5,
+  "paired_trials": [
+    {
+      "stock": 63.40919449576177,
+      "adjoint": 68.47263537929393
+    },
+    {
+      "adjoint": 25.9966321173124,
+      "stock": 37.00909888721071
+    },
+    {
+      "stock": 36.94648812233936,
+      "adjoint": 25.977805256843567
+    },
+    {
+      "adjoint": 25.99783561890945,
+      "stock": 37.034186389064416
+    },
+    {
+      "stock": 37.018512754002586,
+      "adjoint": 25.961272374843247
+    },
+    {
+      "adjoint": 25.957221136195585,
+      "stock": 37.016057496657595
+    },
+    {
+      "stock": 36.96670624776743,
+      "adjoint": 25.956630881410092
+    },
+    {
+      "adjoint": 26.015202252892777,
+      "stock": 36.98162073851563
+    }
+  ],
+  "medians": {
+    "stock": 37.01257819193415,
+    "adjoint": 25.987218687077984
+  },
+  "saved_fraction": 0.29788142419267716,
+  "faster_pairs": 7,
+  "efs_max_abs": {
+    "stock": [
+      0.0,
+      2.384185791015625e-07,
+      2.3283064365386963e-09
+    ],
+    "adjoint": [
+      0.0,
+      2.980232238769531e-07,
+      2.7939677238464355e-09
+    ]
+  },
+  "passed": true,
+  "backward_calls": {
+    "0_convolution": 108,
+    "1_convolution": 108,
+    "2_convolution": 108,
+    "3_convolution": 108,
+    "4_convolution": 108
+  }
+}

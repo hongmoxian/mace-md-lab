@@ -1,0 +1,84 @@
+{
+  "model_sha256": "7052cb42b7b3be42b40b97fa0d21077a48c54b5548948fc4dcf346629f813c36",
+  "fixture": "cu.extxyz",
+  "fixture_sha256": "caf53b8fdc45601d1d781b1f91467a58bae78db87be195d4de6bae55124cd7f9",
+  "gpu": "Tesla V100-SXM2-16GB",
+  "sevennet": "0.13.0",
+  "torch": "2.13.0+cu126",
+  "atoms": 108,
+  "steps": 8,
+  "warmup": 3,
+  "dt_fs": 0.5,
+  "first_route": "adjoint",
+  "paired_trials": [
+    {
+      "adjoint": 51.447103745886125,
+      "stock": 80.141783124418
+    },
+    {
+      "stock": 37.48356137657538,
+      "adjoint": 26.315307739423588
+    },
+    {
+      "adjoint": 26.325789134716615,
+      "stock": 37.386705123935826
+    },
+    {
+      "stock": 37.45707037160173,
+      "adjoint": 26.31232912244741
+    }
+  ],
+  "medians": {
+    "adjoint": 26.3205484370701,
+    "stock": 37.470315874088556
+  },
+  "saved_fraction": 0.2975626753317212,
+  "faster_pairs": 4,
+  "efs_max_abs": {
+    "stock": [
+      0.0,
+      2.384185791015625e-07,
+      2.561137080192566e-09
+    ],
+    "adjoint": [
+      0.0,
+      3.5762786865234375e-07,
+      2.561137080192566e-09
+    ]
+  },
+  "passed": true,
+  "local_adjoint_max_abs": [
+    {
+      "node": 3.814697265625e-06,
+      "angular": 5.7220458984375e-06,
+      "radial": 1.9073486328125e-06
+    },
+    {
+      "node": 4.76837158203125e-06,
+      "angular": 1.1444091796875e-05,
+      "radial": 2.86102294921875e-06
+    },
+    {
+      "node": 3.814697265625e-06,
+      "angular": 9.5367431640625e-06,
+      "radial": 1.9073486328125e-06
+    },
+    {
+      "node": 5.7220458984375e-06,
+      "angular": 1.1444091796875e-05,
+      "radial": 1.9073486328125e-06
+    },
+    {
+      "node": 9.5367431640625e-07,
+      "angular": 3.814697265625e-06,
+      "radial": 9.5367431640625e-07
+    }
+  ],
+  "backward_calls": {
+    "0_convolution": 61,
+    "1_convolution": 61,
+    "2_convolution": 61,
+    "3_convolution": 61,
+    "4_convolution": 61
+  }
+}

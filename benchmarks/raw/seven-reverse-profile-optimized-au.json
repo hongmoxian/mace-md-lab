@@ -1,0 +1,103 @@
+{
+  "model_sha256": "7052cb42b7b3be42b40b97fa0d21077a48c54b5548948fc4dcf346629f813c36",
+  "fixture": "au-water-seed109.extxyz",
+  "fixture_sha256": "f87aa8aeffcef2c334d0b94ea4d7eb9109f01f1c7a746345fc4ded509c93ac2c",
+  "gpu": "Tesla V100-SXM2-16GB",
+  "route": "adjoint",
+  "atoms": 192,
+  "steps": 4,
+  "warmup": 3,
+  "dt_fs": 0.5,
+  "blocks": {
+    "0_convolution": {
+      "x": "128x0e",
+      "y": "1x0e+1x1e+1x2e",
+      "out": "128x0e+128x1e+128x2e",
+      "paths": 3,
+      "weights": 384
+    },
+    "1_convolution": {
+      "x": "128x0e+64x1e+32x2e",
+      "y": "1x0e+1x1e+1x2e",
+      "out": "128x0e+64x0e+32x0e+128x1e+64x1e+64x1e+64x1e+32x1e+32x1e+128x2e+64x2e+64x2e+32x2e+32x2e+32x2e",
+      "paths": 15,
+      "weights": 960
+    },
+    "2_convolution": {
+      "x": "128x0e+64x1e+32x2e",
+      "y": "1x0e+1x1e+1x2e",
+      "out": "128x0e+64x0e+32x0e+128x1e+64x1e+64x1e+64x1e+32x1e+32x1e+128x2e+64x2e+64x2e+32x2e+32x2e+32x2e",
+      "paths": 15,
+      "weights": 960
+    },
+    "3_convolution": {
+      "x": "128x0e+64x1e+32x2e",
+      "y": "1x0e+1x1e+1x2e",
+      "out": "128x0e+64x0e+32x0e+128x1e+64x1e+64x1e+64x1e+32x1e+32x1e+128x2e+64x2e+64x2e+32x2e+32x2e+32x2e",
+      "paths": 15,
+      "weights": 960
+    },
+    "4_convolution": {
+      "x": "128x0e+64x1e+32x2e",
+      "y": "1x0e+1x1e+1x2e",
+      "out": "128x0e+64x0e+32x0e",
+      "paths": 3,
+      "weights": 224
+    }
+  },
+  "trials": [
+    {
+      "stock_ms": 26.33524648263119,
+      "traced_ms": 27.9405192413833,
+      "reverse_union_ms": 2.8751351833343506,
+      "layers": {
+        "0_convolution": 0.3965440019965172,
+        "1_convolution": 0.7001599967479706,
+        "2_convolution": 0.6796800047159195,
+        "3_convolution": 0.6845439970493317,
+        "4_convolution": 0.41420799493789673
+      },
+      "forward_layers_ms": 9.116671934723854
+    },
+    {
+      "traced_ms": 27.736854244722053,
+      "reverse_union_ms": 2.863105058670044,
+      "layers": {
+        "0_convolution": 0.3978240042924881,
+        "1_convolution": 0.6970880031585693,
+        "2_convolution": 0.6814719885587692,
+        "3_convolution": 0.6794240027666092,
+        "4_convolution": 0.40729599446058273
+      },
+      "forward_layers_ms": 9.116415917873383,
+      "stock_ms": 26.540463761193678
+    },
+    {
+      "stock_ms": 26.527826994424686,
+      "traced_ms": 27.81271151616238,
+      "reverse_union_ms": 2.8651511669158936,
+      "layers": {
+        "0_convolution": 0.3980799913406372,
+        "1_convolution": 0.6970880031585693,
+        "2_convolution": 0.6801920086145401,
+        "3_convolution": 0.6832640022039413,
+        "4_convolution": 0.4065279960632324
+      },
+      "forward_layers_ms": 9.11769588291645
+    },
+    {
+      "traced_ms": 27.756430266890675,
+      "reverse_union_ms": 2.8613109588623047,
+      "layers": {
+        "0_convolution": 0.3983360081911087,
+        "1_convolution": 0.6965759992599487,
+        "2_convolution": 0.6778879910707474,
+        "3_convolution": 0.6812160015106201,
+        "4_convolution": 0.40729600191116333
+      },
+      "forward_layers_ms": 9.108223885297775,
+      "stock_ms": 26.51792875258252
+    }
+  ],
+  "share": 0.10305115261428323
+}
