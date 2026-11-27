@@ -2,6 +2,8 @@
 
 Run conservative, fixed-cell molecular dynamics with MACE-MP-0 Small, SevenNet-0 or DPA4-Mini-OMat24. One interface accepts a local checkpoint and periodic ASE structure and returns energy, all forces and stress on each velocity-Verlet step. Each adapter runs directly on its model. An optional MACE comparison uses Symmetrix-XL.
 
+[Liquid copper application: temperature-dependent self-diffusion, full production timings and comparison to neutron scattering](benchmarks/liquid-copper.md)
+
 ## Run independent periodic MD
 
 Use a Linux CUDA environment for the selected model. Install the repository with `python -m pip install -e ".[cuda12]"` for MACE, `".[sevennet]"` for SevenNet, or `".[dpa4]"` for DeePMD with its PyTorch CUDA backend already installed. The hardware and checkpoint versions tested are listed in the [official-baseline benchmark](benchmarks/periodic-official.md).

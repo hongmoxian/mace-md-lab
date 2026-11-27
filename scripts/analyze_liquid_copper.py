@@ -76,7 +76,7 @@ def main():
         p.error("--blocks expects one continuous trajectory")
     runs = []
     with (a.out / "msd.csv").open("w", newline="") as f:
-        w = csv.writer(f)
+        w = csv.writer(f, lineterminator="\n")
         w.writerow(["temperature_K", "atoms", "seed", "lag_ps", "msd_A2"])
         for file in files:
             info, t, msd = analyze(file.parent)
