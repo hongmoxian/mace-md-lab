@@ -5,15 +5,19 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "mace-md-lab"
 version = "0.2.0"
-description = "Conservative MACE dynamics with specialized first derivatives and moving-atom benchmarks."
+description = "Conservative periodic molecular dynamics with model-specific energy and force kernels."
 readme = "README.md"
 requires-python = ">=3.10"
-dependencies = ["mace-torch==0.3.16", "ase>=3.23", "numpy>=1.24", "torch>=2.2"]
+dependencies = ["ase>=3.23", "numpy>=1.24", "torch>=2.2"]
 
 [project.optional-dependencies]
-cuda12 = ["cupy-cuda12x>=13", "triton>=3; platform_system == 'Linux'"]
+mace = ["mace-torch==0.3.16"]
+sevennet = ["sevenn==0.13.0", "triton>=3; platform_system == 'Linux'"]
+dpa4 = ["deepmd-kit==3.2.0", "triton>=3; platform_system == 'Linux'"]
+cuda12 = ["mace-torch==0.3.16", "cupy-cuda12x>=13", "triton>=3; platform_system == 'Linux'"]
 
 [project.scripts]
+conservative-md = "mace_md_lab.portable.md_cli:main"
 mace-md-portable = "mace_md_lab.portable.benchmark:main"
 mace-md-adjoint = "mace_md_lab.adjoint_bench:main"
 mace-md-force-checks = "mace_md_lab.force_checks:main"

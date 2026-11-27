@@ -1,0 +1,112 @@
+{
+  "framework": "mace",
+  "checkpoint": "mace-mp-0-small.model",
+  "model_sha256": "2ddb079cee0e131eaaf6912ba581b394551ead283e95c99cfe78c605d10b5736",
+  "package_version": "0.3.16",
+  "ase": "3.29.0",
+  "gpu": "Tesla V100-SXM2-16GB",
+  "torch": "2.13.0+cu126",
+  "fixture": "au-water-seed109.extxyz",
+  "atoms": 192,
+  "fixture_sha256": "f87aa8aeffcef2c334d0b94ea4d7eb9109f01f1c7a746345fc4ded509c93ac2c",
+  "dt_fs": 0.5,
+  "steps": 16,
+  "warmup": 3,
+  "repeats": 4,
+  "orders": [
+    [
+      "xl_plus",
+      "xl",
+      "independent",
+      "official"
+    ],
+    [
+      "xl",
+      "independent",
+      "official",
+      "xl_plus"
+    ],
+    [
+      "independent",
+      "official",
+      "xl_plus",
+      "xl"
+    ],
+    [
+      "official",
+      "xl_plus",
+      "xl",
+      "independent"
+    ]
+  ],
+  "trials": [
+    {
+      "xl_plus": 2.3285009374376386,
+      "xl": 3.918111564416904,
+      "independent": 4.5195613711257465,
+      "official": 34.3373089999659
+    },
+    {
+      "xl": 3.7132056822883897,
+      "independent": 4.358913436590228,
+      "official": 34.21935300139012,
+      "xl_plus": 2.17879049887415
+    },
+    {
+      "independent": 4.359227874374483,
+      "official": 34.243256064655725,
+      "xl_plus": 2.177983056753874,
+      "xl": 3.710629556735512
+    },
+    {
+      "official": 34.22092981782043,
+      "xl_plus": 2.1772600666736253,
+      "xl": 3.7032202453701757,
+      "independent": 4.360191131127067
+    }
+  ],
+  "ms_step": {
+    "official": 34.23209294123808,
+    "independent": 4.359709502750775,
+    "xl": 3.7119176195119508,
+    "xl_plus": 2.178386777814012
+  },
+  "speedup_vs_official": {
+    "official": 1.0,
+    "independent": 7.8519206198576335,
+    "xl": 9.222212465409987,
+    "xl_plus": 15.71442376068295
+  },
+  "setup_and_first_independent_force_s": 2.706770620075986,
+  "common_frames": 8,
+  "max_abs_efs": {
+    "official": [
+      5.921189464667501e-16,
+      1.4210854715202004e-14,
+      6.245004513516506e-17
+    ],
+    "independent": [
+      0.0,
+      2.4868995751603507e-14,
+      9.71445146547012e-17
+    ],
+    "xl": [
+      7.148390916237683e-09,
+      4.0910544640837543e-07,
+      1.139505226288584e-09
+    ],
+    "xl_plus": [
+      7.148390916237683e-09,
+      4.091058336541664e-07,
+      1.139505156899645e-09
+    ]
+  },
+  "limits": [
+    1e-08,
+    1e-06,
+    1e-07
+  ],
+  "passed": true,
+  "xl_version": "0.2.0",
+  "xl_compact_sha256": "80c2ee186373a08e538018a44127782d3f960a3d3520841a391abe4fc89c3a42"
+}

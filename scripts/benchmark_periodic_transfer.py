@@ -12,7 +12,7 @@ from time import perf_counter
 from ase import units
 from ase.io import read
 from ase.md.verlet import VelocityVerlet
-from ase.stress import full_3x3_to_voigt_6_stress
+from mace_md_lab.portable.deepmd_eval import deep_eval
 import numpy as np
 import torch
 
@@ -45,18 +45,6 @@ class SevenGraph:
         graph = AtomGraphData.from_numpy_dict(d).to(self.calc.device)
         result = self.calc.output_to_results(self.calc.model(graph))
         return result["energy"], result["forces"], result["stress"]
-
-
-def deep_eval(atoms, calc):
-    if any(k in atoms.info for k in ("fparam","aparam","charge_spin")):
-        raise ValueError("requires a field-free fixture")
-    types = [calc.type_dict[k] for k in atoms.get_chemical_symbols()]
-    cell = atoms.cell.array.reshape(1,9)
-    volume = atoms.get_volume()
-    def evaluate(pos):
-        e, f, v = calc.dp.eval(pos.reshape(1,-1),cell,types)[:3]
-        return float(e[0,0]), f[0], full_3x3_to_voigt_6_stress(-v[0].reshape(3,3)/volume)
-    return evaluate
 
 
 def main():

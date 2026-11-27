@@ -1,10 +1,28 @@
 # MACE MD Lab
 
-Compare conservative MD implementations in three separately trained architectures using MACE, PyG SchNet, and SchNetPack PaiNN. The same Cartesian edge derivative and CUDA force replay can be enabled independently in all three. The frozen scalar product optimization below is specific to compatible MACE blocks. [Cross-framework results and reproduction](benchmarks/portable.md)
+Run conservative, fixed-cell molecular dynamics with MACE-MP-0 Small, SevenNet-0 or DPA4-Mini-OMat24. One interface accepts a local checkpoint and periodic ASE structure and returns energy, all forces and stress on each velocity-Verlet step. Each adapter runs directly on its model. An optional MACE comparison uses Symmetrix-XL.
 
-Run a fixed-cell molecular dynamics benchmark with an existing MACE checkpoint, or measure force disagreement across several checkpoints on the same frames. The package compares every optimized path with the original member energies and forces. It writes timings, numerical errors, and neighbor-list rebuild counts to JSON.
+## Run independent periodic MD
 
-**Inputs** are trusted local MACE or ScaleShiftMACE checkpoints and ASE-readable periodic structures. **Outputs** include wall time per MD step, milliseconds per committee observation, per-member force errors, and the maximum atomic force disagreement on each sampled frame. The initial release targets scalar-energy MACE 0.3.16 on CPU or one GPU, with optional CUDA Graph replay.
+Use a Linux CUDA environment for the selected model. Install the repository with `python -m pip install -e ".[cuda12]"` for MACE, `".[sevennet]"` for SevenNet, or `".[dpa4]"` for DeePMD with its PyTorch CUDA backend already installed. The hardware and checkpoint versions tested are listed in the [official-baseline benchmark](benchmarks/periodic-official.md).
+
+```bash
+conservative-md --framework sevennet --model "$checkpoint" --structure "$fixture" --steps 8 --dt-fs 0.5 --output final.extxyz
+```
+
+The initial frame supplies the fixed cell, species, positions and momenta. The final extended XYZ stores the updated positions and momenta, energy (eV), Cartesian forces (eV/Å), and ASE stress (eV/Å³). To read observables during integration:
+
+```python
+from ase.io import read
+from mace_md_lab.portable.periodic import periodic_md
+
+atoms = read("initial.extxyz", index=0)
+with periodic_md("sevennet", checkpoint, atoms, dt_fs=0.5) as md:
+    md.advance(8)
+    print(md.energy, md.forces.shape, md.stress)
+```
+
+Set the framework to `mace`, `sevennet`, or `dpa4` and supply the corresponding qualified checkpoint. The same protocol compares all three with their official calculators. [Benchmarks, optional MACE+XL comparison and checks](benchmarks/periodic-official.md)
 
 ## Measure periodic transfer and GPU capacity
 
@@ -40,7 +58,7 @@ The report compares `none`, `angular`, `product`, and `both` with an identical r
 Install PyTorch for your hardware and install this repository from its root.
 
 ```bash
-python -m pip install -e .
+python -m pip install -e ".[mace]"
 python examples/make_fixture.py --out fixtures
 
 mace-md-bench --model fixtures/member-17.model --structure fixtures/cu.extxyz \
