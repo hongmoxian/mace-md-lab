@@ -71,7 +71,9 @@ def main():
                 run.advance(25)
                 if isinstance(run, OfficialMD):
                     state = SimpleNamespace(
-                        momenta=run.atoms.get_momenta(), inverse_mass=inv_mass
+                        positions=run.atoms.positions,
+                        momenta=run.atoms.get_momenta(),
+                        inverse_mass=inv_mass,
                     )
                     rescale(state, a.temperature, rng, 50.0, 1000.0)
                     run.atoms.set_momenta(state.momenta)
